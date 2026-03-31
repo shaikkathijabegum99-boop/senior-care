@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Nethra Senior Care</title>
+
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="../global/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-overlay">
+      <div class="content-container">
+        <div class="contact-hero-content">
+          <p class="hero-kicker">Get In Touch</p>
+          <h1>Contact Nethra Senior Care</h1>
+          <p>
+            We’re here to help you explore the right care, comfort, and community
+            for your loved one. Reach out to schedule a visit or ask any questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="contact-main-section">
+    <div class="content-container">
+      <div class="contact-layout">
+
+        <!-- LEFT FORM -->
+        <div class="contact-form-card">
+          <div class="section-heading">
+            <span class="section-tag">Reach Out</span>
+            <h2>Book a Visit or Send an Inquiry</h2>
+            <p>
+              Fill out the form below and our care team will get in touch with you shortly.
+            </p>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter full name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter email address" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required />
+              </div>
+
+              <div class="form-group">
+                <label for="city">Preferred City</label>
+                <select id="city" required>
+                  <option value="">Select location</option>
+                  <option>Bangalore</option>
+                  <option>Chennai</option>
+                  <option>Coimbatore</option>
+                  <option>Hyderabad</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Assisted Living</option>
+                  <option>Senior Residential Care</option>
+                  <option>Rehabilitation & Recovery</option>
+                  <option>Medical Support</option>
+                  <option>Respite Care</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="visitDate">Preferred Visit Date</label>
+                <input type="date" id="visitDate" />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Tell us about your needs or questions..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn submit-btn">Submit Inquiry</button>
+            <p id="formMessage" class="form-message"></p>
+          </form>
+        </div>
+
+        <!-- RIGHT INFO -->
+        <div class="contact-info-panel">
+          <div class="contact-image-box">
+            <img src="../images/contact-care.jpg" alt="Senior care support" />
+          </div>
+
+          <div class="info-box">
+            <h3>Visit Our Community</h3>
+            <p>
+              Experience our warm, supportive environment firsthand and see how
+              we create meaningful living for seniors.
+            </p>
+          </div>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Address</h4>
+                <p>123 Wellness Avenue, Senior Care District, Coimbatore, Tamil Nadu</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:info@nethraseniorcare.com">info@nethraseniorcare.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Visiting Hours</h4>
+                <p>Monday - Sunday: 9:00 AM to 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-box">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="content-container">
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps?q=Coimbatore&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="../js/component.js"></script>
+  <script src="../global/global.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

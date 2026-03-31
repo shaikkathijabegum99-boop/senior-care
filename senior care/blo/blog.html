@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Nethra Senior Care</title>
+
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="../global/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="blog-hero-overlay">
+      <div class="content-container">
+        <div class="hero-content">
+          <p class="hero-badge">Nethra Care Journal</p>
+          <h1>Stories, Guidance & Senior Wellness Insights</h1>
+          <p>
+            Explore thoughtful articles on assisted living, healthy aging, emotional well-being,
+            rehabilitation, family support, and life inside our caring community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Controls -->
+  <section class="blog-controls-section">
+    <div class="content-container">
+      <div class="blog-controls-card">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="blogSearch" placeholder="Search blogs..." />
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="care">Care</button>
+          <button class="filter-btn" data-category="wellness">Wellness</button>
+          <button class="filter-btn" data-category="family">Family</button>
+          <button class="filter-btn" data-category="recovery">Recovery</button>
+          <button class="filter-btn" data-category="lifestyle">Lifestyle</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Blog -->
+  <section class="featured-blog-section">
+    <div class="content-container">
+      <div class="featured-blog-card">
+        <div class="featured-blog-image">
+          <img src="../images/blog-1.jpg" alt="Senior wellness and care" />
+        </div>
+        <div class="featured-blog-content">
+          <span class="blog-tag">Featured Article</span>
+          <h2>How Assisted Living Can Improve Quality of Life for Seniors</h2>
+          <p>
+            Discover how personalized care, emotional support, meaningful routines, and
+            a warm community environment can help seniors live with greater comfort,
+            dignity, and joy.
+          </p>
+          <a href="../blo/qualityof life.html" class="read-btn">Read Full Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-grid-section">
+    <div class="content-container">
+      <div class="section-heading">
+        <h2>Latest Articles</h2>
+        <p>Helpful reads for families, seniors, and caregivers.</p>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+
+        <!-- Card 1 -->
+        <article class="blog-card" data-category="care">
+          <div class="blog-card-image">
+            <img src="../images/blog-2.jpg" alt="Medication support" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Care</span>
+            <h3>Why Medication Management Matters in Senior Living</h3>
+            <p>
+              Learn how structured medication support improves safety, consistency,
+              and peace of mind for residents and families.
+            </p>
+            <a href="../blo/madication.html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card" data-category="wellness">
+          <div class="blog-card-image">
+            <img src="../images/blog-3.jpg" alt="Healthy aging" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Wellness</span>
+            <h3>Healthy Aging: Daily Habits That Support Senior Wellness</h3>
+            <p>
+              From mobility to hydration and sleep, discover practical habits that
+              help older adults stay healthier every day.
+            </p>
+            <a href="../blo/health.html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card" data-category="family">
+          <div class="blog-card-image">
+            <img src="../images/blog-4.jpg" alt="Family communication" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Family</span>
+            <h3>Helping Families Stay Connected in Senior Care Communities</h3>
+            <p>
+              Explore meaningful ways families can remain emotionally connected and
+              involved in daily care and life updates.
+            </p>
+            <a href="../blo/family.html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card" data-category="recovery">
+          <div class="blog-card-image">
+            <img src="../images/blog-5.jpg" alt="Recovery support" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Recovery</span>
+            <h3>Recovery After Surgery: What Seniors Need Most</h3>
+            <p>
+              Understand the role of therapy, mobility support, nutrition, and emotional
+              reassurance during recovery.
+            </p>
+            <a href="../blo/recovery.html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card" data-category="lifestyle">
+          <div class="blog-card-image">
+            <img src="../images/blog-6.jpg" alt="Dining and lifestyle" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Lifestyle</span>
+            <h3>Dining, Comfort & Daily Joy in Assisted Living</h3>
+            <p>
+              See how food, housekeeping, and thoughtful routines can improve the
+              daily experience for seniors.
+            </p>
+            <a href="../blo/dining .html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="blog-card" data-category="wellness">
+          <div class="blog-card-image">
+            <img src="../images/blog-7.jpg" alt="Mental wellness" />
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-category">Wellness</span>
+            <h3>Emotional Well-Being in Later Life: Why It Matters</h3>
+            <p>
+              Learn why companionship, routine, and purposeful activity are important
+              for emotional health in older adults.
+            </p>
+            <a href="../blo/emotional.html" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="no-results" id="noResults">
+        <p>No blog articles found. Try another keyword or category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="blog-newsletter">
+    <div class="content-container">
+      <div class="newsletter-card">
+        <div class="newsletter-text">
+          <h2>Stay Updated with Senior Care Insights</h2>
+          <p>
+            Receive thoughtful articles, care guidance, wellness tips, and community updates
+            directly in your inbox.
+          </p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../js/component.js"></script>
+  <script src="../global/global.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>

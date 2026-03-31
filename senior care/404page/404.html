@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Senior Care & Assisted Living</title>
+
+  <link rel="stylesheet" href="404.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Floating Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
+  <!-- Main 404 Section -->
+  <main class="error-page">
+    <div class="content-container">
+      <div class="error-card fade-up">
+
+        <div class="error-icon">
+          <i class="fas fa-house-circle-xmark"></i>
+        </div>
+
+        <span class="error-badge">Oops! Page Missing</span>
+
+        <h1>404</h1>
+        <h2>We couldn’t find the page you’re looking for</h2>
+
+        <p>
+          The page may have been moved, renamed, or no longer exists.  
+          Don’t worry — you can return to the main website or continue exploring
+          our Senior Care & Assisted Living Community.
+        </p>
+
+        <div class="error-actions">
+          <a href="../index/index2.html" class="btn btn-primary">
+            <i class="fas fa-house"></i> Back to Home
+          </a>
+
+          <button class="btn btn-secondary" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Go Back
+          </button>
+
+          <a href="../contact/contact.html" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Contact Support
+          </a>
+        </div>
+
+        <div class="help-links">
+          <a href="../about/about1.html"><i class="fas fa-circle-info"></i> About Us</a>
+          <a href="../service/service.html"><i class="fas fa-hand-holding-heart"></i> Our Services</a>
+          <a href="../admin/admin dashboard.html"><i class="fas fa-gauge-high"></i> Dashboard</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="404.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Visit | Nethra Senior Care</title>
+
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="../global/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <section class="auth-page">
+    <div class="content-container auth-grid">
+
+      <!-- Left Content -->
+      <div class="auth-info-card visit-info-card">
+        <p class="section-tag">Schedule a Personal Tour</p>
+        <h1>Book a Visit</h1>
+        <p class="auth-desc">
+          Visit our community, meet our care team, explore the amenities,
+          and experience the warmth and comfort of our assisted living environment.
+        </p>
+
+        <div class="visit-highlights">
+          <div class="highlight-box">
+            <i class="fas fa-home"></i>
+            <h4>Tour Living Spaces</h4>
+            <p>See our comfortable resident rooms and shared areas.</p>
+          </div>
+
+          <div class="highlight-box">
+            <i class="fas fa-utensils"></i>
+            <h4>Explore Dining</h4>
+            <p>Discover our nutrition-focused dining experience.</p>
+          </div>
+
+          <div class="highlight-box">
+            <i class="fas fa-heart"></i>
+            <h4>Meet the Care Team</h4>
+            <p>Talk to staff and understand our care philosophy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form -->
+      <div class="auth-form-card">
+        <div class="form-header">
+          <h2>Book Your Visit</h2>
+          <p>We’ll help you find the right care and living option.</p>
+        </div>
+
+        <form id="visitForm" class="auth-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <div class="input-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="fullName" placeholder="Enter your full name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <div class="input-wrap">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="phone" placeholder="Enter your mobile number" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="visitEmail">Email Address</label>
+            <div class="input-wrap">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="visitEmail" placeholder="Enter your email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Preferred Location</label>
+              <div class="input-wrap">
+                <i class="fas fa-map-marker-alt"></i>
+                <select id="location" required>
+                  <option value="">Select Location</option>
+                  <option>Coimbatore</option>
+                  <option>Chennai</option>
+                  <option>Bangalore</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="visitDate">Preferred Date</label>
+              <div class="input-wrap">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" id="visitDate" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="visitTime">Preferred Time</label>
+              <div class="input-wrap">
+                <i class="fas fa-clock"></i>
+                <select id="visitTime" required>
+                  <option value="">Select Time</option>
+                  <option>10:00 AM</option>
+                  <option>11:30 AM</option>
+                  <option>1:00 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:30 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="visitType">Visit Type</label>
+              <div class="input-wrap">
+                <i class="fas fa-users"></i>
+                <select id="visitType" required>
+                  <option value="">Select Visit Type</option>
+                  <option>Personal Tour</option>
+                  <option>Family Consultation</option>
+                  <option>Care Discussion</option>
+                  <option>Recovery / Rehab Inquiry</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Notes</label>
+            <div class="input-wrap textarea-wrap">
+              <i class="fas fa-comment-dots"></i>
+              <textarea id="message" rows="5" placeholder="Tell us about your needs, questions, or preferences..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-btn full-btn">Confirm Visit</button>
+
+          <p class="auth-footer-text">
+            Already have a family account?
+            <a href="signin.html" class="text-link">Sign In</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="auth.js"></script>
+</body>
+</html>
