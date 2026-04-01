@@ -99,6 +99,20 @@ body {
   max-width: 620px;
   color: rgba(255,255,255,0.92);
 }
+.back-btn {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
 
 /* =========================
    MAIN
