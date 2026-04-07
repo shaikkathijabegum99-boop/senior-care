@@ -30,9 +30,7 @@ body.dark-theme {
     --shadow-soft: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* =========================
-   HERO
-========================= */
+
 .blog-detail-hero {
     position: relative;
     min-height: 520px;
@@ -118,9 +116,7 @@ body.dark-theme {
     margin-right: 8px;
 }
 
-/* =========================
-   MAIN LAYOUT
-========================= */
+
 .blog-detail-section {
     padding: 80px 20px;
     background: var(--bg-main);
@@ -205,9 +201,7 @@ body.dark-theme {
     line-height: 1.8;
 }
 
-/* =========================
-   QUOTE / HIGHLIGHT
-========================= */
+
 .quote-box {
     background: rgba(242, 155, 75, 0.12);
     border-left: 4px solid var(--brand-orange);
@@ -242,9 +236,6 @@ body.dark-theme {
     margin-bottom: 12px;
 }
 
-/* =========================
-   BENEFITS GRID
-========================= */
 .benefit-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -277,9 +268,7 @@ body.dark-theme {
     font-size: 0.95rem;
 }
 
-/* =========================
-   CTA
-========================= */
+
 .blog-cta-box {
     text-align: center;
     background: linear-gradient(135deg, rgba(139,171,125,0.14), rgba(242,155,75,0.12));
@@ -327,9 +316,6 @@ body.dark-theme {
     color: #fff;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
 .blog-sidebar {
     display: flex;
     flex-direction: column;
@@ -409,11 +395,7 @@ body.dark-theme {
     transform: translateY(-2px);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-/* Mobile: < 640px */
 @media (max-width: 639px) {
     .blog-detail-hero,
     .blog-detail-overlay {
@@ -464,7 +446,7 @@ body.dark-theme {
     }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
     .hero-title {
         font-size: 2.7rem;
@@ -483,7 +465,7 @@ body.dark-theme {
     }
 }
 
-/* Desktop: 1024px - 1280px */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
     .hero-title {
         font-size: 3rem;
@@ -494,7 +476,7 @@ body.dark-theme {
     }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
     .content-container {
         max-width: 1240px;

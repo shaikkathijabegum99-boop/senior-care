@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* =========================
-     THEME TOGGLE
-  ========================= */
+
   const themeToggle = document.getElementById("themeToggle");
   const themeMiniToggle = document.getElementById("themeMiniToggle");
   const savedTheme = localStorage.getItem("dashboard-theme") || "light";
@@ -45,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleTheme();
   });
 
-  /* =========================
-     SIDEBAR TOGGLE
-  ========================= */
   const menuToggle = document.getElementById("menuToggle");
   const sidebarClose = document.getElementById("sidebarClose");
   const sidebar = document.getElementById("sidebar");
@@ -71,9 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* =========================
-     DROPDOWNS
-  ========================= */
   const notifBtn = document.getElementById("notifBtn");
   const notifDropdown = document.getElementById("notifDropdown");
   const profileBtn = document.getElementById("profileBtn");
@@ -96,9 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     profileDropdown?.classList.remove("show");
   });
 
-  /* =========================
-     SCROLL REVEAL
-  ========================= */
+
   const revealItems = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver(
@@ -114,9 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealItems.forEach((item) => observer.observe(item));
 
-  /* =========================
-     ACTIVE SIDEBAR LINKS
-  ========================= */
+
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
 
@@ -141,9 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", activateLink);
   activateLink();
 
-  /* =========================
-     SETTINGS TOGGLE BUTTONS
-  ========================= */
+
   document.querySelectorAll(".toggle-switch").forEach((toggle) => {
     if (toggle.id !== "themeMiniToggle") {
       toggle.addEventListener("click", () => {

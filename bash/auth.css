@@ -1,6 +1,4 @@
-/* ==========================================
-   ROOT THEME VARIABLES
-========================================== */
+
 :root {
     --bg-main: #f7f2ea;
     --bg-card: rgba(255, 255, 255, 0.92);
@@ -37,9 +35,6 @@ body.dark-theme {
     --input-border: #3a3027;
 }
 
-/* ==========================================
-   BASE
-========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -62,9 +57,7 @@ body.dark-theme {
     width: min(1200px, 92%);
     margin: 0 auto;
 }
-/* =========================
-   BACK TO HOME BUTTON
-========================= */
+
 .page-top-nav {
   padding: 90px 0 20px;
   background: transparent;
@@ -94,14 +87,14 @@ body.dark-mode .back-home-btn {
   color: #fff;
 }
 
-/* Tablet */
+
 @media (min-width: 640px) and (max-width: 1023px) {
   .page-top-nav {
     padding: 95px 0 18px;
   }
 }
 
-/* Mobile */
+
 @media (max-width: 639px) {
   .page-top-nav {
     padding: 84px 0 16px;
@@ -112,9 +105,7 @@ body.dark-mode .back-home-btn {
     font-size: 14px;
   }
 }
-/* ==========================================
-   THEME TOGGLE
-========================================== */
+
 .theme-toggle {
     position: fixed;
     top: 24px;
@@ -137,9 +128,6 @@ body.dark-mode .back-home-btn {
     transform: translateY(-3px) scale(1.03);
 }
 
-/* ==========================================
-   PAGE WRAPPER
-========================================== */
 .auth-page {
     min-height: 100vh;
     display: flex;
@@ -154,9 +142,7 @@ body.dark-mode .back-home-btn {
     align-items: stretch;
 }
 
-/* ==========================================
-   LEFT INFO CARD
-========================================== */
+
 .auth-info-card,
 .auth-form-card {
     background: var(--bg-card);
@@ -210,7 +196,7 @@ body.dark-mode .back-home-btn {
     margin-bottom: 30px;
 }
 
-/* Features */
+
 .auth-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -239,7 +225,7 @@ body.dark-mode .back-home-btn {
     font-size: 1rem;
 }
 
-/* Visit highlights */
+
 .visit-highlights {
     display: grid;
     gap: 18px;
@@ -276,9 +262,7 @@ body.dark-mode .back-home-btn {
     line-height: 1.7;
 }
 
-/* ==========================================
-   FORM CARD
-========================================== */
+
 .form-header {
     margin-bottom: 28px;
 }
@@ -406,7 +390,7 @@ body.dark-mode .back-home-btn {
     text-decoration: underline;
 }
 
-/* Buttons */
+
 .primary-btn,
 .secondary-btn {
     height: 56px;
@@ -448,7 +432,7 @@ body.dark-mode .back-home-btn {
     margin-right: 10px;
 }
 
-/* Divider */
+
 .divider {
     display: flex;
     align-items: center;
@@ -469,7 +453,7 @@ body.dark-mode .back-home-btn {
     font-size: 0.9rem;
 }
 
-/* Footer text */
+
 .auth-footer-text {
     text-align: center;
     color: var(--text-muted);
@@ -477,11 +461,6 @@ body.dark-mode .back-home-btn {
     margin-top: 6px;
 }
 
-/* ==========================================
-   RESPONSIVE BREAKPOINTS
-========================================== */
-
-/* Mobile: < 640px */
 @media (max-width: 639px) {
     .auth-page {
         padding: 70px 0 50px;
@@ -527,7 +506,7 @@ body.dark-mode .back-home-btn {
     }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
     .auth-grid {
         grid-template-columns: 1fr;
@@ -543,14 +522,13 @@ body.dark-mode .back-home-btn {
     }
 }
 
-/* Desktop: 1024px - 1280px */
 @media (min-width: 1024px) and (max-width: 1280px) {
     .auth-grid {
         grid-template-columns: 1.05fr 1fr;
     }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
     .content-container {
         width: min(1280px, 90%);

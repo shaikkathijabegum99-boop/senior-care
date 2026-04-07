@@ -21,7 +21,7 @@ body {
   color: var(--service-text);
 }
 
-/* HERO */
+
 .service-detail-hero {
   position: relative;
   min-height: 460px;
@@ -124,7 +124,6 @@ body {
   font-size: 2.6rem;
 }
 
-/* OVERVIEW */
 .overview-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -208,7 +207,6 @@ body {
   line-height: 1.7;
 }
 
-/* BENEFITS */
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -252,7 +250,7 @@ body {
   font-size: 1.15rem;
 }
 
-/* FAMILY */
+
 .family-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -312,7 +310,7 @@ body {
   color: var(--service-muted);
 }
 
-/* CTA */
+
 .cta-box {
   text-align: center;
 
@@ -332,11 +330,7 @@ body {
   line-height: 1.7;
 }
 
-/* ==========================================
-   RESPONSIVE BREAKPOINTS
-   ========================================== */
 
-/* Mobile: < 640px */
 @media (max-width: 639px) {
   .service-detail-hero,
   .service-detail-overlay {
@@ -383,7 +377,7 @@ body {
   }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
   .hero-content h1 {
     font-size: 2.8rem;
@@ -400,7 +394,6 @@ body {
   }
 }
 
-/* Desktop: 1024px - 1280px */
 @media (min-width: 1024px) and (max-width: 1280px) {
   .hero-content h1 {
     font-size: 3.1rem;
@@ -411,7 +404,7 @@ body {
   }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
   .content-container {
     max-width: 1220px;
@@ -465,9 +458,7 @@ body.dark-theme {
     --shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* =========================
-   BASE
-========================= */
+
 body {
     background: var(--bg);
     color: var(--text-main);
@@ -487,9 +478,7 @@ body {
     color: var(--text-main);
 }
 
-/* =========================
-   HERO
-========================= */
+
 .service-hero {
     position: relative;
     height: 550px;
@@ -524,9 +513,7 @@ body {
 body.dark-theme .service-hero-overlay {
     background: linear-gradient(rgba(8, 8, 8, 0.82), rgba(8, 8, 8, 0.82));
 }
-/* =========================
-   SERVICE HERO - DARK MODE TEXT
-========================= */
+
 body.dark-theme .service-hero-overlay {
     background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
 }
@@ -583,9 +570,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     background: rgba(255,255,255,0.2);
 }
 
-/* =========================
-   OVERVIEW
-========================= */
+
 .service-overview {
     padding: 90px 0;
     background: var(--bg);
@@ -627,9 +612,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     display: block;
 }
 
-/* =========================
-   INCLUDED SECTION
-========================= */
+
 .included-section {
     padding: 90px 0;
     background: var(--bg-soft);
@@ -673,9 +656,6 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     color: var(--text-desc);
 }
 
-/* =========================
-   WHY SECTION
-========================= */
 .why-section {
     padding: 90px 0;
     background: var(--bg);
@@ -698,9 +678,6 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     box-shadow: var(--shadow);
 }
 
-/* =========================
-   CTA
-========================= */
 .cta-section {
     padding: 90px 0;
     background: linear-gradient(135deg, #2f6f57, #3f8a6e);
@@ -755,11 +732,8 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     background: rgba(255,255,255,0.08);
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
-/* Mobile: < 640px */
+
 @media (max-width: 639px) {
     .service-hero {
         height: 340px;
@@ -801,7 +775,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -823,7 +797,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     }
 }
 
-/* Desktop: 1024px - 1280px */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
     .hero-content h1 {
         font-size: 3.5rem;
@@ -834,7 +808,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
     }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
     .hero-content h1 {
         font-size: 4.2rem;
@@ -855,9 +829,7 @@ body.dark-theme .hero-copy p:not(.eyebrow) {
 
 
 
-/* =========================
-   DARK MODE
-========================= */
+
 body.dark-theme .service-detail-hero {
     background: linear-gradient(rgba(44, 44, 44, 0.72), rgba(10, 10, 10, 0.72)),
                 url('../images/home0.jpg') center/cover no-repeat;
@@ -876,9 +848,7 @@ body.dark-theme .service-detail-hero .hero-desc {
     color: rgba(255, 255, 255, 0.88);
 }
 
-/* =========================
-   MOBILE: < 640px
-========================= */
+
 @media (max-width: 639px) {
     .service-detail-hero {
         min-height: 68vh;
@@ -906,9 +876,7 @@ body.dark-theme .service-detail-hero .hero-desc {
     }
 }
 
-/* =========================
-   TABLET: 640px - 1024px
-========================= */
+
 @media (min-width: 640px) and (max-width: 1024px) {
     .service-detail-hero h1 {
         font-size: 3rem;
@@ -919,18 +887,13 @@ body.dark-theme .service-detail-hero .hero-desc {
     }
 }
 
-/* =========================
-   DESKTOP: 1024px - 1280px
-========================= */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
     .service-detail-hero h1 {
         font-size: 3.5rem;
     }
 }
 
-/* =========================
-   LARGE: > 1280px
-========================= */
 @media (min-width: 1281px) {
     .service-detail-hero h1 {
         font-size: 4rem;

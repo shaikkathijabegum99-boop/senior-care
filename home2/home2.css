@@ -21,9 +21,6 @@
   --radius-sm: 18px;
 }
 
-/* =========================
-   DARK THEME
-========================= */
 body.dark-theme {
   --bg-main: #16130f;
   --bg-soft: #1d1813;
@@ -38,9 +35,6 @@ body.dark-theme {
   --shadow-hover: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
-/* =========================
-   RESET + GLOBAL
-========================= */
 * {
   margin: 0;
   padding: 0;
@@ -105,9 +99,6 @@ p {
   text-transform: uppercase;
 }
 
-/* =========================
-   BUTTONS
-========================= */
 .primary-btn,
 .secondary-btn,
 .text-link {
@@ -164,9 +155,6 @@ p {
   letter-spacing: 0.3px;
 }
 
-/* =========================
-   HERO
-========================= */
 .home2-hero {
   position: relative;
   background: url("../images/home2-banner.jpg") center/cover no-repeat;
@@ -190,7 +178,6 @@ p {
   transition: background 0.35s ease;
 }
 
-/* DARK MODE HERO OVERLAY */
 body.dark-theme .hero-overlay {
   background: linear-gradient(
     90deg,
@@ -261,7 +248,6 @@ body.dark-theme .hero-badge {
   margin-bottom: 32px;
 }
 
-/* DARK MODE HERO TEXT */
 body.dark-theme .hero-text h1 {
   color: #fffaf4;
 }
@@ -359,9 +345,6 @@ body.dark-theme .floating-card p {
   color: #d4c6b7;
 }
 
-/* =========================
-   WELCOME
-========================= */
 .welcome-section {
   background: var(--bg-main);
   padding: 90px 0;
@@ -401,9 +384,7 @@ body.dark-theme .floating-card p {
   color: var(--text-secondary);
 }
 
-/* =========================
-   WHY CHOOSE
-========================= */
+
 .why-choose-section {
   background: var(--bg-soft);
   padding: 90px 0;
@@ -458,9 +439,7 @@ body.dark-theme .floating-card p {
   color: var(--text-secondary);
 }
 
-/* =========================
-   LIFESTYLE
-========================= */
+
 .lifestyle-section {
   background: var(--bg-main);
   padding: 90px 0;
@@ -516,9 +495,7 @@ body.dark-theme .floating-card p {
   color: #fff;
 }
 
-/* =========================
-   DASHBOARD
-========================= */
+
 .dashboard-section {
   background: var(--bg-soft);
   padding: 90px 0;
@@ -637,9 +614,6 @@ body.dark-theme .floating-card p {
   color: var(--text-secondary);
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
 .testimonials-section {
   background: var(--bg-main);
   padding: 90px 0;
@@ -679,9 +653,7 @@ body.dark-theme .floating-card p {
   margin-bottom: 0;
 }
 
-/* =========================
-   CTA
-========================= */
+
 .cta-section {
   background: var(--bg-soft);
   padding: 90px 0;
@@ -751,9 +723,7 @@ body.dark-theme .floating-card p {
   color: var(--primary);
 }
 
-/* =========================
-   REVEAL ANIMATION
-========================= */
+
 .reveal {
   opacity: 0;
   transform: translateY(45px);
@@ -765,9 +735,7 @@ body.dark-theme .floating-card p {
   transform: translateY(0);
 }
 
-/* =========================
-   KEYFRAMES
-========================= */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -779,11 +747,7 @@ body.dark-theme .floating-card p {
   }
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
 
-/* Mobile: < 640px */
 @media (max-width: 639px) {
   .hero-grid,
   .welcome-grid,
@@ -853,7 +817,7 @@ body.dark-theme .floating-card p {
   }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
   .hero-grid,
   .welcome-grid,
@@ -892,7 +856,7 @@ body.dark-theme .floating-card p {
   }
 }
 
-/* Desktop: 1024px - 1280px */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .content-container {
     width: min(1120px, 92%);
@@ -907,7 +871,7 @@ body.dark-theme .floating-card p {
   }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
   .content-container {
     width: min(1240px, 90%);

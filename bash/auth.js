@@ -1,6 +1,4 @@
-// =============================
-// THEME TOGGLE
-// =============================
+
 const themeToggle = document.getElementById("themeToggle");
 const body = document.body;
 
@@ -26,9 +24,7 @@ if (themeToggle) {
   });
 }
 
-// =============================
-// PASSWORD TOGGLE (Sign In Page)
-// =============================
+
 const togglePassword = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");
 
@@ -44,9 +40,6 @@ if (togglePassword && passwordInput) {
   });
 }
 
-// =============================
-// SIGN IN FORM
-// =============================
 const signinForm = document.getElementById("signinForm");
 
 if (signinForm) {
@@ -67,9 +60,6 @@ if (signinForm) {
   });
 }
 
-// =============================
-// BOOK VISIT FORM
-// =============================
 const visitForm = document.getElementById("visitForm");
 
 if (visitForm) {

@@ -60,7 +60,6 @@ img { display: block; max-width: 100%; }
   min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
   background: var(--card-bg);
   border-right: 1px solid var(--border);
@@ -164,7 +163,7 @@ img { display: block; max-width: 100%; }
   transform: translateX(4px);
 }
 
-/* MAIN */
+
 .dashboard-main {
   padding: 26px;
 }
@@ -367,7 +366,7 @@ img { display: block; max-width: 100%; }
   color: var(--accent-2);
 }
 
-/* CONTENT */
+
 .dashboard-content {
   display: grid;
   gap: 28px;
@@ -517,7 +516,7 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
 }
 
-/* TABLE */
+
 .table-wrap {
   overflow-x: auto;
 }
@@ -561,7 +560,7 @@ img { display: block; max-width: 100%; }
   color: var(--accent);
 }
 
-/* SMALL BOXES */
+
 .mini-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -585,7 +584,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.8;
 }
 
-/* CARE */
+
 .care-list {
   display: grid;
   gap: 16px;
@@ -620,7 +619,6 @@ img { display: block; max-width: 100%; }
   line-height: 1.7;
 }
 
-/* ACTIVITY */
 .activity-list {
   display: grid;
   gap: 16px;
@@ -642,7 +640,7 @@ img { display: block; max-width: 100%; }
   color: var(--accent);
 }
 
-/* MESSAGES */
+
 .message-list {
   display: grid;
   gap: 18px;
@@ -683,7 +681,7 @@ img { display: block; max-width: 100%; }
   color: var(--text-soft);
 }
 
-/* PHOTOS */
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -701,7 +699,7 @@ img { display: block; max-width: 100%; }
   transform: scale(1.04);
 }
 
-/* REPORTS */
+
 .report-bars {
   display: grid;
   gap: 18px;
@@ -729,7 +727,7 @@ img { display: block; max-width: 100%; }
   border-radius: 999px;
 }
 
-/* SETTINGS */
+
 .settings-list {
   display: grid;
   gap: 18px;
@@ -776,7 +774,6 @@ img { display: block; max-width: 100%; }
   left: 28px;
 }
 
-/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(35px);
@@ -788,7 +785,7 @@ img { display: block; max-width: 100%; }
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 1199px) {
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);

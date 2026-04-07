@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth reveal animation on scroll
+ 
   const revealItems = document.querySelectorAll(
     ".mvv-card, .choose-card, .stat-card, .highlight-item, .cta-box"
   );
@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   smoothHoverTilt();
 });
 
-// =========================
-// REVEAL ON SCROLL
-// =========================
+
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -52,9 +50,7 @@ function revealOnScroll() {
   checkReveal();
 }
 
-// =========================
-// COUNTER ANIMATION
-// =========================
+
 function animateCounters() {
   const counters = document.querySelectorAll(".counter");
   let started = false;
@@ -91,9 +87,7 @@ function animateCounters() {
   startCounters();
 }
 
-// =========================
-// LIGHT TILT HOVER EFFECT
-// =========================
+
 function smoothHoverTilt() {
   const cards = document.querySelectorAll(".mvv-card, .choose-card, .stat-card, .highlight-item, .cta-box");
 

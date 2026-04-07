@@ -1,6 +1,4 @@
-/* =========================
-   ROOT COLORS
-========================= */
+
 :root {
     --primary: #8bab7d;
     --primary-dark: #6f8f63;
@@ -14,9 +12,7 @@
     --header-bg: rgba(255, 255, 255, 0.96);
 }
 
-/* =========================
-   DARK THEME
-========================= */
+
 body.dark-theme {
     --secondary: #1b1712;
     --white: #111111;
@@ -27,9 +23,7 @@ body.dark-theme {
     --header-bg: rgba(20, 18, 15, 0.96);
 }
 
-/* =========================
-   RESET
-========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -57,9 +51,6 @@ ul {
     list-style: none;
 }
 
-/* =========================
-   HEADER
-========================= */
 .site-header.scrolled {
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     border-bottom: 1px solid var(--border-light);
@@ -87,9 +78,6 @@ ul {
  position:relative;
 }
 
-/* =========================
-   LOGO
-========================= */
 .logo-box {
     display: flex;
     align-items: center;
@@ -124,9 +112,7 @@ ul {
     letter-spacing: 1.5px;
 }
 
-/* =========================
-   NAV LINKS
-========================= */
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -152,9 +138,7 @@ ul {
     color: var(--primary);
 }
 
-/* =========================
-   DROPDOWN
-========================= */
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -192,9 +176,7 @@ ul {
     transform: translateY(0);
 }
 
-/* =========================
-   ACTIONS
-========================= */
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -230,9 +212,6 @@ ul {
     transform: translateY(-2px);
 }
 
-/* =========================
-   HAMBURGER
-========================= */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -259,9 +238,7 @@ ul {
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* =========================
-   RTL SUPPORT
-========================= */
+
 html[dir="rtl"] body {
     direction: rtl;
     text-align: right;
@@ -307,9 +284,7 @@ html[dir="rtl"] .header-auth-icons {
     flex-direction: row-reverse;
 }
 
-/* =========================
-   MOBILE < 640px
-========================= */
+
 @media (max-width: 639px) {
     .nav-container {
         padding: 14px 16px;
@@ -417,9 +392,6 @@ html[dir="rtl"] .header-auth-icons {
     }
 }
 
-/* =========================
-   TABLET 640px - 1023px
-========================= */
 @media (min-width: 640px) and (max-width: 1023px) {
     .nav-container {
         padding: 16px 20px;
@@ -490,9 +462,7 @@ html[dir="rtl"] .header-auth-icons {
     }
 }
 
-/* =========================
-   DESKTOP 1024px - 1280px
-========================= */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
     .nav-container {
         max-width: 1120px;
@@ -507,9 +477,7 @@ html[dir="rtl"] .header-auth-icons {
     }
 }
 
-/* =========================
-   LARGE > 1280px
-========================= */
+
 @media (min-width: 1281px) {
     .nav-container {
         max-width: 1280px;

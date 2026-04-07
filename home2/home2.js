@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth reveal animation
+
   const revealItems = document.querySelectorAll(
     ".why-card, .lifestyle-card, .testimonial-card, .dashboard-card, .welcome-image, .welcome-content"
   );

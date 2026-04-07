@@ -35,9 +35,7 @@ body.dark-theme {
   --hero-overlay: linear-gradient(to right, rgba(5, 5, 5, 0.82)100%, rgba(5, 5, 5, 0.55));
 }
 
-/* =========================
-   BASE
-========================= */
+
 body {
   background: var(--bg-main);
   color: var(--text-main);
@@ -49,9 +47,7 @@ body {
   margin: 0 auto;padding:100px;
 }
 
-/* =========================
-   HERO
-========================= */
+
 .contact-hero {
   position: relative;
   min-height: 420px;
@@ -114,9 +110,7 @@ body {
     background: rgba(255,255,255,0.2);
 }
 
-/* =========================
-   MAIN
-========================= */
+
 .contact-main-section {
   padding: 80px 0;
   background: var(--bg-main);
@@ -138,9 +132,6 @@ body {
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* =========================
-   FORM CARD
-========================= */
 .contact-form-card {
   padding: 40px;
 }
@@ -268,9 +259,7 @@ body.dark-theme .form-message {
   color: #b8d9b2;
 }
 
-/* =========================
-   INFO PANEL
-========================= */
+
 .contact-info-panel {
   overflow: hidden;
 }
@@ -352,9 +341,7 @@ body.dark-theme .info-item a:hover {
   color: #c9e4c3;
 }
 
-/* =========================
-   SOCIAL
-========================= */
+
 .social-box {
   padding: 20px 26px 30px;
 }
@@ -389,9 +376,7 @@ body.dark-theme .info-item a:hover {
   transform: translateY(-3px);
 }
 
-/* =========================
-   MAP
-========================= */
+
 .map-section {
   padding: 0 0 90px;
   background: var(--bg-main);
@@ -409,11 +394,6 @@ body.dark-theme .map-wrapper {
   background: var(--bg-card);
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
-
-/* Mobile: < 640px */
 @media (max-width: 639px) {
   .contact-hero {
     min-height: 340px;
@@ -490,7 +470,7 @@ body.dark-theme .map-wrapper {
   }
 }
 
-/* Desktop: 1024px - 1280px */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .content-container {
     width: min(1100px, 92%);
@@ -501,7 +481,6 @@ body.dark-theme .map-wrapper {
   }
 }
 
-/* Large: > 1280px */
 @media (min-width: 1281px) {
   .content-container {
     width: min(1240px, 90%);

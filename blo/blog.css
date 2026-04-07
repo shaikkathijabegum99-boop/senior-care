@@ -1,8 +1,4 @@
-/* =========================
-   BLOG PAGE - NETHRA CARE
-   ========================= */
 
-/* ---------- ROOT ---------- */
 :root {
   --primary: #8bab7d;
   --primary-dark: #6e8f61;
@@ -28,13 +24,11 @@ body.dark-theme {
   --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* ---------- GLOBAL ---------- */
 body {
   background: var(--bg-main);
   color: var(--text-main);
 }
 
-/* ---------- HERO ---------- */
 .blog-hero {
   position: relative;
   min-height: 430px;
@@ -82,7 +76,7 @@ body {
   color: rgba(255,255,255,0.92);
 }
 
-/* ---------- CONTROLS ---------- */
+
 .blog-controls-section {
   padding: 50px 20px 20px;
   background: var(--bg-main);
@@ -150,7 +144,7 @@ body {
   border-color: var(--primary);
 }
 
-/* ---------- FEATURED ---------- */
+
 .featured-blog-section {
   padding: 30px 20px 20px;
 }
@@ -223,7 +217,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ---------- BLOG GRID ---------- */
+
 .blog-grid-section {
   padding: 60px 20px 90px;
 }
@@ -322,7 +316,6 @@ body {
   gap: 12px;
 }
 
-/* ---------- NO RESULTS ---------- */
 .no-results {
   display: none;
   text-align: center;
@@ -331,7 +324,6 @@ body {
   font-size: 1rem;
 }
 
-/* ---------- NEWSLETTER ---------- */
 .blog-newsletter {
   padding: 0 20px 90px;
 }
@@ -399,12 +391,6 @@ body.dark-theme .newsletter-form input {
 .newsletter-form button:hover {
   background: var(--primary-dark);
 }
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-   ========================= */
-
-/* Mobile: < 640px */
 @media (max-width: 639px) {
   .blog-hero,
   .blog-hero-overlay {
@@ -473,7 +459,7 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Tablet: 640px - 1024px */
+
 @media (min-width: 640px) and (max-width: 1023px) {
   .hero-content h1 {
     font-size: 2.7rem;
@@ -502,7 +488,6 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Desktop: 1024px - 1280px */
 @media (min-width: 1024px) and (max-width: 1280px) {
   .content-container {
     max-width: 1080px;
@@ -514,7 +499,7 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
   .content-container {
     max-width: 1240px;
@@ -532,11 +517,6 @@ body.dark-theme .newsletter-form input {
 
 
 
-/* =========================
-   BLOG PAGE - NETHRA CARE
-========================= */
-
-/* ---------- ROOT ---------- */
 :root {
   --primary: #8bab7d;
   --primary-dark: #6e8f61;
@@ -566,7 +546,6 @@ body.dark-theme {
   --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* ---------- GLOBAL ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -593,7 +572,7 @@ a {
   margin: 0 auto;
 }
 
-/* ---------- HERO ---------- */
+
 .blog-hero {
   position: relative;
   min-height: 430px;
@@ -662,7 +641,7 @@ body.dark-theme .hero-badge {
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* ---------- CONTROLS ---------- */
+
 .blog-controls-section {
   padding: 50px 20px 20px;
   background: var(--bg-main);
@@ -739,7 +718,7 @@ body.dark-theme .search-box input {
   border-color: var(--primary);
 }
 
-/* ---------- FEATURED ---------- */
+
 .featured-blog-section {
   padding: 30px 20px 20px;
 }
@@ -834,7 +813,7 @@ body.dark-theme .blog-tag {
   transform: translateY(-3px);
 }
 
-/* ---------- BLOG GRID ---------- */
+
 .blog-grid-section {
   padding: 60px 20px 90px;
 }
@@ -933,7 +912,7 @@ body.dark-theme .blog-tag {
   gap: 12px;
 }
 
-/* ---------- NO RESULTS ---------- */
+
 .no-results {
   display: none;
   text-align: center;
@@ -942,7 +921,7 @@ body.dark-theme .blog-tag {
   font-size: 1rem;
 }
 
-/* ---------- NEWSLETTER ---------- */
+
 .blog-newsletter {
   padding: 0 20px 90px;
 }
@@ -1026,11 +1005,6 @@ body.dark-theme .newsletter-form input {
   transform: translateY(-2px);
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
-
-/* Mobile: < 640px */
 @media (max-width: 639px) {
   .blog-hero,
   .blog-hero-overlay {
@@ -1107,7 +1081,6 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Tablet: 640px - 1024px */
 @media (min-width: 640px) and (max-width: 1023px) {
   .hero-content h1 {
     font-size: 2.7rem;
@@ -1136,7 +1109,7 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Desktop: 1024px - 1280px */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .content-container {
     width: min(1080px, 92%);
@@ -1147,7 +1120,7 @@ body.dark-theme .newsletter-form input {
   }
 }
 
-/* Large: > 1280px */
+
 @media (min-width: 1281px) {
   .content-container {
     width: min(1240px, 90%);
@@ -1165,17 +1138,13 @@ body.dark-theme .newsletter-form input {
 
 
 
-/* =========================================
-   DARK MODE - ALL BLOG SECTIONS FIX
-   Add this at the VERY BOTTOM of your CSS
-========================================= */
+
 
 body.dark-theme {
   background: var(--bg-main);
   color: var(--text-main);
 }
 
-/* ---------- HERO ---------- */
 body.dark-theme .blog-hero-overlay {
   background: linear-gradient(
     to right,
@@ -1199,7 +1168,7 @@ body.dark-theme .hero-badge {
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
 }
 
-/* ---------- CONTROLS SECTION ---------- */
+
 body.dark-theme .blog-controls-section {
   background: var(--bg-main);
 }
@@ -1242,7 +1211,6 @@ body.dark-theme .filter-btn.active {
   border-color: var(--primary);
 }
 
-/* ---------- FEATURED BLOG ---------- */
 body.dark-theme .featured-blog-section {
   background: var(--bg-main);
 }
@@ -1266,7 +1234,7 @@ body.dark-theme .blog-tag {
   color: #f0bb84;
 }
 
-/* ---------- BLOG GRID ---------- */
+
 body.dark-theme .blog-grid-section {
   background: var(--bg-main);
 }
@@ -1305,12 +1273,11 @@ body.dark-theme .card-link:hover {
   color: #b8d7af;
 }
 
-/* ---------- NO RESULTS ---------- */
+
 body.dark-theme .no-results {
   color: var(--text-muted);
 }
 
-/* ---------- NEWSLETTER ---------- */
 body.dark-theme .blog-newsletter {
   background: var(--bg-main);
 }
@@ -1353,7 +1320,7 @@ body.dark-theme .newsletter-form button:hover {
   background: var(--primary-dark);
 }
 
-/* ---------- GENERIC SECTION SAFETY ---------- */
+
 body.dark-theme section {
   background-color: transparent;
 }
@@ -1366,7 +1333,7 @@ body.dark-theme .newsletter-card {
   transition: all 0.35s ease;
 }
 
-/* ---------- EXTRA DARK POLISH ---------- */
+
 body.dark-theme .blog-card:hover,
 body.dark-theme .featured-blog-card:hover,
 body.dark-theme .blog-controls-card:hover {

@@ -18,9 +18,6 @@
   --transition: all 0.35s ease;
 }
 
-/* =========================
-   DARK THEME VARIABLES
-========================= */
 body.dark-theme {
   --bg-cream: #17130e;
   --bg-light: #1f1a14;
@@ -33,10 +30,6 @@ body.dark-theme {
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
   --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
-
-/* =========================
-   GLOBAL
-========================= */
 * {
   margin: 0;
   padding: 0;
@@ -107,9 +100,6 @@ a {
   color: var(--text-desc);
 }
 
-/* =========================
-   BADGE
-========================= */
 .section-badge {
   display: inline-flex;
   align-items: center;
@@ -137,9 +127,7 @@ body.dark-theme .section-badge {
   box-shadow: 0 10px 28px rgba(0,0,0,0.28);
 }
 
-/* =========================
-   BUTTONS
-========================= */
+
 .primary-btn,
 .secondary-btn {
   display: inline-flex;
@@ -180,9 +168,6 @@ body.dark-theme .secondary-btn {
   color: #fff;
 }
 
-/* =========================
-   BACK TO HOME BUTTON
-========================= */
 .back-home-wrap {
   margin-top: 22px;
 }
@@ -201,9 +186,6 @@ body.dark-theme .secondary-btn {
   transform: translateX(-4px);
 }
 
-/* =========================
-   ABOUT HERO
-========================= */
 .about-hero {
   min-height: 88vh;
   position: relative;
@@ -257,7 +239,7 @@ body.dark-theme .secondary-btn {
   flex-wrap: wrap;
 }
 
-/* DARK MODE HERO */
+
 body.dark-theme .about-hero {
   background: linear-gradient(rgba(8, 8, 8, 0.68), rgba(8, 8, 8, 0.68)),
               url('../images/about-hero.jpg') center/cover no-repeat;
@@ -271,9 +253,7 @@ body.dark-theme .about-hero-content p {
   color: rgba(242, 239, 233, 0.88);
 }
 
-/* =========================
-   INTRO
-========================= */
+
 .about-intro {
   background: var(--bg-cream);
 }
@@ -360,9 +340,7 @@ body.dark-theme .about-hero-content p {
   justify-content: center;
 }
 
-/* =========================
-   ABOUT STORY
-========================= */
+
 .about-story {
   background: var(--bg-light);
 }
@@ -375,9 +353,7 @@ body.dark-theme .about-hero-content p {
   align-items: center;
 }
 
-/* =========================
-   MISSION / VISION / VALUES
-========================= */
+
 .mission-vision {
   background: var(--bg-light);
 }
@@ -493,9 +469,7 @@ body.dark-theme .about-hero-content p {
   z-index: 1;
 }
 
-/* =========================
-   OUR VALUES
-========================= */
+
 .our-values {
   background: var(--bg-soft);
 }
@@ -512,9 +486,6 @@ body.dark-theme .about-hero-content p {
   text-align: center;
 }
 
-/* =========================
-   WHY CHOOSE US
-========================= */
 .why-choose-us {
   background: var(--bg-soft);
 }
@@ -556,9 +527,6 @@ body.dark-theme .about-hero-content p {
   color: var(--text-desc);
 }
 
-/* =========================
-   CARE PHILOSOPHY
-========================= */
 .care-philosophy {
   background: var(--bg-light);
 }
@@ -593,9 +561,7 @@ body.dark-theme .about-hero-content p {
   margin-top: 4px;
 }
 
-/* =========================
-   TEAM PREVIEW
-========================= */
+
 .team-preview {
   background: var(--bg-cream);
 }
@@ -629,16 +595,12 @@ body.dark-theme .about-hero-content p {
   line-height: 1.8;
 }
 
-/* =========================
-   FACILITY HIGHLIGHTS
-========================= */
+
 .facility-highlights {
   background: var(--bg-light);
 }
 
-/* =========================
-   STATS
-========================= */
+
 .about-stats {
   background: var(--bg-cream);
 }
@@ -670,9 +632,6 @@ body.dark-theme .about-hero-content p {
   z-index: 1;
 }
 
-/* =========================
-   CTA
-========================= */
 .about-cta {
   background: linear-gradient(135deg, #f6eee3, #fff8f0);
 }
@@ -749,9 +708,7 @@ body.dark-theme .about-cta {
   color: #fff;
 }
 
-/* =========================
-   REVEAL ANIMATION
-========================= */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -771,9 +728,6 @@ body.dark-theme .about-cta {
   transform: translate(0, 0);
 }
 
-/* =========================
-   MOBILE: < 640px
-========================= */
 @media (max-width: 639px) {
   .section-space {
     padding: 65px 16px;
@@ -867,9 +821,6 @@ body.dark-theme .about-cta {
   }
 }
 
-/* =========================
-   TABLET: 640px - 1024px
-========================= */
 @media (min-width: 640px) and (max-width: 1023px) {
   .about-hero {
     min-height: 82vh;
@@ -932,9 +883,7 @@ body.dark-theme .about-cta {
   }
 }
 
-/* =========================
-   DESKTOP: 1024px - 1280px
-========================= */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .content-container {
     max-width: 1080px;
@@ -954,9 +903,7 @@ body.dark-theme .about-cta {
   }
 }
 
-/* =========================
-   LARGE: > 1280px
-========================= */
+
 @media (min-width: 1281px) {
   .content-container {
     max-width: 1240px;

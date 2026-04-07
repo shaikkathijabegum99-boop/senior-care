@@ -1,11 +1,9 @@
-// =========================
-// THEME TOGGLE
-// =========================
+
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 const themeIcon = themeToggle.querySelector("i");
 
-// Load saved theme
+
 const savedTheme = localStorage.getItem("theme") || "light";
 html.setAttribute("data-theme", savedTheme);
 updateThemeIcon(savedTheme);
@@ -26,9 +24,7 @@ function updateThemeIcon(theme) {
   }
 }
 
-// =========================
-// GO BACK BUTTON
-// =========================
+
 function goBack() {
   if (window.history.length > 1) {
     window.history.back();
@@ -37,9 +33,7 @@ function goBack() {
   }
 }
 
-// =========================
-// SMALL INTERACTIVE HOVER FX
-// =========================
+
 const buttons = document.querySelectorAll(".btn");
 
 buttons.forEach((btn) => {

@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSavedTheme();
 });
 
-// =========================
-// Load Navbar
-// =========================
+
 function loadNavbar() {
     fetch('../components/navbar.html')
         .then(res => res.text())
@@ -20,9 +18,7 @@ function loadNavbar() {
         .catch(err => console.error('Navbar error:', err));
 }
 
-// =========================
-// Load Footer
-// =========================
+
 function loadFooter() {
     fetch('../components/footer.html')
         .then(res => res.text())
@@ -41,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSavedDirection();
 });
 
-// =========================
-// Load Saved Theme
-// =========================
+
 function loadSavedTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -51,17 +45,12 @@ function loadSavedTheme() {
     }
 }
 
-// =========================
-// Load Saved Direction
-// =========================
 function loadSavedDirection() {
     const savedDir = localStorage.getItem('direction') || 'ltr';
     document.documentElement.setAttribute('dir', savedDir);
 }
 
-// =========================
-// Navbar Functionality
-// =========================
+
 function initNavbar() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -70,9 +59,7 @@ function initNavbar() {
     const body = document.body;
     const html = document.documentElement;
 
-    // =========================
-    // Hamburger Toggle
-    // =========================
+
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -80,9 +67,7 @@ function initNavbar() {
         });
     }
 
-    // =========================
-    // Mobile Dropdown Toggle
-    // =========================
+  
     document.querySelectorAll('.nav-item').forEach(item => {
         const link = item.querySelector('.nav-link');
         const dropdown = item.querySelector('.dropdown-menu');
@@ -103,9 +88,7 @@ function initNavbar() {
         }
     });
 
-    // =========================
-    // Theme Toggle
-    // =========================
+ 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
@@ -114,9 +97,7 @@ function initNavbar() {
         });
     }
 
-    // =========================
-    // RTL Toggle
-    // =========================
+
     if (rtlToggle) {
         rtlToggle.addEventListener('click', () => {
             const currentDir = html.getAttribute('dir');
@@ -126,9 +107,6 @@ function initNavbar() {
         });
     }
 
-    // =========================
-    // Close Menu on Outside Click
-    // =========================
     document.addEventListener('click', (e) => {
         if (
             navMenu &&
@@ -142,9 +120,7 @@ function initNavbar() {
         }
     });
 
-    // =========================
-    // Close Menu on Resize
-    // =========================
+   
     window.addEventListener('resize', () => {
         if (window.innerWidth > 1023) {
             navMenu.classList.remove('active');

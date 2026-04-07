@@ -53,7 +53,7 @@ body {
   margin: 0 auto;
 }
 
-/* Theme Toggle */
+
 .theme-toggle {
   position: fixed;
   top: 24px;
@@ -78,7 +78,7 @@ body {
   box-shadow: var(--glow), var(--shadow);
 }
 
-/* Background Shapes */
+
 .bg-shape {
   position: absolute;
   border-radius: 50%;
@@ -113,7 +113,7 @@ body {
   animation-delay: 2.5s;
 }
 
-/* Main */
+
 .error-page {
   min-height: 100vh;
   display: flex;
@@ -195,7 +195,7 @@ body {
   margin: 0 auto 34px;
 }
 
-/* Buttons */
+
 .error-actions {
   display: flex;
   justify-content: center;
@@ -256,7 +256,7 @@ body {
   color: var(--accent);
 }
 
-/* Links */
+
 .help-links {
   display: flex;
   justify-content: center;
@@ -280,7 +280,7 @@ body {
   margin-right: 8px;
 }
 
-/* Animation */
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -312,7 +312,7 @@ body {
   }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .error-card {
     padding: 50px 22px;
