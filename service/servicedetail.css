@@ -98,7 +98,7 @@ body {
   cursor: pointer;
 }
 
-/* COMMON */
+
 .service-overview,
 .features-section,
 .benefits-section,
@@ -164,7 +164,7 @@ body {
   color: var(--service-text);
 }
 
-/* FEATURES */
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

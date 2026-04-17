@@ -2,7 +2,7 @@
 const themeToggle = document.getElementById("themeToggle");
 const body = document.body;
 
-// Load saved theme
+
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-theme");
   if (themeToggle) {
@@ -55,8 +55,8 @@ if (signinForm) {
     }
 
     alert("Sign in successful! Redirecting to dashboard...");
-    // Example:
-    // window.location.href = "dashboard.html";
+
+
   });
 }
 
@@ -83,3 +83,20 @@ if (visitForm) {
     visitForm.reset();
   });
 }
+
+const rtlToggle = document.getElementById("rtlToggle");
+
+
+if (localStorage.getItem("rtl") === "true") {
+  document.body.classList.add("rtl");
+}
+
+rtlToggle.addEventListener("click", () => {
+  document.body.classList.toggle("rtl");
+
+  if (document.body.classList.contains("rtl")) {
+    localStorage.setItem("rtl", "true");
+  } else {
+    localStorage.setItem("rtl", "false");
+  }
+});

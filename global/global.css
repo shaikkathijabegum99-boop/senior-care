@@ -2,7 +2,7 @@
    🌍 GLOBAL THEME SYSTEM (Light + Dark)
    ========================================================= */
 
-/* Default (Light Theme) */
+
 :root {
   --bg: #ffffff;
   --text: #0f172a;
@@ -12,7 +12,7 @@
   --card-bg: #f9fafb;
 }
 
-/* Dark Theme */
+
 [data-theme="dark"] {
   --bg: #0f172a;
   --text: #f1f5f9;
@@ -22,7 +22,7 @@
   --card-bg: #020617;
 }
 
-/* Apply globally */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Example usage (use everywhere) */
+
 .section {
   background: var(--bg);
   color: var(--text);
@@ -47,13 +47,13 @@ body {
   border-radius: 12px;
 }
 
-/* Links */
+
 a {
   color: var(--primary);
   text-decoration: none;
 }
 
-/* Navbar example (optional) */
+
 .navbar {
   background: var(--bg);
   border-bottom: 1px solid var(--border);

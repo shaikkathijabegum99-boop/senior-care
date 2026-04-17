@@ -17,11 +17,11 @@
     --success: #4caf50;
 }
 
-/* DARK THEME */
+
 body.dark-theme {
     --bg-main: #15110d;
     --bg-card: rgba(34, 27, 20, 0.94);
-    /*--bg-soft: #1d1712;*/
+    
     --title-color: #f5f0e8;
     --text-main: #d7cec4;
     --text-muted: #b6ab9e;
@@ -54,7 +54,7 @@ body.dark-theme {
 }
 
 .content-container {
-    width: min(1200px, 92%);
+    width: min(1200px, 80%);
     margin: 0 auto;
 }
 
@@ -137,8 +137,8 @@ body.dark-mode .back-home-btn {
 
 .auth-grid {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     align-items: stretch;
 }
 
@@ -148,7 +148,7 @@ body.dark-mode .back-home-btn {
     background: var(--bg-card);
     border: 1px solid var(--border-light);
     border-radius: 28px;
-    padding: 48px;
+    padding: 24px;
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(14px);
 }
@@ -183,7 +183,7 @@ body.dark-mode .back-home-btn {
 }
 
 .auth-info-card h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--title-color);
     line-height: 1.15;
     margin-bottom: 20px;
@@ -232,7 +232,7 @@ body.dark-mode .back-home-btn {
 }
 
 .highlight-box {
-    background: var(--bg-soft);
+   
     border: 1px solid var(--border-light);
     border-radius: 20px;
     padding: 22px;
@@ -252,14 +252,14 @@ body.dark-mode .back-home-btn {
 }
 
 .highlight-box h4 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--title-color);
     margin-bottom: 10px;
 }
 
 .highlight-box p {
     color: var(--text-main);
-    line-height: 1.7;
+    line-height: 1.2;
 }
 
 
@@ -360,7 +360,7 @@ body.dark-mode .back-home-btn {
     font-size: 1rem;
 }
 
-/* Options */
+
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -498,7 +498,7 @@ body.dark-mode .back-home-btn {
         align-items: flex-start;
     }
 
-    .theme-toggle {
+    .theme-toggle .rtl-toggles {
         top: 16px;
         right: 16px;
         width: 48px;
@@ -514,7 +514,7 @@ body.dark-mode .back-home-btn {
 
     .auth-info-card,
     .auth-form-card {
-        padding: 38px 32px;
+        padding: 24px 18px;
     }
 
     .auth-info-card h1 {
@@ -524,18 +524,66 @@ body.dark-mode .back-home-btn {
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .auth-grid {
-        grid-template-columns: 1.05fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 
 @media (min-width: 1281px) {
     .content-container {
-        width: min(1280px, 90%);
+        width: min(1000px, 85%);
     }
 
     .auth-info-card,
     .auth-form-card {
-        padding: 56px;
+        padding: 20px;
     }
+}
+
+.rtl-toggle {
+    position: fixed;
+    top: 24px;
+    right: 90px;
+    z-index: 1000;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-card);
+    color: var(--title-color);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+body.rtl {
+    direction: rtl;
+}
+
+
+body.rtl .auth-grid {
+    direction: rtl;
+}
+
+body.rtl .input-wrap i {
+    left: auto;
+    right: 16px;
+}
+
+body.rtl .input-wrap input {
+    padding: 15px 48px 15px 18px;
+}
+
+body.rtl .password-toggle {
+    right: auto;
+    left: 14px;
+}
+
+body.rtl .form-options {
+    flex-direction: row-reverse;
+}
+
+body.rtl .feature-item {
+    flex-direction: row-reverse;
 }

@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
 
-  // Load saved theme
+
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
   }
 
-  // Toggle theme
+
   if (themeToggle) {
     updateThemeIcon(themeToggle);
 
