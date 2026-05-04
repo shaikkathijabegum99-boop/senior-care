@@ -587,3 +587,74 @@ body.rtl .form-options {
 body.rtl .feature-item {
     flex-direction: row-reverse;
 }
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.auth-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Password eye alignment fix */
+.password-wrap {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remember me alignment fix */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Apple button style */
+.apple-btn {
+  background: #000;
+  color: #fff;
+}
+
+.apple-btn:hover {
+  opacity: 0.85;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  color: var(--title-color);
+}

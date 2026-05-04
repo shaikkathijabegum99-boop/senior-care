@@ -86,7 +86,7 @@
     
     .service-hero {
       min-height: 88vh;
-      background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('../images/servicehero.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
@@ -353,9 +353,7 @@
       .section-header h2 { font-size: 3rem; }
       .detail-copy { padding: 50px; }
     }
-/* =========================
-   SERVICE HERO TEXT - DARK MODE
-========================= */
+
 body.dark-theme .service-hero-overlay {
     background: linear-gradient(rgba(8, 8, 8, 0.82)100%, rgba(8, 8, 8, 0.82));
 }
@@ -382,9 +380,7 @@ body.dark-theme .service-hero .btn-secondary {
 body.dark-theme .service-hero .btn-secondary:hover {
     background: rgba(255,255,255,0.18);
 }
-/* =========================================
-   DARK MODE FIX - ALL SECTIONS
-========================================= */
+
 
 
 [data-theme="dark"] body {
@@ -410,13 +406,11 @@ body.dark-theme .service-hero .btn-secondary:hover {
   background: var(--bg-secondary);
 }
 
-/* =========================================
-   HERO OVERLAY + HERO TEXT
-========================================= */
+
 [data-theme="dark"] .service-hero {
   background:
     linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1600&auto=format&fit=crop')
+    url('../images/servicehero.jpg')
     center/cover no-repeat;
 }
 
@@ -447,9 +441,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   background: rgba(255,255,255,0.18);
 }
 
-/* =========================================
-   GLASS HERO CARD
-========================================= */
+
 [data-theme="dark"] .hero-card {
   background: rgba(20, 20, 20, 0.52);
   border: 1px solid rgba(255,255,255,0.08);
@@ -465,9 +457,6 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: #ffd39f;
 }
 
-/* =========================================
-   QUICK LINKS
-========================================= */
 [data-theme="dark"] .quick-links {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -485,9 +474,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   border-color: var(--accent-2);
 }
 
-/* =========================================
-   SECTION HEADERS
-========================================= */
+
 [data-theme="dark"] .section-header h2 {
   color: var(--title);
 }
@@ -500,9 +487,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: var(--accent);
 }
 
-/* =========================================
-   SERVICE CARDS
-========================================= */
+
 [data-theme="dark"] .service-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -526,9 +511,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: var(--accent-2);
 }
 
-/* =========================================
-   DETAIL BLOCKS
-========================================= */
+
 [data-theme="dark"] .detail-block {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -550,9 +533,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: var(--accent-2);
 }
 
-/* =========================================
-   PORTAL SECTION
-========================================= */
+
 [data-theme="dark"] .portal-section {
   background: linear-gradient(
     135deg,
@@ -576,9 +557,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: var(--text-soft);
 }
 
-/* =========================================
-   MOCK UI / FAMILY PORTAL
-========================================= */
+
 [data-theme="dark"] .mock-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
@@ -593,9 +572,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: var(--accent-2);
 }
 
-/* =========================================
-   CTA BOX
-========================================= */
+
 [data-theme="dark"] .cta-box {
   background: linear-gradient(135deg, #5e8764, #739c7a);
   color: #fff;
@@ -609,9 +586,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   color: rgba(255,255,255,0.9);
 }
 
-/* =========================================
-   GENERAL LINKS / BUTTONS
-========================================= */
+
 [data-theme="dark"] .btn-primary {
   background: var(--accent);
   color: #fff;
@@ -621,9 +596,6 @@ body.dark-theme .service-hero .btn-secondary:hover {
   opacity: 0.95;
 }
 
-/* =========================================
-   IMAGES / BLOCKS SAFETY
-========================================= */
 [data-theme="dark"] .detail-media img,
 [data-theme="dark"] .service-hero img {
   filter: none;
@@ -747,7 +719,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
   <section class="section-space" style="padding-top:20px;">
     <div class="content-container detail-stack">
       <div class="detail-block" id="living-support">
-        <div class="detail-media"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1400&auto=format&fit=crop" alt="Senior assisted living support"></div>
+        <div class="detail-media"><img src="../images/service1.jpg" alt="Senior assisted living support"></div>
         <div class="detail-copy">
           <h3>Daily Assisted Living</h3>
           <p>We provide thoughtful day-to-day support for seniors who may need a helping hand but still want to maintain independence, routine, and confidence in their own rhythm of life.</p>
@@ -760,7 +732,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
       </div>
 
       <div class="detail-block reverse" id="health-support">
-        <div class="detail-media"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1400&auto=format&fit=crop" alt="Medical and wellness support"></div>
+        <div class="detail-media"><img src="../images/service2.jpg" alt="Medical and wellness support"></div>
         <div class="detail-copy">
           <h3>Health & Medication Support</h3>
           <p>Our team helps residents stay on track with wellness routines while ensuring families remain informed and reassured. It’s dependable support without losing the warmth of home.</p>
@@ -773,7 +745,7 @@ body.dark-theme .service-hero .btn-secondary:hover {
       </div>
 
       <div class="detail-block" id="comfort-care">
-        <div class="detail-media"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1400&auto=format&fit=crop" alt="Dining and comfort"></div>
+        <div class="detail-media"><img src="../images/service3.jpg" alt="Dining and comfort"></div>
         <div class="detail-copy">
           <h3>Comfort, Dining & Housekeeping</h3>
           <p>Daily life should feel effortless and enjoyable. We take care of meals, cleanliness, and comfort so residents can focus on living fully, socializing, and enjoying each day.</p>
