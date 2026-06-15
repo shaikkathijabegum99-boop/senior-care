@@ -803,7 +803,7 @@ img { display: block; max-width: 100%; }
 
   .sidebar {
     position: fixed;
-    left: -100%;height:170vh;
+    left: -100%;height:100vh;
     width: 290px;
     transition: var(--transition);
   }
@@ -860,4 +860,271 @@ img { display: block; max-width: 100%; }
   .profile-btn div {
     display: none;
   }
+}/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar {
+    background: var(--card-bg);
+    border-right: 1px solid var(--border);
+    width: 290px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 8px;
+    z-index: 999;
+}
+
+/* ==========================
+   SIDEBAR TOP
+========================== */
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* ==========================
+   BRAND
+========================== */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #8bab7d;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--accent-2);
+}
+
+.brand-subtext {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--text-soft);
+    margin-top: 2px;
+}
+
+/* ==========================
+   CLOSE BUTTON
+========================== */
+
+.sidebar-close {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(139,171,125,0.1);
+    color: var(--accent-2);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sidebar-close:hover {
+    background: var(--accent-2);
+    color: #fff;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border-radius: 12px;
+
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.nav-link i {
+    width: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(122,160,122,0.12);
+    color: var(--accent-2);
+    transform: translateX(3px);
+}
+
+/* ==========================
+   SIDEBAR BOTTOM
+========================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+/* ==========================
+   LOGOUT
+========================== */
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border-radius: 12px;
+
+    color: #d05b5b;
+    background: rgba(208,91,91,0.08);
+
+    transition: var(--transition);
+}
+
+.logout-btn:hover {
+    transform: translateX(3px);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1023px) {
+
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+
+        width: 280px;
+        height: 100vh;
+
+        transition: 0.35s ease;
+        z-index: 9999;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar-close {
+        display: flex;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 639px) {
+
+    .sidebar {
+        width: 270px;
+    }
+
+    .sidebar-top {
+        padding: 10px;
+    }
+
+    .nav-logo-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 0.9rem;
+    }
+
+    .brand-subtext {
+        font-size: 0.62rem;
+    }
+
+    .nav-link {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .logout-btn {
+        padding: 10px 12px;
+    }
+}
+
+/* ==========================
+   360px DEVICES
+========================== */
+
+@media (max-width: 360px) {
+
+    .sidebar {
+        width: 250px;
+        height: 1180px;
+    }
+
+    .nav-logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 0.8rem;
+    }
+
+    .brand-subtext {
+        font-size: 0.58rem;
+    }
+
+    .nav-link {
+        padding: 9px 10px;
+        gap: 10px;
+    }
 }

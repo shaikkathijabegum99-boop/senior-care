@@ -3,24 +3,7 @@
    ========================================================= */
 
 
-:root {
-  --bg: #ffffff;
-  --text: #0f172a;
-  --primary: #2563eb;
-  --secondary: #64748b;
-  --border: #e5e7eb;
-  --card-bg: #f9fafb;
-}
 
-
-[data-theme="dark"] {
-  --bg: #0f172a;
-  --text: #f1f5f9;
-  --primary: #3b82f6;
-  --secondary: #94a3b8;
-  --border: #1e293b;
-  --card-bg: #020617;
-}
 
 
 html, body {
@@ -60,5 +43,156 @@ a {
 }
 
 
+
+
+/* =========================================================
+   DARK MODE SYSTEM
+   Consistent Black + Dark Grey Design
+   ========================================================= */
+
+body.dark-theme {
+  --bg-main: #121212;          /* Main page background */
+  --bg-soft: #1c1c1c;          /* Alternate sections */
+  --card-bg: #242424;          /* Cards & containers */
+  --accent-orange: #f29c52;
+  --title-color: #ffffff;
+  --text-main: #f2f2f2;
+  --text-secondary: #c4c4c4;
+
+  --border-light: #353535;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,.45);
+}
+
+/* =========================================================
+   GLOBAL BACKGROUND
+   ========================================================= */
+
+body.dark-theme {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =========================================================
+   ALTERNATE SECTION COLORS
+   ========================================================= */
+
+
+
+body.dark-theme section:nth-of-type(even) {
+  background: var(--bg-soft);
+}
+
+/* =========================================================
+   CARDS & CONTAINERS
+   ========================================================= */
+
+body.dark-theme .card,
+body.dark-theme .service-card,
+body.dark-theme .why-card,
+body.dark-theme .life-card,
+body.dark-theme .testimonial-card,
+body.dark-theme .trust-item,
+body.dark-theme .cta-box,
+body.dark-theme .dashboard-card,
+body.dark-theme .auth-form-card,
+body.dark-theme .auth-info-card,
+body.dark-theme .contact-card,
+body.dark-theme .feature-card,
+body.dark-theme .blog-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--title-color);
+}
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+body.dark-theme p,
+body.dark-theme li
+{
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+body.dark-theme .site-header,
+body.dark-theme .navbar {
+  background: rgba(18,18,18,0.95);
+  border-bottom: 1px solid var(--border-light);
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body.dark-theme footer,
+body.dark-theme .footer {
+  background: #0d0d0d;
+  border-top: 1px solid var(--border-light);
+}
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  background: #2b2b2b;
+  border: 1px solid #404040;
+  color: #ffffff;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+  color: #9a9a9a;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+body.dark-theme .secondary-btn {
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  color: #ffffff;
+}
+
+body.dark-theme .secondary-btn:hover {
+  background: #343434;
+}
+
+/* =========================================================
+   IMAGE OVERLAYS
+   ========================================================= */
+
+body.dark-theme .hero-overlay,
+body.dark-theme .home-hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.58)
+    );
+}
 
 

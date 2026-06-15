@@ -61,3 +61,41 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger?.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+
+    if (window.innerWidth <= 1023) {
+
+        document.querySelectorAll(".has-dropdown > .nav-link")
+            .forEach(link => {
+
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+
+                    const parent = link.parentElement;
+
+                    document
+                        .querySelectorAll(".has-dropdown")
+                        .forEach(item => {
+
+                            if (item !== parent) {
+                                item.classList.remove("open");
+                            }
+                        });
+
+                    parent.classList.toggle("open");
+                });
+
+            });
+
+    }
+
+});

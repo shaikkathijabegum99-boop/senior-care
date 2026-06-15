@@ -11,35 +11,41 @@ document.addEventListener("DOMContentLoaded", async () => {
 /* =========================
    LOAD NAVBAR
 ========================= */
-function loadNavbar() {
-    return fetch('../components/navbar.html')
-        .then(res => res.text())
-        .then(data => {
-            const navbar = document.getElementById('navbar');
-            if (navbar) {
-                navbar.innerHTML = data;
-            }
-        })
-        .catch(err => console.error('Navbar error:', err));
+async function loadNavbar() {
+    try {
+        const res = await fetch("../components/navbar.html");
+        const data = await res.text();
+
+        const navbar = document.getElementById("navbar");
+
+        if (navbar) {
+            navbar.innerHTML = data;
+        }
+    } catch (err) {
+        console.error("Navbar error:", err);
+    }
 }
 
 /* =========================
    LOAD FOOTER
 ========================= */
-function loadFooter() {
-    return fetch('../components/footer.html')
-        .then(res => res.text())
-        .then(data => {
-            const footer = document.getElementById('footer');
-            if (footer) {
-                footer.innerHTML = data;
-            }
-        })
-        .catch(err => console.error('Footer error:', err));
+async function loadFooter() {
+    try {
+        const res = await fetch("../components/footer.html");
+        const data = await res.text();
+
+        const footer = document.getElementById("footer");
+
+        if (footer) {
+            footer.innerHTML = data;
+        }
+    } catch (err) {
+        console.error("Footer error:", err);
+    }
 }
 
 /* =========================
-   THEME (LOAD + APPLY)
+   THEME
 ========================= */
 function loadSavedTheme() {
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -61,13 +67,13 @@ function applyTheme(theme) {
     if (themeToggle) {
         themeToggle.innerHTML =
             theme === "dark"
-                ? `<i class="fas fa-sun"></i>`
-                : `<i class="fas fa-moon"></i>`;
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
     }
 }
 
 /* =========================
-   RTL / LTR FIX
+   RTL / LTR
 ========================= */
 function loadSavedDirection() {
     const savedDir = localStorage.getItem("direction") || "ltr";
@@ -75,35 +81,25 @@ function loadSavedDirection() {
 }
 
 function applyDirection(dir) {
-    const html = document.documentElement;
-
-    html.setAttribute("dir", dir);
+    document.documentElement.setAttribute("dir", dir);
     localStorage.setItem("direction", dir);
 
     fixNavOrder(dir);
 }
 
 /* =========================
-   NAV ORDER FIX (IMPORTANT)
-   Home → Dashboard (LTR)
-   Dashboard → Home (RTL)
+   NAV ORDER FIX
 ========================= */
 function fixNavOrder(dir) {
     const nav = document.querySelector(".nav-links");
+
     if (!nav) return;
 
-    if (!nav.dataset.original) {
-        nav.dataset.original = "true";
-        nav._items = Array.from(nav.children);
-    }
-
-    const items = nav._items;
-    nav.innerHTML = "";
-
-    if (dir === "rtl") {
-        [...items].reverse().forEach(i => nav.appendChild(i));
+    if (window.innerWidth > 1023) {
+        nav.style.flexDirection =
+            dir === "rtl" ? "row-reverse" : "row";
     } else {
-        items.forEach(i => nav.appendChild(i));
+        nav.style.flexDirection = "column";
     }
 }
 
@@ -116,43 +112,67 @@ function initNavbar() {
     const themeToggle = document.getElementById("theme-toggle");
     const rtlToggle = document.getElementById("rtl-toggle");
 
-    /* MOBILE MENU */
+    /* HAMBURGER */
     hamburger?.addEventListener("click", () => {
         hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        navMenu?.classList.toggle("active");
     });
 
-    /* DROPDOWN */
+    /* MOBILE DROPDOWN */
     document.querySelectorAll(".nav-item").forEach(item => {
+
         const link = item.querySelector(".nav-link");
+        const dropdown = item.querySelector(".dropdown-menu");
+
+        if (!dropdown) return;
 
         link?.addEventListener("click", (e) => {
+
             if (window.innerWidth <= 1023) {
+
                 e.preventDefault();
 
                 document.querySelectorAll(".nav-item").forEach(other => {
-                    if (other !== item) other.classList.remove("open");
+                    if (other !== item) {
+                        other.classList.remove("open");
+                    }
                 });
 
                 item.classList.toggle("open");
             }
+
         });
     });
 
     /* THEME TOGGLE */
     themeToggle?.addEventListener("click", () => {
-        const current = localStorage.getItem("theme") || "light";
-        applyTheme(current === "dark" ? "light" : "dark");
+
+        const currentTheme =
+            localStorage.getItem("theme") || "light";
+
+        applyTheme(
+            currentTheme === "dark"
+                ? "light"
+                : "dark"
+        );
     });
 
     /* RTL TOGGLE */
     rtlToggle?.addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("dir") || "ltr";
-        applyDirection(current === "rtl" ? "ltr" : "rtl");
+
+        const currentDir =
+            document.documentElement.getAttribute("dir") || "ltr";
+
+        applyDirection(
+            currentDir === "rtl"
+                ? "ltr"
+                : "rtl"
+        );
     });
 
-    /* CLOSE OUTSIDE CLICK */
+    /* CLOSE OUTSIDE MENU */
     document.addEventListener("click", (e) => {
+
         if (
             navMenu &&
             hamburger &&
@@ -165,9 +185,16 @@ function initNavbar() {
         }
     });
 
-    /* RESET ON RESIZE */
+    /* RESIZE FIX */
     window.addEventListener("resize", () => {
+
+        const dir =
+            document.documentElement.getAttribute("dir") || "ltr";
+
+        fixNavOrder(dir);
+
         if (window.innerWidth > 1023) {
+
             navMenu?.classList.remove("active");
             hamburger?.classList.remove("active");
 
@@ -176,5 +203,64 @@ function initNavbar() {
             });
         }
     });
+
+    /* INITIAL FIX */
+    const dir =
+        document.documentElement.getAttribute("dir") || "ltr";
+
+    fixNavOrder(dir);
 }
 
+function fixNavOrder(dir) {
+    const nav = document.querySelector(".nav-links");
+    if (!nav) return;
+
+    if (!nav.dataset.saved) {
+        nav.dataset.saved = "true";
+        nav.originalItems = [...nav.children];
+    }
+
+    const items = nav.originalItems;
+
+    nav.innerHTML = "";
+
+    if (dir === "rtl") {
+        [...items].reverse().forEach(item => nav.appendChild(item));
+    } else {
+        items.forEach(item => nav.appendChild(item));
+    }
+}
+
+
+/* =========================
+   RTL / LTR NAV FIX
+========================= */
+function fixNavOrder(dir) {
+    const navLinks = document.querySelector(".nav-links");
+    const navContainer = document.querySelector(".nav-container");
+    const logoBox = document.querySelector(".logo-box");
+    const headerActions = document.querySelector(".header-actions");
+
+    if (!navLinks || !navContainer) return;
+
+    if (dir === "rtl") {
+        navLinks.style.flexDirection = window.innerWidth > 1023
+            ? "row-reverse"
+            : "column";
+
+        navContainer.style.flexDirection = "row-reverse";
+
+        if (logoBox) logoBox.style.flexDirection = "row-reverse";
+        if (headerActions) headerActions.style.flexDirection = "row-reverse";
+
+    } else {
+        navLinks.style.flexDirection = window.innerWidth > 1023
+            ? "row"
+            : "column";
+
+        navContainer.style.flexDirection = "row";
+
+        if (logoBox) logoBox.style.flexDirection = "row";
+        if (headerActions) headerActions.style.flexDirection = "row";
+    }
+}

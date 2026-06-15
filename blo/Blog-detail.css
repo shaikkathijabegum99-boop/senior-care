@@ -217,6 +217,7 @@ body.dark-theme {
 }
 
 .quote-box p {
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     color: var(--text-main);
     font-size: 1.05rem;
@@ -468,7 +469,7 @@ body.dark-theme {
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
     .blog-layout {
@@ -495,7 +496,7 @@ body.dark-theme .blog-cta-box {
         rgba(0, 0, 0, 0.72),
         rgba(0, 0, 0, 0.42)
     );
-    padding: 80px 20px;
+    padding: 80px 200px;
 }
 
 body.dark-theme .blog-detail-overlay {

@@ -139,22 +139,6 @@ ul {
 }
 
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 260px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-light);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    padding: 12px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(12px);
-    transition: all 0.25s ease;
-    z-index: 999;
-}
 
 .dropdown-item a {
     display: block;
@@ -261,9 +245,7 @@ html[dir="rtl"] .nav-links {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-link {
-    flex-direction: row-reverse;
-}
+
 
 html[dir="rtl"] .dropdown-menu {
     left: auto;
@@ -414,7 +396,7 @@ html[dir="rtl"] .header-auth-icons {
         align-items: flex-start;
         gap: 0;
         padding: 16px;
-        display: none;
+       
     }
 
     .nav-links.active {
@@ -795,4 +777,320 @@ body.dark-theme .footer-column h3 {
     .bottom-content {
         max-width: 1280px;
     }
+}
+@media (max-width:639px){
+
+    .nav-container{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:12px 14px;
+        gap:8px;
+    }
+
+    .logo-box{
+        flex:1;
+        min-width:0;
+    }
+
+    .header-actions{
+        display:flex;
+        align-items:center;
+        gap:6px;
+    }
+
+    .action-btn{
+        width:34px;
+        height:34px;
+        font-size:.85rem;
+    }
+
+    .hamburger{
+        display:flex;
+        width:36px;
+        height:36px;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        gap:4px;
+        flex-shrink:0;
+        margin-left:2px;
+    }
+
+    .hamburger span{
+        width:22px;
+        height:2.5px;
+    }
+
+    .brand-name{
+        font-size:1rem;
+    }
+
+    .brand-subtext{
+        font-size:.6rem;
+    }
+
+    .nav-logo-img{
+        width:42px;
+        height:42px;
+    }
+}
+
+
+/* ==========================================
+   FOOTER - TABLET
+   640px - 1023px
+========================================== */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+        padding: 0 24px 50px;
+    }
+
+    .brand-section{
+        grid-column: 1 / -1;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .footer-logo{
+        justify-content: center;
+    }
+
+    .tagline{
+        max-width: 600px;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .social-icons{
+        justify-content: center;
+    }
+
+    .bottom-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ==========================================
+   FOOTER - MOBILE
+   BELOW 640px
+========================================== */
+@media screen and (max-width: 639px) {
+
+    .nethra-footer{
+        padding-top: 50px;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 18px 40px;
+    }
+
+    .brand-section{
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .footer-logo{
+        justify-content: center;
+    }
+
+    .footer-logo-img{
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-name{
+        font-size: 1.15rem;
+    }
+
+    .brand-sub{
+        font-size: 0.7rem;
+    }
+
+    .tagline{
+        font-size: 0.92rem;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .contact-info{
+        text-align: center;
+    }
+
+    .social-icons{
+        justify-content: center;
+    }
+
+    .footer-column{
+        text-align: center;
+    }
+
+    .footer-column h3::after{
+        margin: 10px auto 0;
+    }
+
+    .footer-column ul li a:hover{
+        padding-left: 0;
+    }
+
+    .footer-bottom-bar{
+        padding: 16px;
+    }
+
+    .bottom-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   FOOTER - LARGE DESKTOP
+   ABOVE 1280px
+========================================== */
+@media screen and (min-width: 1281px) {
+
+    .footer-container,
+    .bottom-content{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Desktop Hover */
+@media (min-width:1024px){
+
+    .nav-item:hover > .dropdown-menu,
+    .nav-item:focus-within > .dropdown-menu{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:translateY(0);
+    }
+
+    .dropdown-item a{
+        display:block;
+        padding:12px 18px;
+        transition:.25s;
+    }
+
+    .dropdown-item a:hover{
+        background:rgba(139,171,125,.12);
+        color:var(--primary);
+        padding-left:24px;
+    }
+}
+
+/* ==========================================
+   1024px - 1280px
+========================================== */
+
+@media (min-width:1024px) and (max-width:1280px){
+
+    .nav-container{
+        max-width:1120px;
+        padding:14px 20px;
+    }
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-link{
+        font-size:.92rem;
+    }
+
+    .brand-name{
+        font-size:1.15rem;
+    }
+
+    .brand-subtext{
+        font-size:.68rem;
+    }
+
+    .nav-logo-img{
+        width:50px;
+        height:50px;
+    }
+
+    .header-actions{
+        gap:8px;
+    }
+
+    .action-btn{
+        width:40px;
+        height:40px;
+    }
+}
+
+@media (min-width:1024px){
+
+    .nav-links{
+        display:flex !important;
+    }
+
+    .nav-item{
+        position:relative;
+    }
+
+    .dropdown-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        min-width:260px;
+        background:#fff;
+        border:1px solid #ddd;
+        border-radius:12px;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+        display:none;
+        z-index:999999;
+    }
+.dropdown-menu {
+    pointer-events: none;
+}
+
+.nav-item:hover .dropdown-menu {
+    pointer-events: auto;
+}@media (min-width: 1024px) {
+    .nav-links {
+        display: flex !important;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+}
+    .nav-item:hover .dropdown-menu{
+        display:block;
+    }
+}/* ================= DARK MODE DROPDOWN FIX ================= */
+
+body.dark-theme .dropdown-menu {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+body.dark-theme .dropdown-item a {
+    color: var(--text-main);
+}
+
+body.dark-theme .dropdown-item a:hover {
+    background: rgba(139, 171, 125, 0.18);
+    color: var(--primary);
+}
+
+/* Optional: make arrow icon visible in dark mode */
+body.dark-theme .nav-link i {
+    color: var(--text-muted);
 }
