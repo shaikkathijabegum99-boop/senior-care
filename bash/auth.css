@@ -17,22 +17,32 @@
     --success: #4caf50;
 }
 
+/* =========================
+   DARK THEME
+========================= */
 
-body.dark-theme {
-    --bg-main: #15110d;
-    --bg-card: rgba(34, 27, 20, 0.94);
-    
-    --title-color: #f5f0e8;
-    --text-main: #d7cec4;
-    --text-muted: #b6ab9e;
-    --border-light: rgba(255,255,255,0.08);
+body.dark-theme{
+    --bg-main: #0f0f0f;          /* Main black background */
+    --bg-soft: #171717;          /* Alternate sections */
+    --bg-card: #1f1f1f;          /* Cards & containers */
+
+    --title-color: #ffffff;
+    --text-main: #d8d8d8;
+    --text-muted: #9d9d9d;
+
+    --border-light: #2f2f2f;
+
     --primary: #93b586;
     --primary-dark: #7ca06f;
     --accent: #e19a6f;
-    --shadow-soft: 0 20px 50px rgba(0,0,0,0.30);
-    --shadow-hover: 0 25px 60px rgba(0,0,0,0.38);
-    --input-bg: #2a2119;
-    --input-border: #3a3027;
+
+    --input-bg: #242424;
+    --input-border: #343434;
+
+    --shadow-soft: 0 15px 35px rgba(0,0,0,0.35);
+    --shadow-hover: 0 20px 45px rgba(0,0,0,0.45);
+
+    background: #0f0f0f;
 }
 
 * {
@@ -840,9 +850,7 @@ body.dark-theme .apple-btn {
     border-color: rgba(255,255,255,0.15);
 }
 
-body.dark-theme .apple-btn i {
-    color: #111;
-}
+
 
 body.dark-theme .apple-btn:hover {
     background: #f2f2f2;
@@ -1059,7 +1067,7 @@ body.rtl .feature-item {
 .visit-info-card h4,
 .visit-info-card p,
 .visit-info-card .auth-desc,
-.visit-info-card .brand-name,
+
 .visit-info-card .brand-subtext {
     color: #fff !important;
 }
@@ -1080,7 +1088,7 @@ body.rtl .feature-item {
 }
 
 .visit-info-card .brand-name {
-    color: #fff !important;
+    color: var(--primary);
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 1px;
@@ -1155,9 +1163,9 @@ body.dark-theme .visit-info-card {
 
 .auth-info-card h1,
 .auth-info-card p,
-.auth-info-card span,
+
 .auth-info-card .auth-desc,
-.auth-info-card .brand-name,
+
 .auth-info-card .brand-subtext {
     color: #fff !important;
 }
@@ -1168,7 +1176,7 @@ body.dark-theme .visit-info-card {
     background: rgba(255,255,255,0.95);
     padding: 4px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.25);
+    border: 2px solid var(--primary);
 }
 
 /* Section Tag */
@@ -1219,5 +1227,414 @@ body.dark-theme .auth-info-card {
 
     .auth-info-card h1 {
         font-size: 2rem;
+    }
+}.auth-info-card{
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("../images/hero image.jpg") center center/cover no-repeat;
+
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* Remove old overlay */
+.auth-info-card::before{
+    display:none;
+}
+
+/* Center content */
+.auth-brand,
+.logo-link{
+    justify-content:center;
+}
+
+.auth-info-card h1,
+.auth-info-card p,
+.auth-info-card .auth-desc{
+    color:#fff !important;
+    text-align:center;
+}
+
+.auth-info-card .section-tag{
+    margin:0 auto 20px;
+    background:rgba(255,255,255,0.15);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.25);
+}
+
+/* Feature cards */
+.auth-info-card .feature-item{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.18);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
+
+.auth-info-card .feature-item span,
+
+.auth-info-card .brand-subtext{
+    color:#fff !important;
+}
+.auth-info-card .brand-name,
+.visit-info-card .brand-name{
+    color: var(--primary);}/* ====================================
+   VISIT INFO CARD - PREMIUM STYLE
+==================================== */
+
+.visit-info-card{
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../images/auth.jpg") center center/cover no-repeat;
+
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+/* Remove old overlay */
+.visit-info-card::before{
+    display:none;
+}
+
+/* Center Brand */
+
+.visit-info-card .auth-brand{
+    display:flex;
+    justify-content:center;
+    margin-bottom:24px;
+}
+
+.visit-info-card .logo-box{
+    justify-content:center;
+    text-decoration:none;
+}
+
+.visit-info-card .logo-text{
+    text-align:left;
+}
+
+/* White Text */
+
+.visit-info-card h1,
+.visit-info-card h4,
+.visit-info-card p,
+.visit-info-card .auth-desc,
+
+.visit-info-card .brand-subtext{
+    color:#fff !important;
+}
+
+/* Tag */
+
+.visit-info-card .section-tag{
+    margin:0 auto 20px;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.18);
+    color:#fff;
+    backdrop-filter:blur(10px);
+}
+
+/* Heading */
+
+.visit-info-card h1{
+    font-size:2.5rem;
+    margin-bottom:18px;
+    line-height:1.2;
+}
+
+.visit-info-card .auth-desc{
+    max-width:600px;
+    margin:0 auto 30px;
+    line-height:1.8;
+    color:rgba(255,255,255,0.92);
+}
+
+/* Highlight Boxes */
+
+.visit-highlights{
+    display:grid;
+    gap:18px;
+}
+
+.visit-info-card .highlight-box{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    transition:all .35s ease;
+}
+
+.visit-info-card .highlight-box:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,0.18);
+}
+
+.visit-info-card .highlight-box i{
+    width:54px;
+    height:54px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.18);
+    color:var(--primary);
+    margin:0 auto 16px;
+}
+
+.visit-info-card .highlight-box h4{
+    margin-bottom:10px;
+}
+
+.visit-info-card .highlight-box p{
+    color:rgba(255,255,255,0.9);
+}
+
+/* Logo */
+
+.visit-info-card .nav-logo-img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    padding:4px;
+    border:2px solid var(--primary);
+}
+
+/* Dark Theme */
+
+body.dark-theme .visit-info-card{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("../images/auth.jpg") center center/cover no-repeat;
+}
+
+/* ====================================
+   MOBILE < 640px
+==================================== */
+
+@media (max-width:639px){
+
+    .visit-info-card{
+        padding:30px 20px;
+        min-height:520px;
+    }
+
+    .visit-info-card h1{
+        font-size:1.9rem;
+    }
+
+    .visit-info-card .auth-desc{
+        font-size:0.95rem;
+    }
+
+    .visit-info-card .logo-text{
+        text-align:left;
+    }
+}
+
+/* ====================================
+   TABLET 640px - 1024px
+==================================== */
+
+@media (min-width:640px) and (max-width:1023px){
+
+    .visit-info-card{
+        min-height:600px;
+    }
+
+    .visit-info-card h1{
+        font-size:2.2rem;
+    }
+}
+
+/* ====================================
+   DESKTOP 1024px - 1280px
+==================================== */
+
+@media (min-width:1024px) and (max-width:1280px){
+
+    .visit-info-card h1{
+        font-size:2.3rem;
+    }
+}
+
+/* ====================================
+   LARGE >1280px
+==================================== */
+
+@media (min-width:1281px){
+
+    .visit-info-card h1{
+        font-size:2.7rem;
+    }
+}/* =========================
+   DARK MODE SECTIONS
+========================= */
+
+body.dark-theme {
+    background: #0f0f0f;
+}
+
+body.dark-theme .auth-page {
+    background: #0f0f0f;
+}
+
+body.dark-theme .auth-form-card {
+    background: #1b1b1b;
+    border: 1px solid #2d2d2d;
+}
+
+body.dark-theme .highlight-box,
+body.dark-theme .feature-item {
+    background: #232323;
+    border: 1px solid #323232;
+}
+
+body.dark-theme .input-wrap input,
+body.dark-theme .input-wrap select,
+body.dark-theme .input-wrap textarea {
+    background: #242424;
+    border-color: #353535;
+    color: #ffffff;
+}
+
+body.dark-theme .input-wrap input::placeholder,
+body.dark-theme .input-wrap textarea::placeholder {
+    color: #8c8c8c;
+}
+
+body.dark-theme .theme-toggle,
+body.dark-theme .rtl-toggle {
+    background: #1f1f1f;
+    border: 1px solid #303030;
+    color: #ffffff;
+}
+
+body.dark-theme .divider::before,
+body.dark-theme .divider::after {
+    border-color: #323232;
+}
+
+body.dark-theme .secondary-btn {
+    background: #232323;
+    border-color: #343434;
+    color: #ffffff;
+}
+
+body.dark-theme .secondary-btn:hover {
+    background: #2d2d2d;
+}body.dark-theme .visit-info-card{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("../images/auth.jpg") center/cover no-repeat;
+}/* ====================================
+   FORM HEADER ALIGNMENT
+==================================== */
+
+.form-header{
+    text-align: center;
+}
+
+.form-header h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-header p{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ====================================
+   MOBILE < 640px
+==================================== */
+
+@media (max-width:639px){
+
+    .form-header{
+        text-align: center;
+    }
+
+    .form-header h2{
+        font-size: 1.7rem;
+    }
+
+    .form-header p{
+        font-size: 0.95rem;
+        margin: 0 auto;
+    }
+}
+
+/* ====================================
+   TABLET 640px - 1024px
+==================================== */
+
+@media (min-width:640px) and (max-width:1023px){
+
+    .form-header{
+        text-align: center;
+    }
+
+    .form-header h2{
+        font-size: 2rem;
+    }
+
+    .form-header p{
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+
+/* ====================================
+   DESKTOP 1024px - 1280px
+==================================== */
+
+@media (min-width:1024px) and (max-width:1280px){
+
+    .form-header{
+        text-align: center;
+    }
+}
+
+/* ====================================
+   LARGE > 1280px
+==================================== */
+
+@media (min-width:1281px){
+
+    .form-header{
+        text-align: center;
     }
 }

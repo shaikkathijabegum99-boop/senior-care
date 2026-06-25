@@ -1,198 +1,174 @@
 /* =========================================================
-   🌍 GLOBAL THEME SYSTEM (Light + Dark)
-   ========================================================= */
-
-
-
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-
-.section {
-  background: var(--bg);
-  color: var(--text);
-}
-
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-
-.navbar {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-}
-
-
-
-
-/* =========================================================
-   DARK MODE SYSTEM
-   Consistent Black + Dark Grey Design
-   ========================================================= */
-
-body.dark-theme {
-  --bg-main: #121212;          /* Main page background */
-  --bg-soft: #1c1c1c;          /* Alternate sections */
-  --card-bg: #242424;          /* Cards & containers */
+   GLOBAL THEME VARIABLES
+========================================================= */
+:root {
+  --primary-green: #7ba376;
+  --primary-green-dark: #62885d;
   --accent-orange: #f29c52;
-  --title-color: #ffffff;
-  --text-main: #f2f2f2;
-  --text-secondary: #c4c4c4;
+  --bg-cream: #f8f3ea;
+  --bg-light: #ffffff;
+  --bg-soft: #f5f5f5;
+  --text-main: #2c3e50;
+  --text-desc: #5f6b77;
+  --text-muted: #8b97a3;
+  --border-light: #e8e1d7;
+  --card-bg: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.35s ease;
+}
+:root{
+    --primary:#8bab7d;
+    --primary-dark:#6f8f63;
 
-  --border-light: #353535;
+    --secondary:#f4ede3;
+    --white:#ffffff;
 
-  --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
-  --shadow-hover: 0 16px 40px rgba(0,0,0,.45);
+    --text-main:#2f2f2f;
+    --text-muted:#666666;
+
+    --border-light:#e5ddd2;
+
+    --card-bg:#ffffff;
+
+    --header-bg:rgba(255,255,255,.96);
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 16px 40px rgba(0,0,0,.12);
+
+    --section-bg:#f8f5ef;
 }
 
-/* =========================================================
-   GLOBAL BACKGROUND
-   ========================================================= */
 
-body.dark-theme {
-  background: var(--bg-main);
-  color: var(--text-main);
+/* =========================================================
+   DARK THEME VARIABLES
+========================================================= */
+
+body.dark-theme{
+
+    --secondary:#121212;
+
+    --white:#111111;
+
+    --text-main:#f2f2f2;
+
+    --text-muted:#bdbdbd;
+
+    --border-light:#353535;
+
+    --card-bg:#242424;
+
+    --header-bg:rgba(18,18,18,.96);
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+
+    --shadow-hover:0 16px 40px rgba(0,0,0,.45);
+
+    --section-bg:#1c1c1c;
 }
 
+
 /* =========================================================
-   ALTERNATE SECTION COLORS
-   ========================================================= */
+   RESET
+========================================================= */
 
-
-
-body.dark-theme section:nth-of-type(even) {
-  background: var(--bg-soft);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* =========================================================
-   CARDS & CONTAINERS
-   ========================================================= */
-
-body.dark-theme .card,
-body.dark-theme .service-card,
-body.dark-theme .why-card,
-body.dark-theme .life-card,
-body.dark-theme .testimonial-card,
-body.dark-theme .trust-item,
-body.dark-theme .cta-box,
-body.dark-theme .dashboard-card,
-body.dark-theme .auth-form-card,
-body.dark-theme .auth-info-card,
-body.dark-theme .contact-card,
-body.dark-theme .feature-card,
-body.dark-theme .blog-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-soft);
+html{
+    scroll-behavior:smooth;
 }
 
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--secondary);
+    color:var(--text-main);
+    transition:
+        background .3s ease,
+        color .3s ease;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+
 /* =========================================================
-   HEADINGS
-   ========================================================= */
+   BASIC ELEMENTS
+========================================================= */
+
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:.25s ease;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+section{
+    background:var(--secondary);
+    color:var(--text-main);
+    transition:.3s ease;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+
 
 body.dark-theme h1,
 body.dark-theme h2,
 body.dark-theme h3,
 body.dark-theme h4,
 body.dark-theme h5,
-body.dark-theme h6 {
-  color: var(--title-color);
+body.dark-theme h6{
+    color:var(--text-main);
 }
 
-/* =========================================================
-   PARAGRAPHS
-   ========================================================= */
+.hero-content h1 span,
+.about-hero-content h1 span {
+    color: var(--primary-green);
+}
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
 
-body.dark-theme p,
-body.dark-theme li
-{
-  color: var(--text-secondary);
+    font-size:0.9rem;
+    font-weight:600;
+    color:#f5e4cf;
+
+    margin-bottom:20px;
+    letter-spacing:.3px;
 }
 
-/* =========================================================
-   NAVBAR
-   ========================================================= */
-
-body.dark-theme .site-header,
-body.dark-theme .navbar {
-  background: rgba(18,18,18,0.95);
-  border-bottom: 1px solid var(--border-light);
-  backdrop-filter: blur(12px);
+.hero-badge i{
+    color:var(--primary);
+    font-size:1rem;
 }
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-body.dark-theme footer,
-body.dark-theme .footer {
-  background: #0d0d0d;
-  border-top: 1px solid var(--border-light);
-}
-
-/* =========================================================
-   FORM FIELDS
-   ========================================================= */
-
-body.dark-theme input,
-body.dark-theme textarea,
-body.dark-theme select {
-  background: #2b2b2b;
-  border: 1px solid #404040;
-  color: #ffffff;
-}
-
-body.dark-theme input::placeholder,
-body.dark-theme textarea::placeholder {
-  color: #9a9a9a;
-}
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-body.dark-theme .secondary-btn {
-  background: #2a2a2a;
-  border: 1px solid #404040;
-  color: #ffffff;
-}
-
-body.dark-theme .secondary-btn:hover {
-  background: #343434;
-}
-
-/* =========================================================
-   IMAGE OVERLAYS
-   ========================================================= */
-
-body.dark-theme .hero-overlay,
-body.dark-theme .home-hero-overlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.82),
-      rgba(0,0,0,.58)
-    );
-}
-
-

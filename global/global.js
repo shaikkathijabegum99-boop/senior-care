@@ -1,101 +1,262 @@
+/* ==========================================================
+   GLOBAL.JS (FIXED)
+   Theme + RTL + Navbar + Sticky Header
+========================================================== */
 
-(function () {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-})();
+document.addEventListener("DOMContentLoaded", async () => {
 
+    await Promise.all([
+        loadComponent("navbar", "../components/navbar.html"),
+        loadComponent("footer", "../components/footer.html")
+    ]);
 
-
-document.addEventListener('click', (e) => {
-  const toggleBtn = e.target.closest('#theme-toggle');
-  if (!toggleBtn) return;
-
-  const html = document.documentElement;
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
- 
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-
-  const icon = toggleBtn.querySelector('i');
-  if (icon) {
-    icon.className = newTheme === 'dark'
-      ? 'fas fa-sun'
-      : 'fas fa-moon';
-  }
+    initTheme();
+    initDirection();
+    initNavbar();
+    setActiveMenu();
+    initStickyHeader();
 });
 
 
+/* ==========================================================
+   LOAD COMPONENTS
+========================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-  const updateIcon = () => {
-    const toggleBtn = document.querySelector('#theme-toggle');
-    if (!toggleBtn) return;
+async function loadComponent(id, path) {
 
-    const icon = toggleBtn.querySelector('i');
-    if (!icon) return;
+    const element = document.getElementById(id);
+    if (!element) return;
 
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+    try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`Failed to load ${path}`);
 
-    icon.className = currentTheme === 'dark'
-      ? 'fas fa-sun'
-      : 'fas fa-moon';
-  };
+        element.innerHTML = await response.text();
 
-
-  updateIcon();
-
- 
-  setTimeout(updateIcon, 500);
-});
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 
+/* ==========================================================
+   THEME
+========================================================== */
 
-const header = document.querySelector(".site-header");
+function initTheme() {
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 30) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
 
-document.addEventListener("DOMContentLoaded", () => {
+    const themeBtn = document.getElementById("theme-toggle");
 
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("nav-menu");
+    themeBtn?.addEventListener("click", () => {
 
-    hamburger?.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        const current = localStorage.getItem("theme") || "light";
+
+        applyTheme(current === "dark" ? "light" : "dark");
     });
+}
 
-    if (window.innerWidth <= 1023) {
+function applyTheme(theme) {
 
-        document.querySelectorAll(".has-dropdown > .nav-link")
-            .forEach(link => {
+    document.body.classList.toggle("dark-theme", theme === "dark");
 
-                link.addEventListener("click", e => {
-                    e.preventDefault();
+    localStorage.setItem("theme", theme);
 
-                    const parent = link.parentElement;
+    updateThemeIcon(theme);
+}
 
-                    document
-                        .querySelectorAll(".has-dropdown")
-                        .forEach(item => {
+function updateThemeIcon(theme) {
 
-                            if (item !== parent) {
-                                item.classList.remove("open");
-                            }
-                        });
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
 
-                    parent.classList.toggle("open");
-                });
+    btn.innerHTML =
+        theme === "dark"
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
+}
 
-            });
 
+/* ==========================================================
+   RTL / LTR
+========================================================== */
+
+function initDirection() {
+
+    const savedDir = localStorage.getItem("direction") || "ltr";
+    applyDirection(savedDir);
+
+    const rtlBtn = document.getElementById("rtl-toggle");
+
+    rtlBtn?.addEventListener("click", () => {
+
+        const current =
+            document.documentElement.getAttribute("dir") || "ltr";
+
+        applyDirection(current === "rtl" ? "ltr" : "rtl");
+    });
+}
+
+function applyDirection(dir) {
+
+    document.documentElement.setAttribute("dir", dir);
+    localStorage.setItem("direction", dir);
+
+    updateRTLIcon(dir);
+    fixNavbarRTL(dir);
+}
+
+function updateRTLIcon(dir) {
+
+    const btn = document.getElementById("rtl-toggle");
+    if (!btn) return;
+
+    btn.innerHTML = '<i class="fas fa-right-left"></i>';
+
+    const icon = btn.querySelector("i");
+
+    if (icon) {
+        icon.style.transform = dir === "rtl" ? "rotate(180deg)" : "rotate(0deg)";
+        icon.style.transition = "0.3s ease";
+    }
+}
+
+
+/* ==========================================================
+   FIX NAVBAR RTL (SAFE)
+========================================================== */
+
+function fixNavbarRTL(dir) {
+
+    const navLinks = document.querySelector(".nav-links");
+    if (!navLinks) return;
+
+    if (!navLinks._originalItems) {
+        navLinks._originalItems = Array.from(navLinks.children);
     }
 
-});
+    const items = navLinks._originalItems;
+
+    navLinks.innerHTML = "";
+
+    if (dir === "rtl" && window.innerWidth >= 1024) {
+        [...items].reverse().forEach(item => navLinks.appendChild(item));
+    } else {
+        items.forEach(item => navLinks.appendChild(item));
+    }
+}
+
+
+/* ==========================================================
+   ACTIVE MENU
+========================================================== */
+
+function setActiveMenu() {
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+
+        const href = link.getAttribute("href");
+        if (!href) return;
+
+        const page = href.split("/").pop();
+
+        link.classList.toggle("active", page === currentPage);
+    });
+}
+
+
+/* ==========================================================
+   NAVBAR + HAMBURGER
+========================================================== */
+
+function initNavbar() {
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (!hamburger || !navLinks) return;
+
+    /* Hamburger Toggle (FIXED) */
+    hamburger.addEventListener("click", () => {
+
+        const isActive = hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+
+        hamburger.setAttribute("aria-expanded", isActive);
+    });
+
+    /* Dropdown (Mobile) */
+    document.querySelectorAll(".has-dropdown").forEach(item => {
+
+        const link = item.querySelector(".nav-link");
+
+        link?.addEventListener("click", (e) => {
+
+            if (window.innerWidth <= 1023) {
+
+                e.preventDefault();
+
+                document.querySelectorAll(".has-dropdown")
+                    .forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove("open");
+                        }
+                    });
+
+                item.classList.toggle("open");
+            }
+        });
+    });
+
+    /* Close on outside click */
+    document.addEventListener("click", (e) => {
+
+        if (
+            navLinks.classList.contains("active") &&
+            !navLinks.contains(e.target) &&
+            !hamburger.contains(e.target)
+        ) {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", false);
+        }
+    });
+
+    /* Resize reset */
+    window.addEventListener("resize", () => {
+
+        const dir = document.documentElement.getAttribute("dir") || "ltr";
+        fixNavbarRTL(dir);
+
+        if (window.innerWidth >= 1024) {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", false);
+
+            document.querySelectorAll(".has-dropdown")
+                .forEach(item => item.classList.remove("open"));
+        }
+    });
+}
+
+
+/* ==========================================================
+   STICKY HEADER
+========================================================== */
+
+function initStickyHeader() {
+
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    const handleScroll = () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+}

@@ -1,98 +1,179 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nethra Senior Care</title>
 
-  <link rel="stylesheet" href="../css/com.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethra Senior Care</title>
+
+    <meta name="description"
+        content="Compassionate senior care services designed to provide comfort, dignity, and peace of mind.">
+
+    <link rel="icon" href="../images/favicon.png">
+
+    <link rel="stylesheet" href="../css/com.css">
+     <link rel="stylesheet" href="../global/global.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="nav-container">
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header">
 
-  
-      <a href="/index.html" class="logo-box">
-        <img src="../images/slogo.jpg.png" alt="Nethra Logo" class="nav-logo-img" />
-        <div class="logo-text">
-          <span class="brand-name">NETHRA</span>
-          <span class="brand-subtext">SENIOR CARE</span>
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="../index.html" class="logo-box">
+
+                <img src="../images/slogo.jpg.png"
+                    alt="Nethra Senior Care Logo"
+                    class="nav-logo-img"
+                    loading="lazy">
+
+                <div class="logo-text">
+                    <span class="brand-name">NETHRA</span>
+                    <span class="brand-subtext">SENIOR CARE</span>
+                </div>
+
+            </a>
+
+            <!-- Navigation -->
+            <nav aria-label="Primary Navigation">
+
+                <ul class="nav-links" id="nav-menu">
+
+                    <!-- Home -->
+                    <li class="nav-item has-dropdown">
+
+                        <a href="../index.html"
+                            class="nav-link"
+                            aria-haspopup="true">
+
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down"></i>
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li class="dropdown-item">
+                                <a href="../index.html">Home 1</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a href="../home2/home2.html">Home 2</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- About -->
+                    <li class="nav-item">
+                        <a href="../about/about1.html" class="nav-link">
+                            About
+                        </a>
+                    </li>
+
+                    <!-- Services -->
+                    <li class="nav-item">
+                        <a href="../service/service.html" class="nav-link">
+                            Services
+                        </a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li class="nav-item">
+                        <a href="../blo/blog.html" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a href="../contact/contact.html" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+
+                    <!-- Dashboard (Always Last) -->
+                    <li class="nav-item">
+                        <a href="../admin/admin dashboard.html"
+                            class="nav-link">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Theme Toggle -->
+                <button class="action-btn"
+                    id="theme-toggle"
+                    type="button"
+                    title="Toggle Theme"
+                    aria-label="Toggle Theme">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+            <button class="action-btn"
+        id="rtl-toggle"
+        type="button"
+        title="Toggle RTL"
+        aria-label="Toggle RTL">
+
+    <i class="fas fa-right-left"></i>
+
+</button>
+
+</button>
+                <!-- Login -->
+                <div class="header-auth-icons">
+
+                    <a href="../bash/signin.html"
+                        class="action-btn"
+                        title="Login"
+                        aria-label="Login">
+
+                        <i class="fas fa-user-circle"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- Hamburger -->
+               <button class="hamburger"
+        id="hamburger"
+        type="button"
+        aria-label="Toggle Navigation"
+        aria-controls="nav-menu"
+        aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+            </div>
+
         </div>
-      </a>
 
-   
-      <ul class="nav-links" id="nav-menu">
-        <li class="nav-item">
-    <a href="../index.html" class="nav-link">
-        Home
-        <i class="fas fa-chevron-down"></i>
-    </a>
+    </header>
 
-    <ul class="dropdown-menu">
-        <li class="dropdown-item">
-            <a href="../index.html">Home 1</a>
-        </li>
+    <script src="../js/component.js"></script>
 
-        <li class="dropdown-item">
-            <a href="../home2/home2.html">Home 2</a>
-        </li>
-    </ul>
-</li>
-
-        <li class="nav-item">
-          <a href="../about/about1.html" class="nav-link">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="../service/service.html" class="nav-link">Services </a>
-         
-        </li>
-
-        <li class="nav-item">
-          <a href="../blo/blog.html" class="nav-link">Blog </a>
-         
-        </li>
-
-        <li class="nav-item">
-          <a href="../contact/contact.html" class="nav-link">Contact</a>
-        </li>
-         <li class="nav-item">
-          <a href="../admin/admin dashboard.html" class="nav-link">Dashboard</a>
-        </li>
-      </ul>
-
-  
-      <div class="header-actions">
-     
-        <button class="action-btn" id="theme-toggle" title="Toggle Theme">
-          <i class="fas fa-moon"></i>
-        </button>
-
-      
-        <button class="action-btn" id="rtl-toggle" title="Toggle RTL">
-          <i class="fas fa-right-left"></i>
-        </button>
-
-     
-        <div class="header-auth-icons">
-          <a href="../bash/signin.html" class="action-btn" title="Login/Register">
-            <i class="fas fa-user-circle"></i>
-          </a>
-          
-        </div>
-
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <script src="../js/component.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,2302 @@
+/* ==========================================================
+   SERVICE.CSS - PART 1
+   Theme + Reset + Utilities + Buttons + Hero + Quick Links
+   Follows Website Design Guidelines
+========================================================== */
+
+/* ==========================================================
+   THEME VARIABLES
+========================================================== */
+
+:root{
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:20px;
+
+    --transition:all .35s ease;
+
+    --container-width:1280px;
+
+    --shadow-soft:var(--shadow);
+    --shadow-hover:var(--shadow-hover);
+
+    --hero-overlay:rgba(20,20,20,.55);
+}
+
+/* ==========================================================
+   DARK MODE EXTENSIONS
+========================================================== */
+
+body.dark-theme{
+    --hero-overlay:rgba(0,0,0,.72);
+}
+
+/* ==========================================================
+   RESET ENHANCEMENTS
+========================================================== */
+
+*{
+    -webkit-tap-highlight-color:transparent;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    position:relative;
+}
+
+/* ==========================================================
+   LAYOUT UTILITIES
+========================================================== */
+
+.content-container{
+    width:100%;
+    max-width:var(--container-width);
+    margin:auto;
+    padding-inline:24px;
+}
+
+.section-space{
+    padding:90px 0;
+}
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.section-header{
+    max-width:760px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.section-header .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(139,171,125,.12);
+
+    color:var(--primary);
+
+    font-size:.85rem;
+    font-weight:700;
+
+    letter-spacing:.08em;
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+}
+
+body.dark-theme .section-header .eyebrow{
+    background:rgba(139,171,125,.18);
+}
+
+.section-header h2{
+    font-size:2.2rem;
+    color:var(--text-main);
+    margin-bottom:18px;
+    line-height:1.25;
+}
+
+.section-header p{
+    color:var(--text-muted);
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/* ==========================================================
+   BUTTON SYSTEM
+========================================================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:52px;
+    padding:0 28px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+/* ---------- Primary ---------- */
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+
+    border:1px solid var(--primary);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.btn-primary:hover{
+    background:var(--primary-dark);
+    border-color:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-hover);
+}
+
+/* ---------- Secondary ---------- */
+
+.btn-secondary{
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.45);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.12);
+
+    transform:translateY(-3px);
+}
+
+/* ==========================================================
+   SERVICE HERO
+========================================================== */
+
+.service-hero{
+    position:relative;
+
+    min-height:92vh;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            var(--hero-overlay),
+            var(--hero-overlay)
+        ),
+        url("../images/servicehero.jpg")
+        center center/cover no-repeat;
+
+    overflow:hidden;
+}
+
+/* ==========================================================
+   HERO GRID
+========================================================== */
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.3fr .8fr;
+    gap:50px;
+
+    align-items:center;
+
+    padding-top:140px;
+    padding-bottom:80px;
+}
+
+/* ==========================================================
+   HERO COPY
+========================================================== */
+
+.hero-copy{
+    color:#fff;
+
+    animation:fadeUp .8s ease both;
+}
+
+.hero-copy .eyebrow{
+    display:inline-block;
+
+    color:#ffd39f;
+
+    font-size:.88rem;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+}
+
+.hero-copy h1{
+    font-size:4rem;
+
+    line-height:1.12;
+
+    margin-bottom:24px;
+
+    color:#fff;
+}
+
+.hero-copy p:not(.eyebrow){
+    max-width:680px;
+
+    font-size:1.05rem;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+
+    margin-bottom:36px;
+}
+
+body.dark-theme .hero-copy p:not(.eyebrow){
+    color:rgba(255,255,255,.85);
+}
+
+/* ==========================================================
+   HERO ACTIONS
+========================================================== */
+
+.hero-actions{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:16px;
+}
+
+/* ==========================================================
+   HERO CARD
+========================================================== */
+
+.hero-card{
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:var(--radius-lg);
+
+    padding:34px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+    animation:fadeUp .9s ease both;
+}
+
+body.dark-theme .hero-card{
+    background:rgba(0,0,0,.35);
+    border-color:rgba(255,255,255,.08);
+}
+
+.hero-card h3{
+    color:#fff;
+
+    font-size:1.45rem;
+
+    margin-bottom:26px;
+}
+
+.hero-card ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero-card li{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+
+    color:rgba(255,255,255,.92);
+
+    line-height:1.7;
+}
+
+.hero-card li i{
+    flex-shrink:0;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(242,156,82,.18);
+
+    color:var(--accent-orange);
+}
+
+/* ==========================================================
+   QUICK LINKS
+========================================================== */
+
+.quick-links{
+
+    top:84px;
+
+    z-index:100;
+
+    background:var(--card-bg);
+
+    border-top:1px solid var(--border-light);
+    border-bottom:1px solid var(--border-light);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.04);
+}
+
+.quick-links-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    padding:18px 24px;
+}
+
+.quick-links a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:44px;
+
+    padding:0 20px;
+
+    border-radius:999px;
+
+    color:var(--text-main);
+
+    font-size:.92rem;
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.quick-links a:hover{
+    background:rgba(139,171,125,.12);
+
+    color:var(--primary);
+}
+
+body.dark-theme .quick-links{
+    background:var(--card-bg);
+}
+
+body.dark-theme .quick-links a:hover{
+    background:rgba(139,171,125,.18);
+}
+
+/* ==========================================================
+   RTL SUPPORT
+========================================================== */
+
+html[dir="rtl"] .hero-copy{
+    text-align:right;
+}
+
+html[dir="rtl"] .hero-card li{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .hero-actions{
+    justify-content:flex-end;
+}
+
+html[dir="rtl"] .quick-links-wrap{
+    direction:rtl;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}/* ==========================================================
+   SERVICE.CSS - PART 2
+   Services Section + Detail Blocks + Wellness Section
+========================================================== */
+
+/* ==========================================================
+   SERVICES GRID
+========================================================== */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ==========================================================
+   SERVICE CARD
+========================================================== */
+
+.service-card{
+    background:var(--card-bg);
+
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+
+    padding:32px 28px;
+
+    box-shadow:var(--shadow-soft);
+
+    transition:var(--transition);
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+    border-color:rgba(123,163,118,.35);
+}
+
+body.dark-theme .service-card:hover{
+    border-color:rgba(123,163,118,.28);
+}
+
+/* ==========================================================
+   SERVICE ICON
+========================================================== */
+
+.service-icon{
+    width:68px;
+    height:68px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    background:rgba(123,163,118,.12);
+
+    color:var(--primary);
+
+    font-size:1.6rem;
+
+    transition:var(--transition);
+}
+
+.service-card:hover .service-icon{
+    background:var(--primary);
+    color:#fff;
+
+    transform:scale(1.05);
+}
+
+body.dark-theme .service-icon{
+    background:rgba(123,163,118,.18);
+}
+
+/* ==========================================================
+   SERVICE CONTENT
+========================================================== */
+
+.service-card h3{
+    color:var(--text-main);
+
+    font-size:1.3rem;
+
+    line-height:1.35;
+
+    margin-bottom:16px;
+}
+
+.service-card p{
+    color:var(--text-muted);
+
+    line-height:1.85;
+
+    margin-bottom:24px;
+
+    flex:1;
+}
+
+/* ==========================================================
+   SERVICE LINK
+========================================================== */
+
+.detail-link{
+    display:inline-flex;
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:var(--transition);
+}
+
+.detail-link:hover{
+    gap:14px;
+}
+
+/* ==========================================================
+   DETAIL STACK
+========================================================== */
+
+.detail-stack{
+    display:flex;
+    flex-direction:column;
+    gap:90px;
+}
+
+/* ==========================================================
+   DETAIL BLOCK
+========================================================== */
+
+.detail-block{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    align-items:center;
+}
+
+.detail-block.reverse .detail-media{
+    order:2;
+}
+
+.detail-block.reverse .detail-copy{
+    order:1;
+}
+
+/* ==========================================================
+   DETAIL MEDIA
+========================================================== */
+
+.detail-media{
+    position:relative;
+}
+
+.detail-media img{
+    width:100%;
+    height:100%;
+
+    min-height:420px;
+
+    object-fit:cover;
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.detail-media::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    border-radius:var(--radius-lg);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    pointer-events:none;
+}
+
+/* ==========================================================
+   DETAIL COPY
+========================================================== */
+
+.detail-copy h3{
+    font-size:2.2rem;
+
+    color:var(--text-main);
+
+    margin-bottom:22px;
+}
+
+.detail-copy p{
+    color:var(--text-muted);
+
+    line-height:1.95;
+
+    margin-bottom:30px;
+}
+
+/* ==========================================================
+   DETAIL POINTS
+========================================================== */
+
+.detail-points{
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.detail-points li{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+
+    color:var(--text-main);
+
+    line-height:1.7;
+}
+
+.detail-points li i{
+    flex-shrink:0;
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(123,163,118,.12);
+
+    color:var(--primary);
+
+    font-size:.9rem;
+}
+
+body.dark-theme .detail-points li i{
+    background:rgba(123,163,118,.18);
+}
+
+/* ==========================================================
+   WELLNESS SECTION
+========================================================== */
+
+.portal-section{
+    background:var(--bg-soft);
+}
+
+body.dark-theme .portal-section{
+    background:var(--bg-soft);
+}
+
+/* ==========================================================
+   WELLNESS CARD ENHANCEMENTS
+========================================================== */
+
+.portal-section .service-card{
+    text-align:center;
+
+    align-items:center;
+}
+
+.portal-section .service-icon{
+    margin-inline:auto;
+}
+
+.portal-section .service-card p{
+    margin-bottom:0;
+}
+
+/* ==========================================================
+   RTL SUPPORT
+========================================================== */
+
+html[dir="rtl"] .detail-copy{
+    text-align:right;
+}
+
+html[dir="rtl"] .detail-points li{
+    flex-direction:row-reverse;
+
+    text-align:right;
+}
+
+html[dir="rtl"] .detail-block.reverse .detail-media{
+    order:1;
+}
+
+html[dir="rtl"] .detail-block.reverse .detail-copy{
+    order:2;
+}
+
+html[dir="rtl"] .detail-link:hover{
+    gap:8px;
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media (max-width:1023px){
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .detail-block{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .detail-block.reverse .detail-media,
+    .detail-block.reverse .detail-copy{
+        order:unset;
+    }
+
+    .detail-copy h3{
+        font-size:2rem;
+    }
+
+    .detail-media img{
+        min-height:340px;
+    }
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width:639px){
+
+    .service-grid{
+        grid-template-columns:1fr;
+
+        gap:24px;
+    }
+
+    .service-card{
+        padding:28px 22px;
+    }
+
+    .service-icon{
+        width:60px;
+        height:60px;
+
+        font-size:1.4rem;
+
+        margin-bottom:20px;
+    }
+
+    .service-card h3{
+        font-size:1.2rem;
+    }
+
+    .detail-stack{
+        gap:70px;
+    }
+
+    .detail-copy h3{
+        font-size:1.75rem;
+    }
+
+    .detail-copy p{
+        line-height:1.8;
+    }
+
+    .detail-media img{
+        min-height:260px;
+    }
+}/* ==========================================================
+   SERVICE.CSS - PART 3
+   Family Portal + Mock Dashboard + CTA Section
+========================================================== */
+
+/* ==========================================================
+   FAMILY PORTAL SECTION
+========================================================== */
+
+.portal-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+/* ==========================================================
+   LEFT CONTENT
+========================================================== */
+
+.portal-grid .section-header{
+    max-width:100%;
+}
+
+.portal-grid .section-header h2{
+    font-size:2.5rem;
+    color:var(--text-main);
+    line-height:1.25;
+}
+
+.portal-grid .section-header p{
+    color:var(--text-muted);
+    line-height:1.9;
+}
+
+/* ==========================================================
+   PORTAL FEATURES
+========================================================== */
+
+.portal-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:30px;
+}
+
+.portal-item{
+    background:var(--card-bg);
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+
+    padding:26px 24px;
+
+    box-shadow:var(--shadow-soft);
+
+    transition:var(--transition);
+}
+
+.portal-item:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-hover);
+    border-color:rgba(123,163,118,.35);
+}
+
+body.dark-theme .portal-item:hover{
+    border-color:rgba(123,163,118,.25);
+}
+
+.portal-item i{
+    width:56px;
+    height:56px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(123,163,118,.12);
+    color:var(--primary);
+
+    font-size:1.35rem;
+
+    margin-bottom:18px;
+}
+
+body.dark-theme .portal-item i{
+    background:rgba(123,163,118,.18);
+}
+
+.portal-item h4{
+    font-size:1.1rem;
+    color:var(--text-main);
+    margin-bottom:12px;
+}
+
+.portal-item p{
+    color:var(--text-muted);
+    line-height:1.8;
+}
+
+/* ==========================================================
+   PORTAL VISUAL
+========================================================== */
+
+.portal-visual{
+    background:var(--card-bg);
+
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:var(--shadow-soft);
+}
+
+/* ==========================================================
+   MOCK HEADER
+========================================================== */
+
+.mock-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:28px;
+}
+
+.mock-header h3{
+    font-size:1.4rem;
+    color:var(--text-main);
+}
+
+.mock-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(123,163,118,.12);
+    color:var(--primary);
+
+    font-size:.85rem;
+    font-weight:700;
+}
+
+body.dark-theme .mock-pill{
+    background:rgba(123,163,118,.18);
+}
+
+/* ==========================================================
+   MOCK DASHBOARD CARDS
+========================================================== */
+
+.mock-card{
+    background:var(--bg-soft);
+
+    border:1px solid var(--border-light);
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    transition:var(--transition);
+}
+
+.mock-card:last-child{
+    margin-bottom:0;
+}
+
+.mock-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.mock-card p{
+    color:var(--text-muted);
+
+    line-height:1.8;
+}
+
+.mock-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+}
+
+.mock-row strong{
+    color:var(--text-main);
+}
+
+.mock-row span{
+    color:var(--text-muted);
+}
+
+/* ==========================================================
+   CTA SECTION
+========================================================== */
+
+.cta-box{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123,163,118,.95),
+            rgba(98,136,93,.95)
+        );
+
+    border-radius:var(--radius-lg);
+
+    padding:70px 60px;
+
+    text-align:center;
+
+    color:#fff;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.cta-box::before{
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-80px;
+
+    background:rgba(255,255,255,.08);
+}
+
+.cta-box::after{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    bottom:-100px;
+    left:-70px;
+
+    background:rgba(255,255,255,.05);
+}
+
+.cta-box > *{
+    position:relative;
+    z-index:2;
+}
+
+.cta-box h2{
+    font-size:2.7rem;
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+.cta-box p{
+    max-width:760px;
+
+    margin:0 auto 34px;
+
+    font-size:1.05rem;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+}
+
+.cta-box .hero-actions{
+    justify-content:center;
+}
+
+/* ==========================================================
+   CTA BUTTON OVERRIDES
+========================================================== */
+
+.cta-box .btn-primary{
+    background:#fff;
+    color:var(--primary);
+
+    border-color:#fff;
+}
+
+.cta-box .btn-primary:hover{
+    background:transparent;
+    color:#fff;
+    border-color:#fff;
+}
+
+.cta-box .btn-secondary{
+    border-color:rgba(255,255,255,.45);
+    color:#fff;
+}
+
+.cta-box .btn-secondary:hover{
+    background:rgba(255,255,255,.12);
+}
+
+/* ==========================================================
+   RTL SUPPORT
+========================================================== */
+
+html[dir="rtl"] .portal-grid{
+    direction:rtl;
+}
+
+html[dir="rtl"] .portal-grid .section-header{
+    text-align:right;
+}
+
+html[dir="rtl"] .portal-item{
+    text-align:right;
+}
+
+html[dir="rtl"] .mock-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .mock-row{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .portal-item i{
+    margin-left:0;
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media (max-width:1023px){
+
+    .portal-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .portal-features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-box{
+        padding:60px 40px;
+    }
+
+    .cta-box h2{
+        font-size:2.3rem;
+    }
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width:639px){
+
+    .portal-features{
+        grid-template-columns:1fr;
+    }
+
+    .portal-item{
+        padding:24px 20px;
+    }
+
+    .portal-visual{
+        padding:24px 20px;
+    }
+
+    .mock-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .mock-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta-box{
+        padding:50px 24px;
+    }
+
+    .cta-box h2{
+        font-size:1.9rem;
+    }
+
+    .cta-box p{
+        font-size:.98rem;
+    }
+
+    .cta-box .hero-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .cta-box .btn{
+        width:100%;
+    }
+}/* ==========================================================
+   SERVICE.CSS - PART 3
+   Family Portal + Mock Dashboard + CTA Section
+========================================================== */
+
+/* ==========================================================
+   FAMILY PORTAL SECTION
+========================================================== */
+
+.portal-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+/* ==========================================================
+   LEFT CONTENT
+========================================================== */
+
+.portal-grid .section-header{
+    max-width:100%;
+}
+
+.portal-grid .section-header h2{
+    font-size:2.5rem;
+    color:var(--text-main);
+    line-height:1.25;
+}
+
+.portal-grid .section-header p{
+    color:var(--text-muted);
+    line-height:1.9;
+}
+
+/* ==========================================================
+   PORTAL FEATURES
+========================================================== */
+
+.portal-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:30px;
+}
+
+.portal-item{
+    background:var(--card-bg);
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+
+    padding:26px 24px;
+
+    box-shadow:var(--shadow-soft);
+
+    transition:var(--transition);
+}
+
+.portal-item:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-hover);
+    border-color:rgba(123,163,118,.35);
+}
+
+body.dark-theme .portal-item:hover{
+    border-color:rgba(123,163,118,.25);
+}
+
+.portal-item i{
+    width:56px;
+    height:56px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(123,163,118,.12);
+    color:var(--primary);
+
+    font-size:1.35rem;
+
+    margin-bottom:18px;
+}
+
+body.dark-theme .portal-item i{
+    background:rgba(123,163,118,.18);
+}
+
+.portal-item h4{
+    font-size:1.1rem;
+    color:var(--text-main);
+    margin-bottom:12px;
+}
+
+.portal-item p{
+    color:var(--text-muted);
+    line-height:1.8;
+}
+
+/* ==========================================================
+   PORTAL VISUAL
+========================================================== */
+
+.portal-visual{
+    background:var(--card-bg);
+
+    border:1px solid var(--border-light);
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:var(--shadow-soft);
+}
+
+/* ==========================================================
+   MOCK HEADER
+========================================================== */
+
+.mock-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:28px;
+}
+
+.mock-header h3{
+    font-size:1.4rem;
+    color:var(--text-main);
+}
+
+.mock-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(123,163,118,.12);
+    color:var(--primary);
+
+    font-size:.85rem;
+    font-weight:700;
+}
+
+body.dark-theme .mock-pill{
+    background:rgba(123,163,118,.18);
+}
+
+/* ==========================================================
+   MOCK DASHBOARD CARDS
+========================================================== */
+
+.mock-card{
+    background:var(--bg-soft);
+
+    border:1px solid var(--border-light);
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    transition:var(--transition);
+}
+
+.mock-card:last-child{
+    margin-bottom:0;
+}
+
+.mock-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.mock-card p{
+    color:var(--text-muted);
+
+    line-height:1.8;
+}
+
+.mock-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+}
+
+.mock-row strong{
+    color:var(--text-main);
+}
+
+.mock-row span{
+    color:var(--text-muted);
+}
+
+/* ==========================================================
+   CTA SECTION
+========================================================== */
+
+.cta-box{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123,163,118,.95),
+            rgba(98,136,93,.95)
+        );
+
+    border-radius:var(--radius-lg);
+
+    padding:70px 60px;
+
+    text-align:center;
+
+    color:#fff;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.cta-box::before{
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-80px;
+
+    background:rgba(255,255,255,.08);
+}
+
+.cta-box::after{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    bottom:-100px;
+    left:-70px;
+
+    background:rgba(255,255,255,.05);
+}
+
+.cta-box > *{
+    position:relative;
+    z-index:2;
+}
+
+.cta-box h2{
+    font-size:2.7rem;
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+.cta-box p{
+    max-width:760px;
+
+    margin:0 auto 34px;
+
+    font-size:1.05rem;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+}
+
+.cta-box .hero-actions{
+    justify-content:center;
+}
+
+/* ==========================================================
+   CTA BUTTON OVERRIDES
+========================================================== */
+
+.cta-box .btn-primary{
+    background:#fff;
+    color:var(--primary);
+
+    border-color:#fff;
+}
+
+.cta-box .btn-primary:hover{
+    background:transparent;
+    color:#fff;
+    border-color:#fff;
+}
+
+.cta-box .btn-secondary{
+    border-color:rgba(255,255,255,.45);
+    color:#fff;
+}
+
+.cta-box .btn-secondary:hover{
+    background:rgba(255,255,255,.12);
+}
+
+/* ==========================================================
+   RTL SUPPORT
+========================================================== */
+
+html[dir="rtl"] .portal-grid{
+    direction:rtl;
+}
+
+html[dir="rtl"] .portal-grid .section-header{
+    text-align:right;
+}
+
+html[dir="rtl"] .portal-item{
+    text-align:right;
+}
+
+html[dir="rtl"] .mock-header{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .mock-row{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .portal-item i{
+    margin-left:0;
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media (max-width:1023px){
+
+    .portal-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .portal-features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-box{
+        padding:60px 40px;
+    }
+
+    .cta-box h2{
+        font-size:2.3rem;
+    }
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width:639px){
+
+    .portal-features{
+        grid-template-columns:1fr;
+    }
+
+    .portal-item{
+        padding:24px 20px;
+    }
+
+    .portal-visual{
+        padding:24px 20px;
+    }
+
+    .mock-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .mock-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta-box{
+        padding:50px 24px;
+    }
+
+    .cta-box h2{
+        font-size:1.9rem;
+    }
+
+    .cta-box p{
+        font-size:.98rem;
+    }
+
+    .cta-box .hero-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .cta-box .btn{
+        width:100%;
+    }
+}/* ==========================================================
+   SERVICE.CSS - PART 4
+   Responsive Design + RTL + Dark Mode + Accessibility
+========================================================== */
+
+/* ==========================================================
+   LARGE DESKTOP (≥ 1281px)
+========================================================== */
+
+@media (min-width:1281px){
+
+    .content-container{
+        max-width:1280px;
+    }
+
+    .hero-grid{
+        gap:60px;
+    }
+
+    .hero-copy h1{
+        font-size:4.3rem;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .portal-grid{
+        gap:60px;
+    }
+}
+
+/* ==========================================================
+   DESKTOP (1024px - 1280px)
+========================================================== */
+
+@media (min-width:1024px) and (max-width:1280px){
+
+    .content-container{
+        padding-inline:20px;
+    }
+
+    .section-space{
+        padding:80px 0;
+    }
+
+    .hero-grid{
+        gap:40px;
+    }
+
+    .hero-copy h1{
+        font-size:3.7rem;
+    }
+
+    .hero-card{
+        padding:30px;
+    }
+
+    .service-grid{
+        gap:24px;
+    }
+
+    .detail-stack{
+        gap:80px;
+    }
+
+    .portal-grid{
+        gap:40px;
+    }
+
+    .cta-box{
+        padding:65px 50px;
+    }
+}
+
+/* ==========================================================
+   TABLET (640px - 1023px)
+========================================================== */
+
+@media (min-width:640px) and (max-width:1023px){
+
+    .section-space{
+        padding:75px 0;
+    }
+
+    /* Hero */
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+
+        padding-top:120px;
+        padding-bottom:70px;
+    }
+
+    .hero-copy{
+        text-align:center;
+    }
+
+    .hero-copy h1{
+        font-size:3rem;
+    }
+
+    .hero-copy p{
+        margin-inline:auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-card{
+        max-width:700px;
+        margin:auto;
+    }
+
+    /* Services */
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Detail */
+    .detail-block{
+        grid-template-columns:1fr;
+    }
+
+    .detail-copy{
+        text-align:center;
+    }
+
+    .detail-points{
+        max-width:650px;
+        margin:auto;
+    }
+
+    /* Portal */
+    .portal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .portal-features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* CTA */
+    .cta-box{
+        padding:55px 35px;
+    }
+
+    .cta-box h2{
+        font-size:2.3rem;
+    }
+}
+
+/* ==========================================================
+   MOBILE (<640px)
+========================================================== */
+
+@media (max-width:639px){
+
+    .content-container{
+        padding-inline:16px;
+    }
+
+    .section-space{
+        padding:65px 0;
+    }
+
+    /* ======================================================
+       HERO
+    ====================================================== */
+
+    .service-hero{
+        min-height:auto;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        padding-top:110px;
+        padding-bottom:60px;
+    }
+
+    .hero-copy{
+        text-align:center;
+    }
+
+    .hero-copy h1{
+        font-size:2.3rem;
+        line-height:1.2;
+    }
+
+    .hero-copy p{
+        font-size:.98rem;
+        margin-inline:auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+        flex-direction:column;
+    }
+
+    .hero-actions .btn{
+        width:100%;
+    }
+
+    .hero-card{
+        padding:24px;
+    }
+
+    .hero-card h3{
+        font-size:1.3rem;
+    }
+
+    .hero-card li{
+        gap:12px;
+    }
+
+    .hero-card li i{
+        width:38px;
+        height:38px;
+        font-size:.95rem;
+    }
+
+    /* ======================================================
+       QUICK LINKS
+    ====================================================== */
+
+    .quick-links{
+        top:72px;
+    }
+
+    .quick-links-wrap{
+        justify-content:flex-start;
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        padding:14px 16px;
+
+        scrollbar-width:none;
+    }
+
+    .quick-links-wrap::-webkit-scrollbar{
+        display:none;
+    }
+
+    .quick-links a{
+        white-space:nowrap;
+
+        min-height:40px;
+
+        padding:0 18px;
+
+        font-size:.88rem;
+    }
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .service-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .service-card{
+        padding:24px 20px;
+    }
+
+    .service-card h3{
+        font-size:1.2rem;
+    }
+
+    .service-card p{
+        font-size:.95rem;
+    }
+
+    .service-icon{
+        width:60px;
+        height:60px;
+        font-size:1.35rem;
+    }
+
+    /* ======================================================
+       DETAILS
+    ====================================================== */
+
+    .detail-stack{
+        gap:60px;
+    }
+
+    .detail-block{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .detail-copy{
+        text-align:center;
+    }
+
+    .detail-copy h3{
+        font-size:1.8rem;
+    }
+
+    .detail-copy p{
+        font-size:.96rem;
+    }
+
+    .detail-media img{
+        min-height:240px;
+    }
+
+    .detail-points{
+        text-align:left;
+    }
+
+    /* ======================================================
+       PORTAL
+    ====================================================== */
+
+    .portal-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .portal-features{
+        grid-template-columns:1fr;
+    }
+
+    .portal-item{
+        padding:22px 18px;
+    }
+
+    .portal-visual{
+        padding:22px 18px;
+    }
+
+    .mock-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .mock-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    /* ======================================================
+       CTA
+    ====================================================== */
+
+    .cta-box{
+        padding:45px 20px;
+    }
+
+    .cta-box h2{
+        font-size:1.8rem;
+    }
+
+    .cta-box p{
+        font-size:.95rem;
+    }
+
+    .cta-box .hero-actions{
+        flex-direction:column;
+    }
+
+    .cta-box .btn{
+        width:100%;
+    }
+}
+
+/* ==========================================================
+   EXTRA SMALL DEVICES (<360px)
+========================================================== */
+
+@media (max-width:360px){
+
+    .hero-copy h1{
+        font-size:2rem;
+    }
+
+    .hero-copy p{
+        font-size:.92rem;
+    }
+
+    .hero-card{
+        padding:20px;
+    }
+
+    .service-card{
+        padding:20px 18px;
+    }
+
+    .detail-copy h3{
+        font-size:1.6rem;
+    }
+
+    .portal-item{
+        padding:20px 16px;
+    }
+
+    .cta-box{
+        padding:40px 18px;
+    }
+
+    .cta-box h2{
+        font-size:1.6rem;
+    }
+}
+
+/* ==========================================================
+   RTL SUPPORT
+========================================================== */
+
+html[dir="rtl"] body{
+    direction:rtl;
+}
+
+html[dir="rtl"] .hero-copy,
+html[dir="rtl"] .detail-copy,
+html[dir="rtl"] .section-header{
+    text-align:right;
+}
+
+html[dir="rtl"] .hero-actions{
+    justify-content:flex-end;
+}
+
+html[dir="rtl"] .detail-points li,
+html[dir="rtl"] .hero-card li{
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .portal-item{
+    text-align:right;
+}
+
+html[dir="rtl"] .mock-header,
+html[dir="rtl"] .mock-row{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .quick-links-wrap{
+    direction:rtl;
+}
+
+/* Mobile RTL */
+
+@media (max-width:639px){
+
+    html[dir="rtl"] .hero-copy,
+    html[dir="rtl"] .detail-copy,
+    html[dir="rtl"] .section-header,
+    html[dir="rtl"] .portal-item{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .hero-actions{
+        justify-content:center;
+    }
+
+    html[dir="rtl"] .mock-header,
+    html[dir="rtl"] .mock-row{
+        align-items:center;
+    }
+}
+
+/* ==========================================================
+   DARK MODE ENHANCEMENTS
+========================================================== */
+
+body.dark-theme .service-card,
+body.dark-theme .portal-item,
+body.dark-theme .portal-visual
+{
+    background:var(--card-bg);
+    border-color:var(--border-light);
+}
+
+body.dark-theme .mock-card{
+    background:var(--card-bg);
+    border-color:var(--border-light);
+}
+
+body.dark-theme .quick-links{
+    background:var(--card-bg);
+}
+
+body.dark-theme .quick-links a{
+    color:var(--text-main);
+}
+
+body.dark-theme .quick-links a:hover{
+    background:rgba(123,163,118,.18);
+}
+
+body.dark-theme .portal-section{
+    background:var(--bg-soft);
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.btn:focus-visible,
+.quick-links a:focus-visible,
+.detail-link:focus-visible{
+    outline:3px solid rgba(123,163,118,.4);
+    outline-offset:3px;
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+    }
+}/* ==========================================================
+   DARK MODE - WELLNESS SECTION
+========================================================== */
+
+/* Section Background */
+body.dark-theme .portal-section{
+    background: black;
+}
+
+/* Section Heading */
+body.dark-theme .portal-section .section-header h2{
+    color: var(--text-main);
+}
+
+body.dark-theme .portal-section .section-header p{
+    color: var(--text-main);
+}
+
+body.dark-theme .portal-section .eyebrow{
+    color: var(--primary-green);
+}
+
+/* Service Cards */
+body.dark-theme .portal-section .service-card{
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+}
+
+body.dark-theme .portal-section .service-card:hover{
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-6px);
+}
+
+/* Card Titles */
+body.dark-theme .portal-section .service-card h3{
+    color: var(--text-main);
+}
+
+/* Card Description */
+body.dark-theme .portal-section .service-card p{
+    color: var(--text-main);
+}
+
+/* Icons */
+body.dark-theme .portal-section .service-icon{
+    background: rgba(123,163,118,.12);
+    border: 1px solid rgba(123,163,118,.2);
+}
+
+body.dark-theme .portal-section .service-icon i{
+    color: var(--primary-green);
+}/* ==========================================================
+   DETAIL IMAGE SIZE
+========================================================== */
+
+.detail-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-media img{
+    width: 100%;
+    /* Reduce this value as needed */
+    height: 280px;
+    object-fit: cover;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-soft);
+
+    transition: var(--transition);
+}
+
+.detail-media img:hover{
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}/* ==========================================================
+   DETAIL LINK HOVER EFFECT
+========================================================== */
+
+.detail-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 18px;
+
+    color: var(--primary-green);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+/* Hover */
+.detail-link:hover{
+    color: var(--accent-orange);
+    gap: 12px;
+    transform: translateX(4px);
+}
+
+/* Active */
+.detail-link:active{
+    transform: translateX(2px);
+}
+
+/* Focus Accessibility */
+.detail-link:focus-visible{
+    outline: 2px solid var(--primary-green);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}

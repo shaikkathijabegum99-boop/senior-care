@@ -18,17 +18,27 @@
   --transition: all 0.35s ease;
 }
 
-body.dark-theme {
-  --bg-cream: #17130e;
-  --bg-light: #1f1a14;
-  --bg-soft: #231d17;
-  --text-main: #f2efe9;
-  --text-desc: #d2c8bb;
-  --text-muted: #aa9f91;
-  --border-light: #3a3128;
-  --card-bg: #251f18;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
-  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.35);
+body.dark-theme{
+
+    --bg-cream: #121212;
+
+    --bg-light: #111111;
+
+    --bg-soft: #1c1c1c;
+
+    --text-main: #f2f2f2;
+
+    --text-desc: #bdbdbd;
+
+    --text-muted: #bdbdbd;
+
+    --border-light: #353535;
+
+    --card-bg: #242424;
+
+    --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
+
+    --shadow-hover: 0 16px 40px rgba(0,0,0,.45);
 }
 * {
   margin: 0;
@@ -190,7 +200,7 @@ body.dark-theme .secondary-btn {
   min-height: 88vh;
   position: relative;
   background: linear-gradient(rgba(22, 22, 22, 0.45), rgba(22, 22, 22, 0.45)),
-              url('../images/about-hero.jpg') center/cover no-repeat;
+              url('../images/about2.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -242,7 +252,7 @@ body.dark-theme .secondary-btn {
 
 body.dark-theme .about-hero {
   background: linear-gradient(rgba(8, 8, 8, 0.68), rgba(8, 8, 8, 0.68)),
-              url('../images/about-hero.jpg') center/cover no-repeat;
+              url('../images/about2.jpg') center/cover no-repeat;
 }
 
 body.dark-theme .about-hero-content h1 {
@@ -637,7 +647,7 @@ body.dark-theme .about-hero-content p {
 }
 
 body.dark-theme .about-cta {
-  background: linear-gradient(135deg, #1d1711, #261f18);
+  background: linear-gradient(135deg, #131212, #261f18);
 }
 
 .about-cta .cta-box {
@@ -912,4 +922,134 @@ body.dark-theme .about-cta {
   .about-hero-content h1 {
     font-size: 4.4rem;
   }
+}/* ==========================================
+   HERO CENTER ALIGN
+========================================== */
+
+.about-hero-overlay{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.about-hero-content{
+    max-width:850px;
+    margin:0 auto;
+}
+
+.about-hero-content h1{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.about-hero-content p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hero-btns{
+    justify-content:center;
+}
+
+.section-badge{
+    margin-left:auto;
+    margin-right:auto;
+}/* ==========================================
+   CARD HOVER EFFECTS
+========================================== */
+
+.mvv-card,
+.choose-card,
+.stat-card,
+.value-card,
+.facility-card,
+.team-card,
+.highlight-item{
+    transition: all .4s ease;
+}
+
+.mvv-card:hover,
+.choose-card:hover,
+.stat-card:hover,
+.value-card:hover,
+.facility-card:hover,
+.team-card:hover,
+.highlight-item:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.15);
+    border-color: rgba(123,163,118,.4);
+}
+
+/* Icon animation */
+.mvv-card:hover .mvv-icon,
+.choose-card:hover i,
+.value-card:hover .value-icon,
+.facility-card:hover i,
+.highlight-item:hover i{
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* Team card image zoom */
+.team-card{
+    overflow:hidden;
+}
+
+.team-card img{
+    transition: transform .5s ease;
+}
+
+.team-card:hover img{
+    transform: scale(1.08);
+}
+
+/* Stats card hover */
+.stat-card:hover h3{
+    transform: scale(1.08);
+    color: var(--accent-orange);
+}
+
+.stat-card h3{
+    transition: all .35s ease;
+}
+
+/* Gradient glow effect */
+.mvv-card::after,
+.choose-card::after,
+.value-card::after,
+.facility-card::after,
+.team-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(123,163,118,.08),
+        rgba(242,156,82,.08)
+    );
+    opacity:0;
+    transition:.4s ease;
+    pointer-events:none;
+}
+
+.mvv-card:hover::after,
+.choose-card:hover::after,
+.value-card:hover::after,
+.facility-card:hover::after,
+.team-card:hover::after{
+    opacity:1;
+}@media (max-width:1023px){
+
+    .about-hero-content{
+        text-align:center;
+        margin:0 auto;
+    }
+
+    .hero-btns{
+        justify-content:center;
+    }
+
+    .about-hero-content p{
+        max-width:100%;
+    }
 }
