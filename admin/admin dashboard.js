@@ -137,4 +137,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-});
+});const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        localStorage.clear();
+        sessionStorage.clear();
+
+        window.location.href = "../login/login.html"; // change to your login page
+    });
+}

@@ -1,5 +1,5 @@
 /* ==========================================================
-   NAVBAR BASE
+   NAVBAR
 ========================================================== */
 
 .site-header{
@@ -8,14 +8,9 @@
     left:0;
     width:100%;
     z-index:9999;
-
     background:var(--secondary);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
     border-bottom:1px solid var(--border-light);
-    box-shadow:0 2px 12px rgba(0,0,0,.04);
-
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
     transition:.3s ease;
 }
 
@@ -23,24 +18,22 @@
     box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
-/* =========================
-   NAV CONTAINER
-========================= */
+.site-header,
+.nav-container{
+    overflow:visible;
+}
 
 .nav-container{
     max-width:1280px;
     margin:auto;
     padding:14px 24px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
 
-/* =========================
-   LOGO
-========================= */
+/* Logo */
 
 .logo-box{
     display:flex;
@@ -68,14 +61,13 @@
     color:var(--primary);
 }
 
-.brand-subtext{
+.brand-subtext,
+.brand-sub{
     font-size:.75rem;
     color:var(--text-muted);
 }
 
-/* =========================
-   NAV LINKS
-========================= */
+/* Navigation */
 
 .nav-links{
     display:flex;
@@ -83,53 +75,62 @@
     justify-content:center;
     flex:1;
     gap:24px;
+    list-style:none;
 }
 
-.nav-item{position:relative;}
+.nav-item{
+    position:relative;
+}
 
 .nav-link{
-    font-size:.98rem;
-    font-weight:600;
     display:flex;
     align-items:center;
     gap:8px;
+    font-size:.96rem;
+    font-weight:600;
+    color:var(--text-main);
     padding:10px 0;
-    transition:.25s ease;
+    transition:.3s;
 }
 
 .nav-link:hover,
 .nav-link.active{
     color:var(--primary);
-}
-
-/* =========================
+}/* ==========================================================
    DROPDOWN
-========================= */
+========================================================== */
 
 .dropdown-menu{
     position:absolute;
     top:100%;
     left:0;
 
-    min-width:250px;
+    min-width:240px;
+
     background:var(--card-bg);
     border:1px solid var(--border-light);
     border-radius:14px;
-    box-shadow:var(--shadow);
 
     padding:10px 0;
+
+    box-shadow:var(--shadow);
 
     opacity:0;
     visibility:hidden;
     transform:translateY(12px);
-    transition:.25s ease;
-    z-index:9999;
+
+    transition:.3s ease;
+    z-index:999;
+}
+
+.dropdown-item{
+    list-style:none;
 }
 
 .dropdown-item a{
     display:block;
     padding:12px 18px;
-    font-size:.95rem;
+    color:var(--text-main);
     transition:.25s ease;
 }
 
@@ -139,18 +140,17 @@
     padding-left:24px;
 }
 
-/* Desktop dropdown */
 @media(min-width:1024px){
+
     .nav-item:hover .dropdown-menu{
         opacity:1;
         visibility:visible;
         transform:translateY(0);
     }
-}
 
-/* =========================
+}/* ==========================================================
    HEADER ACTIONS
-========================= */
+========================================================== */
 
 .header-actions{
     display:flex;
@@ -161,85 +161,109 @@
 .action-btn{
     width:42px;
     height:42px;
-    border-radius:50%;
-    border:1px solid var(--border-light);
-    background:var(--card-bg);
+
     display:flex;
     align-items:center;
     justify-content:center;
+
+    border-radius:50%;
+    border:1px solid var(--border-light);
+
+    background:var(--card-bg);
+    color:var(--text-main);
+
     cursor:pointer;
-    transition:.25s ease;
+    transition:.3s ease;
 }
 
 .action-btn:hover{
     background:var(--primary);
     color:#fff;
     transform:translateY(-2px);
-}
-
-/* =========================
+}/* ==========================================================
    HAMBURGER
-========================= */
+========================================================== */
 
 .hamburger{
     display:none;
-    width:44px;
-    height:44px;
-    flex-direction:column;
-    justify-content:center;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+    border:1px solid var(--border-light);
+
+    background:var(--card-bg);
+
     align-items:center;
-    cursor:pointer;
+    justify-content:center;
+
     position:relative;
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.hamburger:hover{
+    background:var(--primary);
 }
 
 .hamburger span{
     position:absolute;
-    width:24px;
-    height:3px;
-    border-radius:50px;
+
+    width:20px;
+    height:2px;
+
     background:var(--text-main);
+    border-radius:50px;
+
     transition:.3s ease;
 }
 
-.hamburger span:nth-child(1){transform:translateY(-8px);}
-.hamburger span:nth-child(2){transform:translateY(0);}
-.hamburger span:nth-child(3){transform:translateY(8px);}
-
-.hamburger.active span:nth-child(1){transform:rotate(45deg);}
-.hamburger.active span:nth-child(2){opacity:0;}
-.hamburger.active span:nth-child(3){transform:rotate(-45deg);}
-
-/* =========================
-   RTL NAVBAR
-========================= */
-
-html[dir="rtl"] body{direction:rtl;}
-
-
-
-
-
-html[dir="rtl"] .dropdown-menu{
-    left:auto;
-    right:0;
-    text-align:right;
+.hamburger:hover span{
+    background:#fff;
 }
 
+.hamburger span:nth-child(1){
+    transform:translateY(-6px);
+}
 
-/* ==========================================================
-   FOOTER BASE
+.hamburger span:nth-child(2){
+    transform:translateY(0);
+}
+
+.hamburger span:nth-child(3){
+    transform:translateY(6px);
+}
+
+.hamburger.active{
+    background:var(--primary);
+    border-color:var(--primary);
+}
+
+.hamburger.active span{
+    background:#fff;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg);
+}/* ==========================================================
+   FOOTER
 ========================================================== */
 
 .nethra-footer{
     background:var(--secondary);
-    color:var(--text-main);
-    padding-top:70px;
     border-top:1px solid var(--border-light);
+    padding-top:70px;
 }
-
-/* =========================
-   FOOTER CONTAINER
-========================= */
 
 .footer-container{
     max-width:1280px;
@@ -247,85 +271,77 @@ html[dir="rtl"] .dropdown-menu{
     padding:0 24px 50px;
 
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
     gap:40px;
 }
-
-/* =========================
-   BRAND
-========================= */
 
 .footer-logo{
     display:flex;
     align-items:center;
     gap:14px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.footer-logo-img{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    border:2px solid var(--primary);
-}
-
-.brand-sub{
-    font-size:.75rem;
+.tagline{
+    margin-bottom:15px;
     color:var(--text-muted);
+    line-height:1.7;
 }
 
-/* =========================
-   COLUMNS
-========================= */
+.contact-info p{
+    margin-bottom:8px;
+}
+
+.contact-info a{
+    color:var(--text-main);
+}
 
 .footer-column h3{
-    font-size:1.1rem;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.footer-column ul li{
+.footer-column ul{
+    list-style:none;
+}
+
+.footer-column li{
     margin-bottom:12px;
 }
 
-.footer-column ul li a{
+.footer-column a{
     color:var(--text-muted);
-    transition:.25s ease;
+    transition:.3s ease;
 }
 
-.footer-column ul li a:hover{
+.footer-column a:hover{
     color:var(--primary);
-    padding-left:6px;
 }
-
-/* =========================
-   SOCIAL
-========================= */
 
 .social-icons{
     display:flex;
     gap:12px;
+    margin-top:18px;
 }
 
 .social-icons a{
     width:42px;
     height:42px;
-    border-radius:50%;
-    background:var(--card-bg);
+
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:.25s ease;
+
+    border-radius:50%;
+    background:var(--card-bg);
+
+    transition:.3s ease;
 }
 
 .social-icons a:hover{
     background:var(--primary);
     color:#fff;
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
-
-/* =========================
-   BOTTOM BAR
-========================= */
 
 .footer-bottom-bar{
     border-top:1px solid var(--border-light);
@@ -335,1112 +351,371 @@ html[dir="rtl"] .dropdown-menu{
 .bottom-content{
     max-width:1280px;
     margin:auto;
+
     display:flex;
     justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
+    gap:15px;
+
     color:var(--text-muted);
-}
-
-/* =========================
-   RTL FOOTER
-========================= */
-
-html[dir="rtl"] .footer-column ul li a:hover{
-    padding-left:0;
-    padding-right:6px;
-}
-
-html[dir="rtl"] .footer-container{
-    direction:rtl;
-}
-
-
-
-   /* ==========================================================
-   RESPONSIVE DESIGN
-========================================================== */
-
-/* =========================
-   LARGE DESKTOP (>1280px)
-========================= */
-
-@media (min-width: 1281px) {
-
-    .nav-container,
-    .footer-container,
-    .bottom-content {
-        max-width: 1280px;
-        margin: auto;
-    }
-
-    .nav-links {
-        gap: 26px;
-    }
-
-    .brand-name {
-        font-size: 1.35rem;
-    }
-}
-
-/* =========================
-   DESKTOP (1024px - 1280px)
-========================= */
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
-    .nav-container {
-        padding: 14px 20px;
-    }
-
-    .nav-links {
-        gap: 18px;
-    }
-
-    .nav-link {
-        font-size: 0.95rem;
-    }
-
-    .footer-container {
-        grid-template-columns: 1.3fr 1fr 1fr 1fr;
-    }
-}
-
-/* =========================
-   TABLET (640px - 1023px)
-========================= */
-
-@media (min-width: 640px) and (max-width: 1023px) {
-
-    /* NAVBAR */
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 20px;
-
-        width: 320px;
-
-        display: none;
-        flex-direction: column;
-
-        background: var(--card-bg);
-        border: 1px solid var(--border-light);
-        border-radius: 16px;
-
-        padding: 14px;
-        box-shadow: var(--shadow);
-
-        z-index: 9999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-link {
-        width: 100%;
-        justify-content: space-between;
-        padding: 12px;
-        border-bottom: 1px solid var(--border-light);
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: none;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-    }
-
-    .nav-item.open .dropdown-menu {
-        display: block;
-    }
-
-    /* FOOTER */
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .footer-container .brand-section {
-        grid-column: 1 / -1;
-        text-align: center;
-    }
-
-    .bottom-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* =========================
-   MOBILE (<640px)
-========================= */
-
-@media (max-width: 639px) {
-
-    /* NAVBAR */
-    .nav-container {
-        padding: 12px 15px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 14px;
-        right: 14px;
-
-        display: none;
-        flex-direction: column;
-
-        background: var(--card-bg);
-        border: 1px solid var(--border-light);
-        border-radius: 16px;
-
-        padding: 12px;
-        box-shadow: var(--shadow);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-link {
-        width: 100%;
-        justify-content: space-between;
-        padding: 12px;
-        border-bottom: 1px solid var(--border-light);
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-    }
-
-    .nav-item.open .dropdown-menu {
-        display: block;
-    }
-
-    /* FOOTER */
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .bottom-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ==========================================================
-   RTL RESPONSIVE FIX
-========================================================== */
-
-/* =========================
-   TABLET RTL
-========================= */
-
-@media (min-width: 640px) and (max-width: 1023px) {
-
-    html[dir="rtl"] .nav-links {
-        right: auto;
-        left: 20px;
-
-        text-align: right;
-        align-items: flex-end;
-    }
-
-    html[dir="rtl"] .nav-link {
-        flex-direction: row-reverse;
-        text-align: right;
-    }
-
-    html[dir="rtl"] .dropdown-menu {
-        padding-right: 12px;
-        padding-left: 0;
-    }
-
-    html[dir="rtl"] .footer-container {
-        direction: rtl;
-        text-align: right;
-    }
-}
-
-/* =========================
-   MOBILE RTL
-========================= */
-
-@media (max-width: 639px) {
-
-    html[dir="rtl"] .nav-links {
-      
-        text-align: right;
-        align-items: flex-end;
-    }
-
-    html[dir="rtl"] .nav-link {
-        flex-direction: row-reverse;
-        text-align: right;
-    }
-
-    html[dir="rtl"] .footer-container {
-        direction: rtl;
-        text-align: center;
-    }
-}
-
-/* =========================
-   SMALL FIX: RTL GLOBAL
-========================= */
-
-
-
-
-html[dir="rtl"] .nav-links {
-    direction: rtl;
-}
-
-html[dir="rtl"] .dropdown-menu {
-    left: auto;
-    right: 0;
-    text-align: right;
 }/* ==========================================================
-   EXTRA SMALL MOBILE (360px)
+   DARK MODE
 ========================================================== */
 
-@media (max-width:360px){
+body.dark-theme .site-header,
+body.dark-theme .nethra-footer{
+    background:var(--secondary);
+}
 
-    /* ================= NAV CONTAINER ================= */
-    .nav-container{
-        padding:10px 12px;
-        gap:8px;
-    }
+body.dark-theme .dropdown-menu
+{
+    background:var(--card-bg);
+}
 
-    /* ================= LOGO ================= */
-    .logo-box{
-        gap:6px;
-    }
+body.dark-theme .action-btn,
+body.dark-theme .hamburger{
+    background:var(--card-bg);
+    border-color:var(--border-light);
+}
 
-    .nav-logo-img{
-        width:38px;
-        height:38px;
-    }
+body.dark-theme .hamburger span{
+    background:var(--text-main);
+}
 
-    .brand-name{
-        font-size:.82rem;
-        letter-spacing:.5px;
-    }
+body.dark-theme .dropdown-item a{
+    color:var(--text-main);
+}/* ==========================================================
+   TABLET & MOBILE
+========================================================== */
 
-    .brand-subtext{
-        font-size:.55rem;
-        letter-spacing:.8px;
-    }
+@media(max-width:1023px){
 
-    .logo-text{
-        line-height:1;
-    }
-
-    /* ================= HEADER ACTIONS ================= */
-    .header-actions{
-        gap:6px;
-    }
-
-    .action-btn{
-        width:34px;
-        height:34px;
-        font-size:.8rem;
-    }
-
-    /* ================= HAMBURGER ================= */
     .hamburger{
-        width:36px;
-        height:36px;
+        display:flex;
     }
 
-    .hamburger span{
-        width:20px;
-        height:2px;
-    }
-
-    /* ================= NAV MENU ================= */
     .nav-links{
-        left:10px;
-        right:10px;
-        padding:12px;
-        border-radius:14px;
+        position:absolute;
+        top:100%;
+        left:15px;
+        right:15px;
+
+        display:none;
+        flex-direction:column;
+
+        background:var(--card-bg);
+
+        border:1px solid var(--border-light);
+        border-radius:16px;
+
+        padding:14px;
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.active{
+        display:flex;
     }
 
     .nav-link{
-        font-size:.85rem;
-        padding:12px 6px;
+        width:100%;
+        justify-content:space-between;
+        padding:12px;
+        border-bottom:1px solid var(--border-light);
     }
-
-    /* ================= FOOTER ================= */
-    .footer-container{
-        grid-template-columns:1fr;
-        gap:22px;
-        text-align:center;
-        padding:0 12px 30px;
-    }
-
-    .footer-column h3{
-        font-size:1rem;
-    }
-
-    .footer-column ul li a{
-        font-size:.9rem;
-    }
-
-    .social-icons a{
-        width:36px;
-        height:36px;
-        font-size:.9rem;
-    }
-
-    .footer-bottom-bar{
-        padding:14px 10px;
-    }
-
-    .bottom-content{
-        flex-direction:column;
-        text-align:center;
-        font-size:.85rem;
-    }
-
-}/* =========================================================
-   DARK MODE: HEADER ACTIONS + HAMBURGER FIX
-========================================================= */
-
-body.dark-theme .action-btn{
-    background:var(--card-bg);
-    border-color:var(--border-light);
-    color:var(--text-main);
-}
-
-body.dark-theme .action-btn:hover{
-    background:var(--primary);
-    color:#fff;
-}
-
-/* Hamburger lines */
-body.dark-theme .hamburger span{
-    background:var(--text-main);
-}
-
-/* Active hamburger (X icon) stays visible in dark mode */
-body.dark-theme .hamburger.active span{
-    background:var(--text-main);
-}
-
-/* Optional: improve contrast on mobile menu */
-body.dark-theme .nav-links{
-   
-    border-color:var(--border-light);
-}
-
-/* Optional: dropdown in dark mode */
-body.dark-theme .dropdown-menu{
-    background:var(--card-bg);
-    border-color:var(--border-light);
-}/* =========================================================
-   HAMBURGER BASE IMPROVEMENT (ALL MODES)
-========================================================= */
-
-.hamburger{
-    transition: 0.3s ease;
-}
-
-.hamburger span{
-    background: var(--text-main);
-    transition: 0.3s ease;
-}
-
-/* Smooth hover effect */
-.hamburger:hover span{
-    background: var(--primary);
-}
-
-/* =========================================================
-   DARK MODE HAMBURGER
-========================================================= */
-
-body.dark-theme .hamburger span{
-    background: var(--text-main);
-}
-
-/* Hover in dark mode */
-body.dark-theme .hamburger:hover span{
-    background: black;}
-
-/* Active (X state) color fix */
-body.dark-theme .hamburger.active span{
-    background: black;
-}
-
-/* Optional: add subtle glow in dark mode */
-body.dark-theme .hamburger.active{
-    filter: drop-shadow(0 0 6px rgba(139,171,125,0.4));
-}
-
-/* =========================================================
-   MOBILE TOUCH FEEL (OPTIONAL UPGRADE)
-========================================================= */
-
-.hamburger:active{
-    transform: scale(0.95);
-}/* ==========================================================
-   LARGE SCREENS (>1280px)
-========================================================== */
-@media (min-width: 1281px){
-
-    .footer-container{
-        max-width:1280px;
-        grid-template-columns:1.4fr 1fr 1fr 1fr;
-        gap:40px;
-    }
-
-    .bottom-content{
-        max-width:1280px;
-    }
-}
-
-
-/* ==========================================================
-   DESKTOP (1024px - 1280px)
-========================================================== */
-@media (min-width:1024px) and (max-width:1280px){
-
-    .footer-container{
-        grid-template-columns:1.3fr 1fr 1fr 1fr;
-        gap:30px;
-        padding:0 20px 40px;
-    }
-
-    .footer-column h3{
-        font-size:1.05rem;
-    }
-
-    .footer-column ul li a{
-        font-size:.95rem;
-    }
-}
-
-
-/* ==========================================================
-   TABLET (640px - 1023px)
-========================================================== */
-@media (min-width:640px) and (max-width:1023px){
-
-    .footer-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:30px;
-        padding:0 20px 40px;
-    }
-
-    .brand-section{
-        grid-column:1 / -1;
-        text-align:center;
-    }
-
-    .footer-logo{
-        justify-content:center;
-    }
-
-    .social-icons{
-        justify-content:center;
-    }
-
-    .bottom-content{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-
-/* ==========================================================
-   MOBILE (<640px)
-========================================================== */
-@media (max-width:639px){
-
-    .nethra-footer{
-        padding-top:50px;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr;
-        gap:25px;
-        text-align:center;
-        padding:0 15px 30px;
-    }
-
-    .footer-logo{
-        justify-content:center;
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .nav-logo-img{
-        width:50px;
-        height:50px;
-    }
-
-    .brand-name{
-        font-size:1.1rem;
-    }
-
-    .brand-sub{
-        font-size:.7rem;
-    }
-
-    .contact-info p,
-    .tagline{
-        font-size:.9rem;
-    }
-
-    .footer-column h3{
-        font-size:1rem;
-    }
-
-    .footer-column ul li{
-        margin-bottom:10px;
-    }
-
-    .footer-column ul li a{
-        font-size:.9rem;
-    }
-
-    .social-icons{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .social-icons a{
-        width:38px;
-        height:38px;
-    }
-
-    .footer-bottom-bar{
-        padding:15px;
-    }
-
-    .bottom-content{
-        flex-direction:column;
-        text-align:center;
-        gap:8px;
-        font-size:.85rem;
-    }
-}/* ==========================================================
-   DROPDOWN BASE
-========================================================== */
-
-.nav-item{
-    position:relative;
-}
-
-.dropdown-menu{
-    position:absolute;
-    top:100%;
-    left:0;
-    min-width:240px;
-
-    background:var(--card-bg);
-    border:1px solid var(--border-light);
-    border-radius:14px;
-    box-shadow:var(--shadow);
-
-    padding:10px 0;
-    z-index:9999;
-
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(12px);
-
-    transition:
-        opacity .3s ease,
-        transform .3s ease,
-        visibility .3s ease;
-}
-
-.dropdown-item a{
-    display:block;
-    padding:12px 18px;
-    color:var(--text-main);
-    font-size:.95rem;
-    transition:.25s ease;
-}
-
-.dropdown-item a:hover{
-    background:rgba(139,171,125,.12);
-    color:var(--primary);
-    padding-left:24px;
-}
-
-
-/* ==========================================================
-   DESKTOP DROPDOWN
-========================================================== */
-
-@media (min-width:1024px){
-
-    .nav-item:hover .dropdown-menu{
-        opacity:1;
-        visibility:visible;
-        transform:translateY(0);
-    }
-}
-
-
-/* ==========================================================
-   TABLET & MOBILE DROPDOWN
-========================================================== */
-
-@media (max-width:1023px){
 
     .dropdown-menu{
         position:static;
-        min-width:100%;
-
         display:none;
 
         opacity:1;
         visibility:visible;
         transform:none;
 
-        background:transparent;
         border:none;
         box-shadow:none;
-
-        padding:6px 0 0;
+        background:transparent;
     }
 
     .nav-item.open .dropdown-menu{
         display:block;
     }
 
-    .dropdown-item a{
-        padding:12px 16px 12px 28px;
-        border-bottom:1px solid var(--border-light);
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .dropdown-item:last-child a{
-        border-bottom:none;
+    .bottom-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:639px){
+
+    .nav-container{
+        padding:12px 15px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-logo{
+        justify-content:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+}
+
+@media(max-width:360px){
+
+    .brand-name{
+        font-size:.9rem;
+    }
+
+    .brand-subtext{
+        font-size:.6rem;
+    }
+
+    .nav-logo-img{
+        width:42px;
+        height:42px;
+    }
+
+    .action-btn,
+    .hamburger{
+        width:36px;
+        height:36px;
     }
 }
 
 
 /* ==========================================================
-   RTL SUPPORT
+   RTL NAVIGATION
 ========================================================== */
 
-html[dir="rtl"] .dropdown-menu{
-    left:auto;
-    right:0;
-    text-align:right;
+html[dir="rtl"] body{
+    direction: rtl;
 }
 
-html[dir="rtl"] .dropdown-item a:hover{
-    padding-left:18px;
-    padding-right:24px;
+/* Navigation Layout */
+html[dir="rtl"] .nav-links{
+    flex-direction: row-reverse;
 }
+
+html[dir="rtl"] .nav-item{
+    text-align: right;
+}
+
+/* Nav Link */
+html[dir="rtl"] .nav-link{
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+/* Chevron Icon */
+html[dir="rtl"] .nav-link i{
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+/* Dropdown Position */
+html[dir="rtl"] .dropdown-menu{
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .dropdown-item a{
+    text-align: right;
+}
+
+/* Hover Effect */
+html[dir="rtl"] .dropdown-item a:hover{
+    padding-left: 18px;
+    padding-right: 24px;
+}
+
+
+/* ==========================================================
+   RTL MOBILE & TABLET
+========================================================== */
 
 @media (max-width:1023px){
+
+    html[dir="rtl"] .nav-links{
+        text-align: right;
+    }
+
+    html[dir="rtl"] .nav-link{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    html[dir="rtl"] .dropdown-menu{
+        text-align: right;
+    }
 
     html[dir="rtl"] .dropdown-item a{
-        padding:12px 28px 12px 16px;
+        padding: 12px 24px 12px 16px;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .dropdown-item a:hover{
+        padding-right: 28px;
+        padding-left: 16px;
     }
 }
 
-
 /* ==========================================================
-   DARK MODE DROPDOWN
+   RTL FOOTER
 ========================================================== */
 
-body.dark-theme .dropdown-menu{
-    background:var(--card-bg);
-    border-color:var(--border-light);
+html[dir="rtl"] .footer-container{
+    direction: rtl;
 }
 
-body.dark-theme .dropdown-item a{
-    color:var(--text-main);
+html[dir="rtl"] .footer-column{
+    text-align: right;
 }
 
-body.dark-theme .dropdown-item a:hover{
-    background:rgba(139,171,125,.18);
-    color:var(--primary);
+html[dir="rtl"] .footer-logo{
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .social-icons{
+    justify-content: flex-start;
+}
+
+@media(max-width:639px){
+
+    html[dir="rtl"] .footer-column,
+    html[dir="rtl"] .brand-section{
+        text-align:center;
+    }
+
+    html[dir="rtl"] .social-icons{
+        justify-content:center;
+    }
+}@media (max-width:360px){
+
+    html[dir="rtl"] .nav-item{
+        width:100%;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .nav-link{
+        width:100%;
+    }
+}/* ==========================================================
+   RTL NAV LINKS IN ROW
+========================================================== */
+
+html[dir="rtl"] .nav-links{
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+}
+
+html[dir="rtl"] .nav-item{
+    display:flex;
+    align-items:center;
+}
+
+html[dir="rtl"] .nav-link{
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    gap:8px;
+    text-align:right;
 }@media (max-width:1023px){
 
-    .dropdown-menu{
-        position: static;
-        min-width: 100%;
-
-        display: none;
-
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: none;
-
-        background: transparent;
-        border: none;
-        box-shadow: none;
-
-        padding: 6px 0 0;
+    html[dir="rtl"] .nav-links{
+        flex-direction:column;
+        align-items:stretch;
+        text-align:right;
     }
 
-    .nav-item.open > .dropdown-menu{
-        display: block;
+    html[dir="rtl"] .nav-link{
+        width:100%;
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        align-items:center;
     }
 
-    .dropdown-item a{
-        padding: 12px 16px 12px 28px;
-        border-bottom: 1px solid var(--border-light);
+    html[dir="rtl"] .nav-item{
+        width:100%;
+    }
+}@media (max-width:360px){
+
+    html[dir="rtl"] .nav-link{
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        width:100%;
+        padding:10px 8px;
     }
 
-    .dropdown-item:last-child a{
-        border-bottom: none;
+    html[dir="rtl"] .nav-item{
+        width:100%;
     }
-}.site-header{
-    overflow: visible;
-}
+}@media (max-width:1023px){
 
-.nav-container{
-    overflow: visible;
-}/* ==========================================================
-   HAMBURGER AS HEADER ACTION BUTTON
-========================================================== */
+    .nav-links{
+        display:none;
+    }
 
-.hamburger{
-    display: none;
+    .nav-links.active{
+        display:flex;
+    }
 
-    width: 42px;
-    height: 42px;
+    html[dir="rtl"] .nav-links{
+        display:none;
+    }
 
-    border: 1px solid var(--border-light);
-    border-radius: 50%;
+    html[dir="rtl"] .nav-links.active{
+        display:flex;
+    }
+}/* ==========================================
+   RTL NAV LINK - ICON ON RIGHT OF TEXT
+========================================== */
 
-    background: var(--card-bg);
-
+html[dir="rtl"] .nav-link{
+    display: flex;
+    flex-direction: row;      /* Keep normal order */
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    position: relative;
-
-    transition: .25s ease;
+    text-align: right;
+    gap: 8px;
 }
 
-/* Same hover as action buttons */
-.hamburger:hover{
-    background: var(--primary);
-    color: #fff;
-    transform: translateY(-2px);
+html[dir="rtl"] .nav-link span{
+    order: 1;
 }
 
-/* Active press effect */
-.hamburger:active{
-    transform: scale(.95);
+html[dir="rtl"] .nav-link i{
+    order: 2;                 /* Icon after text (right side in RTL) */
+    margin-left: 0;
+    margin-right: 8px;
 }
 
-/* ==========================================================
-   HAMBURGER LINES
-========================================================== */
-
-.hamburger span{
-    position: absolute;
-
-    width: 20px;
-    height: 2px;
-
-    border-radius: 50px;
-
-    background: var(--text-main);
-
-    transition: .3s ease;
-}
-
-/* Match action button hover */
-.hamburger:hover span{
-    background: #fff;
-}
-
-/* Line positions */
-.hamburger span:nth-child(1){
-    transform: translateY(-6px);
-}
-
-.hamburger span:nth-child(2){
-    transform: translateY(0);
-}
-
-.hamburger span:nth-child(3){
-    transform: translateY(6px);
-}
-
-/* ==========================================================
-   ACTIVE (X) STATE
-========================================================== */
-
-.hamburger.active span:nth-child(1){
-    transform: rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2){
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3){
-    transform: rotate(-45deg);
-}
-
-.hamburger.active{
-    background: var(--primary);
-    border-color: var(--primary);
-}
-
-.hamburger.active span{
-    background: #fff;
-}
-
-/* ==========================================================
-   DARK MODE
-========================================================== */
-
-body.dark-theme .hamburger{
-    background: var(--card-bg);
-    border-color: var(--border-light);
-}
-
-body.dark-theme .hamburger span{
-    background: var(--text-main);
-}
-
-body.dark-theme .hamburger:hover{
-    background: var(--primary);
-}
-
-body.dark-theme .hamburger:hover span,
-body.dark-theme .hamburger.active span{
-    background: #fff;
-}
-
-/* ==========================================================
-   RESPONSIVE DISPLAY
-========================================================== */
-
+/* Mobile */
 @media (max-width:1023px){
-    .hamburger{
-        display: flex;
-        flex-shrink: 0;
+
+    html[dir="rtl"] .nav-link{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        text-align:right;
     }
-}
 
-@media (min-width:1024px){
-    .hamburger{
-        display: none;
+    html[dir="rtl"] .nav-link i{
+        margin-right:0;
+        margin-left:12px;
     }
-}/* ==========================================================
-   FOOTER RESPONSIVE
-========================================================== */
-
-/* =========================
-   LARGE DESKTOP > 1280px
-========================= */
-@media (min-width:1281px){
-
-  .footer-container{
-    max-width:1320px;
-    margin:auto;
-    gap:50px;
-  }
-
-  .footer-brand-name{
-    font-size:1.2rem;
-  }
-
-  .footer-description{
-    font-size:1rem;
-  }
-}
-
-/* =========================
-   DESKTOP 1024px - 1280px
-========================= */
-@media (min-width:1024px) and (max-width:1280px){
-
-  .footer-container{
-    grid-template-columns:1.3fr 1fr 1fr 1.1fr;
-    gap:35px;
-  }
-}
-
-/* =========================
-   TABLET 640px - 1023px
-========================= */
-@media (min-width:640px) and (max-width:1023px){
-
-  .site-footer{
-    padding-top:70px;
-  }
-
-  .footer-container{
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-    text-align:center;
-  }
-
-  .footer-brand,
-  .footer-links,
-  .footer-contact-box{
-    align-items:center;
-  }
-
-  .footer-logo-box{
-    justify-content:center;
-  }
-
-  .footer-description{
-    max-width:100%;
-    margin:auto;
-  }
-
-  .footer-contact-item{
-    justify-content:center;
-    text-align:center;
-  }
-
-  .footer-socials{
-    justify-content:center;
-  }
-
-  .footer-bottom-content{
-    flex-direction:column;
-    text-align:center;
-    gap:12px;
-  }
-
-  .footer-bottom-links{
-    justify-content:center;
-    flex-wrap:wrap;
-  }
-}
-
-/* =========================
-   MOBILE < 640px
-========================= */
-@media (max-width:639px){
-
-  .site-footer{
-    padding-top:60px;
-  }
-
-  .footer-container{
-    grid-template-columns:1fr;
-    gap:30px;
-    text-align:center;
-  }
-
-  .footer-brand,
-  .footer-links,
-  .footer-contact-box{
-    align-items:center;
-  }
-
-  .footer-logo-box{
-    justify-content:center;
-  }
-
-  .footer-description{
-    max-width:100%;
-    margin:auto;
-  }
-
-  .footer-contact-item{
-    justify-content:center;
-    text-align:center;
-  }
-
-  .footer-socials{
-    justify-content:center;
-    flex-wrap:wrap;
-  }
-
-  .footer-bottom-content{
-    flex-direction:column;
-    text-align:center;
-    gap:10px;
-  }
-
-  .footer-bottom-links{
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-}
-
-/* =========================
-   EXTRA SMALL MOBILE < 360px
-========================= */
-@media (max-width:360px){
-
-  .footer-container{
-    gap:22px;
-    padding-bottom:30px;
-  }
-
-  .footer-logo-img{
-    width:46px;
-    height:46px;
-  }
-
-  .footer-brand-name{
-    font-size:.9rem;
-  }
-
-  .footer-brand-subtext{
-    font-size:.62rem;
-  }
-
-  .footer-title{
-    font-size:.95rem;
-  }
-
-  .footer-description,
-  .footer-links li a,
-  .footer-contact-item{
-    font-size:.88rem;
-  }
-
-  .footer-social{
-    width:36px;
-    height:36px;
-  }
-
-  .footer-bottom{
-    padding:15px 0;
-  }
-
-  .footer-bottom-content{
-    font-size:.85rem;
-  }
 }

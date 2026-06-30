@@ -152,7 +152,9 @@ body.dark-theme h6{
 }
 
 .hero-content h1 span,
-.about-hero-content h1 span {
+.about-hero-content h1 span ,
+    .hero-copy h1 span,
+    .hero-content h1 span{
     color: var(--primary-green);
 }
 .hero-badge{
