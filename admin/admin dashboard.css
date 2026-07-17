@@ -221,9 +221,9 @@ img { display: block; max-width: 100%; }
   gap: 10px;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  padding: 12px 16px;
+  padding: 16px 26px;
   border-radius: 14px;
-  min-width: 260px;
+  min-width: 590px;
 }
 
 .search-box i { color: var(--text-soft); }
@@ -389,7 +389,7 @@ img { display: block; max-width: 100%; }
 }
 
 .eyebrow {
-  color: var(--accent);
+ /* color: var(--accent);*/
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.82rem;
@@ -692,7 +692,7 @@ img { display: block; max-width: 100%; }
 }
 
 .photo-grid img {
-  height: 130px;
+ /* height: 130px;*/
   object-fit: cover;
   border-radius: 18px;
   transition: var(--transition);
@@ -871,7 +871,7 @@ img { display: block; max-width: 100%; }
     background: var(--card-bg);
     border-right: 1px solid var(--border);
     width: 290px;
-    height: 100vh;
+    height: 120vh;
     position: sticky;
     top: 0;
 
@@ -1179,4 +1179,47 @@ select{
 
 .brand-subtext{
     font-weight:500;
+}/* ==========================================
+   TOPBAR RIGHT - DESKTOP FIX
+========================================== */
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:18px;
+    flex-wrap:nowrap;
+    margin-left:auto;
+}
+
+.topbar-right > *{
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+}
+
+.topbar-right a,
+.topbar-right button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+/* Desktop (1024px - 1280px) */
+@media (min-width:1024px) and (max-width:1280px){
+
+    .topbar-right{
+        gap:16px;
+    }
+
+}
+
+/* Large Desktop (>1280px) */
+@media (min-width:1281px){
+
+    .topbar-right{
+        gap:20px;
+    }
+
 }

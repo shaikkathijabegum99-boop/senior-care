@@ -105,11 +105,7 @@ a{
   padding:10px 18px;
   border-radius:999px;
 
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);
-
-  backdrop-filter:blur(10px);
-
+ 
   margin-bottom:24px;
 }
 
@@ -139,7 +135,7 @@ a{
   justify-content:center;
   gap:10px;
 
-  padding:14px 28px;
+  padding:10px 16px;
   border-radius:999px;
   font-weight:600;
 
@@ -181,10 +177,10 @@ a{
   padding:8px 18px;
   border-radius:999px;
 
-  background:rgba(139,171,125,.12);
+  
   color:var(--primary);
 
-  font-size:.85rem;
+  font-size:.95rem;
   font-weight:700;
 
   margin-bottom:15px;
@@ -679,8 +675,7 @@ body{
 .hero-badge{
     margin:0 auto 24px;
 
-    background:rgba(242,155,75,.15);
-    border:1px solid rgba(242,155,75,.25);
+   
 }
 
 .hero-content h1{
@@ -724,7 +719,7 @@ body{
 ========================================== */
 
 .section-tag{
-    background:rgba(242,155,75,.12);
+  
     color:var(--brand-orange);
 }
 

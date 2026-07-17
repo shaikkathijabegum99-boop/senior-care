@@ -82,8 +82,7 @@ body.dark-theme {
     margin: 0 auto 22px;
 
     padding: 8px 16px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.18);
+   
     border-radius: 999px;
 
     color: #fff;
@@ -200,7 +199,7 @@ body.dark-theme {
 }
 
 .article-block h2 {
-    font-size: 1.85rem;
+    font-size: 1.5rem;
 }
 
 .article-list {
