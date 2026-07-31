@@ -1,179 +1,193 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>Nethra Senior Care</title>
-
     <meta name="description"
-        content="Compassionate senior care services designed to provide comfort, dignity, and peace of mind.">
-
-    <link rel="icon" href="../images/favicon.png">
-
-    <link rel="stylesheet" href="../css/com.css">
-     <link rel="stylesheet" href="../global/global.css">
-
+          content="Compassionate senior care services designed to provide comfort, dignity, and peace of mind.">
+    <link rel="icon"
+          href="../images/favicon.png">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          href="../global/global.css">
+    <link rel="stylesheet"
+          href="../css/com.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
-
-    <!-- =========================
-         HEADER
-    ========================== -->
-    <header class="site-header">
-
-        <div class="nav-container">
-
-            <!-- Logo -->
-            <a href="../index.html" class="logo-box">
-
-                <img src="../images/slogo.jpg.png"
-                    alt="Nethra Senior Care Logo"
-                    class="nav-logo-img"
-                    loading="lazy">
-
-                <div class="logo-text">
-                    <span class="brand-name">NETHRA</span>
-                    <span class="brand-subtext">SENIOR CARE</span>
-                </div>
-
+<!-- ==========================================
+HEADER
+========================================== -->
+<header class="site-header">
+<div class="container">
+<nav id="nav">
+<a class="logo-box"
+   href="../index.html">
+    <img src="../images/slogo.jpg.png"
+         alt="Nethra Senior Care Logo"
+         class="nav-logo-img"
+         loading="lazy">
+    <div class="logo-text">
+        <span class="brand-name">
+            NETHRA
+        </span>
+        <span class="brand-subtext">
+            SENIOR CARE
+        </span>
+    </div>
+</a>
+<ul class="nav-links">
+    <li class="has-drop">
+        <a href="../index.html">
+            Home
+            <span class="drop-chevron"></span>
+        </a>
+        <div class="nav-dropdown">
+            <a class="dd-item"
+               href="../index.html">
+                Home I
             </a>
-
-            <!-- Navigation -->
-            <nav aria-label="Primary Navigation">
-
-                <ul class="nav-links" id="nav-menu">
-
-                    <!-- Home -->
-                    <li class="nav-item has-dropdown">
-
-                        <a href="../index.html"
-                            class="nav-link"
-                            aria-haspopup="true">
-
-                            <span>Home</span>
-                            <i class="fas fa-chevron-down"></i>
-
-                        </a>
-
-                        <ul class="dropdown-menu">
-
-                            <li class="dropdown-item">
-                                <a href="../index.html">Home 1</a>
-                            </li>
-
-                            <li class="dropdown-item">
-                                <a href="../home2/home2.html">Home 2</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-                    <!-- About -->
-                    <li class="nav-item">
-                        <a href="../about/about1.html" class="nav-link">
-                            About
-                        </a>
-                    </li>
-
-                    <!-- Services -->
-                    <li class="nav-item">
-                        <a href="../service/service.html" class="nav-link">
-                            Services
-                        </a>
-                    </li>
-
-                    <!-- Blog -->
-                    <li class="nav-item">
-                        <a href="../blo/blog.html" class="nav-link">
-                            Blog
-                        </a>
-                    </li>
-
-                    <!-- Contact -->
-                    <li class="nav-item">
-                        <a href="../contact/contact.html" class="nav-link">
-                            Contact
-                        </a>
-                    </li>
-
-                    <!-- Dashboard (Always Last) -->
-                    <li class="nav-item">
-                        <a href="../admin/admin dashboard.html"
-                            class="nav-link">
-                            Dashboard
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <!-- Header Actions -->
-            <div class="header-actions">
-
-                <!-- Theme Toggle -->
-                <button class="action-btn"
-                    id="theme-toggle"
-                    type="button"
-                    title="Toggle Theme"
-                    aria-label="Toggle Theme">
-
-                    <i class="fas fa-moon"></i>
-
-                </button>
-
-            <button class="action-btn"
-        id="rtl-toggle"
-        type="button"
-        title="Toggle RTL"
-        aria-label="Toggle RTL">
-
-    <i class="fas fa-right-left"></i>
-
-</button>
-
-</button>
-                <!-- Login -->
-                <div class="header-auth-icons">
-
-                    <a href="../bash/signin.html"
-                        class="action-btn"
-                        title="Login"
-                        aria-label="Login">
-
-                        <i class="fas fa-user-circle"></i>
-
-                    </a>
-
-                </div>
-
-                <!-- Hamburger -->
-               <button class="hamburger"
-        id="hamburger"
-        type="button"
-        aria-label="Toggle Navigation"
-        aria-controls="nav-menu"
-        aria-expanded="false">
-
-    <span></span>
-    <span></span>
-    <span></span>
-
-</button>
-
-            </div>
-
+            <a class="dd-item"
+               href="../home2/home2.html">
+                Home II
+            </a>
         </div>
-
-    </header>
-
-    <script src="../js/component.js"></script>
-
+    </li>
+    <li>
+        <a href="../about/about1.html">
+            About
+        </a>
+    </li>
+    <li>
+        <a href="../service/service.html">
+            Services
+        </a>
+    </li>
+    <li>
+        <a href="../pricing/pricing.html">
+            Pricing
+        </a>
+    </li>
+    <li>
+        <a href="../blog/blog.html">
+            Blog
+        </a>
+    </li>
+    <li>
+        <a href="../contact/contact.html">
+            Contact
+        </a>
+    </li>
+    <li>
+        <a href="../admin/admin dashboard.html" >
+            Dashboard
+        </a>
+    </li>
+</ul>
+<div class="nav-r">
+    <button class="icon-btn"
+            id="theme-btn"
+            onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+    <button class="rtl-btn"
+            id="rtl-btn"
+            onclick="toggleRTL()">
+        RTL
+    </button>
+    <a href="../bash/signin.html"
+       class="btn btn-primary btn-sm">
+        <i class="fas fa-user"></i>
+        Login
+    </a>
+    <button class="ham"
+            id="ham"
+            onclick="toggleMob()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+</nav>
+</div>
+</header>
+<!-- ==========================================
+MOBILE NAVIGATION
+========================================== -->
+<div class="mob-nav"
+     id="mob-nav">
+<div class="mob-header">
+    <div class="mob-title">
+        Menu
+    </div>
+    <button class="mob-close"
+            id="mob-close"
+            aria-label="Close Menu">
+        <span></span>
+        <span></span>
+    </button>
+</div>
+    <button class="mob-dd-toggle"
+            onclick="toggleMobDrop(this)">
+        Home
+        <span class="mob-dd-chevron">▼</span>
+    </button>
+    <div class="mob-dropdown">
+        <a href="../index.html"
+           onclick="closeMob()">
+            Home I
+        </a>
+        <a href="../home2/home2.html"
+           onclick="closeMob()">
+            Home II
+        </a>
+    </div>
+    <a href="../about/about1.html"
+       onclick="closeMob()">
+        About
+    </a>
+    <a href="../service/service.html"
+       onclick="closeMob()">
+        Services
+    </a>
+    <a href="../pricing/pricing.html"
+       onclick="closeMob()">
+        Pricing
+    </a>
+    <a href="../blog/blog.html"
+       onclick="closeMob()">
+        Blog
+    </a>
+    <a href="../contact/contact.html"
+       onclick="closeMob()">
+        Contact
+    </a>
+    <a href="../admin/admin dashboard.html"
+       onclick="closeMob()">
+        Dashboard
+    </a>
+    <hr class="mob-divider">
+    <a href="../contact/contact.html"
+       class="btn btn-outline btn-sm">
+        Book Visit
+    </a>
+    <a href="../bash/signin.html"
+       class="btn btn-primary btn-sm">
+        Login
+    </a>
+</div>
+<div class="mob-overlay"
+     id="mob-overlay"
+     onclick="closeMob()"></div>
+<script src="../js/component.js"></script>
 </body>
-
 </html>

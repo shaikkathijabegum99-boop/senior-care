@@ -1,262 +1,309 @@
-/* ==========================================================
-   GLOBAL.JS (FIXED)
-   Theme + RTL + Navbar + Sticky Header
-========================================================== */
-
-document.addEventListener("DOMContentLoaded", async () => {
-
-    await Promise.all([
-        loadComponent("navbar", "../components/navbar.html"),
-        loadComponent("footer", "../components/footer.html")
-    ]);
-
-    initTheme();
-    initDirection();
-    initNavbar();
-    setActiveMenu();
-    initStickyHeader();
+/*==================================================
+ NETHRA SENIOR CARE
+ GLOBAL.JS
+ Component Loader
+ Navbar Functionality
+ Mobile Menu
+ Dark Mode
+ RTL Mode
+ Sticky Header
+==================================================*/
+document.addEventListener("DOMContentLoaded",()=>{
+/*==================================================
+ COMPONENT LOADER
+==================================================*/
+async function loadComponent(selector,file){
+const element =
+document.querySelector(selector);
+if(!element) return;
+try{
+const response =
+await fetch(file);
+if(!response.ok){
+throw new Error(
+"Component not found : "+file
+);
+}
+element.innerHTML =
+await response.text();
+initNavbar();
+setActiveNav();
+}
+catch(error){
+console.error(error);
+}
+}
+/*==================================================
+LOAD NAVBAR
+==================================================*/
+loadComponent(
+"#navbar",
+"../components/navbar.html"
+);
+/*==================================================
+LOAD FOOTER
+==================================================*/
+loadComponent(
+"#footer",
+"../components/footer.html"
+);
 });
-
-
-/* ==========================================================
-   LOAD COMPONENTS
-========================================================== */
-
-async function loadComponent(id, path) {
-
-    const element = document.getElementById(id);
-    if (!element) return;
-
-    try {
-        const response = await fetch(path);
-        if (!response.ok) throw new Error(`Failed to load ${path}`);
-
-        element.innerHTML = await response.text();
-
-    } catch (error) {
-        console.error(error);
-    }
+/*==================================================
+NAVBAR INITIALIZATION
+==================================================*/
+function initNavbar(){
+if(document.body.dataset.navLoaded){
+return;
 }
-
-
-/* ==========================================================
-   THEME
-========================================================== */
-
-function initTheme() {
-
-    const savedTheme = localStorage.getItem("theme") || "light";
-    applyTheme(savedTheme);
-
-    const themeBtn = document.getElementById("theme-toggle");
-
-    themeBtn?.addEventListener("click", () => {
-
-        const current = localStorage.getItem("theme") || "light";
-
-        applyTheme(current === "dark" ? "light" : "dark");
-    });
+document.body.dataset.navLoaded="true";
+/*==================================================
+ELEMENTS
+==================================================*/
+const ham =
+document.getElementById("ham");
+const mobNav =
+document.getElementById("mob-nav");
+const overlay =
+document.getElementById("mob-overlay");
+const closeBtn =
+document.getElementById("mob-close");
+const themeBtn =
+document.getElementById("theme-btn");
+const rtlBtn =
+document.getElementById("rtl-btn");
+const header =
+document.querySelector(".site-header");
+/*==================================================
+LOAD SAVED SETTINGS
+==================================================*/
+const savedTheme =
+localStorage.getItem("theme");
+if(savedTheme){
+document.documentElement
+.setAttribute(
+"data-theme",
+savedTheme
+);
 }
-
-function applyTheme(theme) {
-
-    document.body.classList.toggle("dark-theme", theme === "dark");
-
-    localStorage.setItem("theme", theme);
-
-    updateThemeIcon(theme);
+const savedDirection =
+localStorage.getItem("direction");
+if(savedDirection){
+document.documentElement
+.setAttribute(
+"dir",
+savedDirection
+);
 }
-
-function updateThemeIcon(theme) {
-
-    const btn = document.getElementById("theme-toggle");
-    if (!btn) return;
-
-    btn.innerHTML =
-        theme === "dark"
-            ? '<i class="fas fa-sun"></i>'
-            : '<i class="fas fa-moon"></i>';
+/*==================================================
+OPEN MOBILE MENU
+==================================================*/
+function openMenu(){
+if(!mobNav) return;
+mobNav.classList.add(
+"active"
+);
+if(overlay){
+overlay.classList.add(
+"active"
+);
 }
-
-
-/* ==========================================================
-   RTL / LTR
-========================================================== */
-
-function initDirection() {
-
-    const savedDir = localStorage.getItem("direction") || "ltr";
-    applyDirection(savedDir);
-
-    const rtlBtn = document.getElementById("rtl-toggle");
-
-    rtlBtn?.addEventListener("click", () => {
-
-        const current =
-            document.documentElement.getAttribute("dir") || "ltr";
-
-        applyDirection(current === "rtl" ? "ltr" : "rtl");
-    });
+if(ham){
+ham.classList.add(
+"active"
+);
 }
-
-function applyDirection(dir) {
-
-    document.documentElement.setAttribute("dir", dir);
-    localStorage.setItem("direction", dir);
-
-    updateRTLIcon(dir);
-    fixNavbarRTL(dir);
+document.body.classList.add(
+"menu-open"
+);
 }
-
-function updateRTLIcon(dir) {
-
-    const btn = document.getElementById("rtl-toggle");
-    if (!btn) return;
-
-    btn.innerHTML = '<i class="fas fa-right-left"></i>';
-
-    const icon = btn.querySelector("i");
-
-    if (icon) {
-        icon.style.transform = dir === "rtl" ? "rotate(180deg)" : "rotate(0deg)";
-        icon.style.transition = "0.3s ease";
-    }
+/*==================================================
+CLOSE MOBILE MENU
+==================================================*/
+function closeMenu(){
+if(mobNav){
+mobNav.classList.remove(
+"active"
+);
 }
-
-
-/* ==========================================================
-   FIX NAVBAR RTL (SAFE)
-========================================================== */
-
-function fixNavbarRTL(dir) {
-
-    const navLinks = document.querySelector(".nav-links");
-    if (!navLinks) return;
-
-    if (!navLinks._originalItems) {
-        navLinks._originalItems = Array.from(navLinks.children);
-    }
-
-    const items = navLinks._originalItems;
-
-    navLinks.innerHTML = "";
-
-    if (dir === "rtl" && window.innerWidth >= 1024) {
-        [...items].reverse().forEach(item => navLinks.appendChild(item));
-    } else {
-        items.forEach(item => navLinks.appendChild(item));
-    }
+if(overlay){
+overlay.classList.remove(
+"active"
+);
 }
-
-
-/* ==========================================================
-   ACTIVE MENU
-========================================================== */
-
-function setActiveMenu() {
-
-    const currentPage = window.location.pathname.split("/").pop();
-
-    document.querySelectorAll(".nav-link").forEach(link => {
-
+if(ham){
+ham.classList.remove(
+"active"
+);
+}
+document.body.classList.remove(
+"menu-open"
+);
+}
+/*==================================================
+HAMBURGER BUTTON
+==================================================*/
+if(ham){
+ham.onclick = ()=>{
+if(
+mobNav.classList.contains(
+"active"
+)
+){
+closeMenu();
+}
+else{
+openMenu();
+}
+};
+}
+/*==================================================
+CLOSE BUTTON
+==================================================*/
+if(closeBtn){
+closeBtn.onclick =
+closeMenu;
+}
+/*==================================================
+OVERLAY CLOSE
+==================================================*/
+if(overlay){
+overlay.onclick =
+closeMenu;
+}
+/*==================================================
+MOBILE LINKS CLOSE
+==================================================*/
+document
+.querySelectorAll(
+".mob-nav a"
+)
+.forEach(link=>{
+link.onclick =
+closeMenu;
+});
+/*==================================================
+MOBILE DROPDOWN
+==================================================*/
+const mobDrop =
+document.querySelector(
+".mob-dd-toggle"
+);
+const mobDropdown =
+document.querySelector(
+".mob-dropdown"
+);
+if(
+mobDrop &&
+mobDropdown
+){
+mobDrop.onclick = ()=>{
+mobDropdown
+.classList
+.toggle(
+"active"
+);
+mobDrop
+.classList
+.toggle(
+"active"
+);
+};
+}
+/*==================================================
+DARK LIGHT MODE
+==================================================*/
+if(themeBtn){
+themeBtn.onclick = ()=>{
+let current =
+document.documentElement
+.getAttribute(
+"data-theme"
+);
+let theme =
+current === "dark"
+?
+"light"
+:
+"dark";
+document.documentElement
+.setAttribute(
+"data-theme",
+theme
+);
+localStorage.setItem(
+"theme",
+theme
+);
+const icon =
+themeBtn.querySelector("i");
+if(icon){
+icon.classList.toggle(
+"fa-moon"
+);
+icon.classList.toggle(
+"fa-sun"
+);
+}
+};
+}
+/*==================================================
+RTL TOGGLE
+==================================================*/
+if(rtlBtn){
+rtlBtn.onclick = ()=>{
+let current =
+document.documentElement
+.getAttribute(
+"dir"
+);
+let direction =
+current === "rtl"
+?
+"ltr"
+:
+"rtl";
+document.documentElement
+.setAttribute(
+"dir",
+direction
+);
+localStorage.setItem(
+"direction",
+direction
+);
+};
+}
+/*==================================================
+STICKY HEADER
+==================================================*/
+window.addEventListener(
+"scroll",
+()=>{
+if(!header)
+return;
+if(window.scrollY > 50){
+header.classList.add(
+"sticky"
+);
+}
+else{
+header.classList.remove(
+"sticky"
+);
+}
+});
+}
+/*==================================================
+ACTIVE NAVIGATION
+==================================================*/
+function setActiveNav() {
+    const current = window.location.pathname.toLowerCase();
+    document.querySelectorAll(".nav-links a, .nav-dropdown a, .mob-nav a").forEach(link => {
+        link.classList.remove("act");
         const href = link.getAttribute("href");
         if (!href) return;
-
-        const page = href.split("/").pop();
-
-        link.classList.toggle("active", page === currentPage);
-    });
-}
-
-
-/* ==========================================================
-   NAVBAR + HAMBURGER
-========================================================== */
-
-function initNavbar() {
-
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (!hamburger || !navLinks) return;
-
-    /* Hamburger Toggle (FIXED) */
-    hamburger.addEventListener("click", () => {
-
-        const isActive = hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-
-        hamburger.setAttribute("aria-expanded", isActive);
-    });
-
-    /* Dropdown (Mobile) */
-    document.querySelectorAll(".has-dropdown").forEach(item => {
-
-        const link = item.querySelector(".nav-link");
-
-        link?.addEventListener("click", (e) => {
-
-            if (window.innerWidth <= 1023) {
-
-                e.preventDefault();
-
-                document.querySelectorAll(".has-dropdown")
-                    .forEach(other => {
-                        if (other !== item) {
-                            other.classList.remove("open");
-                        }
-                    });
-
-                item.classList.toggle("open");
-            }
-        });
-    });
-
-    /* Close on outside click */
-    document.addEventListener("click", (e) => {
-
-        if (
-            navLinks.classList.contains("active") &&
-            !navLinks.contains(e.target) &&
-            !hamburger.contains(e.target)
-        ) {
-            navLinks.classList.remove("active");
-            hamburger.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", false);
+        if (current.includes(href.replace("../","").toLowerCase())) {
+            link.classList.add("act");
         }
     });
-
-    /* Resize reset */
-    window.addEventListener("resize", () => {
-
-        const dir = document.documentElement.getAttribute("dir") || "ltr";
-        fixNavbarRTL(dir);
-
-        if (window.innerWidth >= 1024) {
-            navLinks.classList.remove("active");
-            hamburger.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", false);
-
-            document.querySelectorAll(".has-dropdown")
-                .forEach(item => item.classList.remove("open"));
-        }
-    });
-}
-
-
-/* ==========================================================
-   STICKY HEADER
-========================================================== */
-
-function initStickyHeader() {
-
-    const header = document.querySelector(".site-header");
-    if (!header) return;
-
-    const handleScroll = () => {
-        header.classList.toggle("scrolled", window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
 }

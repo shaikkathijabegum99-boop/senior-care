@@ -1,27 +1,208 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const formMessage = document.getElementById("formMessage");
-
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const fullName = document.getElementById("fullName").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const city = document.getElementById("city").value.trim();
-      const service = document.getElementById("service").value.trim();
-
-      if (!fullName || !email || !phone || !city || !service) {
-        formMessage.textContent = "Please fill in all required fields.";
-        formMessage.style.color = "#d9534f";
-        return;
-      }
-
-      formMessage.textContent = "Thank you! Your inquiry has been submitted successfully.";
-      formMessage.style.color = "#4f8a10";
-
-      form.reset();
-    });
-  }
+/*==================================================
+NETHRA SENIOR CARE
+CONTACT PAGE JS
+Features:
+01. Contact Form Validation
+02. Submit Loading
+03. Success Message
+04. FAQ Accordion
+05. Newsletter Validation
+06. Smooth Scroll
+==================================================*/
+document.addEventListener("DOMContentLoaded",()=>{
+/*==================================================
+01. CONTACT FORM
+==================================================*/
+const contactForm = document.querySelector(".contact-form");
+if(contactForm){
+contactForm.addEventListener("submit",(e)=>{
+e.preventDefault();
+const name =
+contactForm.querySelector(
+'input[type="text"]'
+);
+const phone =
+contactForm.querySelector(
+'input[type="tel"]'
+);
+const email =
+contactForm.querySelector(
+'input[type="email"]'
+);
+const service =
+contactForm.querySelector(
+"select"
+);
+const message =
+contactForm.querySelector(
+"textarea"
+);
+let valid=true;
+[
+name,
+phone,
+email,
+service,
+message
+].forEach(field=>{
+if(
+!field.value.trim() ||
+(
+field.tagName==="SELECT" &&
+field.selectedIndex===0
+)
+){
+field.classList.add("error");
+valid=false;
+}
+else{
+field.classList.remove("error");
+}
+});
+if(!valid){
+showFormMessage(
+"Please complete all required fields.",
+"error"
+);
+return;
+}
+const button =
+contactForm.querySelector("button");
+const oldText =
+button.innerHTML;
+button.disabled=true;
+button.innerHTML=`
+<i class="fa-solid fa-spinner fa-spin"></i>
+Sending...
+`;
+setTimeout(()=>{
+showFormMessage(
+"Thank you! Our care team will contact you shortly.",
+"success"
+);
+contactForm.reset();
+button.disabled=false;
+button.innerHTML=oldText;
+},1500);
+});
+}
+/*==================================================
+FORM MESSAGE
+==================================================*/
+function showFormMessage(text,type){
+let messageBox =
+document.querySelector(".form-message");
+if(!messageBox){
+messageBox =
+document.createElement("div");
+messageBox.className =
+"form-message";
+contactForm.prepend(messageBox);
+}
+messageBox.innerHTML=text;
+messageBox.className =
+"form-message "+type;
+setTimeout(()=>{
+messageBox.remove();
+},4000);
+}
+/*==================================================
+02. INPUT FOCUS EFFECT
+==================================================*/
+const fields =
+document.querySelectorAll(
+".contact-form input, .contact-form select, .contact-form textarea"
+);
+fields.forEach(field=>{
+field.addEventListener(
+"focus",
+()=>{
+field.parentElement.classList.add(
+"focused"
+);
+});
+field.addEventListener(
+"blur",
+()=>{
+field.parentElement.classList.remove(
+"focused"
+);
+});
+});
+/*==================================================
+03. FAQ ACCORDION
+==================================================*/
+const faqItems =
+document.querySelectorAll(".faq-item");
+faqItems.forEach(item=>{
+const button =
+item.querySelector(".faq-question");
+button.addEventListener(
+"click",
+()=>{
+faqItems.forEach(other=>{
+if(other!==item){
+other.classList.remove(
+"active"
+);
+}
+});
+item.classList.toggle(
+"active"
+);
+});
+});
+/*==================================================
+04. NEWSLETTER FORM
+==================================================*/
+const newsletter =
+document.querySelector(
+".newsletter-form"
+);
+if(newsletter){
+newsletter.addEventListener(
+"submit",
+(e)=>{
+e.preventDefault();
+const email =
+newsletter.querySelector(
+"input"
+);
+if(
+!email.value ||
+!email.value.includes("@")
+){
+alert(
+"Please enter a valid email address."
+);
+return;
+}
+alert(
+"Thank you for subscribing!"
+);
+newsletter.reset();
+});
+}
+/*==================================================
+05. SMOOTH SCROLL
+==================================================*/
+document.querySelectorAll(
+'a[href^="#"]'
+)
+.forEach(link=>{
+link.addEventListener(
+"click",
+(e)=>{
+const target =
+document.querySelector(
+link.getAttribute("href")
+);
+if(target){
+e.preventDefault();
+target.scrollIntoView({
+behavior:"smooth"
+});
+}
+});
+});
 });

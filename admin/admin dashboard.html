@@ -1,449 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard | Senior Care Community</title>
-<link rel="icon" type="image/png" href="../images/slogo.jpg.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-  <link rel="stylesheet" href="admin dashboard.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+Family Care Portal | Nethra Senior Care
+</title>
+<link rel="icon" href="../images/slogo.jpg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="../global/global.css">
+<link rel="stylesheet"
+href="admin dashboard.css">
 </head>
 <body>
-
-  <div class="dashboard-layout">
-
-    
-    <aside class="sidebar" id="sidebar">
-     <div class="sidebar-top">
-
-    <a href="../index.html" class="sidebar-brand">
-        <img src="../images/slogo.jpg.png" alt="Nethra Logo" class="nav-logo-img">
-
-        <div class="logo-text">
-            <span class="brand-name">NETHRA</span>
-            <span class="brand-subtext">SENIOR CARE</span>
-        </div>
-    </a>
-
-    <button class="sidebar-close" id="sidebarClose">
-        <i class="fas fa-times"></i>
-    </button>
-
+<div class="dashboard-layout">
+<!--==================================================
+SIDEBAR
+==================================================-->
+<aside class="sidebar" id="sidebar">
+<div class="sidebar-top">
+<a href="../index.html" class="sidebar-brand">
+<img 
+src="../images/slogo.jpg.png"
+class="nav-logo-img"
+alt="Nethra">
+<div class="logo-text">
+<span class="brand-name">
+NETHRA
+</span>
+<span class="brand-subtext">
+SENIOR CARE
+</span>
 </div>
-
-      <nav class="sidebar-nav">
-        <a href="#overview" class="nav-link active"><i class="fas fa-chart-pie"></i><span>Overview</span></a>
-        <a href="#residents" class="nav-link"><i class="fas fa-user-group"></i><span>Residents</span></a>
-        <a href="#families" class="nav-link"><i class="fas fa-people-roof"></i><span>Family Accounts</span></a>
-        <a href="#careplans" class="nav-link"><i class="fas fa-notes-medical"></i><span>Care Plans</span></a>
-        <a href="#calendar" class="nav-link"><i class="fas fa-calendar-days"></i><span>Activities</span></a>
-        <a href="#messages" class="nav-link"><i class="fas fa-comments"></i><span>Messages</span></a>
-        <a href="#photos" class="nav-link"><i class="fas fa-camera-retro"></i><span>Photo Updates</span></a>
-        <a href="#reports" class="nav-link"><i class="fas fa-chart-line"></i><span>Reports</span></a>
-        <a href="#settings" class="nav-link"><i class="fas fa-gear"></i><span>Settings</span></a>
-      </nav>
-
-      <div class="sidebar-bottom">
-        <a href="#" class="logout-btn">
-          <i class="fas fa-right-from-bracket"></i>
-          <span>Logout</span>
-        </a>
-      </div>
-    </aside>
-
-  
-    <main class="dashboard-main">
-
-   
-      <header class="dashboard-topbar">
-        <div class="topbar-left">
-          <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div>
-            <h1>Admin Dashboard</h1>
-            <p>Manage residents, family communication, care plans, and updates.</p>
-          </div>
-        </div>
-
-        <div class="topbar-right">
-          <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search dashboard..." />
-          </div>
-
-          <button class="icon-btn" id="themeToggle" title="Toggle Theme">
-            <i class="fas fa-moon"></i>
-          </button>
-
-          <div class="notif-wrap">
-            <button class="icon-btn" id="notifBtn">
-              <i class="fas fa-bell"></i>
-              <span class="badge">3</span>
-            </button>
-
-            <div class="notif-dropdown" id="notifDropdown">
-              <h4>Notifications</h4>
-              <div class="notif-item">
-                <i class="fas fa-camera"></i>
-                <div>
-                  <p>3 new photo updates uploaded</p>
-                  <span>10 mins ago</span>
-                </div>
-              </div>
-              <div class="notif-item">
-                <i class="fas fa-calendar-check"></i>
-                <div>
-                  <p>Yoga session scheduled for today</p>
-                  <span>1 hour ago</span>
-                </div>
-              </div>
-              <div class="notif-item">
-                <i class="fas fa-envelope-open-text"></i>
-                <div>
-                  <p>2 unread family messages</p>
-                  <span>2 hours ago</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="profile-wrap">
-            <button class="profile-btn" id="profileBtn">
-              <img src="https://i.pravatar.cc/100?img=12" alt="Admin Profile">
-              <div>
-                <strong>Admin</strong>
-                <span>System Manager</span>
-              </div>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-
-            <div class="profile-dropdown" id="profileDropdown">
-              <a href="#"><i class="fas fa-user"></i> Profile</a>
-              <a href="#settings"><i class="fas fa-gear"></i> Settings</a>
-             
-            </div>
-          </div>
-        </div>
-      </header>
-
-     
-      <section class="dashboard-content">
-
-       
-        <section class="welcome-banner reveal" id="overview">
-          <div>
-            <span class="eyebrow">Daily Overview</span>
-            <h2>Welcome back, Admin 👋</h2>
-            <p>Here’s what’s happening in your senior care community today.</p>
-          </div>
-          <a href="#calendar" class="action-pill">
-            <i class="fas fa-calendar-plus"></i> Manage Activities
-          </a>
-        </section>
-
- 
-        <section class="metrics-grid">
-          <div class="metric-card reveal">
-            <div class="metric-icon"><i class="fas fa-user-group"></i></div>
-            <div>
-              <h3>128</h3>
-              <p>Total Residents</p>
-              <span>+6 this month</span>
-            </div>
-          </div>
-
-          <div class="metric-card reveal">
-            <div class="metric-icon"><i class="fas fa-people-roof"></i></div>
-            <div>
-              <h3>76</h3>
-              <p>Family Accounts</p>
-              <span>+12 active today</span>
-            </div>
-          </div>
-
-          <div class="metric-card reveal">
-            <div class="metric-icon"><i class="fas fa-user-nurse"></i></div>
-            <div>
-              <h3>14</h3>
-              <p>Staff Members</p>
-              <span>2 on leave</span>
-            </div>
-          </div>
-
-          <div class="metric-card reveal">
-            <div class="metric-icon"><i class="fas fa-comments"></i></div>
-            <div>
-              <h3>12</h3>
-              <p>Unread Messages</p>
-              <span>Needs attention</span>
-            </div>
-          </div>
-        </section>
-
-        <div class="dashboard-grid">
-
-          <div class="dashboard-left">
-
-        
-            <section class="dashboard-card reveal" id="residents">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Residents</span>
-                  <h3>Resident Overview</h3>
-                </div>
-                <a href="#" class="mini-btn">View All</a>
-              </div>
-
-              <div class="table-wrap">
-                <table class="custom-table">
-                  <thead>
-                    <tr>
-                      <th>Resident</th>
-                      <th>Room</th>
-                      <th>Care Level</th>
-                      <th>Assigned Staff</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Margaret Wilson</td>
-                      <td>204A</td>
-                      <td>Assisted Living</td>
-                      <td>Nurse Emma</td>
-                      <td><span class="status active">Stable</span></td>
-                    </tr>
-                    <tr>
-                      <td>Robert Hayes</td>
-                      <td>117B</td>
-                      <td>Memory Care</td>
-                      <td>John Carter</td>
-                      <td><span class="status warning">Monitoring</span></td>
-                    </tr>
-                    <tr>
-                      <td>Helen Parker</td>
-                      <td>312C</td>
-                      <td>Independent</td>
-                      <td>Sarah Lee</td>
-                      <td><span class="status active">Good</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-
-          
-            <section class="dashboard-card reveal" id="families">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Family Portal</span>
-                  <h3>Family Accounts</h3>
-                </div>
-                <a href="#" class="mini-btn">Manage</a>
-              </div>
-
-              <div class="mini-grid">
-                <div class="info-box">
-                  <h4>Linked Accounts</h4>
-                  <p>76 verified family members currently connected to residents.</p>
-                </div>
-                <div class="info-box">
-                  <h4>Recent Logins</h4>
-                  <p>18 family members accessed care plans or photos in the last 24 hours.</p>
-                </div>
-              </div>
-            </section>
-
-          
-            <section class="dashboard-card reveal" id="careplans">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Care Plans</span>
-                  <h3>Care Plan Updates</h3>
-                </div>
-                <a href="#" class="mini-btn">Update</a>
-              </div>
-
-              <div class="care-list">
-                <div class="care-item">
-                  <i class="fas fa-pills"></i>
-                  <div>
-                    <h4>Medication Schedule Updated</h4>
-                    <p>Margaret Wilson’s medication timing was adjusted this morning.</p>
-                  </div>
-                </div>
-                <div class="care-item">
-                  <i class="fas fa-heart-pulse"></i>
-                  <div>
-                    <h4>Wellness Monitoring</h4>
-                    <p>Robert Hayes requires additional evening observation this week.</p>
-                  </div>
-                </div>
-                <div class="care-item">
-                  <i class="fas fa-utensils"></i>
-                  <div>
-                    <h4>Meal Preference Added</h4>
-                    <p>Helen Parker now has a customized low-sodium meal plan.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          
-            <section class="dashboard-card reveal" id="calendar">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Today’s Schedule</span>
-                  <h3>Activity Calendar</h3>
-                </div>
-                <a href="#" class="mini-btn">Add Activity</a>
-              </div>
-
-              <div class="activity-list">
-                <div class="activity-item">
-                  <span class="time">09:00 AM</span>
-                  <div>
-                    <h4>Morning Yoga</h4>
-                    <p>Wellness Studio • 18 participants</p>
-                  </div>
-                </div>
-                <div class="activity-item">
-                  <span class="time">11:30 AM</span>
-                  <div>
-                    <h4>Music Therapy</h4>
-                    <p>Community Hall • 22 participants</p>
-                  </div>
-                </div>
-                <div class="activity-item">
-                  <span class="time">04:00 PM</span>
-                  <div>
-                    <h4>Family Visit Hour</h4>
-                    <p>Garden Lounge • Scheduled</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </div>
-
-        
-          <div class="dashboard-right">
-
-          
-            <section class="dashboard-card reveal" id="messages">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Communication</span>
-                  <h3>Recent Messages</h3>
-                </div>
-              </div>
-
-              <div class="message-list">
-                <div class="message-item">
-                  <img src="https://i.pravatar.cc/80?img=32" alt="">
-                  <div>
-                    <h4>Emily Parker</h4>
-                    <p>Can we schedule a visit this Sunday for mom?</p>
-                    <span>12 mins ago</span>
-                  </div>
-                </div>
-                <div class="message-item">
-                  <img src="https://i.pravatar.cc/80?img=48" alt="">
-                  <div>
-                    <h4>Daniel Hayes</h4>
-                    <p>Thank you for the wellness update and photos.</p>
-                    <span>1 hour ago</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-        
-            <section class="dashboard-card reveal" id="photos">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Memories</span>
-                  <h3>Photo Updates</h3>
-                </div>
-              </div>
-
-              <div class="photo-grid">
-                <img src="../images/index1.jpg" alt="">
-                <img src="../images/about-hero.jpg" alt="">
-                <img src="../images/home2-hero.jpg" alt="">
-                <img src="../images/bloghero1.jpg" alt="">
-              </div>
-            </section>
-
-            <section class="dashboard-card reveal" id="reports">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Insights</span>
-                  <h3>Reports Summary</h3>
-                </div>
-              </div>
-
-              <div class="report-bars">
-                <div class="bar-item">
-                  <div class="bar-top">
-                    <span>Family Portal Usage</span>
-                    <strong>84%</strong>
-                  </div>
-                  <div class="bar"><span style="width:84%"></span></div>
-                </div>
-                <div class="bar-item">
-                  <div class="bar-top">
-                    <span>Activity Participation</span>
-                    <strong>72%</strong>
-                  </div>
-                  <div class="bar"><span style="width:72%"></span></div>
-                </div>
-                <div class="bar-item">
-                  <div class="bar-top">
-                    <span>Care Plan Completion</span>
-                    <strong>91%</strong>
-                  </div>
-                  <div class="bar"><span style="width:91%"></span></div>
-                </div>
-              </div>
-            </section>
-
-          
-            <section class="dashboard-card reveal" id="settings">
-              <div class="card-head">
-                <div>
-                  <span class="eyebrow">Preferences</span>
-                  <h3>Quick Settings</h3>
-                </div>
-              </div>
-
-              <div class="settings-list">
-                <div class="setting-row">
-                  <span>Dark Mode</span>
-                  <button class="toggle-switch active" id="themeMiniToggle"></button>
-                </div>
-                <div class="setting-row">
-                  <span>Email Notifications</span>
-                  <button class="toggle-switch active"></button>
-                </div>
-                <div class="setting-row">
-                  <span>Family Update Alerts</span>
-                  <button class="toggle-switch active"></button>
-                </div>
-              </div>
-            </section>
-
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="admin dashboard.js"></script>
+</a>
+<button class="sidebar-close">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+<nav class="sidebar-nav">
+<a href="#" class="nav-link active">
+<i class="fa-solid fa-house"></i>
+<span>
+Dashboard
+</span>
+</a>
+<a href="#loved-one" class="nav-link">
+<i class="fa-solid fa-heart"></i>
+<span>
+My Loved One
+</span>
+</a>
+<a href="#health" class="nav-link">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>
+Health Updates
+</span>
+</a>
+<a href="#care-plan" class="nav-link">
+<i class="fa-solid fa-notes-medical"></i>
+<span>
+Care Plans
+</span>
+</a>
+<a href="#activities" class="nav-link">
+<i class="fa-solid fa-calendar-days"></i>
+<span>
+Activity Calendar
+</span>
+</a>
+<a href="#messages" class="nav-link">
+<i class="fa-solid fa-comments"></i>
+<span>
+Messages
+</span>
+</a>
+<a href="#photos" class="nav-link">
+<i class="fa-solid fa-camera"></i>
+<span>
+Photo Memories
+</span>
+</a>
+<a href="#visits" class="nav-link">
+<i class="fa-solid fa-calendar-check"></i>
+<span>
+Visit Requests
+</span>
+</a>
+<a href="#documents" class="nav-link">
+<i class="fa-solid fa-folder-open"></i>
+<span>
+Documents
+</span>
+</a>
+<a href="#care-progress" class="nav-link">
+<i class="fa-solid fa-chart-line"></i>
+<span>
+Care Progress
+</span>
+</a>
+<a href="#payments" class="nav-link">
+<i class="fa-solid fa-credit-card"></i>
+<span>
+Payments
+</span>
+</a>
+<a href="#announcements" class="nav-link">
+<i class="fa-solid fa-bullhorn"></i>
+<span>
+Announcements
+</span>
+</a>
+<a href="#support" class="nav-link">
+<i class="fa-solid fa-hands-helping"></i>
+<span>
+Family Support
+</span>
+</a>
+<a href="#feedback" class="nav-link">
+<i class="fa-solid fa-star"></i>
+<span>
+Feedback
+</span>
+</a>
+<a href="#emergency" class="nav-link">
+<i class="fa-solid fa-phone"></i>
+<span>
+Emergency Contacts
+</span>
+</a>
+<a href="#settings" class="nav-link">
+<i class="fa-solid fa-gear"></i>
+<span>
+Settings
+</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<a href="#" class="logout-btn">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>
+Logout
+</span>
+</a>
+</div>
+</aside>
+<!--==================================================
+MAIN
+==================================================-->
+<main class="dashboard-main">
+<header class="dashboard-topbar">
+<div class="topbar-left">
+<button class="menu-toggle">
+<i class="fa-solid fa-bars"></i>
+</button>
+<div>
+<h1>
+Family Care Portal
+</h1>
+<p>
+Stay connected with your loved one's care journey
+</p>
+</div>
+</div>
+<div class="topbar-right">
+<div class="search-box">
+<i class="fa-solid fa-search"></i>
+<input 
+type="search"
+placeholder="Search updates">
+</div>
+<button class="icon-btn" id="themeToggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+<button class="icon-btn">
+<i class="fa-solid fa-bell"></i>
+<span class="badge">
+3
+</span>
+</button>
+<button class="profile-btn">
+<img 
+src="https://i.pravatar.cc/100?img=32">
+<div>
+<strong>
+Sarah Parker
+</strong>
+<span>
+Family Member
+</span>
+</div>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+</div>
+</header>
+<section class="dashboard-content">
+<section class="welcome-banner">
+<div>
+<span class="eyebrow">
+Welcome Back
+</span>
+<h2>
+Hello Sarah
+</h2>
+<p>
+Here are today's updates about your loved one's wellbeing.
+</p>
+</div>
+<a href="#visits" class="action-pill">
+<i class="fa-solid fa-calendar-plus"></i>
+Schedule Visit
+</a>
+</section>
+<div class="dashboard-grid">
+<div class="dashboard-left"><!--==================================================
+MY LOVED ONE
+==================================================-->
+<section class="dashboard-card" id="loved-one">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-user-heart"></i>
+Resident Profile
+</span>
+<h3>
+My Loved One
+</h3>
+</div>
+<a href="#" class="mini-btn">
+View Profile
+</a>
+</div>
+<div class="resident-profile">
+<div class="resident-image">
+<img 
+src="../images/resident.jpg"
+alt="Resident">
+</div>
+<div class="resident-info">
+<h4>
+Margaret Wilson
+</h4>
+<p>
+Room No: <strong>204A</strong>
+</p>
+<p>
+Care Level: Assisted Living
+</p>
+<span class="resident-status">
+<i class="fa-solid fa-circle"></i>
+Stable
+</span>
+</div>
+</div>
+<div class="resident-details">
+<div class="detail-box">
+<span>
+Age
+</span>
+<strong>
+78 Years
+</strong>
+</div>
+<div class="detail-box">
+<span>
+Assigned Nurse
+</span>
+<strong>
+Emily Johnson
+</strong>
+</div>
+<div class="detail-box">
+<span>
+Since
+</span>
+<strong>
+March 2025
+</strong>
+</div>
+</div>
+</section>
+<!--==================================================
+HEALTH SUMMARY
+==================================================-->
+<section class="dashboard-card" id="health">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-heart-pulse"></i>
+Wellness
+</span>
+<h3>
+Health Summary
+</h3>
+</div>
+<a href="#" class="mini-btn">
+Details
+</a>
+</div>
+<div class="health-grid">
+<div class="health-card">
+<div class="health-top">
+<i class="fa-solid fa-heart-pulse"></i>
+<strong class="health-value">
+98%
+</strong>
+</div>
+<p>
+Overall Wellness
+</p>
+<div class="progress-bar">
+<span style="width:98%"></span>
+</div>
+</div>
+<div class="health-card">
+<div class="health-top">
+<i class="fa-solid fa-pills"></i>
+<strong class="health-value">
+100%
+</strong>
+</div>
+<p>
+Medication Routine
+</p>
+<div class="progress-bar">
+<span style="width:100%"></span>
+</div>
+</div>
+<div class="health-card">
+<div class="health-top">
+<i class="fa-solid fa-person-walking"></i>
+<strong class="health-value">
+85%
+</strong>
+</div>
+<p>
+Activity Level
+</p>
+<div class="progress-bar">
+<span style="width:85%"></span>
+</div>
+</div>
+<div class="health-card">
+<div class="health-top">
+<i class="fa-solid fa-utensils"></i>
+<strong class="health-value">
+92%
+</strong>
+</div>
+<p>
+Nutrition Plan
+</p>
+<div class="progress-bar">
+<span style="width:92%"></span>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+CARE PLAN
+==================================================-->
+<section class="dashboard-card" id="care-plan">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-notes-medical"></i>
+Care Management
+</span>
+<h3>
+Current Care Plan
+</h3>
+</div>
+<a href="#" class="mini-btn">
+Open Plan
+</a>
+</div>
+<div class="care-list">
+<div class="care-item">
+<i class="fa-solid fa-pills"></i>
+<div>
+<h4>
+Medication Schedule
+</h4>
+<p>
+Morning and evening medications completed successfully.
+</p>
+</div>
+</div>
+<div class="care-item">
+<i class="fa-solid fa-apple-whole"></i>
+<div>
+<h4>
+Nutrition Plan
+</h4>
+<p>
+Balanced low-sodium meals prepared according to doctor's advice.
+</p>
+</div>
+</div>
+<div class="care-item">
+<i class="fa-solid fa-person-rays"></i>
+<div>
+<h4>
+Therapy Sessions
+</h4>
+<p>
+Physiotherapy scheduled every Tuesday and Thursday.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+ACTIVITY CALENDAR
+==================================================-->
+<section class="dashboard-card" id="activities">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-calendar-days"></i>
+Daily Activities
+</span>
+<h3>
+Activity Calendar
+</h3>
+</div>
+<a href="#" class="mini-btn">
+Full Calendar
+</a>
+</div>
+<div class="activity-list">
+<div class="activity-item">
+<div class="activity-time">
+09:00 AM
+</div>
+<div class="activity-content">
+<h4>
+Morning Yoga
+</h4>
+<p>
+Wellness Studio • 18 Residents
+</p>
+</div>
+</div>
+<div class="activity-item">
+<div class="activity-time">
+11:30 AM
+</div>
+<div class="activity-content">
+<h4>
+Music Therapy
+</h4>
+<p>
+Community Hall • Group Session
+</p>
+</div>
+</div>
+<div class="activity-item">
+<div class="activity-time">
+04:00 PM
+</div>
+<div class="activity-content">
+<h4>
+Garden Walk
+</h4>
+<p>
+Outdoor Activity • Family Friendly
+</p>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+PAYMENTS
+==================================================-->
+<section class="dashboard-card" id="payments">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-credit-card"></i>
+Billing
+</span>
+<h3>
+Payments
+</h3>
+</div>
+<a href="#" class="mini-btn">
+View All
+</a>
+</div>
+<div class="payment-list">
+<div class="payment-item">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+<div>
+<h4>
+Monthly Care Fee
+</h4>
+<p>
+August 2026 Invoice
+</p>
+</div>
+<strong>
+₹45,000
+</strong>
+<span class="paid">
+Paid
+</span>
+</div>
+<div class="payment-item">
+<i class="fa-solid fa-receipt"></i>
+<div>
+<h4>
+Medical Services
+</h4>
+<p>
+Additional Consultation
+</p>
+</div>
+<strong>
+₹3,500
+</strong>
+<span class="pending">
+Pending
+</span>
+</div>
+</div>
+</section>
+<!--==================================================
+ANNOUNCEMENTS
+==================================================-->
+<section class="dashboard-card" id="announcements">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-bullhorn"></i>
+Updates
+</span>
+<h3>
+Announcements
+</h3>
+</div>
+</div>
+<div class="announcement-list">
+<div class="announcement-item">
+<i class="fa-solid fa-calendar"></i>
+<div>
+<h4>
+Annual Health Camp
+</h4>
+<p>
+Free wellness screening available for all residents.
+</p>
+</div>
+</div>
+<div class="announcement-item">
+<i class="fa-solid fa-tree"></i>
+<div>
+<h4>
+Garden Celebration Event
+</h4>
+<p>
+Family members are invited this weekend.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+FAMILY SUPPORT
+==================================================-->
+<section class="dashboard-card" id="support">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-hands-helping"></i>
+Assistance
+</span>
+<h3>
+Family Support
+</h3>
+</div>
+</div>
+<div class="support-box">
+<i class="fa-solid fa-headset"></i>
+<div>
+<h4>
+Need Help?
+</h4>
+<p>
+Our family support team is available anytime.
+</p>
+</div>
+<a href="#" class="mini-btn">
+Contact
+</a>
+</div>
+</section>
+<!--==================================================
+FEEDBACK
+==================================================-->
+<section class="dashboard-card" id="feedback">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-star"></i>
+Review
+</span>
+<h3>
+Share Feedback
+</h3>
+</div>
+</div>
+<div class="rating-box">
+<p>
+How satisfied are you with our care service?
+</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<textarea placeholder="Write your feedback"></textarea>
+<button class="btn-primary">
+Submit Feedback
+</button>
+</div>
+</section>
+<!--==================================================
+EMERGENCY CONTACT
+==================================================-->
+<section class="dashboard-card" id="emergency">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-phone"></i>
+Emergency
+</span>
+<h3>
+Emergency Contacts
+</h3>
+</div>
+</div>
+<div class="emergency-list">
+<div class="emergency-item">
+<i class="fa-solid fa-user-nurse"></i>
+<div>
+<h4>
+Care Desk
+</h4>
+<p>
+24/7 Assistance
+</p>
+</div>
+<strong>
++91 84484 44714
+</strong>
+</div>
+<div class="emergency-item">
+<i class="fa-solid fa-user-doctor"></i>
+<div>
+<h4>
+Medical Team
+</h4>
+<p>
+Emergency Support
+</p>
+</div>
+<strong>
++91 90000 00000
+</strong>
+</div>
+</div>
+</section>
+</div>
+<!--==================================================
+RIGHT COLUMN
+==================================================-->
+<div class="dashboard-right">
+<!--==================================================
+MESSAGES
+==================================================-->
+<section class="dashboard-card" id="messages">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-comments"></i>
+Communication
+</span>
+<h3>
+Messages
+</h3>
+</div>
+<a href="#" class="mini-btn">
+Open Chat
+</a>
+</div>
+<div class="message-list">
+<div class="message-item">
+<img 
+src="https://i.pravatar.cc/100?img=47"
+alt="Nurse">
+<div>
+<h4>
+Emily Johnson
+</h4>
+<p>
+Your mother's wellness check was completed successfully today.
+</p>
+<span>
+10 minutes ago
+</span>
+</div>
+</div>
+<div class="message-item">
+<img 
+src="https://i.pravatar.cc/100?img=12"
+alt="Doctor">
+<div>
+<h4>
+Dr. Michael Brown
+</h4>
+<p>
+Monthly health review report has been updated.
+</p>
+<span>
+Yesterday
+</span>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+PHOTO MEMORIES
+==================================================-->
+<section class="dashboard-card" id="photos">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-camera-retro"></i>
+Memories
+</span>
+<h3>
+Photo Updates
+</h3>
+</div>
+<a href="#" class="mini-btn">
+View Gallery
+</a>
+</div>
+<div class="photo-grid">
+<img 
+src="../images/activity1.jpg"
+alt="Activity">
+<img 
+src="../images/activity2.jpg"
+alt="Event">
+<img 
+src="../images/activity3.jpg"
+alt="Garden">
+<img 
+src="../images/activity4.jpg"
+alt="Family">
+</div>
+</section>
+<!--==================================================
+VISIT REQUEST
+==================================================-->
+<section class="dashboard-card" id="visits">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-calendar-check"></i>
+Family Visits
+</span>
+<h3>
+Upcoming Visits
+</h3>
+</div>
+<a href="#" class="mini-btn">
+Request Visit
+</a>
+</div>
+<div class="visit-box">
+<div class="visit-date">
+<strong>
+18
+</strong>
+<span>
+August
+</span>
+</div>
+<div class="visit-info">
+<h4>
+Family Garden Visit
+</h4>
+<p>
+Saturday • 03:00 PM
+</p>
+<span>
+Approved
+</span>
+</div>
+</div>
+<div class="visit-box">
+<div class="visit-date">
+<strong>
+25
+</strong>
+<span>
+August
+</span>
+</div>
+<div class="visit-info">
+<h4>
+Weekend Family Meeting
+</h4>
+<p>
+Sunday • 11:00 AM
+</p>
+<span>
+Pending
+</span>
+</div>
+</div>
+</section>
+<!--==================================================
+CARE TEAM
+==================================================-->
+<section class="dashboard-card">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-user-nurse"></i>
+Support Team
+</span>
+<h3>
+Care Team
+</h3>
+</div>
+</div>
+<div class="team-list">
+<div class="team-member">
+<img
+src="https://i.pravatar.cc/100?img=45"
+alt="Nurse">
+<div>
+<h4>
+Emily Johnson
+</h4>
+<p>
+Primary Nurse
+</p>
+</div>
+</div>
+<div class="team-member">
+<img
+src="https://i.pravatar.cc/100?img=52"
+alt="Doctor">
+<div>
+<h4>
+Dr. Michael Brown
+</h4>
+<p>
+Medical Consultant
+</p>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+DOCUMENTS
+==================================================-->
+<section class="dashboard-card" id="documents">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-folder-open"></i>
+Records
+</span>
+<h3>
+Documents
+</h3>
+</div>
+</div>
+<div class="document-list">
+<a href="#" class="document-item">
+<i class="fa-solid fa-file-medical"></i>
+<div>
+<h4>
+Medical Report
+</h4>
+<p>
+Updated July 2026
+</p>
+</div>
+</a>
+<a href="#" class="document-item">
+<i class="fa-solid fa-file-lines"></i>
+<div>
+<h4>
+Care Agreement
+</h4>
+<p>
+Assisted Living Plan
+</p>
+</div>
+</a>
+</div>
+</section>
+<!--==================================================
+SETTINGS
+==================================================-->
+<section class="dashboard-card" id="settings">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-gear"></i>
+Preferences
+</span>
+<h3>
+Account Settings
+</h3>
+</div>
+</div>
+<div class="settings-list">
+<div class="setting-row">
+<div>
+<h4>
+Email Notifications
+</h4>
+<p>
+Receive care updates by email
+</p>
+</div>
+<button class="toggle-switch active"></button>
+</div>
+<div class="setting-row">
+<div>
+<h4>
+Photo Updates
+</h4>
+<p>
+Allow daily photo notifications
+</p>
+</div>
+<button class="toggle-switch active"></button>
+</div>
+<div class="setting-row">
+<div>
+<h4>
+Dark Mode
+</h4>
+<p>
+Switch dashboard appearance
+</p>
+</div>
+<button class="toggle-switch" id="darkToggle"></button>
+</div>
+</div>
+</section><!--==================================================
+CARE PROGRESS
+==================================================-->
+<section class="dashboard-card" id="care-progress">
+<div class="card-head">
+<div>
+<span class="section-label">
+<i class="fa-solid fa-chart-line"></i>
+Progress
+</span>
+<h3>
+Care Progress
+</h3>
+</div>
+</div>
+<div class="progress-summary">
+<div class="progress-box">
+<i class="fa-solid fa-heart-circle-check"></i>
+<div>
+<strong>
+92%
+</strong>
+<p>
+Overall Care Score
+</p>
+</div>
+</div>
+<div class="progress-box">
+<i class="fa-solid fa-dumbbell"></i>
+<div>
+<strong>
+85%
+</strong>
+<p>
+Mobility Improvement
+</p>
+</div>
+</div>
+<div class="progress-box">
+<i class="fa-solid fa-face-smile"></i>
+<div>
+<strong>
+95%
+</strong>
+<p>
+Emotional Wellness
+</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script src="admin dashboard.js"></script>
 </body>
 </html>

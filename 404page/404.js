@@ -1,46 +1,146 @@
-
+/*==================================================
+ NETHRA SENIOR CARE
+ 404 PAGE JAVASCRIPT
+==================================================*/
+document.addEventListener("DOMContentLoaded",()=>{
+/*==================================================
+ DARK MODE
+==================================================*/
 const themeToggle = document.getElementById("themeToggle");
+const darkToggle = document.getElementById("darkToggle");
 const html = document.documentElement;
-const themeIcon = themeToggle.querySelector("i");
-
-
-const savedTheme = localStorage.getItem("theme") || "light";
-html.setAttribute("data-theme", savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener("click", () => {
-  const currentTheme = html.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-  html.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  updateThemeIcon(newTheme);
+function enableDarkMode(){
+html.setAttribute(
+    "data-theme",
+    "dark"
+);
+localStorage.setItem(
+    "nethra-theme",
+    "dark"
+);
+updateIcons();
+}
+function enableLightMode(){
+html.setAttribute(
+    "data-theme",
+    "light"
+);
+localStorage.setItem(
+    "nethra-theme",
+    "light"
+);
+updateIcons();
+}
+function updateIcons(){
+const themeIcon =
+document.querySelector("#themeToggle i");
+if(!themeIcon)
+return;
+if(
+html.getAttribute("data-theme")
+==="dark"
+){
+themeIcon.className =
+"fa-solid fa-sun";
+}
+else{
+themeIcon.className =
+"fa-solid fa-moon";
+}
+}
+const savedTheme =
+localStorage.getItem(
+"nethra-theme"
+);
+if(savedTheme){
+html.setAttribute(
+"data-theme",
+savedTheme
+);
+}
+else{
+html.setAttribute(
+"data-theme",
+"light"
+);
+}
+updateIcons();
+if(themeToggle){
+themeToggle.addEventListener(
+"click",
+()=>{
+if(
+html.getAttribute("data-theme")
+==="light"
+){
+enableDarkMode();
+}
+else{
+enableLightMode();
+}
 });
-
-function updateThemeIcon(theme) {
-  if (theme === "dark") {
-    themeIcon.className = "fas fa-sun";
-  } else {
-    themeIcon.className = "fas fa-moon";
-  }
 }
-
-
-function goBack() {
-  if (window.history.length > 1) {
-    window.history.back();
-  } else {
-    window.location.href = "index.html";
-  }
+if(darkToggle){
+darkToggle.addEventListener(
+"click",
+()=>{
+if(
+html.getAttribute("data-theme")
+==="light"
+){
+enableDarkMode();
+darkToggle.classList.add(
+"active"
+);
 }
-
-
-const buttons = document.querySelectorAll(".btn");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("mousemove", (e) => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    btn.style.backgroundPosition = `${x}px ${y}px`;
-  });
+else{
+enableLightMode();
+darkToggle.classList.remove(
+"active"
+);
+}
+});
+}
+/*==================================================
+ AUTO BACK BUTTON
+==================================================*/
+const backButton =
+document.querySelector(
+".error-actions .btn-primary"
+);
+if(backButton){
+backButton.addEventListener(
+"mouseenter",
+()=>{
+backButton.style.transform =
+"translateY(-3px)";
+}
+);
+backButton.addEventListener(
+"mouseleave",
+()=>{
+backButton.style.transform =
+"translateY(0)";
+}
+);
+}
+/*==================================================
+ PAGE LOAD ANIMATION
+==================================================*/
+const container =
+document.querySelector(
+".error-container"
+);
+if(container){
+container.style.opacity="0";
+container.style.transform=
+"translateY(30px)";
+setTimeout(()=>{
+container.style.transition=
+"all .6s ease";
+container.style.opacity="1";
+container.style.transform=
+"translateY(0)";
+},100);
+}
 });

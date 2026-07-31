@@ -1,102 +1,238 @@
-
-const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
-
-
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark-theme");
-  if (themeToggle) {
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-  }
+/*==================================================
+NETHRA AUTH JS
+Senior Care Authentication
+==================================================*/
+document.addEventListener("DOMContentLoaded",()=>{
+/*==================================================
+THEME TOGGLE
+==================================================*/
+const themeBtn =
+document.getElementById("themeToggle");
+const themeIcon =
+themeBtn?.querySelector("i");
+let savedTheme =
+localStorage.getItem("theme");
+if(savedTheme){
+document.documentElement.setAttribute(
+"data-theme",
+savedTheme
+);
+updateThemeIcon(savedTheme);
 }
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-theme");
-
-    if (body.classList.contains("dark-theme")) {
-      localStorage.setItem("theme", "dark");
-      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      localStorage.setItem("theme", "light");
-      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  });
+themeBtn?.addEventListener(
+"click",
+()=>{
+let currentTheme =
+document.documentElement.getAttribute(
+"data-theme"
+);
+let newTheme =
+currentTheme==="light"
+?
+"dark"
+:
+"light";
+document.documentElement.setAttribute(
+"data-theme",
+newTheme
+);
+localStorage.setItem(
+"theme",
+newTheme
+);
+updateThemeIcon(newTheme);
+});
+function updateThemeIcon(theme){
+if(!themeIcon)
+return;
+if(theme==="dark"){
+themeIcon.className=
+"fa-solid fa-sun";
 }
-
-
-const togglePassword = document.getElementById("togglePassword");
-const passwordInput = document.getElementById("password");
-
-if (togglePassword && passwordInput) {
-  togglePassword.addEventListener("click", () => {
-    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-    passwordInput.setAttribute("type", type);
-
-    togglePassword.innerHTML =
-      type === "password"
-        ? '<i class="fas fa-eye"></i>'
-        : '<i class="fas fa-eye-slash"></i>';
-  });
+else{
+themeIcon.className=
+"fa-solid fa-moon";
 }
-
-const signinForm = document.getElementById("signinForm");
-
-if (signinForm) {
-  signinForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    if (!email || !password) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    alert("Sign in successful! Redirecting to dashboard...");
-
-
-  });
 }
-
-const visitForm = document.getElementById("visitForm");
-
-if (visitForm) {
-  visitForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const fullName = document.getElementById("fullName").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const email = document.getElementById("visitEmail").value.trim();
-    const location = document.getElementById("location").value;
-    const visitDate = document.getElementById("visitDate").value;
-    const visitTime = document.getElementById("visitTime").value;
-    const visitType = document.getElementById("visitType").value;
-
-    if (!fullName || !phone || !email || !location || !visitDate || !visitTime || !visitType) {
-      alert("Please complete all required fields.");
-      return;
-    }
-
-    alert("Your visit has been booked successfully! Our team will contact you shortly.");
-    visitForm.reset();
-  });
+/*==================================================
+RTL TOGGLE
+==================================================*/
+const rtlBtn =
+document.getElementById("rtlToggle");
+rtlBtn?.addEventListener(
+"click",
+()=>{
+let html =
+document.documentElement;
+let current =
+html.getAttribute("dir");
+if(current==="ltr"){
+html.setAttribute(
+"dir",
+"rtl"
+);
+localStorage.setItem(
+"direction",
+"rtl"
+);
 }
-
-const rtlToggle = document.getElementById("rtlToggle");
-
-
-if (localStorage.getItem("rtl") === "true") {
-  document.body.classList.add("rtl");
+else{
+html.setAttribute(
+"dir",
+"ltr"
+);
+localStorage.setItem(
+"direction",
+"ltr"
+);
 }
-
-rtlToggle.addEventListener("click", () => {
-  document.body.classList.toggle("rtl");
-
-  if (document.body.classList.contains("rtl")) {
-    localStorage.setItem("rtl", "true");
-  } else {
-    localStorage.setItem("rtl", "false");
-  }
+});
+let savedDirection =
+localStorage.getItem(
+"direction"
+);
+if(savedDirection){
+document.documentElement.setAttribute(
+"dir",
+savedDirection
+);
+}
+/*==================================================
+PASSWORD SHOW / HIDE
+==================================================*/
+const passwordInput =
+document.getElementById(
+"password"
+);
+const passwordToggle =
+document.querySelector(
+".toggle-password"
+);
+passwordToggle?.addEventListener(
+"click",
+()=>{
+if(passwordInput.type==="password"){
+passwordInput.type="text";
+passwordToggle.classList.remove(
+"fa-eye"
+);
+passwordToggle.classList.add(
+"fa-eye-slash"
+);
+}
+else{
+passwordInput.type="password";
+passwordToggle.classList.remove(
+"fa-eye-slash"
+);
+passwordToggle.classList.add(
+"fa-eye"
+);
+}
+});
+/*==================================================
+LOGIN FORM
+==================================================*/
+const authForm =
+document.querySelector(
+".auth-form"
+);
+const authButton =
+document.querySelector(
+".auth-btn"
+);
+authForm?.addEventListener(
+"submit",
+(e)=>{
+e.preventDefault();
+const email =
+authForm.querySelector(
+'input[type="email"]'
+);
+const password =
+authForm.querySelector(
+'input[type="password"]'
+);
+if(
+!email.value.trim()
+||
+!password.value.trim()
+){
+showMessage(
+"Please fill all required fields",
+"error"
+);
+return;
+}
+authButton.innerHTML=
+`
+<i class="fa-solid fa-spinner fa-spin"></i>
+Signing In...
+`;
+authButton.disabled=true;
+setTimeout(()=>{
+authButton.innerHTML=
+`
+<i class="fa-solid fa-check"></i>
+Success
+`;
+showMessage(
+"Login successful",
+"success"
+);
+},1500);
+});
+/*==================================================
+SOCIAL BUTTONS
+==================================================*/
+const socialButtons =
+document.querySelectorAll(
+".social-btn"
+);
+socialButtons.forEach(
+button=>{
+button.addEventListener(
+"click",
+()=>{
+let name =
+button.querySelector("span")
+.textContent;
+showMessage(
+`${name} login selected`,
+"success"
+);
+});
+});
+/*==================================================
+MESSAGE ALERT
+==================================================*/
+function showMessage(
+message,
+type
+){
+let alert =
+document.createElement(
+"div"
+);
+alert.className=
+`auth-alert ${type}`;
+alert.innerHTML=
+`
+<i class="fa-solid ${
+type==="success"
+?
+"fa-circle-check"
+:
+"fa-circle-exclamation"
+}">
+</i>
+${message}
+`;
+document.body.appendChild(
+alert
+);
+setTimeout(()=>{
+alert.remove();
+},3000);
+}
 });

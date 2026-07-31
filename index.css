@@ -1,1460 +1,2100 @@
-:root {
-  --primary-green: #7ba376;
-  --primary-green-dark: #62885d;
-  --accent-orange: #f29c52;
-  --bg-cream: #f8f3ea;
-  --bg-light: #ffffff;
-  --bg-soft: #f5f5f5;
-  --text-main: #2c3e50;
-  --text-desc: #5f6b77;
-  --text-muted: #8b97a3;
-  --border-light: #e8e1d7;
-  --card-bg: #ffffff;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --radius-lg: 18px;
-  --radius-md: 12px;
-  --radius-sm: 8px;
-  --transition: all 0.35s ease;
-}
-
-body.dark-theme{
-
-    --bg-cream: #121212;
-
-    --bg-light: #111111;
-
-    --bg-soft: #1c1c1c;
-
-    --text-main: #f2f2f2;
-
-    --text-desc: #bdbdbd;
-
-    --text-muted: #bdbdbd;
-
-    --border-light: #353535;
-
-    --card-bg: #242424;
-
-    --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
-
-    --shadow-hover: 0 16px 40px rgba(0,0,0,.45);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-cream);
-  color: var(--text-main);
-  transition: background 0.35s ease, color 0.35s ease;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.section-space {
-  padding: 90px 20px;
-}
-
-.content-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;padding:40px;
-}
-
-.section-label {
-  display: inline-block;
-  color: var(--accent-orange);
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.section-heading {
-  max-width: 760px;
-  margin: 0 auto 50px;
-}
-
-.section-heading.center {
-  text-align: center;
-}
-
-.section-heading h2 {
-  font-size: 2rem;
-  color: var(--text-main);
-  margin-bottom: 16px;
-  line-height: 1.25;
-}
-
-.section-heading p {
-  color: var(--text-desc);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.8;
-}
-
-
-.primary-btn,
-.secondary-btn,
-.text-link-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-decoration: none;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.primary-btn {
-  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: 600;
-  border: 1px solid var(--primary-green);
-  box-shadow: var(--shadow-soft);
-}
-
-.primary-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.primary-btn::before,
-.secondary-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 120%;
-  height: 100%;
- 
-  transform: skewX(-20deg);
-  transition: 0.6s;
-}
-
-.primary-btn:hover::before,
-.secondary-btn:hover::before {
-  left: 120%;
-}
-
-.secondary-btn {
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: 600;
-  background: transparent;
-}
-
-.secondary-btn:hover {
-  background: rgba(255,255,255,0.12);
-  transform: translateY(-4px);
-}
-
-.text-link-btn {
-  color: var(--primary-green);
-  font-weight: 700;
-  margin-top: 10px;
-}
-
-.text-link-btn:hover {
-  gap: 14px;
-  color: var(--primary-green-dark);
-}
-
-.dark-outline {
-  color: var(--primary-green);
-  border-color: var(--primary-green);
-}
-
-.dark-outline:hover {
-  background: var(--primary-green);
-  color: #fff;
-}
-
-
-.home-hero {
-  position: relative;
-  min-height: 70vh;
-  background: url('../images/home-about.jpg') center center/cover no-repeat;
-  display: flex;
-  align-items: center;
-}
-
-.home-hero-overlay {
-  width: 100%;
-  min-height: 92vh;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.68) 0%,
-    rgba(0, 0, 0, 0.40) 100%
-  );
-  display: flex;
-  align-items: center;
-  padding: 60px 20px;
-  transition: background 0.3s ease;
-}
-
-
-body.dark-theme .home-hero-overlay {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.58) 100%
-  );
-}
-
-
-body.dark-theme .hero-content p {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-body.dark-theme .hero-badge {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-}
-.hero-content {
-  max-width: 760px;
-  color: #fff;
-  animation: fadeUp 1s ease;
-}
-
-
-body.dark-theme .hero-content h1 {
-    color: #d2d2d2;
-}
-
-body.dark-theme .hero-content p {
-    color: #c5c5c5;
-}
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 22px;
-  backdrop-filter: blur(10px);
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
-  color: #fff;
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 22px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  white-space: nowrap;
-  width: fit-content;
-  max-width: 100%;
-}
-
-body.dark-theme .hero-badge {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #ffffff;
-}
-
-
-@media (max-width: 639px) {
-  .hero-badge {
-    padding: 8px 14px;
-    font-size: 0.78rem;
-    margin-bottom: 16px;
-    white-space: normal;
-    line-height: 1.4;
-    text-align: center;
-  }
-}
-
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .hero-badge {
-    padding: 9px 16px;
-    font-size: 0.84rem;
-    margin-bottom: 18px;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .hero-badge {
-    padding: 10px 18px;
-    font-size: 0.9rem;
-  }
-}
-
-
-@media (min-width: 1281px) {
-  .hero-badge {
-    padding: 12px 22px;
-    font-size: 0.95rem;
-  }
-}
-.hero-content h1 {
-  font-size: 4.1rem;
-  line-height: 1.1;
-  margin-bottom: 24px;
-}
-.hero-content h1 span {
-    color: var(--primary-green);
-}
-.hero-content p {
-  font-size: 1.12rem;
-  line-height: 1.9;
-  max-width: 650px;
-  margin-bottom: 34px;
-  opacity: 0.96;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-.hero-mini-highlights {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 0.98rem;
-  opacity: 0.95;
-}
-
-.hero-mini-highlights div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hero-mini-highlights i {
-  color: var(--accent-orange);
-}
-
-
-.trust-bar {
-  background: var(--bg-light);
-  padding: 28px 20px;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-}
-
-.trust-item:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-
-.trust-item i {
-  font-size: 1.6rem;
-  color: var(--primary-green);
-}
-
-.trust-item h3 {
-  color: var(--text-main);
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-}
-
-.trust-item p {
-  color: var(--text-desc);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-
-.about-preview {
-  background: var(--bg-cream);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.about-image,
-.portal-image,
-.life-card {
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-}
-
-.about-image img,
-.portal-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 500px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-}
-
-.about-image:hover img,
-.portal-image:hover img,
-.life-card:hover img {
-  transform: scale(1.06);
-}
-
-.about-text h2,
-.portal-text h2 {
-  font-size: 1.8rem;
-  color: var(--text-main);
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.about-text p,
-.portal-text p {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: var(--text-desc);
-  margin-bottom: 18px;
-}
-
-
-.core-services {
-  background: var(--bg-light);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.service-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 30px 24px;
-  text-decoration: none;
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-  color: inherit;
-  position: relative;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-hover);
-  border-color: rgba(123, 163, 118, 0.35);
-}
-
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(123,163,118,0.04), rgba(242,156,82,0.03));
-  opacity: 0;
-  transition: 0.35s ease;
-}
-
-.service-card:hover::after {
-  opacity: 1;
-}
-
-.service-icon {
-  width: 62px;
-  height: 62px;
-  border-radius: 18px;
-  background: rgba(123, 163, 118, 0.12);
-  color: var(--primary-green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  transition: var(--transition);
-}
-
-.service-card:hover .service-icon {
-  transform: scale(1.08) rotate(-4deg);
-  background: var(--primary-green);
-  color: #fff;
-}
-
-.service-card h3 {
-  color: var(--text-main);
-  font-size: 1.25rem;
-  margin-bottom: 14px;
-  position: relative;
-  z-index: 1;
-}
-
-.service-card p {
-  color: var(--text-desc);
-  line-height: 1.8;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.service-link {
-  color: var(--accent-orange);
-  font-weight: 700;
-  font-size: 0.95rem;
-  position: relative;
-  z-index: 1;
-}
-
-.special-card {
-  background: linear-gradient(135deg, rgba(123,163,118,0.08), rgba(242,156,82,0.08));
-}
-
-
-.why-us {
-  background: var(--bg-soft);
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.why-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 28px 22px;
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-}
-
-.why-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-}
-
-.why-card i {
-  font-size: 1.6rem;
-  color: var(--accent-orange);
-  margin-bottom: 18px;
-  transition: var(--transition);
-}
-
-.why-card:hover i {
-  transform: scale(1.15);
-}
-
-.why-card h3 {
-  color: var(--text-main);
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-
-.why-card p {
-  color: var(--text-desc);
-  line-height: 1.8;
-  font-size: 0.94rem;
-}
-
-
-.family-portal {
-  background: var(--bg-light);
-}
-
-.portal-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.portal-list {
-  list-style: none;
-  margin: 24px 0 28px;
-}
-
-.portal-list li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  color: var(--text-main);
-  line-height: 1.8;
-  margin-bottom: 14px;
-  transition: var(--transition);
-}
-
-.portal-list li:hover {
-  transform: translateX(6px);
-}
-
-.portal-list i {
-  color: var(--primary-green);
-  margin-top: 4px;
-}
-
-
-.daily-life {
-  background: var(--bg-cream);
-}
-
-.life-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.life-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-}
-
-.life-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-}
-
-.life-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.life-card-content {
-  padding: 24px;
-}
-
-.life-card-content h3 {
-  color: var(--text-main);
-  margin-bottom: 12px;
-  font-size: 1.18rem;
-}
-
-.life-card-content p {
-  color: var(--text-desc);
-  line-height: 1.8;
-  font-size: 0.95rem;
-}
-
-
-.testimonials {
-  background: var(--bg-soft);
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.testimonial-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 30px 26px;
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-}
-
-.testimonial-card p {
-  color: var(--text-desc);
-  line-height: 1.9;
-  font-size: 0.98rem;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.testimonial-card h4 {
-  color: var(--text-main);
-  font-size: 0.98rem;
-}
-
-
-.home-cta {
-  background: linear-gradient(135deg, #f6eee3, #fff8f0);
-}
-
-body.dark-theme .home-cta {
-  background: linear-gradient(135deg, #1b1b1b, #261f18);
-}
-
-.cta-box {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: 28px;
-  padding: 60px 40px;
-  text-align: center;
-  box-shadow: var(--shadow-soft);
-  max-width: 950px;
-  margin: 0 auto;
-  transition: var(--transition);
-}
-
-.cta-box:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-
-.cta-box h2 {
-  font-size: 2rem;
-  color: var(--text-main);
-  margin-bottom: 16px;
-}
-
-.cta-box p {
-  max-width: 700px;
-  margin: 0 auto 28px;
-  color: var(--text-desc);
-  line-height: 1.9;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(35px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-@media (max-width: 639px) {
-  .section-space {
-    padding: 65px 16px;
-  }
-
-  .home-hero,
-  .home-hero-overlay {
-    min-height: 80vh;
-  }
-
-  .hero-content h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-mini-highlights {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .trust-grid,
-  .about-grid,
-  .services-grid,
-  .why-grid,
-  .portal-grid,
-  .life-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-image img,
-  .portal-image img {
-    min-height: 280px;
-  }
-
-  .about-text h2,
-  .portal-text h2,
-  .section-heading h2,
-  .cta-box h2 {
-    font-size: 1.8rem;
-  }
-
-  .cta-box {
-    padding: 40px 22px;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  .trust-grid,
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-grid,
-  .portal-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid,
-  .life-grid,
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-image img,
-  .portal-image img {
-    min-height: 360px;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .content-container {
-    max-width: 1080px;
-  }
-
-  .hero-content h1 {
-    font-size: 3.6rem;
-  }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-@media (min-width: 1281px) {
-  .content-container {
-    max-width: 1240px;
-  }
-
-  .hero-content h1 {
-    font-size: 4.4rem;
-  }
-}.testimonial-card {
-  text-align: center;
-}
-
-.testimonial-card img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  border: 4px solid rgba(123,163,118,.15);
-}
-
-.testimonial-card span {
-  display: block;
-  margin-top: 6px;
-  color: var(--text-muted);
-  font-size: .9rem;
-}/* =========================================================
-   MOBILE DEVICES
-   < 640px
-========================================================= */
-@media (max-width: 639px) {
-
-  .content-container{
-    padding-inline:16px;
-  }
-
-  .section-space{
-    padding:60px 0;
-  }
-
-  .section-heading{
-    margin-bottom:35px;
-  }
-
-  .section-heading h2,
-  .about-text h2,
-  .portal-text h2,
-  .cta-box h2{
-    font-size:1.8rem;
-    line-height:1.3;
-  }
-
-  .section-heading p{
-    font-size:0.95rem;
-  }
-
-  /* Hero */
-
-  .home-hero{
-    min-height:85vh;
-  }
-
-  .home-hero-overlay{
-    min-height:85vh;
-    padding:100px 0 60px;
-  }
-
-  .hero-content{
+/*==================================================
+NETHRA SENIOR CARE
+INDEX CSS - PART 1
+Sections:
+01. Global Section Setup
+02. Section Header
+03. Home Hero
+04. Trust Bar
+05. About Section
+06. Values Section
+Clean Premium Version
+==================================================*/
+/*==================================================
+01. GLOBAL SECTION SETUP
+==================================================*/
+section{
+    position:relative;
+    padding:80px 0;
+}
+img{
+    max-width:100%;
+    display:block;
+}
+/*==================================================
+02. SECTION HEADER
+==================================================*/
+.section-header{
+    max-width:720px;
+    margin:0 auto 45px;
     text-align:center;
-  }
-
-  .hero-content h1{
-    font-size:2.3rem;
-    line-height:1.2;
-  }
-
-  .hero-content p{
-    font-size:1rem;
-    line-height:1.8;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .hero-buttons a{
-    width:100%;
-  }
-
-  .hero-mini-highlights{
-    flex-direction:column;
+}
+.section-label{
+    display:inline-flex;
     align-items:center;
-    gap:12px;
-  }
-
-  .hero-badge{
-    margin-inline:auto;
-  }
-
-  /* Grids */
-
-  .trust-grid,
-  .about-grid,
-  .services-grid,
-  .why-grid,
-  .portal-grid,
-  .life-grid,
-  .testimonial-grid{
-    grid-template-columns:1fr;
+    gap:8px;
+    width:max-content;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+    font-size:.82rem;
+    font-weight:700;
+}
+.section-label i{
+    color:var(--primary);
+}
+.section-header .section-label{
+    margin-bottom:15px;
+}
+.section-header h2{
+    margin:0 0 15px;
+    font-size:clamp(
+        2rem,
+        3.5vw,
+        3rem
+    );
+    line-height:1.2;
+    font-weight:800;
+    color:var(--heading);
+}
+.section-header h2 em{
+    font-style:normal;
+    color:var(--primary);
+}
+.section-header p{
+    margin:auto;
+    max-width:620px;
+    color:var(--text-light);
+    font-size:.98rem;
+    line-height:1.8;
+}
+/*==================================================
+03. HOME HERO
+==================================================*/
+.home-hero{
+    position:relative;
+    overflow:hidden;
+    background:var(--bg);
+    padding:110px 0 60px;
+}
+.hero-grid{
+    display:grid;
+    grid-template-columns:
+    1.05fr
+    .95fr;
+    align-items:center;
+    gap:55px;
+}
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    width:max-content;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(var(--primary-rgb),.08);
+    border:1px solid rgba(var(--primary-rgb),.15);
+    color:var(--primary);
+    font-size:.82rem;
+    font-weight:700;
+}
+.hero-tag i{
+    color:var(--primary);
+}
+.hero-content h1{
+    margin:0;
+    font-size:clamp(
+        2.6rem,
+        4vw,
+        3.8rem
+    );
+    line-height:1.1;
+    letter-spacing:-1px;
+    font-weight:800;
+    color:var(--heading);
+}
+.hero-content h1 span{
+    display:block;
+    color:var(--primary);
+}
+.hero-content h1 em{
+    font-style:normal;
+    color:var(--secondary);
+}
+.hero-content p{
+    max-width:560px;
+    font-size:1rem;
+    line-height:1.75;
+    color:var(--text-light);
+}
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+.hero-buttons .btn{
+    padding:13px 24px;
+}
+.hero-buttons .btn i{
+    margin-right:8px;
+}
+.hero-features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+.hero-features div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 18px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow:var(--shadow-sm);
+    transition:.35s;
+}
+.hero-features div:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+}
+.hero-features i{
+    width:40px;
+    height:40px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+}
+.hero-features span{
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--heading);
+}
+.hero-image{
+    position:relative;
+}
+.hero-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:26px;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+}
+.floating-card{
+    position:absolute;
+    left:-20px;
+    bottom:25px;
+    width:270px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow-md);
+}
+.card-icon{
+    width:58px;
+    height:58px;
+    flex-shrink:0;
+    display:grid;
+    place-items:center;
+    border-radius:16px;
+    background:var(--primary);
+    color:#fff;
+    font-size:1.3rem;
+}
+.floating-card h4{
+    margin:0 0 5px;
+    color:var(--heading);
+}
+.floating-card p{
+    margin:0;
+    font-size:.88rem;
+}
+/*==================================================
+04. TRUST BAR
+==================================================*/
+.trust-bar{
+    background:var(--surface);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:28px 0;
+}
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+.trust-item{
+    text-align:center;
+    padding:24px 16px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:18px;
+    transition:.35s;
+}
+.trust-item:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.trust-item h3{
+    margin:0 0 8px;
+    color:var(--primary);
+    font-size:2.2rem;
+    font-weight:800;
+}
+.trust-item p{
+    margin:0;
+    color:var(--text-light);
+    font-size:.92rem;
+    font-weight:600;
+}
+/*==================================================
+05. ABOUT SECTION
+==================================================*/
+.about-home{
+    background:var(--bg);
+}
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+.about-images img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:var(--shadow-md);
+}
+.about-content{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.about-content h2{
+    margin:0;
+    font-size:clamp(
+        1.9rem,
+        3vw,
+        2.8rem
+    );
+    line-height:1.2;
+    color:var(--heading);
+}
+.about-content h2 em{
+    font-style:normal;
+    color:var(--primary);
+}
+.about-content p{
+    font-size:.96rem;
+    line-height:1.75;
+    color:var(--text-light);
+}
+.about-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    padding:0;
+    margin:10px 0;
+    list-style:none;
+}
+.about-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+    color:var(--heading);
+}
+.about-list i{
+    width:30px;
+    height:30px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+}
+/*==================================================
+06. VALUES SECTION
+==================================================*/
+.values{
+    background:var(--surface);
+}
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+.value-card{
+    text-align:center;
+    padding:30px 22px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.value-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.value-icon{
+    width:64px;
+    height:64px;
+    margin:0 auto 18px;
+    display:grid;
+    place-items:center;
+    border-radius:18px;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+    font-size:1.5rem;
+}
+.value-card h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.value-card p{
+    margin:0;
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--text-light);
+}/*==================================================
+NETHRA SENIOR CARE
+INDEX CSS - PART 2
+Sections:
+07. Services
+08. Care Journey
+09. Family Portal
+10. Amenities
+Premium Clean Version
+==================================================*/
+/*==================================================
+07. SERVICES
+==================================================*/
+.services{
+    background:var(--bg);
+}
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:24px;
-  }
-
-  /* Images */
-
-  .about-image img,
-  .portal-image img{
-    min-height:280px;
-    height:280px;
-  }
-
-  .life-card img{
-    height:220px;
-  }
-
-  /* Cards */
-
-  .service-card,
-  .why-card,
-  .testimonial-card{
-    padding:24px 20px;
-  }
-
-  .trust-item{
+}
+.service-card{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.service-image{
+    height:210px;
+    overflow:hidden;
+}
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.45s;
+}
+.service-card:hover .service-image img{
+    transform:scale(1.06);
+}
+.service-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    padding:22px;
+}
+.service-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    width:max-content;
+    padding:7px 14px;
+    margin-bottom:15px;
+    border-radius:999px;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+    font-size:.78rem;
+    font-weight:700;
+}
+.service-content h3{
+    margin:0 0 12px;
+    font-size:1.2rem;
+    color:var(--heading);
+}
+.service-content p{
+    margin:0 0 20px;
+    font-size:.94rem;
+    line-height:1.75;
+    color:var(--text-light);
+}
+.text-link{
+    margin-top:auto;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:.92rem;
+    font-weight:700;
+    transition:.3s;
+}
+.text-link:hover{
+    gap:12px;
+}
+/*==================================================
+08. CARE JOURNEY
+==================================================*/
+.care-journey{
+    background:var(--surface);
+}
+.journey-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+.journey-card{
+    text-align:center;
+    padding:28px 22px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.journey-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.journey-number{
+    width:60px;
+    height:60px;
+    margin:0 auto 18px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    font-size:1.2rem;
+    font-weight:700;
+}
+.journey-card h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.journey-card p{
+    margin:0;
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--text-light);
+}
+/*==================================================
+09. FAMILY PORTAL
+==================================================*/
+.family-portal{
+    background:var(--bg);
+}
+.portal-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+.portal-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:var(--shadow-md);
+}
+.portal-content{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.portal-content h2{
+    margin:0;
+    font-size:clamp(
+        1.9rem,
+        3vw,
+        2.8rem
+    );
+    line-height:1.2;
+    color:var(--heading);
+}
+.portal-content h2 em{
+    font-style:normal;
+    color:var(--primary);
+}
+.portal-content p{
+    font-size:.96rem;
+    line-height:1.75;
+    color:var(--text-light);
+}
+.portal-list{
+    display:grid;
+    gap:14px;
+    padding:0;
+    margin:10px 0;
+    list-style:none;
+}
+.portal-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--heading);
+}
+.portal-list i{
+    color:var(--primary);
+}
+/*==================================================
+10. AMENITIES
+==================================================*/
+.amenities{
+    background:var(--surface);
+}
+.amenities-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+.amenity-card{
+    overflow:hidden;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.amenity-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.amenity-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    transition:.45s;
+}
+.amenity-card:hover img{
+    transform:scale(1.06);
+}
+.amenity-card h3{
+    margin:0;
+    padding:20px 20px 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.amenity-card p{
+    margin:0;
+    padding:0 20px 22px;
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--text-light);
+}/*==================================================
+NETHRA SENIOR CARE
+INDEX CSS - PART 3
+Sections:
+11. Safety & Wellness
+12. Nutrition
+13. Daily Life
+14. Why Choose Us
+Premium Clean Version
+==================================================*/
+/*==================================================
+11. SAFETY & WELLNESS
+==================================================*/
+.wellness-section{
+    background:var(--bg);
+}
+.wellness-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+.wellness-content{
+    flex-direction:column;
+    gap:18px;
+}
+.wellness-content h2{
+    margin:0;
+    font-size:clamp(
+        2rem,
+        3vw,
+        2.9rem
+    );
+    line-height:1.2;
+    color:var(--heading);
+}
+.wellness-content h2 em{
+    font-style:normal;
+    color:var(--primary);
+}
+.wellness-content p{
+    margin:0;
+    font-size:.96rem;
+    line-height:1.8;
+    color:var(--text-light);
+}
+.wellness-features{
+    display:grid;
+    gap:16px;
+    margin-top:8px;
+}
+.feature-box{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    padding:18px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    transition:.35s;
+}
+.feature-box:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+}
+.feature-box i{
+    width:52px;
+    height:52px;
+    flex-shrink:0;
+    display:grid;
+    place-items:center;
+    border-radius:15px;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+    font-size:1.2rem;
+}
+.feature-box h4{
+    margin:0 0 6px;
+    font-size:1.05rem;
+    color:var(--heading);
+}
+.feature-box p{
+    margin:0;
+    font-size:.9rem;
+    line-height:1.6;
+}
+.wellness-image img{
+    width:100%;
+    height:540px;
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:var(--shadow-md);
+}
+/*==================================================
+12. NUTRITION
+==================================================*/
+.nutrition{
+    background:var(--surface);
+}
+.nutrition-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+.nutrition-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:var(--shadow-md);
+}
+.nutrition-content{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.nutrition-content h2{
+    margin:0;
+    font-size:clamp(
+        2rem,
+        3vw,
+        2.8rem
+    );
+    line-height:1.2;
+    color:var(--heading);
+}
+.nutrition-content h2 em{
+    color:var(--primary);
+    font-style:normal;
+}
+.nutrition-content p{
+    margin:0;
+    font-size:.96rem;
+    line-height:1.8;
+    color:var(--text-light);
+}
+.nutrition-list{
+    display:grid;
+    gap:14px;
+    padding:0;
+    margin:10px 0;
+    list-style:none;
+}
+.nutrition-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--heading);
+}
+.nutrition-list i{
+    color:var(--primary);
+}
+/*==================================================
+13. DAILY LIFE
+==================================================*/
+.daily-life{
+    background:var(--bg);
+}
+.life-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+.life-card{
+    overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.life-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.life-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition:.45s;
+}
+.life-card:hover img{
+    transform:scale(1.06);
+}
+.life-content{
+    padding:22px;
+}
+.life-content h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.life-content p{
+    margin:0;
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--text-light);
+}
+/*==================================================
+14. WHY CHOOSE US
+==================================================*/
+.why-us{
+    background:var(--surface);
+}
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+.why-card{
+    text-align:center;
+    padding:30px 22px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.why-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.why-card i{
+    width:64px;
+    height:64px;
+    margin:0 auto 18px;
+    display:grid;
+    place-items:center;
+    border-radius:18px;
+    background:rgba(var(--primary-rgb),.08);
+    color:var(--primary);
+    font-size:1.5rem;
+    transition:.35s;
+}
+.why-card:hover i{
+    background:var(--primary);
+    color:#fff;
+}
+.why-card h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.why-card p{
+    margin:0;
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--text-light);
+}/*==================================================
+NETHRA SENIOR CARE
+INDEX CSS - PART 4
+Sections:
+15. Awards & Certifications
+16. Partners
+17. Photo Gallery
+18. CTA Section
+19. Newsletter
+Premium Clean Version
+==================================================*/
+/*==================================================
+15. AWARDS & CERTIFICATIONS
+==================================================*/
+.awards{
+    background:var(--bg);
+}
+.awards-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+.award-card{
+    text-align:center;
+    padding:28px 22px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    transition:.35s;
+}
+.award-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+.award-card img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    margin:0 auto 18px;
+}
+.award-card h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+    color:var(--heading);
+}
+.award-card p{
+    margin:0;
+    font-size:.9rem;
+    line-height:1.7;
+    color:var(--text-light);
+}
+/*==================================================
+16. PARTNERS
+==================================================*/
+.partners{
+    background:var(--surface);
+}
+.partners-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    align-items:center;
+    gap:25px;
+}
+.partners-grid img{
+    width:100%;
+    max-width:130px;
+    margin:auto;
+    opacity:.65;
+    filter:grayscale(100%);
+    transition:.35s;
+}
+.partners-grid img:hover{
+    opacity:1;
+    filter:none;
+    transform:scale(1.08);
+}
+/*==================================================
+17. PHOTO GALLERY
+==================================================*/
+.gallery-preview{
+    background:var(--bg);
+}
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.gallery-grid img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+    transition:.4s;
+}
+.gallery-grid img:hover{
+    transform:scale(1.04);
+    box-shadow:var(--shadow-md);
+}
+/*==================================================
+18. CTA SECTION
+==================================================*/
+.cta-box{
+    padding:65px 45px;
+    border-radius:30px;
+    text-align:center;
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-hover)
+    );
+    color:#fff;
+}
+.cta-box .section-label{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
+.cta-box h2{
+    margin:20px 0 15px;
+    font-size:clamp(
+        2rem,
+        4vw,
+        3.3rem
+    );
+    line-height:1.2;
+    color:#fff;
+}
+.cta-box h2 em{
+    font-style:normal;
+    text-decoration:underline;
+}
+.cta-box p{
+    max-width:650px;
+    margin:0 auto 30px;
+    font-size:.98rem;
+    line-height:1.8;
+    color:rgba(255,255,255,.9);
+}
+.cta-actions{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.cta-actions .btn{
+    padding:13px 26px;
+}
+.cta-actions .btn-outline{
+    background:#fff;
+    border-color:#fff;
+    color:var(--primary);
+}
+/*==================================================
+19. NEWSLETTER
+==================================================*/
+.newsletter-section{
+    background:var(--bg);
+}
+.newsletter-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:40px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:26px;
+    box-shadow:var(--shadow-md);
+}
+.newsletter-content{
+    flex:1;
+}
+.newsletter-content h2{
+    margin:0 0 12px;
+    font-size:2.1rem;
+    color:var(--heading);
+}
+.newsletter-content h2 em{
+    color:var(--primary);
+    font-style:normal;
+}
+.newsletter-content p{
+    margin:0;
+    line-height:1.7;
+    color:var(--text-light);
+}
+.newsletter-form{
+    display:flex;
+    flex:1;
+    max-width:480px;
+    gap:12px;
+}
+.newsletter-form input{
+    flex:1;
+    height:55px;
+    padding:0 18px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--heading);
+}
+.newsletter-form input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+.newsletter-form button{
+    white-space:nowrap;
+}
+/*==================================================
+RESPONSIVE
+==================================================*/
+@media (max-width:1280px){
+.awards-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+.partners-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+}
+@media (max-width:1024px){
+.awards-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+.partners-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+.newsletter-box{
     flex-direction:column;
     text-align:center;
-  }
-
-  .trust-item i{
-    font-size:2rem;
-  }
-
-  /* CTA */
-
-  .cta-box{
-    padding:35px 20px;
-  }
-
-  .cta-buttons{
-    flex-direction:column;
-  }
-
-  .cta-buttons a{
+}
+.newsletter-form{
     width:100%;
-  }
-
-  /* Testimonials */
-
-  .testimonial-author{
-    justify-content:center;
-  }
+    max-width:none;
 }
-
-
-/* =========================================================
-   TABLET
-   640px - 1023px
-========================================================= */
-@media (min-width: 640px) and (max-width: 1023px) {
-
-  .content-container{
-    padding-inline:24px;
-  }
-
-  .section-space{
-    padding:75px 0;
-  }
-
-  /* Hero */
-
-  .home-hero{
-    min-height:90vh;
-  }
-
-  .home-hero-overlay{
-    min-height:90vh;
-  }
-
-  .hero-content h1{
-    font-size:3rem;
-    line-height:1.2;
-  }
-
-  .hero-content p{
-    font-size:1.05rem;
-  }
-
-  /* Layout */
-
-  .about-grid,
-  .portal-grid{
+}
+@media (max-width:640px){
+.awards-grid,
+.partners-grid,
+.gallery-grid{
     grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .trust-grid{
-    grid-template-columns:repeat(1,1fr);
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .life-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .testimonial-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  /* Images */
-
-  .about-image img,
-  .portal-image img{
-    min-height:380px;
-    height:380px;
-  }
-
-  .life-card img{
-    height:240px;
-  }
-
-  /* CTA */
-
-  .cta-box{
-    padding:50px 30px;
-  }
 }
-
-
-/* =========================================================
-   DESKTOP
-   1024px - 1280px
-========================================================= */
-@media (min-width: 1024px) and (max-width: 1280px) {
-
-  .content-container{
-    max-width:1100px;
-    padding-inline:30px;
-  }
-
-  .section-space{
-    padding:90px 0;
-  }
-
-  .hero-content h1{
-    font-size:2.2rem;
-  }
-
-  .hero-content{
-    max-width:700px;
-  }
-
-  .trust-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .life-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .testimonial-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .about-grid{
-    grid-template-columns:1.05fr 1fr;
-  }
-
-  .portal-grid{
-    grid-template-columns:1fr 1.05fr;
-  }
-
-  .about-image img,
-  .portal-image img{
-    min-height:550px;
-  }
+.award-card{
+    padding:24px 18px;
 }
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1281px - 1599px
-========================================================= */
-@media (min-width: 1281px) and (max-width: 1599px) {
-
-  .content-container{
-    max-width:1240px;
-    padding-inline:32px;
-  }
-
-  .hero-content{
-    max-width:760px;
-  }
-
-  .hero-content h1{
-    font-size:4.3rem;
-  }
-
-  .hero-content p{
-    font-size:1.1rem;
-  }
-
-  .trust-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .life-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .testimonial-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
+.gallery-grid img{
+    height:220px;
 }
-
-
-/* =========================================================
-   EXTRA LARGE DESKTOP
-   1600px+
-========================================================= */
-@media (min-width: 1600px) {
-
-  .content-container{
-    max-width:1400px;
-    padding-inline:40px;
-  }
-
-  .section-space{
-    padding:110px 0;
-  }
-
-  .hero-content{
-    max-width:850px;
-  }
-
-  .hero-content h1{
-    font-size:5rem;
-    line-height:1.1;
-  }
-
-  .hero-content p{
-    font-size:1.15rem;
-  }
-
-  .section-heading h2{
-    font-size:3rem;
-  }
-
-  .about-text h2,
-  .portal-text h2,
-  .cta-box h2{
-    font-size:2.8rem;
-  }
-
-  .about-image img,
-  .portal-image img{
-    min-height:650px;
-  }
-
-  .life-card img{
-    height:300px;
-  }
-
-  .service-card{
-    padding:35px 30px;
-  }
-
-  .why-card{
-    padding:35px 28px;
-  }
-
-  .testimonial-card{
-    padding:35px 30px;
-  }
-
-  .cta-box{
-    max-width:1100px;
-    padding:70px 60px;
-  }
-}/* =========================
-   SERVICE LINK HOVER
-========================= */
-
-.service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--accent-orange);
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+.cta-box{
+    padding:45px 20px;
+    border-radius:22px;
 }
-
-.service-link::after {
-  content: "\f061"; /* Font Awesome arrow-right */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  transition: transform 0.3s ease;
+.cta-actions{
+    flex-direction:column;
 }
-
-.service-card:hover .service-link {
-  color: var(--primary-green);
-  gap: 12px;
+.cta-actions .btn{
+    width:100%;
 }
-
-.service-card:hover .service-link::after {
-  transform: translateX(6px);
-}.why-us .section-heading{
-    text-align: center;
+.newsletter-box{
+    padding:30px 20px;
+    border-radius:20px;
 }
-
-.why-card{
-    text-align: center;
+.newsletter-content h2{
+    font-size:1.8rem;
 }
-
-.why-card i{
-    display: block;
-    margin: 0 auto 18px;
+.newsletter-form{
+    flex-direction:column;
 }
-
-.why-card h3{
-    text-align: center;
+.newsletter-form input,
+.newsletter-form button{
+    width:100%;
 }
-
-.why-card p{
-    text-align: center;
-}.why-card{
-    position: relative;
-    overflow: hidden;
+}/*==================================================
+NETHRA SENIOR CARE
+INDEX CSS - PART 5
+Sections:
+20. Global Section System
+21. Hero Screen Fix
+22. Premium Card Effects
+23. Dark Mode Polish
+24. Final Responsive Cleanup
+Premium Final Version
+==================================================*/
+/*==================================================
+20. GLOBAL SECTION SYSTEM
+==================================================*/
+section{
+    position:relative;
+    padding:80px 0;
 }
-
-.why-card::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(123,163,118,0.08),
-        rgba(242,156,82,0.06)
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+}
+.section-header{
+    max-width:720px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+.section-header .section-label{
+    margin:0 auto 16px;
+}
+.section-header h2{
+    margin:0 0 15px;
+    font-size:clamp(
+        2rem,
+        3.5vw,
+        3rem
     );
-    opacity: 0;
-    transition: 0.4s ease;
+    line-height:1.2;
+    font-weight:800;
+    color:var(--heading);
 }
-
-.why-card:hover::before{
-    opacity: 1;
+.section-header h2 em{
+    color:var(--primary);
+    font-style:normal;
 }
-
-.why-card:hover{
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(123,163,118,0.35);
+.section-header p{
+    max-width:620px;
+    margin:auto;
+    font-size:.98rem;
+    line-height:1.8;
+    color:var(--text-light);
 }
-
-.why-card:hover i{
-    transform: scale(1.15) rotate(-5deg);
-    color: var(--primary-green);
-}@media (max-width: 639px){
-
-    .hero-content{
-        text-align: center;
-    }
-
-    .hero-buttons{
-        justify-content: center;
-    }
-
-    .hero-mini-highlights{
-        align-items: center;
-        justify-content: center;
-    }
-
-    .why-card{
-        text-align: center;
-    }
-}/* ==========================================
-   TESTIMONIAL SECTION ALIGNMENT FIX
-========================================== */
-
-.testimonial-grid{
-    align-items: stretch;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
 }
-
-.testimonial-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 100%;
-    padding: 32px 28px;
+.btn:hover{
+    transform:translateY(-3px);
 }
-
-.testimonial-card img{
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    border: 4px solid rgba(123,163,118,.15);
-    flex-shrink: 0;
+img{
+    max-width:100%;
 }
-
-.testimonial-card p{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    text-align: center;
-    line-height: 1.9;
-    color: var(--text-desc);
-    font-style: italic;
+/*==================================================
+21. HERO SCREEN FIX
+==================================================*/
+@media (min-width:1025px){
+.home-hero{
+    min-height:calc(100vh - 90px);
+    display:flex;
+    align-items:center;
+    padding-top:120px;
 }
-
-.testimonial-card h4{
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text-main);
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:55px;
+    align-items:center;
 }
-
-.testimonial-card span{
-    display: block;
-    margin-top: 6px;
-    font-size: .9rem;
-    color: var(--text-muted);
+.hero-content{
+    order:1;
 }
-
-body.dark-theme .testimonial-card h4{
-    color: #fff;
+.hero-image{
+    order:2;
 }
-
-body.dark-theme .testimonial-card span{
-    color: #bdbdbd;
+.hero-image img{
+    height:520px;
+}
+.hero-content h1{
+    font-size:clamp(
+        2.8rem,
+        4vw,
+        4rem
+    );
+}
+}
+@media (min-width:640px) and (max-width:1024px){
+.home-hero{
+    padding-top:110px;
+}
+.hero-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+.hero-image{
+    order:1;
+}
+.hero-content{
+    order:2;
+    text-align:center;
+    align-items:center;
+}
+.hero-image img{
+    height:420px;
+}
+}
+@media (max-width:640px){
+.home-hero{
+    padding-top:95px;
+}
+.hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+.hero-image img{
+    height:320px;
+}
+.hero-content h1{
+    font-size:2.15rem;
+}
+}
+/*==================================================
+22. PREMIUM CARD EFFECTS
+==================================================*/
+.value-card,
+.service-card,
+.journey-card,
+.amenity-card,
+.life-card,
+.why-card,
+.award-card,
+.trust-item{
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+    box-shadow:
+    0 10px 30px rgba(27,94,32,.12),
+    0 0 20px rgba(27,94,32,.08);
+}
+.value-card::before,
+.service-card::before,
+.journey-card::before,
+.amenity-card::before,
+.life-card::before,
+.why-card::before,
+.award-card::before,
+.trust-item::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:var(--primary);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+}
+.value-card:hover::before,
+.service-card:hover::before,
+.journey-card:hover::before,
+.amenity-card:hover::before,
+.life-card:hover::before,
+.why-card:hover::before,
+.award-card:hover::before,
+.trust-item:hover::before{
+    transform:scaleX(1);
+}
+.value-card:hover,
+.service-card:hover,
+.journey-card:hover,
+.amenity-card:hover,
+.life-card:hover,
+.why-card:hover,
+.award-card:hover,
+.trust-item:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+    box-shadow:
+    0 20px 45px rgba(27,94,32,.20),
+    0 0 35px rgba(27,94,32,.25);
+}
+.service-card img,
+.amenity-card img,
+.life-card img,
+.gallery-grid img{
+    transition:.45s;
+}
+.service-card:hover img,
+.amenity-card:hover img,
+.life-card:hover img,
+.gallery-grid img:hover{
+    transform:scale(1.06);
+}
+/*==================================================
+23. DARK MODE POLISH
+==================================================*/
+[data-theme="dark"] 
+.value-card,
+[data-theme="dark"] 
+.service-card,
+[data-theme="dark"] 
+.journey-card,
+[data-theme="dark"] 
+.amenity-card,
+[data-theme="dark"] 
+.life-card,
+[data-theme="dark"] 
+.why-card,
+[data-theme="dark"] 
+.award-card,
+[data-theme="dark"] 
+.trust-item{
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.45),
+    0 0 25px rgba(27,94,32,.25);
+}
+[data-theme="dark"] 
+.value-card:hover,
+[data-theme="dark"] 
+.service-card:hover,
+[data-theme="dark"] 
+.journey-card:hover,
+[data-theme="dark"] 
+.amenity-card:hover,
+[data-theme="dark"] 
+.life-card:hover,
+[data-theme="dark"] 
+.why-card:hover,
+[data-theme="dark"] 
+.award-card:hover,
+[data-theme="dark"] 
+.trust-item:hover{
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.6),
+    0 0 40px rgba(27,94,32,.35);
+}
+[data-theme="dark"] 
+.hero-image img,
+[data-theme="dark"] 
+.about-images img,
+[data-theme="dark"] 
+.portal-image img,
+[data-theme="dark"] 
+.wellness-image img,
+[data-theme="dark"] 
+.nutrition-image img{
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+}
+/*==================================================
+24. FINAL RESPONSIVE CLEANUP
+==================================================*/
+@media (max-width:1280px){
+section{
+    padding:70px 0;
+}
+.container{
+    max-width:1200px;
+}
+}
+@media (max-width:1024px){
+section{
+    padding:60px 0;
+}
+.container{
+    padding:0 18px;
+}
+.section-header h2{
+    font-size:2.3rem;
+}
+}
+@media (max-width:640px){
+section{
+    padding:50px 0;
+}
+.container{
+    padding:0 15px;
+}
+.section-header h2{
+    font-size:1.9rem;
+}
+.section-header p{
+    font-size:.92rem;
+}
+.value-card,
+.service-card,
+.journey-card,
+.amenity-card,
+.life-card,
+.why-card,
+.award-card,
+.trust-item{
+    border-radius:18px;
+}
+}
+/*==================================================
+ACCESSIBILITY
+==================================================*/
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+:focus-visible{
+    outline:3px solid var(--primary);
+    outline-offset:3px;
+}/*==================================================
+NETHRA SENIOR CARE
+FINAL RESPONSIVE SYSTEM
+Mobile     : < 640px
+Tablet     : 640px - 1024px
+Desktop    : 1024px - 1280px
+Large      : > 1280px
+==================================================*/
+/*==================================================
+LARGE DESKTOP
+1280px+
+==================================================*/
+@media (min-width:1281px){
+.container{
+    max-width:1200px;
+}
+.home-hero{
+    padding-top:130px;
+}
+.hero-grid{
+    gap:60px;
+}
+.hero-image img{
+    height:560px;
+}
+section{
+    padding:90px 0;
+}
+.values-grid,
+.why-grid,
+.awards-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.services-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.journey-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.amenities-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.life-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.gallery-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+}
+/*==================================================
+DESKTOP
+1024px - 1280px
+==================================================*/
+@media (min-width:1024px) and (max-width:1280px){
+.home-hero{
+    padding-top:120px;
+}
+.hero-grid{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+.hero-content h1{
+    font-size:3.3rem;
+}
+.hero-image img{
+    height:500px;
+}
+.about-grid,
+.portal-grid,
+.wellness-grid,
+.nutrition-grid{
+    gap:40px;
+}
+.about-images img,
+.portal-image img,
+.nutrition-image img{
+    height:450px;
+}
+.values-grid,
+.why-grid,
+.awards-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+.services-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.journey-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.amenities-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.life-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.gallery-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.partners-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+}
+/*==================================================
+TABLET
+640px - 1024px
+==================================================*/
+@media (min-width:640px) and (max-width:1024px){
+.container{
+    padding:0 18px;
+}
+section{
+    padding:65px 0;
+}
+.home-hero{
+    padding-top:110px;
+}
+.hero-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+.hero-image{
+    order:-1;
+}
+.hero-image img{
+    height:430px;
+}
+.hero-content{
+    text-align:center;
+    align-items:center;
+}
+.hero-buttons,
+.hero-features{
+    justify-content:center;
+}
+.about-grid,
+.portal-grid,
+.wellness-grid,
+.nutrition-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+.about-images img,
+.portal-image img,
+.wellness-image img,
+.nutrition-image img{
+    height:420px;
+}
+.trust-grid,
+.values-grid,
+.services-grid,
+.journey-grid,
+.amenities-grid,
+.why-grid,
+.awards-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+.life-grid,
+.gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+.partners-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.newsletter-box{
+    flex-direction:column;
+    text-align:center;
+}
+.newsletter-form{
+    max-width:100%;
+    width:100%;
+}
+}
+/*==================================================
+MOBILE
+Below 640px
+==================================================*/
+@media (max-width:639px){
+.container{
+    padding:0 15px;
+}
+section{
+    padding:50px 0;
+}
+.home-hero{
+    padding-top:95px;
+}
+.hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+.hero-image{
+    order:-1;
+}
+.hero-image img{
+    height:320px;
+    border-radius:18px;
+}
+.hero-content h1{
+    font-size:2.1rem;
+}
+.hero-buttons{
+    flex-direction:column;
+}
+.hero-buttons .btn{
+    width:100%;
+}
+.hero-features{
+    flex-direction:column;
+}
+.hero-features div{
+    width:100%;
+}
+.trust-grid,
+.values-grid,
+.services-grid,
+.journey-grid,
+.amenities-grid,
+.life-grid,
+.why-grid,
+.awards-grid,
+.gallery-grid,
+.partners-grid{
+    grid-template-columns:1fr;
+}
+.about-images img,
+.portal-image img,
+.wellness-image img,
+.nutrition-image img{
+    height:320px;
+    border-radius:18px;
+}
+.value-card,
+.service-card,
+.journey-card,
+.amenity-card,
+.life-card,
+.why-card,
+.award-card{
+    border-radius:18px;
+}
+.service-image{
+    height:220px;
+}
+.amenity-card img{
+    height:220px;
+}
+.life-card img{
+    height:220px;
+}
+.gallery-grid img{
+    height:220px;
+}
+.cta-box{
+    padding:45px 20px;
+}
+.cta-actions{
+    flex-direction:column;
+}
+.cta-actions .btn{
+    width:100%;
+}
+.newsletter-box{
+    padding:30px 20px;
+    flex-direction:column;
+}
+.newsletter-form{
+    width:100%;
+    flex-direction:column;
+}
+.newsletter-form input,
+.newsletter-form button{
+    width:100%;
+}
+}/*==================================================
+NETHRA SENIOR CARE
+FINAL DESKTOP COMPACT MODE
+Reduce:
+- H1 Size
+- H2 Size
+- Section Padding
+- Hero Padding
+- Card Padding
+Desktop : 1024px - 1280px
+Large   : 1281px+
+==================================================*/
+/*==================================================
+DESKTOP
+1024px - 1280px
+==================================================*/
+@media (min-width:1024px) and (max-width:1280px){
+section{
+    padding:55px 0;
+}
+.home-hero{
+    padding-top:95px;
+    padding-bottom:45px;
+}
+.hero-grid{
+    gap:35px;
+}
+.hero-content{
+    gap:15px;
+}
+.hero-content h1{
+    font-size:2.6rem;
+    line-height:1.1;
+}
+.hero-content p{
+    max-width:480px;
+}
+.hero-buttons{
+    margin-top:0;
+}
+.hero-buttons .btn{
+    padding:10px 18px;
+}
+.hero-image img{
+    height:430px;
+    border-radius:22px;
+}
+.floating-card{
+    width:220px;
+    padding:14px;
+}
+.card-icon{
+    width:45px;
+    height:45px;
+}
+.section-header{
+    margin-bottom:35px;
+}
+.section-header h2,
+.about-content h2,
+.portal-content h2,
+.wellness-content h2,
+.nutrition-content h2,
+.cta-box h2,
+.newsletter-content h2{
+    font-size:1.9rem;
+}
+.section-header p{
+    max-width:560px;
+}
+.value-card,
+.journey-card,
+.why-card,
+.award-card,
+.trust-item{
+    padding:22px 16px;
+}
+.service-content{
+    padding:18px;
+}
+.life-content{
+    padding:18px;
+}
+.value-icon,
+.why-card i{
+    width:55px;
+    height:55px;
+}
+.values-grid,
+.services-grid,
+.journey-grid,
+.amenities-grid,
+.why-grid,
+.awards-grid{
+    gap:18px;
+}
+}
+/*==================================================
+LARGE DESKTOP
+1281px+
+==================================================*/
+@media (min-width:1281px){
+section{
+    padding:65px 0;
+}
+.home-hero{
+    padding-top:105px;
+    padding-bottom:50px;
+}
+.hero-grid{
+    gap:45px;
+}
+.hero-content h1{
+    font-size:3.1rem;
+}
+.hero-content{
+    gap:16px;
+}
+.hero-image img{
+    height:500px;
+}
+.section-header{
+    margin-bottom:40px;
+}
+.section-header h2,
+.about-content h2,
+.portal-content h2,
+.wellness-content h2,
+.nutrition-content h2,
+.cta-box h2,
+.newsletter-content h2{
+    font-size:2.2rem;
+}
+.about-images img,
+.portal-image img,
+.nutrition-image img{
+    height:420px;
+}
+.wellness-image img{
+    height:460px;
+}
+.value-card,
+.journey-card,
+.why-card,
+.award-card,
+.trust-item{
+    padding:25px 18px;
+}
+.service-content{
+    padding:20px;
+}
+.life-content{
+    padding:20px;
+}
+.values-grid,
+.services-grid,
+.journey-grid,
+.amenities-grid,
+.why-grid,
+.awards-grid{
+    gap:20px;
+}
+}/*==================================================
+SECTION HEADING EMPHASIS COLOR
+==================================================*/
+.section-heading h2 em,
+.about-content h2 em,
+.portal-content h2 em,
+.wellness-content h2 em,
+.nutrition-content h2 em,
+.newsletter-box h2 em{
+    color:var(--primary);
+    font-style:normal;
+    font-weight:700;
+}
+/*==================================================
+SECTION LABEL STYLE
+==================================================*/
+.section-label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:.82rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:14px;
+}
+.section-label i{
+    font-size:.85rem;
+    color:var(--primary);
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .section-heading h2 em,
+[data-theme="dark"] .about-content h2 em,
+[data-theme="dark"] .portal-content h2 em,
+[data-theme="dark"] .wellness-content h2 em,
+[data-theme="dark"] .nutrition-content h2 em,
+[data-theme="dark"] .cta-box h2 em,
+[data-theme="dark"] .newsletter-box h2 em,
+[data-theme="dark"] .home-cta h2 em{
+    color:var(--primary-light);
+}/*==================================================
+HOME HERO BACKGROUND
+==================================================*/
+.home-hero{
+    position:relative;
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary-soft),
+        var(--bg)
+    );
+    overflow:hidden;
+}
+.home-hero::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    top:-180px;
+    right:-150px;
+    background:var(--primary-light);
+    border-radius:50%;
+    opacity:.55;
+}
+.home-hero::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    bottom:-120px;
+    left:-100px;
+    background:var(--secondary-soft);
+    border-radius:50%;
+    opacity:.65;
+}
+.hero-grid,
+.hero-overlay{
+    position:relative;
+    z-index:2;
+}
+/*==================================================
+FULL PAGE LIGHT BACKGROUND
+==================================================*/
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+.values,
+.services,
+.care-journey,
+.amenities,
+.why-us,
+.awards,
+.partners,
+.gallery-preview{
+    background:var(--bg-soft);
+}
+.about-home,
+.family-portal,
+.wellness-section,
+.nutrition,
+.daily-life{
+    background:var(--surface);
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"]{
+    --primary-light:#134E4A;
+    --primary-soft:#062F2D;
+    --secondary-soft:#172554;
+}
+[data-theme="dark"] body{
+    background:var(--bg);
+}
+[data-theme="dark"] .home-hero{
+    background:
+    linear-gradient(
+        135deg,
+        var(--bg),
+        var(--surface)
+    );
+}
+[data-theme="dark"] .home-hero::before{
+    background:var(--primary);
+    opacity:.15;
+}
+[data-theme="dark"] .home-hero::after{
+    background:var(--secondary);
+    opacity:.12;
+}
+[data-theme="dark"] .values,
+[data-theme="dark"] .services,
+[data-theme="dark"] .care-journey,
+[data-theme="dark"] .amenities,
+[data-theme="dark"] .why-us,
+[data-theme="dark"] .awards,
+[data-theme="dark"] .partners,
+[data-theme="dark"] .gallery-preview{
+    background:var(--bg-soft);
+}
+[data-theme="dark"] .about-home,
+[data-theme="dark"] .family-portal,
+[data-theme="dark"] .wellness-section,
+[data-theme="dark"] .nutrition,
+[data-theme="dark"] .daily-life{
+    background:var(--surface);
+}/*==================================================
+HERO TABLET FIX
+1024px
+==================================================*/
+@media (max-width:1024px){
+.home-hero .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+}
+.hero-image{
+    order:2;
+}
+.hero-content{
+    order:1;
+}
+.hero-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:var(--radius-xl);
+}
+.floating-card{
+    right:20px;
+    bottom:20px;
+}
+}
+/*==================================================
+SMALL TABLET / MOBILE
+768px
+==================================================*/
+@media(max-width:768px){
+.home-hero .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+.hero-content{
+    order:1;
+}
+.hero-image{
+    order:2;
+}
+.hero-image img{
+    height:380px;
+}
+.hero-buttons{
+    justify-content:center;
+}
 }

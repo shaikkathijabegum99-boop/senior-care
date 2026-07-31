@@ -1,151 +1,238 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-  const themeToggle = document.getElementById("themeToggle");
-  const themeMiniToggle = document.getElementById("themeMiniToggle");
-  const savedTheme = localStorage.getItem("dashboard-theme") || "light";
-
-  document.documentElement.setAttribute("data-theme", savedTheme);
-
-  if (savedTheme === "dark") {
-    themeMiniToggle?.classList.add("active");
-    updateThemeIcon("dark");
-  } else {
-    themeMiniToggle?.classList.remove("active");
-    updateThemeIcon("light");
-  }
-
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("dashboard-theme", next);
-
-    updateThemeIcon(next);
-
-    if (next === "dark") {
-      themeMiniToggle?.classList.add("active");
-    } else {
-      themeMiniToggle?.classList.remove("active");
-    }
-  }
-
-  function updateThemeIcon(theme) {
-    if (!themeToggle) return;
-    themeToggle.innerHTML =
-      theme === "dark"
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-  }
-
-  themeToggle?.addEventListener("click", toggleTheme);
-  themeMiniToggle?.addEventListener("click", () => {
-    themeMiniToggle.classList.toggle("active");
-    toggleTheme();
-  });
-
-  const menuToggle = document.getElementById("menuToggle");
-  const sidebarClose = document.getElementById("sidebarClose");
-  const sidebar = document.getElementById("sidebar");
-
-  menuToggle?.addEventListener("click", () => {
-    sidebar.classList.add("show");
-  });
-
-  sidebarClose?.addEventListener("click", () => {
-    sidebar.classList.remove("show");
-  });
-
-  document.addEventListener("click", (e) => {
-    if (
-      window.innerWidth <= 900 &&
-      sidebar &&
-      !sidebar.contains(e.target) &&
-      !menuToggle.contains(e.target)
-    ) {
-      sidebar.classList.remove("show");
-    }
-  });
-
-  const notifBtn = document.getElementById("notifBtn");
-  const notifDropdown = document.getElementById("notifDropdown");
-  const profileBtn = document.getElementById("profileBtn");
-  const profileDropdown = document.getElementById("profileDropdown");
-
-  notifBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    notifDropdown?.classList.toggle("show");
-    profileDropdown?.classList.remove("show");
-  });
-
-  profileBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    profileDropdown?.classList.toggle("show");
-    notifDropdown?.classList.remove("show");
-  });
-
-  document.addEventListener("click", () => {
-    notifDropdown?.classList.remove("show");
-    profileDropdown?.classList.remove("show");
-  });
-
-
-  const revealItems = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealItems.forEach((item) => observer.observe(item));
-
-
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  const activateLink = () => {
-    let current = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 140;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  };
-
-  window.addEventListener("scroll", activateLink);
-  activateLink();
-
-
-  document.querySelectorAll(".toggle-switch").forEach((toggle) => {
-    if (toggle.id !== "themeMiniToggle") {
-      toggle.addEventListener("click", () => {
-        toggle.classList.toggle("active");
-      });
-    }
-  });
-});const logoutBtn = document.getElementById("logoutBtn");
-
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        localStorage.clear();
-        sessionStorage.clear();
-
-        window.location.href = "../login/login.html"; // change to your login page
-    });
+/*==================================================
+NETHRA SENIOR CARE
+FAMILY DASHBOARD JS
+Features:
+- Dark Mode
+- Sidebar Mobile Menu
+- Overlay
+- Settings Toggle
+- Active Nav
+==================================================*/
+document.addEventListener("DOMContentLoaded",()=>{
+/*==================================================
+DARK MODE
+==================================================*/
+const html=document.documentElement;
+const themeToggle=document.getElementById(
+"themeToggle"
+);
+const darkToggle=document.getElementById(
+"darkToggle"
+);
+function applyTheme(theme){
+html.setAttribute(
+"data-theme",
+theme
+);
+localStorage.setItem(
+"nethra-theme",
+theme
+);
+if(themeToggle){
+let icon=themeToggle.querySelector("i");
+if(icon){
+icon.className=
+theme==="dark"
+?
+"fa-solid fa-sun"
+:
+"fa-solid fa-moon";
 }
+}
+if(darkToggle){
+if(theme==="dark"){
+darkToggle.classList.add(
+"active"
+);
+}
+else{
+darkToggle.classList.remove(
+"active"
+);
+}
+}
+}
+let savedTheme=
+localStorage.getItem(
+"nethra-theme"
+)
+||
+"light";
+applyTheme(savedTheme);
+function toggleTheme(){
+let current=
+html.getAttribute(
+"data-theme"
+);
+applyTheme(
+current==="light"
+?
+"dark"
+:
+"light"
+);
+}
+themeToggle?.addEventListener(
+"click",
+toggleTheme
+);
+darkToggle?.addEventListener(
+"click",
+toggleTheme
+);
+/*==================================================
+MOBILE SIDEBAR
+==================================================*/
+const sidebar=
+document.getElementById(
+"sidebar"
+);
+const menuBtn=
+document.querySelector(
+".menu-toggle"
+);
+const closeBtn=
+document.querySelector(
+".sidebar-close"
+);
+let overlay=
+document.querySelector(
+".sidebar-overlay"
+);
+if(!overlay){
+overlay=
+document.createElement(
+"div"
+);
+overlay.className=
+"sidebar-overlay";
+document.body.appendChild(
+overlay
+);
+}
+function openSidebar(){
+sidebar.classList.add(
+"active"
+);
+overlay.classList.add(
+"active"
+);
+}
+function closeSidebar(){
+sidebar.classList.remove(
+"active"
+);
+overlay.classList.remove(
+"active"
+);
+}
+menuBtn?.addEventListener(
+"click",
+openSidebar
+);
+closeBtn?.addEventListener(
+"click",
+closeSidebar
+);
+overlay?.addEventListener(
+"click",
+closeSidebar
+);
+document.querySelectorAll(
+".nav-link"
+)
+.forEach(link=>{
+link.addEventListener(
+"click",
+()=>{
+if(window.innerWidth<=1024){
+closeSidebar();
+}
+});
+});
+/*==================================================
+ACTIVE NAVIGATION
+==================================================*/
+const navLinks=
+document.querySelectorAll(
+".nav-link"
+);
+navLinks.forEach(link=>{
+link.addEventListener(
+"click",
+()=>{
+navLinks.forEach(item=>
+item.classList.remove(
+"active"
+)
+);
+link.classList.add(
+"active"
+);
+});
+});
+/*==================================================
+SETTINGS TOGGLE SWITCH
+==================================================*/
+document.querySelectorAll(
+".toggle-switch"
+)
+.forEach(toggle=>{
+toggle.addEventListener(
+"click",
+()=>{
+toggle.classList.toggle(
+"active"
+);
+});
+});
+/*==================================================
+SMOOTH SCROLL
+==================================================*/
+document.querySelectorAll(
+'a[href^="#"]'
+)
+.forEach(anchor=>{
+anchor.addEventListener(
+"click",
+function(e){
+let target=
+document.querySelector(
+this.getAttribute("href")
+);
+if(target){
+e.preventDefault();
+target.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+}
+});
+});
+/*==================================================
+SEARCH BOX
+==================================================*/
+const searchInput=
+document.querySelector(
+".search-box input"
+);
+searchInput?.addEventListener(
+"keyup",
+()=>{
+let value=
+searchInput.value.toLowerCase();
+document.querySelectorAll(
+".dashboard-card"
+)
+.forEach(card=>{
+let text=
+card.innerText.toLowerCase();
+if(text.includes(value)){
+card.style.display="";
+}
+else{
+card.style.display="none";
+}
+});
+});
+});

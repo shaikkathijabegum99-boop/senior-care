@@ -1,224 +1,489 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Nethra Senior Care</title>
-
-<link rel="icon" type="image/png" href="../images/slogo.jpg.png">
-<link rel="stylesheet" href="../global/global.css">
-<link rel="stylesheet" href="contact.css">
-
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>
+Contact Us | Nethra Senior Care
+</title>
+<meta name="description"
+content="Contact Nethra Senior Care for assisted living, senior wellness support, and personalized elderly care solutions.">
+<link rel="icon"
+href="../images/slogo.jpg.png"
+type="image/png">
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+href="../global/global.css">
+<link rel="stylesheet"
+href="./contact.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
-
 <div id="navbar"></div>
-
-<!-- HERO -->
+<!--==================================================
+CONTACT HERO
+==================================================-->
 <section class="contact-hero">
-    <div class="hero-overlay">
-        <div class="content-container">
-            <div class="hero-content">
-                <span class="hero-badge">
-                    
-                    Contact Nethra Senior Care
-                </span>
-
-                <h1>We're Here <span>to Support </span>Your Family</h1>
-
-                <p>
-                    Have questions about our senior living services, care plans,
-                    rehabilitation support, or residential facilities?
-                    Our team is ready to assist you.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#contact-form" class="primary-btn">
-                        Book a Visit
-                    </a>
-
-                    <a href="tel:+919876543210" class="secondary-btn">
-                      
-                        Call Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container contact-hero-grid">
+<div class="contact-hero-content">
+<span class="section-label">
+<i class="fa-solid fa-headset"></i>
+Contact Us
+</span>
+<h1>
+We're Here To
+<span>
+Support Your Family
+</span>
+</h1>
+<p>
+Our senior care specialists are ready to
+answer your questions, arrange visits,
+and help you choose the right care solution
+for your loved ones.
+</p>
+<div class="contact-actions">
+<a href="../bash/signin.html"
+class="btn btn-primary">
+<i class="fa-solid fa-calendar-check"></i>
+Book A Visit
+</a>
+<a href="tel:+918448444714"
+class="btn btn-outline">
+<i class="fa-solid fa-phone"></i>
+Call Now
+</a>
+</div>
+<div class="contact-features">
+<div>
+<i class="fa-solid fa-clock"></i>
+<span>
+24/7 Support
+</span>
+</div>
+<div>
+<i class="fa-solid fa-user-doctor"></i>
+<span>
+Expert Care Team
+</span>
+</div>
+<div>
+<i class="fa-solid fa-heart"></i>
+<span>
+Compassionate Care
+</span>
+</div>
+</div>
+</div>
+<div class="contact-hero-image">
+<img 
+src="../images/service2.jpg"
+alt="Senior care consultation">
+<div class="contact-floating-card">
+<div class="card-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h4>
+Visit Our Care Center
+</h4>
+<p>
+Schedule a personal tour
+</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<!-- CONTACT SECTION -->
-<section class="contact-section" id="contact-form">
-    <div class="content-container">
-
-        <div class="section-heading">
-            <span class="section-tag">Get In Touch</span>
-            <h2>Let's Connect</h2>
-            <p>
-                Reach out for inquiries, admissions, facility tours,
-                or personalized senior care guidance.
-            </p>
-        </div>
-
-        <div class="contact-layout">
-
-            <!-- FORM -->
-            <div class="contact-form-card">
-
-                <h3>Send Us a Message</h3>
-
-                <form id="contactForm">
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="Your Full Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Preferred Location</label>
-                            <select required>
-                                <option value="">Select Location</option>
-                                <option>Bangalore</option>
-                                <option>Chennai</option>
-                                <option>Coimbatore</option>
-                                <option>Hyderabad</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Service Required</label>
-
-                        <select required>
-                            <option value="">Choose Service</option>
-                            <option>Assisted Living</option>
-                            <option>Residential Care</option>
-                            <option>Medical Support</option>
-                            <option>Respite Care</option>
-                            <option>Rehabilitation</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message</label>
-
-                        <textarea rows="6"
-                            placeholder="Tell us how we can help..."></textarea>
-                    </div>
-
-                    <button type="submit" class="primary-btn submit-btn">
-                        Submit Inquiry
-                    </button>
-
-                </form>
-
-            </div>
-
-            <!-- CONTACT INFO -->
-            <div class="contact-info-card">
-
-                <img src="../images/contact-care.jpg"
-                     alt="Senior Care">
-
-                <div class="info-content">
-
-                    <h3>Contact Information</h3>
-
-                    <div class="info-item">
-                        <i class="fas fa-location-dot"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>
-                                123 Wellness Avenue,<br>
-                                Coimbatore, Tamil Nadu
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 98765 43210</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@nethraseniorcare.com</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Visiting Hours</h4>
-                            <p>Mon - Sun : 9:00 AM - 6:00 PM</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
+<!--==================================================
+CONTACT INFORMATION
+==================================================-->
+<section class="contact-info-section">
+<div class="container">
+<div class="section-header">
+<span class="section-label">
+<i class="fa-solid fa-address-card"></i>
+Get In Touch
+</span>
+<h2>
+Connect With Nethra Senior Care
+</h2>
+<p>
+Reach out to our care specialists for
+appointments, enquiries, and personalized
+senior care guidance.
+</p>
+</div>
+<div class="contact-info-grid">
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fa-solid fa-phone"></i>
+</div>
+<h3>
+Call Us
+</h3>
+<p>
++91 84484 44714
+</p>
+<a href="tel:+918448444714">
+Contact Support
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<h3>
+Email Us
+</h3>
+<p>
+info@nethra.com
+</p>
+<a href="mailto:info@nethra.com">
+Send Email
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<h3>
+Location
+</h3>
+<p>
+Hyderabad, Telangana
+</p>
+<a href="#map">
+View Location
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+<h3>
+Working Hours
+</h3>
+<p>
+Available 24/7
+</p>
+<a href="#">
+Emergency Support
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
 </section>
-
-<!-- MAP -->
-<section class="map-section">
-
-    <div class="content-container">
-
-        <div class="section-heading">
-            <span class="section-tag">Our Location</span>
-            <h2>Visit Our Community</h2>
-        </div>
-
-        <div class="map-wrapper">
-
-            <iframe
-                src="https://www.google.com/maps?q=Coimbatore&output=embed"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-    </div>
-
+<!--==================================================
+CONTACT FORM SECTION
+==================================================-->
+<section class="contact-message-section">
+<div class="container contact-message-grid">
+<div class="contact-message-image">
+<img 
+src="../images/trusted.jpg"
+alt="Senior care consultation">
+<div class="contact-image-card">
+<div class="contact-image-icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+<div>
+<h4>
+Compassionate Care
+</h4>
+<p>
+Trusted support for your loved ones
+</p>
+</div>
+</div>
+</div>
+<div class="contact-message-card">
+<span class="section-label">
+<i class="fa-solid fa-comments"></i>
+Get In Touch
+</span>
+<h2>
+Let's Discuss The Right
+<span>Care Solution</span>
+</h2>
+<p>
+Our senior care experts are ready to understand
+your requirements and help you choose the best
+support option for your family.
+</p>
+<form class="contact-form">
+<div class="form-group">
+<input
+type="text"
+placeholder="Full Name"
+required>
+</div>
+<div class="form-group">
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+</div>
+<div class="form-group">
+<input
+type="email"
+placeholder="Email Address"
+required>
+</div>
+<div class="form-group">
+<select>
+<option>
+Select Care Service
+</option>
+<option>
+Assisted Living
+</option>
+<option>
+Nursing Support
+</option>
+<option>
+Wellness Care
+</option>
+<option>
+Senior Consultation
+</option>
+</select>
+</div>
+<div class="form-group">
+<textarea
+rows="4"
+placeholder="Tell us about your requirements">
+</textarea>
+</div>
+<button
+class="btn btn-primary"
+type="submit">
+<i class="fa-solid fa-paper-plane"></i>
+Send Request
+</button>
+</form>
+</div>
+</div>
 </section>
-
+<!--==================================================
+EMERGENCY SUPPORT
+==================================================-->
+<section class="emergency-section">
+<div class="container">
+<div class="emergency-box">
+<div class="emergency-icon">
+<i class="fa-solid fa-phone-volume"></i>
+</div>
+<div class="emergency-content">
+<h2>
+Need Immediate Assistance?
+</h2>
+<p>
+Our care team is available round the clock
+to support senior care emergencies and
+urgent enquiries.
+</p>
+</div>
+<a href="tel:+918448444714"
+class="btn btn-primary">
+<i class="fa-solid fa-phone"></i>
+Call Emergency Support
+</a>
+</div>
+</div>
+</section><!--==================================================
+LOCATION SECTION
+==================================================-->
+<section class="contact-location"
+id="map">
+<div class="container contact-location-grid">
+<div class="location-content">
+<span class="section-label">
+<i class="fa-solid fa-map-location-dot"></i>
+Our Location
+</span>
+<h2>
+Visit Our Senior Care Center
+</h2>
+<p>
+Experience our comfortable care environment,
+meet our compassionate team, and understand
+how we support seniors with dignity and care.
+</p>
+<div class="location-details">
+<div>
+<i class="fa-solid fa-location-dot"></i>
+<span>
+Nethra Senior Care,
+Hyderabad, Telangana, India
+</span>
+</div>
+<div>
+<i class="fa-solid fa-phone"></i>
+<span>
++91 84484 44714
+</span>
+</div>
+<div>
+<i class="fa-solid fa-envelope"></i>
+<span>
+info@nethra.com
+</span>
+</div>
+</div>
+</div>
+<div class="map-box">
+<iframe
+src="https://maps.google.com/maps?q=Hyderabad%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+</section>
+<!--==================================================
+FAQ SECTION
+==================================================-->
+<section class="contact-faq">
+<div class="container">
+<div class="section-header">
+<span class="section-label">
+<i class="fa-solid fa-circle-question"></i>
+FAQ
+</span>
+<h2>
+Frequently Asked Questions
+</h2>
+<p>
+Find answers about appointments,
+senior care services, visits, and support.
+</p>
+</div>
+<div class="faq-wrapper">
+<div class="faq-item active">
+<button class="faq-question">
+<span>
+How can I schedule a care visit?
+</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+<p>
+You can book a visit through our website
+or contact our care team directly.
+We will arrange a convenient appointment.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>
+Do you provide personalized care plans?
+</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+<p>
+Yes. We create personalized care solutions
+based on health requirements, lifestyle,
+and comfort preferences.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>
+Can family members visit residents?
+</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+<p>
+Yes. Family involvement is encouraged.
+Visitors can meet residents and participate
+in their care journey.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>
+Is medical support available?
+</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="faq-answer">
+<p>
+We provide wellness monitoring and
+coordinate medical assistance whenever
+required.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--==================================================
+NEWSLETTER SECTION
+==================================================-->
+<section class="contact-newsletter">
+<div class="container">
+<div class="newsletter-box">
+<div class="newsletter-content">
+<span class="section-label">
+<i class="fa-solid fa-envelope-open-text"></i>
+Newsletter
+</span>
+<h2>
+Stay Connected With
+<span>
+Senior Care Updates
+</span>
+</h2>
+<p>
+Receive helpful information about senior
+wellness, healthy aging, and care guidance.
+</p>
+</div>
+<form class="newsletter-form">
+<div class="newsletter-input">
+<i class="fa-solid fa-envelope"></i>
+<input
+type="email"
+placeholder="Enter your email address"
+required>
+</div>
+<button
+type="submit"
+class="btn btn-primary">
+<i class="fa-solid fa-paper-plane"></i>
+Subscribe
+</button>
+</form>
+</div>
+</div>
+</section>
+<!--==================================================
+FOOTER
+==================================================-->
 <div id="footer"></div>
-
+<!--==================================================
+SCRIPTS
+==================================================-->
 <script src="../js/component.js"></script>
 <script src="../global/global.js"></script>
-<script src="contact.js"></script>
-
+<script src="./contact.js"></script>
 </body>
 </html>

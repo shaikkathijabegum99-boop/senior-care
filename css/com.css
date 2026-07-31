@@ -1,721 +1,1957 @@
-/* ==========================================================
-   NAVBAR
-========================================================== */
-
+/*==================================================
+NETHRA SENIOR CARE
+NAVBAR CSS
+PART 1
+Header • Logo • Desktop Navigation
+==================================================*/
+/*==================================================
+HEADER
+==================================================*/
 .site-header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:9999;
-    background:var(--secondary);
-    border-bottom:1px solid var(--border-light);
-    box-shadow:0 2px 12px rgba(0,0,0,.05);
-    transition:.3s ease;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+    transition:all .35s ease;
 }
-
-.site-header.scrolled{
-    box-shadow:0 8px 24px rgba(0,0,0,.08);
+.site-header.sticky{
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 }
-
-.site-header,
-.nav-container{
-    overflow:visible;
-}
-
-.nav-container{
-    max-width:1280px;
+/*==================================================
+CONTAINER
+==================================================*/
+.site-header .container{
+    width:min(1320px,92%);
     margin:auto;
-    padding:14px 24px;
+}
+/*==================================================
+NAVBAR
+==================================================*/
+#nav{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:2rem;
+    min-height:82px;
 }
-
-/* Logo */
-
+/*==================================================
+LOGO
+==================================================*/
+.logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    flex-shrink:0;
+}
+.logo-img{
+    height:56px;
+    width:auto;
+    display:block;
+    transition:.3s;
+}
+.logo-img--dark{
+    display:none;
+}
+[data-theme="dark"] .logo-img--light{
+    display:none;
+}
+[data-theme="dark"] .logo-img--dark{
+    display:block;
+}
+/*==================================================
+DESKTOP MENU
+==================================================*/
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    margin-left:auto;
+    list-style:none;
+    padding:0;
+}
+.nav-links li{
+    position:relative;
+}
+.nav-links a{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:.35rem;
+    font-size:.97rem;
+    font-weight:600;
+    color:var(--text);
+    text-decoration:none;
+    transition:.3s;
+}
+.nav-links a:hover{
+    color:var(--primary);
+}
+/*==================================================
+ACTIVE LINK
+==================================================*/
+.nav-links a.act{
+    color:var(--primary);
+}
+/*==================================================
+HOME DROPDOWN
+==================================================*/
+.has-drop{
+    position:relative;
+}
+.drop-chevron{
+    display:inline-block;
+    width:7px;
+    height:7px;
+    border-right:2px solid currentColor;
+    border-bottom:2px solid currentColor;
+    transform:rotate(45deg);
+    margin-left:4px;
+    transition:.3s;
+}
+.has-drop:hover .drop-chevron{
+    transform:rotate(225deg);
+}
+/*==================================================
+DESKTOP DROPDOWN
+==================================================*/
+.nav-dropdown{
+    position:absolute;
+    top:calc(100% + 22px);
+    left:0;
+    min-width:220px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:12px;
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(18px);
+    transition:.3s;
+    z-index:999;
+}
+.has-drop:hover .nav-dropdown{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+/*==================================================
+DROPDOWN ITEMS
+==================================================*/
+.dd-item{
+    display:flex;
+    align-items:center;
+    padding:12px 16px;
+    border-radius:12px;
+    color:var(--text);
+    text-decoration:none;
+    font-weight:500;
+    transition:.25s;
+}
+.dd-item:hover{
+    background:var(--primary-soft);
+    color:#fff;
+}
+/*==================================================
+NETHRA NAVBAR
+PART 2
+Right Actions • Buttons • Mobile Menu
+==================================================*/
+/*==================================================
+RIGHT SIDE
+==================================================*/
+.nav-r{
+    display:flex;
+    align-items:center;
+    gap:.85rem;
+    flex-shrink:0;
+}
+/*==================================================
+ICON BUTTONS
+==================================================*/
+.icon-btn{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:var(--surface);
+    color:var(--text);
+    cursor:pointer;
+    transition:.3s ease;
+}
+.icon-btn:hover{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:#fff;
+    transform:translateY(-2px);
+}
+.icon-btn i{
+    font-size:1rem;
+}
+/*==================================================
+RTL BUTTON
+==================================================*/
+.rtl-btn{
+    height:44px;
+  width:44px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    color:var(--text);
+    font-size:.9rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+.rtl-btn:hover{
+    background:var(--primary);
+    color:#fff;
+    border-color:var(--primary);
+}
+/*==================================================
+BUTTONS
+==================================================*/
+.btn-sm{
+    height:44px;
+    padding:0 22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.6rem;
+    border-radius:999px;
+    font-size:.92rem;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+.btn-outline{
+    background:transparent;
+    color:var(--primary);
+    border:1px solid var(--primary);
+}
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+    border:1px solid var(--primary);
+}
+.btn-primary:hover{
+    background:var(--primary-hover);
+    border-color:var(--primary-hover);
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+/*==================================================
+HAMBURGER
+==================================================*/
+.ham{
+    display:none;
+    width:46px;
+    height:46px;
+    padding:10px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:var(--surface);
+    cursor:pointer;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    transition:.3s;
+}
+.ham:hover{
+    border-color:var(--primary);
+}
+.ham span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:var(--text);
+    border-radius:10px;
+    transition:.35s;
+}
+.ham.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+.ham.active span:nth-child(2){
+    opacity:0;
+}
+.ham.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+/*==================================================
+MOBILE SIDEBAR
+==================================================*/
+.mob-nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:340px;
+    max-width:100%;
+    height:100vh;
+    background:var(--surface);
+    padding:90px 28px 30px;
+    overflow-y:auto;
+    box-shadow:-15px 0 45px rgba(0,0,0,.15);
+    transition:.4s ease;
+    z-index:9999;
+}
+.mob-nav.active{
+    right:0;
+}
+/*==================================================
+MOBILE LINKS
+==================================================*/
+.mob-nav>a,
+.mob-dd-toggle{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+    color:var(--text);
+    font-size:1rem;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid var(--border);
+    background:none;
+    cursor:pointer;
+    transition:.3s;
+}
+.mob-nav>a:hover,
+.mob-dd-toggle:hover{
+    color:var(--primary);
+    padding-left:10px;
+}
+/*==================================================
+MOBILE DROPDOWN
+==================================================*/
+.mob-dropdown{
+    display:none;
+    padding:8px 0 10px 18px;
+}
+.mob-dropdown.active{
+    display:block;
+}
+.mob-dropdown a{
+    display:block;
+    padding:12px 0;
+    color:var(--text-light);
+    text-decoration:none;
+    transition:.3s;
+}
+.mob-dropdown a:hover{
+    color:var(--primary);
+    padding-left:8px;
+}
+.mob-dd-chevron{
+    transition:.3s;
+    font-size:.75rem;
+}
+.mob-dd-toggle.active .mob-dd-chevron{
+    transform:rotate(180deg);
+}
+/*==================================================
+DIVIDER
+==================================================*/
+.mob-divider{
+    border:none;
+    border-top:1px solid var(--border);
+    margin:22px 0;
+}
+/*==================================================
+MOBILE BUTTONS
+==================================================*/
+.mob-nav .btn{
+    width:100%;
+    justify-content:center;
+    margin-bottom:14px;
+}
+/*==================================================
+OVERLAY
+==================================================*/
+.mob-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:9998;
+}
+.mob-overlay.active{
+    opacity:1;
+    visibility:visible;
+}/*==================================================
+NETHRA NAVBAR
+PART 3
+Responsive • Dark Mode • RTL • Sticky
+==================================================*/
+/*==================================================
+TABLET
+==================================================*/
+@media (max-width:1024px){
+    .nav-links{
+        display:none;
+    }
+    .ham{
+        display:flex;
+    }
+    .btn-outline{
+        display:none;
+    }
+}
+/*==================================================
+MOBILE
+==================================================*/
+@media (max-width:768px){
+    #nav{
+        min-height:72px;
+    }
+    .logo-img{
+        height:48px;
+    }
+    .btn-primary.btn-sm{
+        display:none;
+    }
+    .rtl-btn{
+        display:none;
+    }
+    .icon-btn{
+        width:40px;
+        height:40px;
+    }
+    .mob-nav{
+        width:100%;
+        padding:82px 24px 24px;
+    }
+}
+/*==================================================
+SMALL MOBILE
+==================================================*/
+@media (max-width:480px){
+    .logo-img{
+        height:42px;
+    }
+    .icon-btn{
+        width:38px;
+        height:38px;
+        font-size:.9rem;
+    }
+    .ham{
+        width:42px;
+        height:42px;
+    }
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .site-header{
+    background:rgba(18,18,18,.94);
+    border-color:rgba(255,255,255,.08);
+}
+[data-theme="dark"] .nav-dropdown{
+    background:var(--surface);
+    border-color:var(--border);
+}
+[data-theme="dark"] .icon-btn,
+[data-theme="dark"] .rtl-btn,
+[data-theme="dark"] .ham{
+    background:var(--surface);
+    border-color:var(--border);
+}
+[data-theme="dark"] .ham span{
+    background:var(--text);
+}
+[data-theme="dark"] .mob-nav{
+    background:var(--surface);
+}
+[data-theme="dark"] .mob-dropdown a{
+    color:var(--text-light);
+}
+[data-theme="dark"] .mob-dropdown a:hover{
+    color:var(--primary);
+}
+/*==================================================
+RTL SUPPORT
+==================================================*/
+html[dir="rtl"] #nav{
+    direction:rtl;
+}
+html[dir="rtl"] .nav-links{
+    margin-left:0;
+    margin-right:auto;
+}
+html[dir="rtl"] .nav-dropdown{
+    left:auto;
+    right:0;
+}
+html[dir="rtl"] .mob-nav{
+    right:auto;
+    left:-100%;
+}
+html[dir="rtl"] .mob-nav.active{
+    left:0;
+}
+html[dir="rtl"] .mob-nav>a:hover,
+html[dir="rtl"] .mob-dd-toggle:hover{
+    padding-left:0;
+    padding-right:10px;
+}
+html[dir="rtl"] .mob-dropdown{
+    padding-left:0;
+    padding-right:18px;
+}
+html[dir="rtl"] .mob-dropdown a:hover{
+    padding-left:0;
+    padding-right:8px;
+}
+/*==================================================
+STICKY NAVBAR
+==================================================*/
+.site-header{
+    transition:
+    background .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+.site-header.sticky{
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+}
+/*==================================================
+SMOOTH ANIMATIONS
+==================================================*/
+.logo-img,
+.nav-links a,
+.dd-item,
+.mob-nav a,
+.mob-dropdown a,
+.icon-btn,
+.rtl-btn,
+.btn,
+.ham{
+    transition:all .3s ease;
+}
+/*==================================================
+SCROLLBAR
+==================================================*/
+.mob-nav::-webkit-scrollbar{
+    width:6px;
+}
+.mob-nav::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:50px;
+}
+.mob-nav::-webkit-scrollbar-track{
+    background:transparent;
+}
+/*==================================================
+ACCESSIBILITY
+==================================================*/
+.icon-btn:focus,
+.rtl-btn:focus,
+.ham:focus,
+.btn:focus,
+.nav-links a:focus{
+    outline:2px solid var(--primary);
+    outline-offset:3px;
+}
+/*==================================================
+REDUCED MOTION
+==================================================*/
+@media (prefers-reduced-motion:reduce){
+*{
+animation:none !important;
+transition:none !important;
+scroll-behavior:auto !important;
+}
+}/*==================================================
+NETHRA BRAND LOGO
+==================================================*/
 .logo-box{
     display:flex;
     align-items:center;
     gap:12px;
+    text-decoration:none;
+    flex-shrink:0;
 }
-
 .nav-logo-img{
-    width:54px;
-    height:54px;
+    width:55px;
+    height:55px;
+    object-fit:contain;
     border-radius:50%;
-    object-fit:cover;
-    border:2px solid var(--primary);
 }
-
 .logo-text{
     display:flex;
     flex-direction:column;
-    line-height:1.1;
+    line-height:1;
 }
-
 .brand-name{
-    font-size:1.3rem;
+font-family:
+"Playfair Display",
+"Cormorant Garamond",
+serif;
+    font-size:1.35rem;
     font-weight:800;
+    letter-spacing:2px;
     color:var(--primary);
 }
-
-.brand-subtext,
-.brand-sub{
-    font-size:.75rem;
-    color:var(--text-muted);
+.brand-subtext{
+    margin-top:5px;
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:3px;
+    color:var(--text-light);
 }
-
-/* Navigation */
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex:1;
-    gap:24px;
-    list-style:none;
-}
-
-.nav-item{
-    position:relative;
-}
-
-.nav-link{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:.96rem;
-    font-weight:600;
-    color:var(--text-main);
-    padding:10px 0;
-    transition:.3s;
-}
-
-.nav-link:hover,
-.nav-link.active{
+[data-theme="dark"] .brand-name{
     color:var(--primary);
-}/* ==========================================================
-   DROPDOWN
-========================================================== */
-
-.dropdown-menu{
-    position:absolute;
-    top:100%;
-    left:0;
-
-    min-width:240px;
-
-    background:var(--card-bg);
-    border:1px solid var(--border-light);
-    border-radius:14px;
-
-    padding:10px 0;
-
-    box-shadow:var(--shadow);
-
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(12px);
-
-    transition:.3s ease;
-    z-index:999;
 }
-
-.dropdown-item{
-    list-style:none;
+[data-theme="dark"] .brand-subtext{
+    color:var(--text-light);
 }
-
-.dropdown-item a{
-    display:block;
-    padding:12px 18px;
-    color:var(--text-main);
-    transition:.25s ease;
-}
-
-.dropdown-item a:hover{
-    background:rgba(139,171,125,.12);
-    color:var(--primary);
-    padding-left:24px;
-}
-
-@media(min-width:1024px){
-
-    .nav-item:hover .dropdown-menu{
-        opacity:1;
-        visibility:visible;
-        transform:translateY(0);
+@media(max-width:768px){
+    .nav-logo-img{
+        width:45px;
+        height:45px;
     }
-
-}/* ==========================================================
-   HEADER ACTIONS
-========================================================== */
-
-.header-actions{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    .brand-name{
+        font-size:1.1rem;
+    }
+    .brand-subtext{
+        font-size:.55rem;
+        letter-spacing:2px;
+    }
+}/*==================================================
+NETHRA NAVBAR
+RTL VISIBLE RESPONSIVE FIX
+==================================================*/
+/*==============================
+TABLET
+==============================*/
+@media (max-width:1024px){
+    .nav-links{
+        display:none;
+    }
+    .ham{
+        display:flex;
+    }
 }
-
-.action-btn{
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-    border:1px solid var(--border-light);
-
-    background:var(--card-bg);
-    color:var(--text-main);
-
-    cursor:pointer;
-    transition:.3s ease;
+/*==============================
+MOBILE
+RTL BUTTON VISIBLE
+==============================*/
+@media (max-width:768px){
+    #nav{
+        min-height:72px;
+    }
+    .nav-logo-img{
+        width:45px;
+        height:45px;
+    }
+    .brand-name{
+        font-size:1.1rem;
+    }
+    .brand-subtext{
+        font-size:.55rem;
+    }
+    .nav-r .btn-primary{
+        display:none;
+    }
+    .rtl-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:40px;
+        padding:0 14px;
+        border-radius:50px;
+        font-size:.75rem;
+        font-weight:700;
+    }
+    .icon-btn{
+        width:40px;
+        height:40px;
+    }
+    .ham{
+        display:flex;
+        width:42px;
+        height:42px;
+    }
 }
-
-.action-btn:hover{
+/*==============================
+SMALL MOBILE
+==============================*/
+@media(max-width:480px){
+    .brand-name{
+        font-size:1rem;
+    }
+    .brand-subtext{
+        font-size:.5rem;
+        letter-spacing:2px;
+    }
+    .rtl-btn{
+        height:38px;
+        padding:0 10px;
+        font-size:.7rem;
+    }
+    .icon-btn{
+        width:38px;
+        height:38px;
+    }
+    .ham{
+        width:40px;
+        height:40px;
+    }
+}
+/*==============================
+DARK MODE RTL BUTTON
+==============================*/
+[data-theme="dark"] .rtl-btn{
+    background:var(--surface);
+    color:var(--text);
+    border-color:var(--border);
+}
+[data-theme="dark"] .rtl-btn:hover{
     background:var(--primary);
     color:#fff;
-    transform:translateY(-2px);
-}/* ==========================================================
-   HAMBURGER
-========================================================== */
-
-.hamburger{
+}
+/*==============================
+RTL DIRECTION SUPPORT
+==============================*/
+html[dir="rtl"] .nav-r{
+    direction:rtl;
+}
+html[dir="rtl"] .logo-box{
+    flex-direction:row-reverse;
+}
+html[dir="rtl"] .mob-nav{
+    left:auto;
+    right:-100%;
+}
+html[dir="rtl"] .mob-nav.active{
+    right:0;
+}
+/*==================================================
+NETHRA MOBILE NAVIGATION SIDEBAR
+==================================================*/
+.mob-nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:340px;
+    max-width:100%;
+    height:100vh;
+    background:var(--surface);
+    padding:0 0 30px;
+    overflow-y:auto;
+    z-index:9999;
+    box-shadow:-15px 0 45px rgba(0,0,0,.15);
+    transition:right .4s ease;
+}
+.mob-nav.active{
+    right:0;
+}
+/*==================================================
+RTL MOBILE MENU
+==================================================*/
+html[dir="rtl"] .mob-nav{
+    right:auto;
+    left:-100%;
+    transition:left .4s ease;
+}
+html[dir="rtl"] .mob-nav.active{
+    left:0;
+}
+/*==================================================
+MOBILE HEADER
+==================================================*/
+.mob-header{
+    position:sticky;
+    top:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 24px;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    z-index:5;
+}
+.mob-title{
+    font-size:1.25rem;
+    font-weight:700;
+    color:var(--text);
+}
+/*==================================================
+MOBILE LINKS
+==================================================*/
+.mob-nav>a,
+.mob-dd-toggle{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 24px;
+    color:var(--text);
+    font-size:1rem;
+    font-weight:600;
+    text-decoration:none;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid var(--border);
+    cursor:pointer;
+    transition:.3s ease;
+}
+.mob-nav>a:hover,
+.mob-dd-toggle:hover{
+    color:var(--primary);
+    padding-left:32px;
+}
+html[dir="rtl"] .mob-nav>a:hover,
+html[dir="rtl"] .mob-dd-toggle:hover{
+    padding-left:24px;
+    padding-right:32px;
+}
+/*==================================================
+MOBILE DROPDOWN
+==================================================*/
+.mob-dropdown{
     display:none;
-
+    padding:10px 24px 10px 45px;
+    background:var(--surface2);
+}
+.mob-dropdown.active{
+    display:block;
+}
+.mob-dropdown a{
+    display:block;
+    padding:12px 0;
+    color:var(--text-light);
+    text-decoration:none;
+    font-size:.95rem;
+    transition:.3s;
+}
+.mob-dropdown a:hover{
+    color:var(--primary);
+    padding-left:8px;
+}
+html[dir="rtl"] .mob-dropdown{
+    padding-left:24px;
+    padding-right:45px;
+}
+html[dir="rtl"] .mob-dropdown a:hover{
+    padding-left:0;
+    padding-right:8px;
+}
+/*==================================================
+MOBILE BUTTONS
+==================================================*/
+.mob-nav .btn{
+    width:calc(100% - 48px);
+    margin:14px 24px 0;
+    justify-content:center;
+}
+/*==================================================
+DIVIDER
+==================================================*/
+.mob-divider{
+    border:none;
+    border-top:1px solid var(--border);
+    margin:20px 24px;
+}
+/*==================================================
+SCROLLBAR
+==================================================*/
+.mob-nav::-webkit-scrollbar{
+    width:6px;
+}
+.mob-nav::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:50px;
+}
+.mob-nav::-webkit-scrollbar-track{
+    background:transparent;
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .mob-nav{
+    background:var(--surface);
+}
+[data-theme="dark"] .mob-header{
+    background:var(--surface);
+}
+[data-theme="dark"] .mob-dropdown{
+    background:var(--surface2);
+}
+/*==================================================
+MOBILE RESPONSIVE
+==================================================*/
+@media(max-width:768px){
+.mob-nav{
+    width:100%;
+}
+.mob-nav>a,
+.mob-dd-toggle{
+    padding:15px 20px;
+}
+.mob-nav .btn{
+    width:calc(100% - 40px);
+    margin-left:20px;
+    margin-right:20px;
+}
+}
+@media(max-width:480px){
+.mob-title{
+    font-size:1.1rem;
+}
+.mob-close{
+    width:38px;
+    height:38px;
+}
+}/*==================================================
+MOBILE DROPDOWN
+==================================================*/
+.mob-dd-toggle{
+    position:relative;
+}
+.mob-dd-chevron{
+    font-size:.75rem;
+    transition:.3s ease;
+}
+.mob-dd-toggle.active .mob-dd-chevron{
+    transform:rotate(180deg);
+}
+.mob-dropdown{
+    display:none;
+    padding:10px 24px 14px 45px;
+    background:var(--surface2);
+    border-bottom:1px solid var(--border);
+    animation:dropdownOpen .3s ease;
+}
+.mob-dropdown.active{
+    display:block;
+}
+.mob-dropdown a{
+    display:flex;
+    align-items:center;
+    padding:12px 0;
+    color:var(--text-light);
+    text-decoration:none;
+    font-size:.95rem;
+    font-weight:500;
+    transition:.3s ease;
+}
+.mob-dropdown a:hover{
+    color:var(--primary);
+    padding-left:10px;
+}
+@keyframes dropdownOpen{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/*==================================================
+MOBILE CLOSE BUTTON
+==================================================*/
+.mob-close{
     width:42px;
     height:42px;
-
     border-radius:50%;
-    border:1px solid var(--border-light);
-
-    background:var(--card-bg);
-
+    border:1px solid var(--border);
+    background:var(--surface2);
+    display:flex;
     align-items:center;
     justify-content:center;
-
     position:relative;
     cursor:pointer;
-
     transition:.3s ease;
 }
-
-.hamburger:hover{
-    background:var(--primary);
-}
-
-.hamburger span{
+.mob-close span{
     position:absolute;
-
-    width:20px;
+    width:22px;
     height:2px;
-
-    background:var(--text-main);
-    border-radius:50px;
-
+    background:var(--text);
+    border-radius:10px;
     transition:.3s ease;
 }
-
-.hamburger:hover span{
-    background:#fff;
+.mob-close span:first-child{
+    transform:rotate(45deg);
 }
-
-.hamburger span:nth-child(1){
-    transform:translateY(-6px);
+.mob-close span:last-child{
+    transform:rotate(-45deg);
 }
-
-.hamburger span:nth-child(2){
-    transform:translateY(0);
-}
-
-.hamburger span:nth-child(3){
-    transform:translateY(6px);
-}
-
-.hamburger.active{
+.mob-close:hover{
     background:var(--primary);
     border-color:var(--primary);
 }
-
-.hamburger.active span{
+.mob-close:hover span{
     background:#fff;
 }
-
-.hamburger.active span:nth-child(1){
-    transform:rotate(45deg);
+/*==================================================
+RTL SUPPORT
+==================================================*/
+html[dir="rtl"] .mob-dropdown{
+    padding-left:24px;
+    padding-right:45px;
 }
-
-.hamburger.active span:nth-child(2){
-    opacity:0;
+html[dir="rtl"] .mob-dropdown a:hover{
+    padding-left:0;
+    padding-right:10px;
 }
-
-.hamburger.active span:nth-child(3){
-    transform:rotate(-45deg);
-}/* ==========================================================
-   FOOTER
-========================================================== */
-
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .mob-close{
+    background:var(--surface);
+    border-color:var(--border);
+}
+[data-theme="dark"] .mob-close span{
+    background:var(--text);
+}
+[data-theme="dark"] .mob-close:hover span{
+    background:#fff;
+}
+/*==================================================
+NETHRA SENIOR CARE
+FOOTER CSS
+Premium Footer Design
+==================================================*/
+/*==================================================
+FOOTER MAIN
+==================================================*/
 .nethra-footer{
-    background:var(--secondary);
-    border-top:1px solid var(--border-light);
-    padding-top:70px;
+    background:var(--surface);
+    border-top:1px solid var(--border);
+    color:var(--text);
+    margin-top:80px;
 }
-
+/*==================================================
+FOOTER CONTAINER
+==================================================*/
 .footer-container{
-    max-width:1280px;
+    width:min(1320px,92%);
     margin:auto;
-    padding:0 24px 50px;
-
+    padding:70px 0 50px;
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr 1fr;
-    gap:40px;
+    grid-template-columns:
+    1.5fr 1fr 1.2fr 1fr;
+    gap:45px;
 }
-
+/*==================================================
+BRAND SECTION
+==================================================*/
 .footer-logo{
     display:flex;
     align-items:center;
     gap:14px;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
-
-.tagline{
-    margin-bottom:15px;
-    color:var(--text-muted);
-    line-height:1.7;
+.footer-logo .nav-logo-img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    border-radius:50%;
 }
-
-.contact-info p{
-    margin-bottom:8px;
+.footer-logo .logo-text{
+    display:flex;
+    flex-direction:column;
 }
-
-.contact-info a{
-    color:var(--text-main);
-}
-
-.footer-column h3{
-    margin-bottom:18px;
-}
-
-.footer-column ul{
-    list-style:none;
-}
-
-.footer-column li{
-    margin-bottom:12px;
-}
-
-.footer-column a{
-    color:var(--text-muted);
-    transition:.3s ease;
-}
-
-.footer-column a:hover{
+.footer-logo .brand-name{
+    font-size:1.4rem;
+    font-weight:800;
+    letter-spacing:2px;
     color:var(--primary);
 }
-
+.footer-logo .brand-sub{
+    font-size:.65rem;
+    letter-spacing:3px;
+    font-weight:700;
+    color:var(--text-light);
+    margin-top:5px;
+}
+.tagline{
+    color:var(--text-light);
+    line-height:1.7;
+    margin-bottom:22px;
+    font-size:.95rem;
+}
+/*==================================================
+CONTACT INFO
+==================================================*/
+.contact-info p{
+    margin:8px 0;
+    color:var(--text);
+    font-size:.95rem;
+}
+.contact-info a{
+    color:var(--text);
+    text-decoration:none;
+}
+.contact-info a:hover{
+    color:var(--primary);
+}
+/*==================================================
+SOCIAL ICONS
+==================================================*/
 .social-icons{
     display:flex;
     gap:12px;
-    margin-top:18px;
+    margin-top:25px;
 }
-
 .social-icons a{
     width:42px;
     height:42px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-    background:var(--card-bg);
-
+    background:var(--surface2);
+    border:1px solid var(--border);
+    color:var(--text);
     transition:.3s ease;
 }
-
 .social-icons a:hover{
     background:var(--primary);
     color:#fff;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
-
+/*==================================================
+FOOTER COLUMNS
+==================================================*/
+.footer-column h3{
+    font-size:1.1rem;
+    font-weight:700;
+    margin-bottom:22px;
+    color:var(--text);
+    position:relative;
+}
+.footer-column h3::after{
+    content:"";
+    display:block;
+    width:35px;
+    height:3px;
+    background:var(--primary);
+    margin-top:10px;
+    border-radius:10px;
+}
+.footer-column ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.footer-column ul li{
+    margin-bottom:13px;
+}
+.footer-column ul li a{
+    text-decoration:none;
+    color:var(--text-light);
+    font-size:.95rem;
+    transition:.3s ease;
+}
+.footer-column ul li a:hover{
+    color:var(--primary);
+    padding-left:8px;
+}
+/*==================================================
+BOTTOM BAR
+==================================================*/
 .footer-bottom-bar{
-    border-top:1px solid var(--border-light);
-    padding:18px 24px;
+    border-top:1px solid var(--border);
+    padding:22px 0;
 }
-
 .bottom-content{
-    max-width:1280px;
+    width:min(1320px,92%);
     margin:auto;
-
     display:flex;
     justify-content:space-between;
-    gap:15px;
-
-    color:var(--text-muted);
-}/* ==========================================================
+    align-items:center;
+    gap:20px;
+}
+.bottom-content p{
+    margin:0;
+    color:var(--text-light);
+    font-size:.9rem;
+}
+.bottom-content p:last-child{
+    color:var(--text);
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .nethra-footer{
+    background:var(--surface);
+}
+[data-theme="dark"] .social-icons a{
+    background:var(--surface2);
+}
+/*==================================================
+RTL SUPPORT
+==================================================*/
+html[dir="rtl"] .footer-container{
+    direction:rtl;
+}
+html[dir="rtl"] .social-icons{
+    flex-direction:row-reverse;
+}
+html[dir="rtl"] .footer-column ul li a:hover{
+    padding-left:0;
+    padding-right:8px;
+}
+/*==================================================
+TABLET
+==================================================*/
+@media(max-width:1024px){
+.footer-container{
+    grid-template-columns:
+    repeat(2,1fr);
+    gap:40px;
+}
+}
+/*==================================================
+MOBILE
+==================================================*/
+@media(max-width:640px){
+.footer-container{
+    grid-template-columns:1fr;
+    padding:50px 0 35px;
+}
+.footer-logo .nav-logo-img{
+    width:50px;
+    height:50px;
+}
+.bottom-content{
+    flex-direction:column;
+    text-align:center;
+}
+.footer-column h3{
+    margin-top:15px;
+}
+}
+/*==================================================
+SMALL MOBILE
+==================================================*/
+@media(max-width:480px){
+.social-icons a{
+    width:38px;
+    height:38px;
+}
+.footer-column ul li a{
+    font-size:.9rem;
+}
+}/*========================================
+   HEADER CONTACT INFO WITH ICONS
+========================================*/
+.tagline{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    color:var(--text);
+    font-size:15px;
+    line-height:1.6;
+    font-weight:500;
+    margin:0;
+}
+.tagline i{
+    color:var(--primary);
+    font-size:20px;
+    margin-top:4px;
+}
+/*========================================
+   CONTACT INFO
+========================================*/
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.contact-info p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0;
+    font-size:15px;
+    color:var(--text);
+}
+.contact-info i{
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--primary);
+    font-size:16px;
+}
+.contact-info a{
+    color:var(--text);
+    text-decoration:none;
+    transition:0.3s ease;
+}
+.contact-info a:hover{
+    color:var(--primary);
+}
+/*========================================
    DARK MODE
-========================================================== */
-
-body.dark-theme .site-header,
-body.dark-theme .nethra-footer{
-    background:var(--secondary);
+========================================*/
+[data-theme="dark"] .tagline,
+[data-theme="dark"] .contact-info p,
+[data-theme="dark"] .contact-info a{
+    color:var(--text);
 }
-
-body.dark-theme .dropdown-menu
-{
-    background:var(--card-bg);
+[data-theme="dark"] .tagline i,
+[data-theme="dark"] .contact-info i{
+    color:var(--primary);
 }
-
-body.dark-theme .action-btn,
-body.dark-theme .hamburger{
-    background:var(--card-bg);
-    border-color:var(--border-light);
+/*========================================
+   MOBILE RESPONSIVE
+========================================*/
+@media(max-width:640px){
+    .tagline{
+        font-size:14px;
+    }
+    .tagline i{
+        font-size:18px;
+    }
+    .contact-info p{
+        font-size:14px;
+    }
+    .contact-info i{
+        font-size:15px;
+    }
 }
-
-body.dark-theme .hamburger span{
-    background:var(--text-main);
+.brand-section{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 }
-
-body.dark-theme .dropdown-item a{
-    color:var(--text-main);
-}/* ==========================================================
-   TABLET & MOBILE
-========================================================== */
-
-@media(max-width:1023px){
-
-    .hamburger{
-        display:flex;
-    }
-
-    .nav-links{
-        position:absolute;
-        top:100%;
-        left:15px;
-        right:15px;
-
-        display:none;
-        flex-direction:column;
-
-        background:var(--card-bg);
-
-        border:1px solid var(--border-light);
-        border-radius:16px;
-
-        padding:14px;
-        box-shadow:var(--shadow);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .nav-link{
-        width:100%;
-        justify-content:space-between;
-        padding:12px;
-        border-bottom:1px solid var(--border-light);
-    }
-
-    .dropdown-menu{
-        position:static;
-        display:none;
-
-        opacity:1;
-        visibility:visible;
-        transform:none;
-
-        border:none;
-        box-shadow:none;
-        background:transparent;
-    }
-
-    .nav-item.open .dropdown-menu{
-        display:block;
-    }
-
-    .footer-container{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .bottom-content{
-        flex-direction:column;
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+.brand-name{
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+.brand-sub{
+    font-size:12px;
+    letter-spacing:2px;
+}
+.tagline{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin:20px 0;
+}
+.tagline i{
+    margin-top:5px;
+    color:var(--primary);
+}
+.tagline p{
+    margin:0;
+    line-height:1.6;
+}
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.contact-info p{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:0;
+}
+.contact-info a{
+    text-decoration:none;
+}
+.social-icons{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+@media(max-width:768px){
+    .brand-section{
+        align-items:center;
         text-align:center;
     }
-}
-
-@media(max-width:639px){
-
-    .nav-container{
-        padding:12px 15px;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
     .footer-logo{
         justify-content:center;
     }
-
+    .tagline{
+        justify-content:center;
+        align-items:center;
+    }
+    .tagline p{
+        text-align:center;
+    }
+    .contact-info{
+        align-items:center;
+    }
+    .contact-info p{
+        justify-content:center;
+    }
     .social-icons{
         justify-content:center;
     }
-}
-
+}/*==================================================
+   360px MOBILE FOOTER CENTER ALIGNMENT
+==================================================*/
 @media(max-width:360px){
-
-    .brand-name{
-        font-size:.9rem;
-    }
-
-    .brand-subtext{
-        font-size:.6rem;
-    }
-
-    .nav-logo-img{
-        width:42px;
-        height:42px;
-    }
-
-    .action-btn,
-    .hamburger{
-        width:36px;
-        height:36px;
-    }
-}
-
-
-/* ==========================================================
-   RTL NAVIGATION
-========================================================== */
-
-html[dir="rtl"] body{
-    direction: rtl;
-}
-
-/* Navigation Layout */
-html[dir="rtl"] .nav-links{
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-item{
-    text-align: right;
-}
-
-/* Nav Link */
-html[dir="rtl"] .nav-link{
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-}
-
-/* Chevron Icon */
-html[dir="rtl"] .nav-link i{
-    margin-right: 0;
-    margin-left: 8px;
-}
-
-/* Dropdown Position */
-html[dir="rtl"] .dropdown-menu{
-    left: auto;
-    right: 0;
-    text-align: right;
-}
-
-html[dir="rtl"] .dropdown-item a{
-    text-align: right;
-}
-
-/* Hover Effect */
-html[dir="rtl"] .dropdown-item a:hover{
-    padding-left: 18px;
-    padding-right: 24px;
-}
-
-
-/* ==========================================================
-   RTL MOBILE & TABLET
-========================================================== */
-
-@media (max-width:1023px){
-
-    html[dir="rtl"] .nav-links{
-        text-align: right;
-    }
-
-    html[dir="rtl"] .nav-link{
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-
-    html[dir="rtl"] .dropdown-menu{
-        text-align: right;
-    }
-
-    html[dir="rtl"] .dropdown-item a{
-        padding: 12px 24px 12px 16px;
-        text-align: right;
-    }
-
-    html[dir="rtl"] .dropdown-item a:hover{
-        padding-right: 28px;
-        padding-left: 16px;
-    }
-}
-
-/* ==========================================================
-   RTL FOOTER
-========================================================== */
-
-html[dir="rtl"] .footer-container{
-    direction: rtl;
-}
-
-html[dir="rtl"] .footer-column{
-    text-align: right;
-}
-
-html[dir="rtl"] .footer-logo{
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .social-icons{
-    justify-content: flex-start;
-}
-
-@media(max-width:639px){
-
-    html[dir="rtl"] .footer-column,
-    html[dir="rtl"] .brand-section{
+    .nethra-footer{
         text-align:center;
     }
-
-    html[dir="rtl"] .social-icons{
+    .footer-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .footer-column,
+    .brand-section{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .footer-logo{
         justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
     }
-}@media (max-width:360px){
-
-    html[dir="rtl"] .nav-item{
-        width:100%;
-        text-align:right;
+    .logo-text{
+        align-items:center;
+        text-align:center;
     }
-
-    html[dir="rtl"] .nav-link{
-        width:100%;
+    .brand-name,
+    .brand-sub{
+        text-align:center;
     }
-}/* ==========================================================
-   RTL NAV LINKS IN ROW
-========================================================== */
-
-html[dir="rtl"] .nav-links{
+    .tagline{
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+    }
+    .tagline p{
+        text-align:center;
+        margin:0;
+    }
+    .contact-info{
+        align-items:center;
+        text-align:center;
+    }
+    .contact-info p{
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+    }
+    .contact-info a{
+        text-align:center;
+    }
+    .social-icons{
+        justify-content:center;
+        align-items:center;
+    }
+    .footer-column h3{
+        text-align:center;
+    }
+    .footer-column ul{
+        padding:0;
+        text-align:center;
+    }
+    .footer-column ul li{
+        text-align:center;
+    }
+    .footer-column ul li a{
+        text-align:center;
+    }
+    .footer-bottom-bar{
+        text-align:center;
+    }
+    .bottom-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .bottom-content p{
+        text-align:center;
+    }
+}/*==================================================
+NETHRA NAVBAR
+360px MOBILE COMPLETE FIX
+==================================================*/
+@media(max-width:360px){
+/*================================
+HEADER CONTAINER
+================================*/
+.site-header .container{
+    width:94%;
+}
+#nav{
+    min-height:68px;
+    gap:6px;
+}
+/*================================
+LOGO AREA
+================================*/
+.logo-box{
+    gap:6px;
+    flex-shrink:1;
+    min-width:0;
+}
+.nav-logo-img{
+    width:38px;
+    height:38px;
+    flex-shrink:0;
+}
+.logo-text{
     display:flex;
-    flex-direction:row-reverse;
+    flex-direction:column;
+    justify-content:center;
+    min-width:0;
+}
+.brand-name{
+    font-size:.85rem;
+    font-weight:800;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
+.brand-subtext,
+.brand-sub{
+    display:block;
+    font-size:.45rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    margin-top:3px;
+    white-space:nowrap;
+    color:var(--text-light);
+}
+/*================================
+RIGHT ACTION AREA
+================================*/
+.nav-r{
+    gap:5px;
+    flex-shrink:0;
+}
+.icon-btn{
+    width:34px;
+    height:34px;
+}
+.icon-btn i{
+    font-size:.8rem;
+}
+.rtl-btn{
+    display:flex;
     align-items:center;
     justify-content:center;
-    gap:24px;
+    height:34px;
+    padding:0 8px;
+    border-radius:50px;
+    font-size:.62rem;
+    font-weight:700;
 }
-
-html[dir="rtl"] .nav-item{
-    display:flex;
-    align-items:center;
+.nav-r .btn-primary,
+.nav-r .btn-sm{
+    display:none;
 }
-
-html[dir="rtl"] .nav-link{
+/*================================
+HAMBURGER
+================================*/
+.ham{
     display:flex;
+    width:36px;
+    height:36px;
+    padding:8px;
+    border-radius:10px;
+    gap:5px;
+}
+.ham span{
+    height:2px;
+}
+/*================================
+MOBILE MENU
+================================*/
+.mob-nav{
+    width:100%;
+}
+.mob-header{
+    padding:16px 18px;
+}
+.mob-title{
+    font-size:1rem;
+}
+.mob-close{
+    width:36px;
+    height:36px;
+}
+/*================================
+MOBILE LINKS
+================================*/
+.mob-nav>a,
+.mob-dd-toggle{
+    padding:14px 20px;
+    font-size:.95rem;
+}
+.mob-dropdown{
+    padding-left:35px;
+}
+.mob-dropdown a{
+    font-size:.9rem;
+}
+/*================================
+RTL SUPPORT
+================================*/
+html[dir="rtl"] .logo-box{
     flex-direction:row-reverse;
+}
+html[dir="rtl"] .nav-r{
+    direction:rtl;
+}
+}
+/*==================================================
+NETHRA SENIOR CARE
+PREMIUM FOOTER CSS
+==================================================*/
+.nethra-footer{
+    background:var(--surface);
+    border-top:1px solid var(--border);
+    padding:70px 0 0;
+    overflow:hidden;
+}
+.footer-container{
+    width:min(var(--container),92%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:45px;
+}
+/*==================================================
+FOOTER COLUMNS
+==================================================*/
+.footer-column h3{
+    font-size:1.15rem;
+    color:var(--heading);
+    margin-bottom:22px;
+    position:relative;
+}
+.footer-column h3::after{
+    content:"";
+    display:block;
+    width:35px;
+    height:2px;
+    background:var(--primary);
+    margin-top:10px;
+}
+.footer-column ul{
+    display:grid;
+    gap:12px;
+}
+.footer-column ul li a{
+    color:var(--text-light);
+    font-size:.9rem;
+    transition:var(--transition);
+}
+.footer-column ul li a:hover{
+    color:var(--primary);
+    padding-left:6px;
+}
+/*==================================================
+LOGO AREA
+==================================================*/
+.footer-logo{
+    display:flex;
     align-items:center;
+    gap:14px;
+    margin-bottom:22px;
+}
+.footer-logo-img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid var(--primary-light);
+}
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+.brand-name{
+    font-size:1.45rem;
+    font-weight:800;
+    letter-spacing:2px;
+    line-height:1;
+    color:var(--primary);
+}
+.brand-sub{
+    font-size:.72rem;
+    letter-spacing:3px;
+    margin-top:6px;
+    color:var(--text-light);
+    font-weight:600;
+}
+/*==================================================
+TAGLINE
+==================================================*/
+.tagline{
+    display:flex;
+    gap:12px;
+    color:var(--text-light);
+    font-size:.9rem;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+.tagline i{
+    color:var(--primary);
+    font-size:1rem;
+    margin-top:5px;
+}
+/*==================================================
+CONTACT INFO
+==================================================*/
+.contact-info{
+    display:grid;
+    gap:12px;
+}
+.contact-info p{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:0;
+}
+.contact-info i{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(15,118,110,.1);
+    color:var(--primary);
+    font-size:.85rem;
+}
+.contact-info a{
+    color:var(--text);
+    font-size:.9rem;
+}
+.contact-info a:hover{
+    color:var(--primary);
+}
+/*==================================================
+SOCIAL ICONS
+==================================================*/
+.social-icons{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+.social-icons a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(15,118,110,.08);
+    color:var(--primary);
+    transition:var(--transition);
+}
+.social-icons a:hover{
+    background:var(--primary);
+    color:#fff;
+    transform:translateY(-4px);
+}
+/*==================================================
+FOOTER BOTTOM
+==================================================*/
+.footer-bottom-bar{
+    margin-top:60px;
+    border-top:1px solid var(--border);
+    padding:22px 0;
+}
+.bottom-content{
+    width:min(var(--container),92%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.bottom-content p{
+    margin:0;
+    font-size:.85rem;
+    color:var(--text-light);
+}
+/*==================================================
+DARK MODE
+==================================================*/
+[data-theme="dark"] .nethra-footer{
+    background:var(--surface);
+}
+[data-theme="dark"] .contact-info i,
+[data-theme="dark"] .social-icons a{
+    background:rgba(45,212,191,.12);
+}
+/*==================================================
+TABLET
+==================================================*/
+@media(max-width:1024px){
+.footer-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+}
+/*==================================================
+MOBILE
+==================================================*/
+@media(max-width:640px){
+.nethra-footer{
+    padding-top:50px;
+}
+.footer-container{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+.footer-logo-img{
+    width:60px;
+    height:60px;
+}
+.brand-name{
+    font-size:1.25rem;
+}
+.bottom-content{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+}
+.footer-column h3{
+    margin-bottom:16px;
+}
+}/*==================================================
+NETHRA FOOTER COMPACT SPACING FIX
+==================================================*/
+.nethra-footer{
+    padding:40px 0 0;
+}
+.footer-container{
+    gap:30px;
+}
+.footer-logo{
+    margin-bottom:14px;
+}
+.footer-logo-img{
+    width:55px;
+    height:55px;
+}
+.brand-name{
+    font-size:1.25rem;
+}
+.brand-sub{
+    font-size:.65rem;
+}
+.tagline{
+    margin-bottom:14px;
+    line-height:1.5;
+}
+.contact-info{
     gap:8px;
-    text-align:right;
-}@media (max-width:1023px){
-
-    html[dir="rtl"] .nav-links{
-        flex-direction:column;
-        align-items:stretch;
-        text-align:right;
-    }
-
-    html[dir="rtl"] .nav-link{
-        width:100%;
-        display:flex;
-        flex-direction:row-reverse;
-        justify-content:space-between;
-        align-items:center;
-    }
-
-    html[dir="rtl"] .nav-item{
-        width:100%;
-    }
-}@media (max-width:360px){
-
-    html[dir="rtl"] .nav-link{
-        flex-direction:row-reverse;
-        justify-content:space-between;
-        width:100%;
-        padding:10px 8px;
-    }
-
-    html[dir="rtl"] .nav-item{
-        width:100%;
-    }
-}@media (max-width:1023px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    html[dir="rtl"] .nav-links{
-        display:none;
-    }
-
-    html[dir="rtl"] .nav-links.active{
-        display:flex;
-    }
-}/* ==========================================
-   RTL NAV LINK - ICON ON RIGHT OF TEXT
-========================================== */
-
-html[dir="rtl"] .nav-link{
-    display: flex;
-    flex-direction: row;      /* Keep normal order */
-    justify-content: flex-start;
-    align-items: center;
-    text-align: right;
-    gap: 8px;
 }
-
-html[dir="rtl"] .nav-link span{
-    order: 1;
+.contact-info i{
+    width:30px;
+    height:30px;
 }
-
-html[dir="rtl"] .nav-link i{
-    order: 2;                 /* Icon after text (right side in RTL) */
-    margin-left: 0;
-    margin-right: 8px;
+.social-icons{
+    margin-top:15px;
+    gap:10px;
 }
-
-/* Mobile */
-@media (max-width:1023px){
-
-    html[dir="rtl"] .nav-link{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-        text-align:right;
+.social-icons a{
+    width:38px;
+    height:38px;
+}
+.footer-column h3{
+    margin-bottom:15px;
+}
+.footer-column ul{
+    gap:8px;
+}
+.footer-column ul li a{
+    font-size:.88rem;
+}
+.footer-bottom-bar{
+    margin-top:35px;
+    padding:15px 0;
+}
+@media(max-width:1024px){
+    .footer-container{
+        gap:25px;
     }
-
-    html[dir="rtl"] .nav-link i{
-        margin-right:0;
-        margin-left:12px;
+}
+@media(max-width:640px){
+    .nethra-footer{
+        padding-top:35px;
     }
+    .footer-container{
+        gap:25px;
+    }
+    .footer-bottom-bar{
+        margin-top:25px;
+        padding:14px 0;
+    }
+}
+@media(max-width:360px){
+    .nethra-footer{
+        padding-top:30px;
+    }
+    .footer-container{
+        gap:20px;
+    }
+    .social-icons{
+        margin-top:12px;
+    }
+}.nav-links a,
+.mob-nav a{
+    position:relative;
+}
+.nav-links a::after,
+.mob-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--primary);
+    transition:width .3s ease;
+}
+.nav-links a:hover::after,
+.mob-nav a:hover::after,
+.nav-links a.act::after,
+.mob-nav a.act::after{
+    width:100%;
+}
+.nav-links a.act,
+.mob-nav a.act{
+    color:var(--primary);
 }
