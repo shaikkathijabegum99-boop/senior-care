@@ -299,7 +299,7 @@ DESKTOP
 ==================================================*/@media(min-width:1024px) and (max-width:1280px){.blog-detail-content-section,
 .blog-sidebar-section,
 .blog-detail-cta,
-.blog-newsletter{    padding:80px 30px;}.newsletter-box{    grid-template-columns:1fr 350px;    padding:55px 45px;}.article-section h2{    font-size:1.8rem;}}/*==================================================
+.blog-newsletter{    padding:40px 30px;}.newsletter-box{    grid-template-columns:1fr 350px;    padding:55px 45px;}.article-section h2{    font-size:1.8rem;}}/*==================================================
 TABLET
 640px - 1024px
 ==================================================*/@media(min-width:640px) and (max-width:1023px){.blog-detail-content-section,

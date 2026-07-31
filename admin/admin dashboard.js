@@ -235,4 +235,40 @@ card.style.display="none";
 }
 });
 });
-});
+});/*=========================================
+RTL TOGGLE
+=========================================*/
+
+const rtlToggle = document.getElementById("rtlToggle");
+
+// Load saved direction
+const savedDirection = localStorage.getItem("direction");
+
+if (savedDirection) {
+    document.documentElement.setAttribute("dir", savedDirection);
+}
+
+if (rtlToggle) {
+
+    // Update icon/button state
+    if (document.documentElement.getAttribute("dir") === "rtl") {
+        rtlToggle.classList.add("active");
+    }
+
+    rtlToggle.addEventListener("click", () => {
+
+        const currentDir =
+            document.documentElement.getAttribute("dir") || "ltr";
+
+        const newDir =
+            currentDir === "rtl" ? "ltr" : "rtl";
+
+        document.documentElement.setAttribute("dir", newDir);
+
+        localStorage.setItem("direction", newDir);
+
+        rtlToggle.classList.toggle("active");
+
+    });
+
+}
