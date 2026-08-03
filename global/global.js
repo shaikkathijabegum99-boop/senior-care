@@ -297,13 +297,74 @@ header.classList.remove(
 ACTIVE NAVIGATION
 ==================================================*/
 function setActiveNav() {
-    const current = window.location.pathname.toLowerCase();
-    document.querySelectorAll(".nav-links a, .nav-dropdown a, .mob-nav a").forEach(link => {
+
+    const currentPage =
+        window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase() || "index.html";
+
+    // Remove all active classes
+    document.querySelectorAll(
+        ".nav-links a, .nav-dropdown a, .mob-nav a"
+    ).forEach(link => {
         link.classList.remove("act");
-        const href = link.getAttribute("href");
-        if (!href) return;
-        if (current.includes(href.replace("../","").toLowerCase())) {
+    });
+
+    // Desktop + Mobile links
+    document.querySelectorAll(
+        ".nav-links a, .mob-nav a"
+    ).forEach(link => {
+
+        const page =
+            link.getAttribute("href")
+            ?.split("/")
+            .pop()
+            .toLowerCase();
+
+        if (page === currentPage) {
             link.classList.add("act");
         }
+
     });
+
+    // Home dropdown
+    if (
+        currentPage === "index.html" ||
+        currentPage === "home2.html"
+    ) {
+
+        const homeLink =
+            document.querySelector(".has-drop > a");
+
+        const mobHome =
+            document.querySelector(".mob-dd-toggle");
+
+        if(homeLink){
+            homeLink.classList.add("act");
+        }
+
+        if(mobHome){
+            mobHome.classList.add("act");
+        }
+
+        // Highlight selected dropdown item
+        document.querySelectorAll(
+            ".nav-dropdown a, .mob-dropdown a"
+        ).forEach(link => {
+
+            const page =
+                link.getAttribute("href")
+                ?.split("/")
+                .pop()
+                .toLowerCase();
+
+            if(page === currentPage){
+                link.classList.add("act");
+            }
+
+        });
+
+    }
+
 }
