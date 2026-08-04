@@ -1,12 +1,4 @@
-/*====================================================
-   NETHRA SENIOR CARE
-   ABOUT PAGE CSS
-   PREMIUM VERSION
-   PART 1
-====================================================*/
-/*====================================================
-   ABOUT GLOBAL
-====================================================*/
+
 .about-hero,
 .about-story,
 .values,
@@ -30,9 +22,7 @@
     width:min(1200px,92%);
     margin:auto;
 }
-/*====================================================
-   SECTION HEADER
-====================================================*/
+
 .section-header{
     max-width:720px;
     margin:0 auto 60px;
@@ -67,9 +57,7 @@
     line-height:1.8;
     font-size:16px;
 }
-/*====================================================
-   ABOUT HERO
-====================================================*/
+
 .about-hero{
     padding-top:140px;
     padding-bottom:100px;
@@ -122,9 +110,7 @@
     color:var(--text-light);
     margin-bottom:35px;
 }
-/*====================================================
-   HERO BUTTONS
-====================================================*/
+
 .hero-buttons{
     display:flex;
     gap:18px;
@@ -135,9 +121,7 @@
     align-items:center;
     gap:10px;
 }
-/*====================================================
-   HERO FEATURES
-====================================================*/
+
 .hero-features{
     display:flex;
     gap:30px;
@@ -154,9 +138,7 @@
     color:var(--primary);
     font-size:22px;
 }
-/*====================================================
-   HERO IMAGE
-====================================================*/
+
 .hero-image{
     position:relative;
 }
@@ -200,9 +182,7 @@
     line-height:1.5;
     color:var(--text-light);
 }
-/*====================================================
-   STORY SECTION
-====================================================*/
+
 .about-story{
     background:var(--surface);
 }
@@ -248,9 +228,7 @@
 .about-list i{
     color:var(--primary);
 }
-/*====================================================
-   VALUES
-====================================================*/
+
 .values{
     background:var(--bg-soft);
 }
@@ -292,20 +270,7 @@
 .value-card p{
     color:var(--text-light);
     line-height:1.7;
-}/*====================================================
-   NETHRA SENIOR CARE
-   ABOUT PAGE CSS
-   PREMIUM VERSION
-   PART 2
-   Sections:
-   - Mission & Vision
-   - Care Philosophy
-   - About Stats
-   - Why Families Choose Us
-====================================================*/
-/*====================================================
-   MISSION & VISION SECTION
-====================================================*/
+}
 .mission-vision{
     background:var(--surface);
 }
@@ -349,9 +314,7 @@
     line-height:1.8;
     font-size:16px;
 }
-/*====================================================
-   CARE PHILOSOPHY
-====================================================*/
+
 .care-philosophy{
     background:var(--bg-soft);
 }
@@ -402,9 +365,7 @@
     border-radius:30px;
     box-shadow:var(--shadow-lg);
 }
-/*====================================================
-   ABOUT STATS
-====================================================*/
+
 .about-stats{
     background:var(--surface);
 }
@@ -447,9 +408,7 @@
     color:var(--text-light);
     font-size:15px;
 }
-/*====================================================
-   WHY FAMILIES CHOOSE US
-====================================================*/
+
 .why-about{
     background:var(--bg-soft);
 }
@@ -491,18 +450,14 @@
     color:var(--text-light);
     line-height:1.7;
 }
-/*====================================================
-   COMMON CARD HOVER EFFECT
-====================================================*/
+
 .value-card,
 .mission-card,
 .stat-card,
 .why-card{
     will-change:transform;
 }
-/*====================================================
-   DARK MODE SUPPORT
-====================================================*/
+
 [data-theme="dark"] .mission-card,
 [data-theme="dark"] .stat-card,
 [data-theme="dark"] .why-card,
@@ -516,22 +471,7 @@
 [data-theme="dark"] .hero-tag{
     background:var(--surface);
 }
-/*====================================================
-   END PART 2
-====================================================*//*====================================================
-   NETHRA SENIOR CARE
-   ABOUT PAGE CSS
-   PREMIUM VERSION
-   PART 3
-   Sections:
-   - Team Section
-   - Timeline Section
-   - Facility Section
-   - Gallery Section
-====================================================*/
-/*====================================================
-   TEAM SECTION
-====================================================*/
+
 .team-section{
     background:var(--surface);
 }
@@ -603,9 +543,7 @@
     background:var(--primary);
     color:#fff;
 }
-/*====================================================
-   TIMELINE SECTION
-====================================================*/
+
 .timeline-section{
     background:var(--bg-soft);
 }
@@ -675,9 +613,7 @@
     color:var(--text-light);
     line-height:1.7;
 }
-/*====================================================
-   FACILITY SECTION
-====================================================*/
+
 .facility-section{
     background:var(--surface);
 }
@@ -720,9 +656,7 @@
     color:var(--text-light);
     line-height:1.7;
 }
-/*====================================================
-   GALLERY SECTION
-====================================================*/
+
 .gallery-section{
     background:var(--bg-soft);
 }
@@ -743,9 +677,7 @@
     transform:scale(1.04);
     box-shadow:var(--shadow-lg);
 }
-/*====================================================
-   DARK MODE
-====================================================*/
+
 [data-theme="dark"] .team-card,
 [data-theme="dark"] .timeline-content,
 [data-theme="dark"] .facility-card{
@@ -754,22 +686,7 @@
 [data-theme="dark"] .team-social a{
     background:var(--bg-soft);
 }
-/*====================================================
-   END PART 3
-====================================================*//*====================================================
-   NETHRA SENIOR CARE
-   ABOUT PAGE CSS
-   PREMIUM VERSION
-   PART 4
-   Sections:
-   - Testimonials
-   - CTA
-   - Responsive Design
-   - Mobile / Tablet / Desktop
-====================================================*/
-/*====================================================
-   TESTIMONIALS SECTION
-====================================================*/
+
 .testimonials-section{
     background:var(--surface);
 }
@@ -829,9 +746,7 @@
     color:var(--primary);
     font-size:14px;
 }
-/*====================================================
-   ABOUT CTA SECTION
-====================================================*/
+
 .about-cta{
     background:
     linear-gradient(
@@ -881,9 +796,7 @@
     background:#fff;
     color:var(--primary);
 }
-/*====================================================
-   LARGE DESKTOP
-====================================================*/
+
 @media(max-width:1280px){
 .hero-content h1{
     font-size:52px;
@@ -901,10 +814,6 @@
     repeat(2,1fr);
 }
 }
-/*====================================================
-   TABLET
-   640px - 1024px
-====================================================*/
 @media(max-width:1024px){
 .about-hero,
 .about-story,
@@ -977,10 +886,7 @@
     width:100%;
 }
 }
-/*====================================================
-   MOBILE
-   BELOW 640px
-====================================================*/
+
 @media(max-width:640px){
 .about-hero,
 .about-story,
@@ -1089,9 +995,7 @@
 .gallery-grid img{
     height:250px;
 }
-}/*==================================================
-PREMIUM CARD GLOW SHADOW
-==================================================*/
+}
 .value-card,
 .service-card,
 .journey-card,
@@ -1158,11 +1062,7 @@ PREMIUM CARD GLOW SHADOW
 .trust-item:hover::before,
 .feature-box:hover::before{
     transform:scaleX(1);
-}/*====================================================
-NETHRA ABOUT PAGE
-FINAL PREMIUM CARD SYSTEM
-WHITE CARD + GLOW SHADOW + HOVER EFFECT
-====================================================*/
+}
 .value-card,
 .mission-card,
 .stat-card,
@@ -1228,9 +1128,7 @@ WHITE CARD + GLOW SHADOW + HOVER EFFECT
 .timeline-content:hover::before{
     transform:scaleX(1);
 }
-/*====================================================
-ICON HOVER
-====================================================*/
+
 .value-icon,
 .mission-icon,
 .stat-icon,
@@ -1247,9 +1145,8 @@ ICON HOVER
     box-shadow:
     0 0 25px rgba(27,94,32,.45);
 }
-/*====================================================
-TEAM IMAGE PREMIUM
-====================================================*/
+
+
 .team-image{
     overflow:hidden;
 }
@@ -1259,18 +1156,14 @@ TEAM IMAGE PREMIUM
 .team-card:hover .team-image img{
     transform:scale(1.08);
 }
-/*====================================================
-TESTIMONIAL QUOTE GLOW
-====================================================*/
+
 .testimonial-card:hover .quote-icon{
     background:var(--primary);
     color:#fff;
     box-shadow:
     0 0 25px rgba(27,94,32,.45);
 }
-/*====================================================
-DARK MODE
-====================================================*/
+
 [data-theme="dark"]
 .value-card,
 [data-theme="dark"]
@@ -1310,9 +1203,7 @@ DARK MODE
     0 25px 60px rgba(0,0,0,.65),
     0 0 45px rgba(27,94,32,.35);
 }
-/*====================================================
-MOBILE FIX
-====================================================*/
+
 @media(max-width:640px){
 .value-card,
 .mission-card,
@@ -1324,9 +1215,7 @@ MOBILE FIX
 .timeline-content{
     border-radius:18px;
 }
-}/*====================================================
-   VALUES ICON FIX
-====================================================*/
+}
 .value-icon{
     width:70px;
     height:70px;
@@ -1359,9 +1248,7 @@ MOBILE FIX
 }
 [data-theme="dark"] .value-icon i{
     color:#ffffff;
-}/*====================================================
-WHY CHOOSE US ICON FIX
-====================================================*/
+}
 .why-card > i{
     width:65px;
     height:65px;
@@ -1387,9 +1274,7 @@ WHY CHOOSE US ICON FIX
 [data-theme="dark"] .why-card > i{
     background:var(--primary);
     color:#fff;
-}/*====================================================
-WHY CHOOSE US CENTER ALIGN
-====================================================*/
+}
 .why-card{
     text-align:center;
 }
@@ -1401,10 +1286,7 @@ WHY CHOOSE US CENTER ALIGN
 }
 .why-card p{
     text-align:center;
-}/*====================================================
-   DESKTOP RESPONSIVE
-   1024px - 1280px
-====================================================*/
+}
 @media (min-width:1024px) and (max-width:1280px){
     .content-container{
         width:min(1100px,92%);
@@ -1451,10 +1333,7 @@ WHY CHOOSE US CENTER ALIGN
         font-size:44px;
     }
 }
-/*====================================================
-   LARGE DESKTOP
-   ABOVE 1280px
-====================================================*/
+
 @media (min-width:1281px){
     .content-container{
         width:1200px;
@@ -1473,9 +1352,7 @@ WHY CHOOSE US CENTER ALIGN
     .team-grid{
         grid-template-columns:repeat(3,1fr);
     }
-}/*====================================================
-   DESKTOP SMALL CARD SIZE
-====================================================*/
+}
 @media (min-width:1024px){
 .value-card,
 .mission-card,
@@ -1538,9 +1415,7 @@ WHY CHOOSE US CENTER ALIGN
 .timeline-content p{
     font-size:14px;
 }
-}/*====================================================
-   MISSION & VISION CENTER ALIGN
-====================================================*/
+}
 .mission-card{
     text-align:center;
     display:flex;
@@ -1564,10 +1439,7 @@ WHY CHOOSE US CENTER ALIGN
     .mission-card{
         padding:35px 30px;
     }
-}/*==================================================
-NETHRA ABOUT PAGE
-PREMIUM SMALL TYPOGRAPHY SCALE
-==================================================*/
+}
 .section-header h2,
 .about-content h2,
 .philosophy-content h2,
@@ -1663,9 +1535,7 @@ PREMIUM SMALL TYPOGRAPHY SCALE
 .cta-box p{
     font-size:.95rem;
 }
-/*==================================================
-DESKTOP 1025px - 1280px
-==================================================*/
+
 @media(max-width:1280px){
 .hero-content h1{
     font-size:2.8rem;
@@ -1686,9 +1556,6 @@ DESKTOP 1025px - 1280px
     padding:22px 18px;
 }
 }
-/*==================================================
-TABLET
-==================================================*/
 @media(max-width:1024px){
 .hero-content h1{
     font-size:2.5rem;
@@ -1703,9 +1570,7 @@ TABLET
     font-size:1.1rem;
 }
 }
-/*==================================================
-MOBILE
-==================================================*/
+
 @media(max-width:640px){
 .hero-content h1{
     font-size:2rem;
@@ -1743,14 +1608,9 @@ MOBILE
 .team-image img{
     height:260px;
 }
-}/*====================================================
-   ABOUT PAGE TABLET FIX
-   641px - 768px
-====================================================*/
+}
 @media (max-width:768px){
-/*=============================
-   HERO NAVBAR SPACE FIX
-=============================*/
+
 .about-hero{
     padding-top:120px;
     padding-bottom:70px;
@@ -1765,12 +1625,7 @@ MOBILE
 .hero-image img{
     height:450px;
 }
-/*=============================
-   CARD GRID TABLET
-=============================*/
-/*=============================
-   SMALLER CARDS
-=============================*/
+
 .value-card,
 .mission-card,
 .stat-card,
@@ -1780,9 +1635,7 @@ MOBILE
     padding:25px 20px;
     border-radius:20px;
 }
-/*=============================
-   ICON SIZE
-=============================*/
+
 .value-icon,
 .mission-icon,
 .stat-icon,
@@ -1793,9 +1646,7 @@ MOBILE
     font-size:20px;
     margin-bottom:18px;
 }
-/*=============================
-   CARD TITLES
-=============================*/
+
 .value-card h3,
 .mission-card h3,
 .why-card h3,
@@ -1805,9 +1656,7 @@ MOBILE
 .stat-card h3{
     font-size:32px;
 }
-/*=============================
-   CARD TEXT
-=============================*/
+
 .value-card p,
 .mission-card p,
 .why-card p,
@@ -1816,9 +1665,7 @@ MOBILE
     font-size:14px;
     line-height:1.6;
 }
-/*=============================
-   MISSION VISION CENTER
-=============================*/
+
 .mission-card{
     text-align:center;
     display:flex;
@@ -1829,22 +1676,15 @@ MOBILE
     margin-left:auto;
     margin-right:auto;
 }
-/*=============================
-   TEAM IMAGE
-=============================*/
+
 .team-image img{
     height:260px;
 }
-/*=============================
-   TIMELINE
-=============================*/
+
 .timeline-content{
     padding:25px;
 }
-}/*==================================
-TESTIMONIALS
-Alignment Fix
-==================================*/
+}
 .testimonials-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -1901,4 +1741,55 @@ Alignment Fix
     margin-top:4px;
     font-size:.95rem;
     color:var(--text-light);
+}/*==================================================
+ABOUT CTA - REDUCE SPACE BEFORE FOOTER
+==================================================*/
+
+.about-cta{
+    position:relative;
+    padding:60px 0 30px;   /* reduced from 100px */
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-soft)
+    );
+}
+
+.cta-box{
+    text-align:center;
+    padding:50px 35px;      /* reduced from 75px 60px */
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+}
+
+.cta-box h2{
+    margin-bottom:15px;
+}
+
+.cta-box p{
+    max-width:750px;
+    margin:0 auto 25px;     /* reduced from 35px */
+}
+
+.cta-actions{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:0;
+}
+
+/* Mobile */
+
+@media(max-width:640px){
+
+    .about-cta{
+        padding:40px 0 20px;
+    }
+
+    .cta-box{
+        padding:35px 20px;
+    }
+
 }

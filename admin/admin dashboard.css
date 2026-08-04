@@ -1,16 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-FAMILY CARE PORTAL DASHBOARD CSS
-PART 1
-Dashboard Layout
-Sidebar
-Topbar
-Dark Mode Base
-Main Grid
-==================================================*/
-/*==================================================
-DASHBOARD RESET
-==================================================*/
+
 .dashboard-layout,
 .dashboard-layout *{
     box-sizing:border-box;
@@ -20,9 +8,7 @@ DASHBOARD RESET
     min-height:100vh;
     background:var(--bg);
 }
-/*==================================================
-SIDEBAR
-==================================================*/
+
 .sidebar{
     width:270px;
     height:100vh;
@@ -78,9 +64,7 @@ SIDEBAR
     background:var(--bg-soft);
     color:var(--text);
 }
-/*==================================================
-SIDEBAR NAVIGATION
-==================================================*/
+
 .sidebar-nav{
     display:flex;
     flex-direction:column;
@@ -119,9 +103,7 @@ SIDEBAR NAVIGATION
 .nav-link.active i{
     color:white;
 }
-/*==================================================
-SIDEBAR BOTTOM
-==================================================*/
+
 .sidebar-bottom{
     padding-top:20px;
     border-top:1px solid var(--border);
@@ -138,17 +120,13 @@ SIDEBAR BOTTOM
 .logout-btn:hover{
     background:rgba(220,38,38,.08);
 }
-/*==================================================
-MAIN DASHBOARD AREA
-==================================================*/
+
 .dashboard-main{
     width:calc(100% - 270px);
     margin-left:270px;
     min-height:100vh;
 }
-/*==================================================
-TOPBAR
-==================================================*/
+
 .dashboard-topbar{
     height:82px;
     padding:0 32px;
@@ -185,9 +163,7 @@ TOPBAR
     color:var(--primary);
     border:1px solid var(--border);
 }
-/*==================================================
-TOPBAR RIGHT
-==================================================*/
+
 .topbar-right{
     display:flex;
     align-items:center;
@@ -218,9 +194,7 @@ TOPBAR RIGHT
 .search-box input:focus{
     box-shadow:none;
 }
-/*==================================================
-ICON BUTTONS
-==================================================*/
+
 .icon-btn{
     width:42px;
     height:42px;
@@ -252,9 +226,7 @@ ICON BUTTONS
     color:white;
     font-size:.65rem;
 }
-/*==================================================
-PROFILE BUTTON
-==================================================*/
+
 .profile-btn{
     display:flex;
     align-items:center;
@@ -286,16 +258,12 @@ PROFILE BUTTON
     color:var(--text-light);
     font-size:.75rem;
 }
-/*==================================================
-DASHBOARD CONTENT
-==================================================*/
+
 .dashboard-content{
     width:100%;
     padding:30px;
 }
-/*==================================================
-WELCOME BANNER
-==================================================*/
+
 .welcome-banner{
     display:flex;
     align-items:center;
@@ -339,9 +307,7 @@ WELCOME BANNER
     background:var(--primary-hover);
     transform:translateY(-3px);
 }
-/*==================================================
-MAIN GRID
-==================================================*/
+
 .dashboard-grid{
     display:grid;
     grid-template-columns:
@@ -357,9 +323,7 @@ MAIN GRID
     gap:20px;
     min-width:0;
 }
-/*==================================================
-COMMON CARD
-==================================================*/
+
 .dashboard-card{
     width:100%;
     height:auto;
@@ -405,23 +369,7 @@ COMMON CARD
     background:var(--primary);
     color:white;
 }
-/*==================================================
-NETHRA SENIOR CARE
-FAMILY CARE PORTAL DASHBOARD CSS
-PART 2
-Resident Profile
-Health Summary
-Care Plan
-Activity Calendar
-Payments
-Announcements
-Support
-Feedback
-Emergency
-==================================================*/
-/*==================================================
-RESIDENT PROFILE
-==================================================*/
+
 .resident-profile{
     display:flex;
     align-items:center;
@@ -466,9 +414,7 @@ RESIDENT PROFILE
 .resident-status i{
     font-size:.55rem;
 }
-/*==================================================
-RESIDENT DETAILS
-==================================================*/
+
 .resident-details{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -491,9 +437,7 @@ RESIDENT DETAILS
     font-size:.9rem;
     color:var(--heading);
 }
-/*==================================================
-HEALTH SUMMARY
-==================================================*/
+
 .health-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -543,9 +487,7 @@ HEALTH SUMMARY
     background:var(--primary);
     border-radius:20px;
 }
-/*==================================================
-CARE PLAN
-==================================================*/
+
 .care-list{
     display:flex;
     flex-direction:column;
@@ -579,9 +521,7 @@ CARE PLAN
     color:var(--text-light);
     line-height:1.5;
 }
-/*==================================================
-ACTIVITY CALENDAR
-==================================================*/
+
 .activity-list{
     display:flex;
     flex-direction:column;
@@ -609,9 +549,7 @@ ACTIVITY CALENDAR
     font-size:.82rem;
     color:var(--text-light);
 }
-/*==================================================
-PAYMENTS
-==================================================*/
+
 .payment-list{
     display:flex;
     flex-direction:column;
@@ -665,9 +603,7 @@ PAYMENTS
     background:#fef3c7;
     color:#92400e;
 }
-/*==================================================
-ANNOUNCEMENTS
-==================================================*/
+
 .announcement-list{
     display:flex;
     flex-direction:column;
@@ -699,9 +635,7 @@ ANNOUNCEMENTS
     color:var(--text-light);
     line-height:1.5;
 }
-/*==================================================
-FAMILY SUPPORT
-==================================================*/
+
 .support-box{
     display:flex;
     align-items:center;
@@ -730,9 +664,7 @@ FAMILY SUPPORT
     font-size:.82rem;
     color:var(--text-light);
 }
-/*==================================================
-FEEDBACK
-==================================================*/
+
 .rating-box{
     display:flex;
     flex-direction:column;
@@ -763,9 +695,7 @@ FEEDBACK
 .rating-box .btn-primary{
     width:max-content;
 }
-/*==================================================
-EMERGENCY CONTACT
-==================================================*/
+
 .emergency-list{
     display:flex;
     flex-direction:column;
@@ -802,21 +732,7 @@ EMERGENCY CONTACT
 .emergency-item strong{
     font-size:.9rem;
 }
-/*==================================================
-NETHRA SENIOR CARE
-FAMILY CARE PORTAL DASHBOARD CSS
-PART 3
-Messages
-Photo Memories
-Visit Requests
-Care Team
-Documents
-Settings
-Care Progress
-==================================================*/
-/*==================================================
-MESSAGES
-==================================================*/
+
 .message-list{
     display:flex;
     flex-direction:column;
@@ -857,9 +773,7 @@ MESSAGES
     color:var(--primary);
     font-weight:600;
 }
-/*==================================================
-PHOTO MEMORIES
-==================================================*/
+
 .photo-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -876,9 +790,7 @@ PHOTO MEMORIES
 .photo-grid img:hover{
     transform:scale(1.04);
 }
-/*==================================================
-VISIT REQUESTS
-==================================================*/
+
 .visit-box{
     display:flex;
     align-items:center;
@@ -930,9 +842,7 @@ VISIT REQUESTS
     background:rgba(217,119,6,.12);
     color:var(--warning);
 }
-/*==================================================
-CARE TEAM
-==================================================*/
+
 .team-list{
     display:flex;
     flex-direction:column;
@@ -959,9 +869,7 @@ CARE TEAM
     font-size:.82rem;
     color:var(--text-light);
 }
-/*==================================================
-DOCUMENTS
-==================================================*/
+
 .document-list{
     display:flex;
     flex-direction:column;
@@ -997,9 +905,7 @@ DOCUMENTS
     font-size:.78rem;
     color:var(--text-light);
 }
-/*==================================================
-SETTINGS
-==================================================*/
+
 .settings-list{
     display:flex;
     flex-direction:column;
@@ -1021,9 +927,7 @@ SETTINGS
     font-size:.82rem;
     color:var(--text-light);
 }
-/*==================================================
-TOGGLE SWITCH
-==================================================*/
+
 .toggle-switch{
     width:48px;
     height:26px;
@@ -1051,9 +955,7 @@ TOGGLE SWITCH
 .toggle-switch.active::before{
     transform:translateX(20px);
 }
-/*==================================================
-CARE PROGRESS
-==================================================*/
+
 .progress-summary{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -1087,9 +989,7 @@ CARE PROGRESS
     font-size:.8rem;
     color:var(--text-light);
 }
-/*==================================================
-DARK MODE CARD FIXES
-==================================================*/
+
 [data-theme="dark"] 
 .dashboard-card,
 [data-theme="dark"] 
@@ -1124,10 +1024,7 @@ DARK MODE CARD FIXES
 .visit-box{
     background:var(--surface);
 }
-/*==================================================
-LARGE DESKTOP
-ABOVE 1280px
-==================================================*/
+
 @media(min-width:1281px){
 .dashboard-content{
     padding:35px;
@@ -1139,10 +1036,7 @@ ABOVE 1280px
     height:160px;
 }
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+
 @media(max-width:1280px){
 .dashboard-content{
     padding:24px;
@@ -1154,10 +1048,7 @@ DESKTOP
     grid-template-columns:1fr;
 }
 }
-/*==================================================
-TABLET
-640px - 1024px
-==================================================*/
+
 @media(max-width:1024px){
 .dashboard-grid{
     grid-template-columns:1fr;
@@ -1173,10 +1064,7 @@ TABLET
     grid-template-columns:1fr;
 }
 }
-/*==================================================
-MOBILE
-BELOW 640px
-==================================================*/
+
 @media(max-width:640px){
 .dashboard-content{
     padding:14px;
@@ -1208,9 +1096,7 @@ BELOW 640px
     flex-wrap:wrap;
 }
 }
-/*==================================================
-360px FIX
-==================================================*/
+
 @media(max-width:360px){
 .dashboard-card{
     padding:14px;
@@ -1229,20 +1115,7 @@ BELOW 640px
     font-size:1.1rem;
 }
 }
-/*==================================================
-NETHRA SENIOR CARE
-FAMILY CARE PORTAL DASHBOARD CSS
-PART 4
-Sidebar Responsive
-Mobile Menu
-Header Responsive
-Dark Mode Fix
-Animations
-Final Cleanup
-==================================================*/
-/*==================================================
-MOBILE SIDEBAR
-==================================================*/
+
 .sidebar-overlay{
     display:none;
     position:fixed;
@@ -1253,10 +1126,7 @@ MOBILE SIDEBAR
 .sidebar-overlay.active{
     display:block;
 }
-/*==================================================
-TABLET + MOBILE SIDEBAR
-1024px
-==================================================*/
+
 @media(max-width:1024px){
 .menu-toggle{
     display:flex;
@@ -1288,10 +1158,7 @@ TABLET + MOBILE SIDEBAR
     width:200px;
 }
 }
-/*==================================================
-TABLET
-640px - 1024px
-==================================================*/
+
 @media(min-width:640px) and (max-width:1024px){
 .dashboard-content{
     padding:20px;
@@ -1314,10 +1181,7 @@ TABLET
     flex-wrap:wrap;
 }
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+
 @media(min-width:1024px) and (max-width:1280px){
 .sidebar{
     width:250px;
@@ -1338,10 +1202,7 @@ DESKTOP
     width:220px;
 }
 }
-/*==================================================
-MOBILE HEADER
-BELOW 768px
-==================================================*/
+
 @media(max-width:768px){
 .dashboard-topbar{
     height:auto;
@@ -1385,10 +1246,7 @@ BELOW 768px
     height:36px;
 }
 }
-/*==================================================
-SMALL MOBILE
-480px
-==================================================*/
+
 @media(max-width:480px){
 .dashboard-content{
     padding:12px;
@@ -1429,9 +1287,7 @@ SMALL MOBILE
     width:100%;
 }
 }
-/*==================================================
-360px PERFECT FIX
-==================================================*/
+
 @media(max-width:360px){
 .dashboard-topbar{
     padding:12px;
@@ -1485,9 +1341,7 @@ SMALL MOBILE
     width:44px;
 }
 }
-/*==================================================
-DARK MODE COMPLETE FIX
-==================================================*/
+
 [data-theme="dark"] .sidebar,
 [data-theme="dark"] .dashboard-topbar,
 [data-theme="dark"] .dashboard-card,
@@ -1516,9 +1370,7 @@ DARK MODE COMPLETE FIX
 [data-theme="dark"] input{
     color:var(--text);
 }
-/*==================================================
-ANIMATION
-==================================================*/
+
 .dashboard-card,
 .message-item,
 .team-member,
@@ -1537,15 +1389,11 @@ to{
     transform:translateY(0);
 }
 }
-/*==================================================
-SMOOTH SCROLL
-==================================================*/
+
 html{
     scroll-behavior:smooth;
 }
-/*==================================================
-SCROLLBAR
-==================================================*/
+
 .sidebar-nav::-webkit-scrollbar{
     width:5px;
 }
@@ -1553,9 +1401,7 @@ SCROLLBAR
     background:var(--border);
     border-radius:20px;
 }
-/*==================================================
-PRINT
-==================================================*/
+
 @media print{
 .sidebar,
 .dashboard-topbar,
@@ -1575,21 +1421,7 @@ PRINT
     box-shadow:none;
 }
 }
-/*==================================================
-END
-FAMILY CARE PORTAL DASHBOARD CSS
-==================================================*//*==================================================
-RESPONSIVE FIX
-NETHRA FAMILY CARE DASHBOARD
-Mobile : <640px
-Tablet : 640px - 1024px
-Desktop : 1024px - 1280px
-Large : >1280px
-==================================================*/
-/*==================================================
-LARGE DESKTOP
-1280px+
-==================================================*/
+
 @media(min-width:1281px){
 .dashboard-content{
     padding:35px;
@@ -1604,10 +1436,7 @@ LARGE DESKTOP
     padding:28px;
 }
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+
 @media(min-width:1024px) and (max-width:1280px){
 .dashboard-content{
     padding:24px;
@@ -1629,10 +1458,7 @@ DESKTOP
     display:none;
 }
 }
-/*==================================================
-TABLET
-640px - 1023px
-==================================================*/
+
 @media(min-width:640px) and (max-width:1023px){
 .sidebar{
     transform:translateX(-100%);
@@ -1683,9 +1509,7 @@ TABLET
     grid-template-columns:repeat(3,1fr);
 }
 }
-/*==================================================
-768px FIX
-==================================================*/
+
 @media(max-width:768px){
 .dashboard-topbar{
     flex-direction:column;
@@ -1720,10 +1544,7 @@ TABLET
     flex-wrap:wrap;
 }
 }
-/*==================================================
-MOBILE
-Below 640px
-==================================================*/
+
 @media(max-width:639px){
 .dashboard-content{
     padding:12px;
@@ -1806,9 +1627,7 @@ Below 640px
     align-items:flex-start;
 }
 }
-/*==================================================
-360px PERFECT FIX
-==================================================*/
+
 @media(max-width:360px){
 body{
     overflow-x:hidden;
@@ -1881,13 +1700,9 @@ body{
 .contact-item p{
     font-size:12px;
 }
-}/*==================================================
-1024px TABLET / SMALL DESKTOP FIX
-==================================================*/
+}
 @media (max-width:1024px){
-/*==============================
-SIDEBAR
-==============================*/
+
 .sidebar{
     transform:translateX(-100%);
     width:280px;
@@ -1899,9 +1714,7 @@ SIDEBAR
     width:100%;
     margin-left:0;
 }
-/*==============================
-TOPBAR
-==============================*/
+
 .dashboard-topbar{
     padding:16px 20px;
     height:auto;
@@ -1934,9 +1747,7 @@ TOPBAR
 .profile-btn{
     padding:6px;
 }
-/*==============================
-CONTENT
-==============================*/
+
 .dashboard-content{
     padding:20px;
 }
@@ -1950,7 +1761,7 @@ CONTENT
 }
 .dashboard-right{
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    
     gap:20px;
 }
 .dashboard-card{

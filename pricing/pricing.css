@@ -1,24 +1,8 @@
-/*==================================================
-NETHRA SENIOR CARE
-PRICING CSS - PART 1
-
-Sections:
-01. Global Pricing Setup
-02. Pricing Hero
-03. Pricing Plans
-04. Pricing Cards
-05. Pricing Featured Card
-06. Pricing Responsive Start
-
-Premium Clean Version
-==================================================*//*==================================================
-01. GLOBAL PRICING SETUP
-==================================================*/.pricing-section,
+.pricing-section,
 .pricing-comparison,
 .additional-services,
 .pricing-faq,
-.pricing-cta-section,
-.pricing-newsletter{
+.pricing-cta-section{
 
     position:relative;
 
@@ -94,9 +78,7 @@ Premium Clean Version
 
     color:var(--text-light);
 
-}/*==================================================
-02. PRICING HERO
-==================================================*/.pricing-hero{
+}.pricing-hero{
 
     position:relative;
 
@@ -214,9 +196,7 @@ Premium Clean Version
 
     margin-right:6px;
 
-}/*==================================================
-03. PRICING PLANS
-==================================================*/.pricing-section{
+}.pricing-section{
 
     background:var(--surface);
 
@@ -230,9 +210,7 @@ Premium Clean Version
 
     align-items:stretch;
 
-}/*==================================================
-04. PRICING CARDS
-==================================================*/.pricing-card{
+}.pricing-card{
 
     position:relative;
 
@@ -416,9 +394,7 @@ Premium Clean Version
 
     padding:13px 20px;
 
-}/*==================================================
-05. FEATURED PRICING CARD
-==================================================*/.pricing-card.featured{
+}.pricing-card.featured{
 
     background:
 
@@ -468,9 +444,7 @@ Premium Clean Version
 
     color:var(--primary);
 
-}/*==================================================
-06. RESPONSIVE START
-==================================================*/@media(max-width:1280px){.pricing-grid{
+}@media(max-width:1280px){.pricing-grid{
 
     gap:20px;
 
@@ -514,21 +488,7 @@ Premium Clean Version
 
     width:100%;
 
-}}/*==================================================
-NETHRA SENIOR CARE
-PRICING CSS - PART 2
-
-Sections:
-07. Pricing Comparison Table
-08. Additional Services
-09. FAQ Section
-10. Pricing CTA
-11. Newsletter
-
-Premium Clean Version
-==================================================*//*==================================================
-07. PRICING COMPARISON TABLE
-==================================================*/.pricing-comparison{
+}}.pricing-comparison{
 
     background:var(--bg);
 
@@ -624,9 +584,7 @@ Premium Clean Version
 
     color:#dc2626;
 
-}/*==================================================
-08. ADDITIONAL SERVICES
-==================================================*/.additional-services{
+}.additional-services{
 
     background:var(--surface);
 
@@ -728,9 +686,7 @@ Premium Clean Version
 
     color:var(--text-light);
 
-}/*==================================================
-09. FAQ SECTION
-==================================================*/.pricing-faq{
+}.pricing-faq{
 
     background:var(--bg);
 
@@ -812,9 +768,7 @@ Premium Clean Version
 
     color:var(--text-light);
 
-}/*==================================================
-10. PRICING CTA SECTION
-==================================================*/.pricing-cta-section{
+}.pricing-cta-section{
 
     background:var(--surface);
 
@@ -928,9 +882,7 @@ Premium Clean Version
 
     border-color:#fff;
 
-}/*==================================================
-11. NEWSLETTER SECTION
-==================================================*/.pricing-newsletter{
+}.pricing-newsletter{
 
     background:var(--bg);
 
@@ -1038,9 +990,7 @@ Premium Clean Version
 
     white-space:nowrap;
 
-}/*==================================================
-RESPONSIVE
-==================================================*/@media(max-width:1280px){.service-grid{
+}@media(max-width:1280px){.service-grid{
 
     grid-template-columns:repeat(2,1fr);
 
@@ -1102,20 +1052,7 @@ RESPONSIVE
 
     padding:0 18px 18px;
 
-}}/*==================================================
-NETHRA SENIOR CARE
-PRICING CSS - PART 3
-
-Sections:
-12. Premium Card Effects
-13. Dark Mode Styling
-14. Final Responsive Cleanup
-15. Accessibility
-
-Premium Final Version
-==================================================*//*==================================================
-12. PREMIUM CARD EFFECTS
-==================================================*/.pricing-card,
+}}.pricing-card,
 .service-card,
 .faq-item,
 .comparison-table-wrapper,
@@ -1171,9 +1108,8 @@ Premium Final Version
 
     box-shadow:
 
-    0 15px 35px rgba(27,94,32,.12);}.newsletter-box:hover{    border-color:var(--primary);}/*==================================================
-13. DARK MODE STYLING
-==================================================*/[data-theme="dark"] .pricing-hero{    background:
+    0 15px 35px rgba(27,94,32,.12);}.newsletter-box:hover{    border-color:var(--primary);}
+    [data-theme="dark"] .pricing-hero{    background:
 
     linear-gradient(
 
@@ -1216,9 +1152,8 @@ Premium Final Version
 
     rgba(255,255,255,.04);}[data-theme="dark"] .newsletter-input input{    background:var(--bg);
 
-    color:var(--text);}[data-theme="dark"] .newsletter-input input::placeholder{    color:var(--text-light);}[data-theme="dark"] .faq-question{    color:var(--heading);}/*==================================================
-14. FINAL RESPONSIVE CLEANUP
-==================================================*/@media(min-width:1281px){.pricing-hero{    padding:130px 0 90px;}.pricing-grid{    gap:30px;}.pricing-card{    padding:40px 30px;}.service-grid{    gap:25px;}}@media(min-width:1024px)
+    color:var(--text);}[data-theme="dark"] .newsletter-input input::placeholder{    color:var(--text-light);}[data-theme="dark"] .faq-question{    color:var(--heading);}
+    @media(min-width:1281px){.pricing-hero{    padding:130px 0 90px;}.pricing-grid{    gap:30px;}.pricing-card{    padding:40px 30px;}.service-grid{    gap:25px;}}@media(min-width:1024px)
 and
 (max-width:1280px){.pricing-hero{    padding:100px 0 70px;}.pricing-hero h1{    font-size:3rem;}.pricing-grid{    gap:20px;}.pricing-card{    padding:30px 22px;}.price{    font-size:2.2rem;}.service-grid{    gap:18px;}.newsletter-box{    padding:35px;}}@media(min-width:640px)
 and
@@ -1231,9 +1166,8 @@ and
 .service-grid{    grid-template-columns:1fr;}.pricing-card{    border-radius:18px;}.pricing-icon{    width:60px;
 
     height:60px;}.price{    font-size:2rem;}.comparison-table-wrapper{    border-radius:16px;}.pricing-cta-box{    border-radius:20px;}.newsletter-form{    flex-direction:column;}.newsletter-input input,
-.newsletter-form button{    width:100%;}}/*==================================================
-15. ACCESSIBILITY
-==================================================*/button,
+.newsletter-form button{    width:100%;}}
+button,
 a{    -webkit-tap-highlight-color:transparent;}button:focus-visible,
 a:focus-visible,
 input:focus-visible{    outline:
@@ -1242,9 +1176,7 @@ input:focus-visible{    outline:
 .service-card,
 .service-icon,
 .pricing-icon,
-.faq-item{    will-change:transform;}}/*==================================================
-PRICING HERO
-==================================================*/.pricing-hero{
+.faq-item{    will-change:transform;}}.pricing-hero{
 
     background:
     linear-gradient(
@@ -1391,11 +1323,8 @@ PRICING HERO
 
     font-size:.85rem;
 
-}@media(max-width:1024px){.pricing-hero-grid{
-
-    grid-template-columns:1fr;
-
-}.pricing-hero-image{
+}@media(max-width:1024px){
+    .pricing-hero-image{
 
     order:-1;
 
@@ -1437,10 +1366,7 @@ PRICING HERO
 
     bottom:15px;
 
-}}/*==================================================
-PRICING HERO COMPACT DESKTOP MODE
-1024px - 1280px
-==================================================*/
+}}
 
 @media (min-width:1024px) and (max-width:1280px){.pricing-hero{
 
@@ -1506,10 +1432,7 @@ PRICING HERO COMPACT DESKTOP MODE
 
     font-size:.85rem;
 
-}}/*==================================================
-LARGE DESKTOP
-1281px+
-==================================================*/
+}}
 
 @media (min-width:1281px){.pricing-hero{
 
@@ -1524,3 +1447,70 @@ LARGE DESKTOP
     height:450px;
 
 }}
+
+
+.pricing-cta-section{
+
+    padding-bottom:0 !important;
+
+    margin-bottom:0 !important;
+
+}
+
+
+
+
+.pricing-cta-box{
+
+    margin-bottom:0;
+
+}
+
+
+
+
+.pricing-newsletter{
+
+    padding-bottom:40px;
+
+}
+
+
+
+
+#footer{
+
+    margin-top:0 !important;
+
+}
+
+
+
+
+.home2-cta,
+.pricing-cta-section.section-space{
+
+    margin-bottom:0 !important;
+
+}
+
+
+
+
+
+@media(max-width:640px){
+
+.pricing-cta-section{
+
+    padding-bottom:20px !important;
+
+}
+
+
+.pricing-cta-box{
+
+    margin-bottom:0;
+
+}
+
+}

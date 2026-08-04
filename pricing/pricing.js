@@ -1,19 +1,8 @@
-/*==================================================
-NETHRA SENIOR CARE
-PRICING JS
-Features:
-01. FAQ Accordion
-02. Newsletter Validation
-03. Pricing Card Animation
-04. Button Loading Effect
-Premium Clean Version
-==================================================*/
+
 document.addEventListener(
 "DOMContentLoaded",
 ()=>{
-/*==================================================
-01. FAQ ACCORDION
-==================================================*/
+
 const faqItems =
 document.querySelectorAll(".faq-item");
 faqItems.forEach(item=>{
@@ -51,9 +40,7 @@ answer.style.display="none";
 }
 });
 });
-/*==================================================
-02. NEWSLETTER VALIDATION
-==================================================*/
+
 const newsletterForm =
 document.querySelector(".newsletter-form");
 if(newsletterForm){
@@ -118,9 +105,7 @@ alertBox.className =
 "pricing-alert";
 },3000);
 }
-/*==================================================
-03. PRICING CARD ANIMATION
-==================================================*/
+
 const pricingCards =
 document.querySelectorAll(
 ".pricing-card"
@@ -139,9 +124,7 @@ card.style.transform=
 },
 index*120);
 });
-/*==================================================
-04. BUTTON LOADING EFFECT
-==================================================*/
+
 const buttons =
 document.querySelectorAll(
 ".pricing-card .btn"

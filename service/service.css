@@ -1,16 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-SERVICE CSS - PART 1
-Sections:
-01. Global Service Setup
-02. Service Hero
-03. Services Cards
-04. Service Detail Layout
-Premium Clean Version
-==================================================*/
-/*==================================================
-01. GLOBAL SERVICE SETUP
-==================================================*/
+
 section{
     position:relative;
     padding:80px 0;
@@ -53,9 +41,7 @@ img{
     line-height:1.8;
     color:var(--text-light);
 }
-/*==================================================
-02. SERVICE HERO
-==================================================*/
+
 .service-hero{
     position:relative;
     overflow:hidden;
@@ -173,9 +159,7 @@ img{
     font-size:.85rem;
     color:var(--text-light);
 }
-/*==================================================
-03. SERVICES CARDS
-==================================================*/
+
 .services{
     background:var(--surface);
 }
@@ -240,9 +224,7 @@ img{
 .text-link:hover{
     gap:12px;
 }
-/*==================================================
-04. SERVICE DETAIL LAYOUT
-==================================================*/
+
 .service-details{
     background:var(--bg);
 }
@@ -305,20 +287,7 @@ img{
 }
 .detail-list i{
     color:var(--primary);
-}/*==================================================
-NETHRA SENIOR CARE
-SERVICE CSS - PART 2
-Sections:
-05. Pricing / Care Plans
-06. FAQ Section
-07. CTA Banner
-08. Dark Mode
-09. Responsive System
-Premium Clean Version
-==================================================*/
-/*==================================================
-05. PRICING / CARE PLANS
-==================================================*/
+}
 .pricing{
     background:var(--surface);
 }
@@ -404,9 +373,7 @@ Premium Clean Version
 .pricing-card .btn{
     width:100%;
 }
-/*==================================================
-06. FAQ SECTION
-==================================================*/
+
 .faq-section{
     background:var(--bg);
 }
@@ -451,9 +418,7 @@ Premium Clean Version
     line-height:1.8;
     color:var(--text-light);
 }
-/*==================================================
-07. CTA BANNER
-==================================================*/
+
 .service-cta{
     background:var(--surface);
 }
@@ -507,9 +472,7 @@ Premium Clean Version
     color:var(--primary);
     border-color:#fff;
 }
-/*==================================================
-08. DARK MODE
-==================================================*/
+
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .pricing-card,
 [data-theme="dark"] .faq-item{
@@ -530,9 +493,7 @@ Premium Clean Version
     box-shadow:
     0 25px 60px rgba(0,0,0,.5);
 }
-/*==================================================
-09. RESPONSIVE SYSTEM
-==================================================*/
+
 @media (min-width:1281px){
 .service-hero{
     padding:110px 0 80px;
@@ -677,18 +638,7 @@ section{
 .faq-item{
     padding:20px;
 }
-}/*==================================================
-NETHRA SENIOR CARE
-SERVICE PAGE RESPONSIVE SYSTEM
-Mobile  : < 640px
-Tablet  : 640px - 1024px
-Desktop : 1024px - 1280px
-Large   : > 1280px
-==================================================*/
-/*==================================================
-LARGE DESKTOP
-1281px+
-==================================================*/
+}
 @media (min-width:1281px){
 .service-hero{
     padding:120px 0 80px;
@@ -712,10 +662,7 @@ LARGE DESKTOP
     padding:26px;
 }
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+
 @media (min-width:1024px) and (max-width:1280px){
 .service-hero{
     padding:95px 0 60px;
@@ -757,10 +704,6 @@ DESKTOP
     font-size:.9rem;
 }
 }
-/*==================================================
-TABLET
-640px - 1024px
-==================================================*/
 @media (min-width:640px) and (max-width:1024px){
 .service-hero{
     padding:90px 0 60px;
@@ -801,10 +744,6 @@ TABLET
     padding:22px;
 }
 }
-/*==================================================
-MOBILE
-Below 640px
-==================================================*/
 @media (max-width:639px){
 .service-hero{
     padding:75px 0 45px;
@@ -867,11 +806,7 @@ Below 640px
 .text-link{
     font-size:.88rem;
 }
-}/*====================================================
-   NETHRA SERVICES PAGE
-   DESKTOP TYPOGRAPHY REDUCTION
-   1024px ABOVE
-====================================================*/
+}
 @media (min-width:1024px){
 .service-hero h1{
     font-size:2.8rem;
@@ -935,15 +870,9 @@ Below 640px
 .service-cta p{
     font-size:.9rem;
 }
-}/*====================================================
-   NETHRA SERVICE PAGE
-   FINAL DESKTOP SMALL TYPOGRAPHY
-   1024px ABOVE
-====================================================*/
+}
 @media (min-width:1024px){
-/*========================
-   HERO
-========================*/
+
 .hero-content h1{
     font-size:2.6rem;
     line-height:1.15;
@@ -951,9 +880,7 @@ Below 640px
 .hero-content p{
     font-size:.9rem;
 }
-/*========================
-   SECTION HEADINGS
-========================*/
+
 .section-heading h2,
 .service-detail-content h2,
 .cta-box h2{
@@ -963,9 +890,7 @@ Below 640px
 .section-heading p{
     font-size:.85rem;
 }
-/*========================
-   SERVICE CARDS
-========================*/
+
 .service-content h3{
     font-size:1.05rem;
 }
@@ -976,18 +901,14 @@ Below 640px
 .text-link{
     font-size:.85rem;
 }
-/*========================
-   SERVICE DETAILS
-========================*/
+
 .service-detail-content p{
     font-size:.85rem;
 }
 .detail-list li{
     font-size:.85rem;
 }
-/*========================
-   PRICING
-========================*/
+
 .pricing-card h3{
     font-size:1.05rem;
 }
@@ -997,28 +918,21 @@ Below 640px
 .pricing-card li{
     font-size:.82rem;
 }
-/*========================
-   FAQ
-========================*/
+
 .faq-item h3{
     font-size:.95rem;
 }
 .faq-item p{
     font-size:.85rem;
 }
-/*========================
-   CTA
-========================*/
+
 .cta-box h2{
     font-size:2rem;
 }
 .cta-box p{
     font-size:.85rem;
 }
-}/*====================================================
-   NETHRA SERVICE PAGE
-   PREMIUM CARD GLOW SYSTEM
-====================================================*/
+}
 .service-card,
 .pricing-card,
 .faq-item,
@@ -1102,10 +1016,7 @@ Below 640px
 .faq-item{
     border-radius:18px;
 }
-}/*====================================================
-   NETHRA SERVICE PAGE
-   PREMIUM CARD BORDER SYSTEM
-====================================================*/
+}
 .service-card,
 .pricing-card,
 .faq-item,
@@ -1158,10 +1069,7 @@ Below 640px
 [data-theme="dark"] .pricing-card:hover,
 [data-theme="dark"] .faq-item:hover{
     border-color:var(--primary);
-}/*====================================================
-   NETHRA SERVICE PAGE
-   PREMIUM CARD HOVER GLOW EFFECT
-====================================================*/
+}
 .service-card,
 .pricing-card,
 .faq-item,
@@ -1235,4 +1143,38 @@ Below 640px
 .faq-item:hover{
     transform:translateY(-5px);
 }
+}
+
+.service-cta{
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+.service-cta .cta-box{
+    margin-bottom:0;
+}
+
+
+footer,
+.site-footer{
+    margin-top:0;
+}
+
+.service-cta + footer,
+.service-cta + .site-footer{
+    margin-top:0;
+}
+
+
+
+@media(max-width:639px){
+
+    .service-cta{
+        padding-bottom:20px;
+    }
+
+    .cta-box{
+        margin-bottom:0;
+    }
+
 }

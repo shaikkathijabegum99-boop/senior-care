@@ -1,12 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-NAVBAR CSS
-PART 1
-Header • Logo • Desktop Navigation
-==================================================*/
-/*==================================================
-HEADER
-==================================================*/
+
 .site-header{
     position:fixed;
     top:0;
@@ -22,16 +14,12 @@ HEADER
 .site-header.sticky{
     box-shadow:0 12px 35px rgba(0,0,0,.08);
 }
-/*==================================================
-CONTAINER
-==================================================*/
+
 .site-header .container{
     width:min(1320px,92%);
     margin:auto;
 }
-/*==================================================
-NAVBAR
-==================================================*/
+
 #nav{
     display:flex;
     align-items:center;
@@ -39,9 +27,7 @@ NAVBAR
     gap:6rem;
     min-height:82px;
 }
-/*==================================================
-LOGO
-==================================================*/
+
 .logo{
     display:flex;
     align-items:center;
@@ -63,9 +49,7 @@ LOGO
 [data-theme="dark"] .logo-img--dark{
     display:block;
 }
-/*==================================================
-DESKTOP MENU
-==================================================*/
+
 .nav-links{
     display:flex;
     align-items:center;
@@ -91,15 +75,11 @@ DESKTOP MENU
 .nav-links a:hover{
     color:var(--primary);
 }
-/*==================================================
-ACTIVE LINK
-==================================================*/
+
 .nav-links a.act{
     color:var(--primary);
 }
-/*==================================================
-HOME DROPDOWN
-==================================================*/
+
 .has-drop{
     position:relative;
 }
@@ -116,9 +96,7 @@ HOME DROPDOWN
 .has-drop:hover .drop-chevron{
     transform:rotate(225deg);
 }
-/*==================================================
-DESKTOP DROPDOWN
-==================================================*/
+
 .nav-dropdown{
     position:absolute;
     top:calc(100% + 22px);
@@ -140,9 +118,7 @@ DESKTOP DROPDOWN
     visibility:visible;
     transform:translateY(0);
 }
-/*==================================================
-DROPDOWN ITEMS
-==================================================*/
+
 .dd-item{
     display:flex;
     align-items:center;
@@ -157,23 +133,14 @@ DROPDOWN ITEMS
     background:var(--primary-soft);
     color:#fff;
 }
-/*==================================================
-NETHRA NAVBAR
-PART 2
-Right Actions • Buttons • Mobile Menu
-==================================================*/
-/*==================================================
-RIGHT SIDE
-==================================================*/
+
 .nav-r{
     display:flex;
     align-items:center;
     gap:.85rem;
     flex-shrink:0;
 }
-/*==================================================
-ICON BUTTONS
-==================================================*/
+
 .icon-btn{
     width:44px;
     height:44px;
@@ -196,9 +163,7 @@ ICON BUTTONS
 .icon-btn i{
     font-size:1rem;
 }
-/*==================================================
-RTL BUTTON
-==================================================*/
+
 .rtl-btn{
     height:44px;
   width:44px;
@@ -216,9 +181,7 @@ RTL BUTTON
     color:#fff;
     border-color:var(--primary);
 }
-/*==================================================
-BUTTONS
-==================================================*/
+
 .btn-sm{
     height:44px;
     padding:0 22px;
@@ -252,9 +215,7 @@ BUTTONS
     transform:translateY(-2px);
     box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
-/*==================================================
-HAMBURGER
-==================================================*/
+
 .ham{
     display:none;
     width:46px;
@@ -289,9 +250,7 @@ HAMBURGER
 .ham.active span:nth-child(3){
     transform:translateY(-8px) rotate(-45deg);
 }
-/*==================================================
-MOBILE SIDEBAR
-==================================================*/
+
 .mob-nav{
     position:fixed;
     top:0;
@@ -309,9 +268,7 @@ MOBILE SIDEBAR
 .mob-nav.active{
     right:0;
 }
-/*==================================================
-MOBILE LINKS
-==================================================*/
+
 .mob-nav>a,
 .mob-dd-toggle{
     width:100%;
@@ -333,9 +290,7 @@ MOBILE LINKS
     color:var(--primary);
     padding-left:10px;
 }
-/*==================================================
-MOBILE DROPDOWN
-==================================================*/
+
 .mob-dropdown{
     display:none;
     padding:8px 0 10px 18px;
@@ -361,25 +316,18 @@ MOBILE DROPDOWN
 .mob-dd-toggle.active .mob-dd-chevron{
     transform:rotate(180deg);
 }
-/*==================================================
-DIVIDER
-==================================================*/
+
 .mob-divider{
     border:none;
     border-top:1px solid var(--border);
     margin:22px 0;
 }
-/*==================================================
-MOBILE BUTTONS
-==================================================*/
+
 .mob-nav .btn{
     width:100%;
     justify-content:center;
     margin-bottom:14px;
 }
-/*==================================================
-OVERLAY
-==================================================*/
 .mob-overlay{
     position:fixed;
     inset:0;
@@ -392,14 +340,7 @@ OVERLAY
 .mob-overlay.active{
     opacity:1;
     visibility:visible;
-}/*==================================================
-NETHRA NAVBAR
-PART 3
-Responsive • Dark Mode • RTL • Sticky
-==================================================*/
-/*==================================================
-TABLET
-==================================================*/
+}
 @media (max-width:1024px){
     .nav-links{
         display:none;
@@ -411,9 +352,6 @@ TABLET
         display:none;
     }
 }
-/*==================================================
-MOBILE
-==================================================*/
 @media (max-width:768px){
     #nav{
         min-height:72px;
@@ -436,9 +374,6 @@ MOBILE
         padding:82px 24px 24px;
     }
 }
-/*==================================================
-SMALL MOBILE
-==================================================*/
 @media (max-width:480px){
     .logo-img{
         height:42px;
@@ -453,12 +388,9 @@ SMALL MOBILE
         height:42px;
     }
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .site-header{
-    background:rgba(18,18,18,.94);
-    border-color:rgba(255,255,255,.08);
+    background:var(--surface);
+   
 }
 [data-theme="dark"] .nav-dropdown{
     background:var(--surface);
@@ -482,9 +414,6 @@ DARK MODE
 [data-theme="dark"] .mob-dropdown a:hover{
     color:var(--primary);
 }
-/*==================================================
-RTL SUPPORT
-==================================================*/
 html[dir="rtl"] #nav{
     direction:rtl;
 }
@@ -516,9 +445,7 @@ html[dir="rtl"] .mob-dropdown a:hover{
     padding-left:0;
     padding-right:8px;
 }
-/*==================================================
-STICKY NAVBAR
-==================================================*/
+
 .site-header{
     transition:
     background .35s ease,
@@ -529,9 +456,7 @@ STICKY NAVBAR
     box-shadow:
     0 10px 35px rgba(0,0,0,.08);
 }
-/*==================================================
-SMOOTH ANIMATIONS
-==================================================*/
+
 .logo-img,
 .nav-links a,
 .dd-item,
@@ -543,9 +468,7 @@ SMOOTH ANIMATIONS
 .ham{
     transition:all .3s ease;
 }
-/*==================================================
-SCROLLBAR
-==================================================*/
+
 .mob-nav::-webkit-scrollbar{
     width:6px;
 }
@@ -556,9 +479,7 @@ SCROLLBAR
 .mob-nav::-webkit-scrollbar-track{
     background:transparent;
 }
-/*==================================================
-ACCESSIBILITY
-==================================================*/
+
 .icon-btn:focus,
 .rtl-btn:focus,
 .ham:focus,
@@ -567,22 +488,18 @@ ACCESSIBILITY
     outline:2px solid var(--primary);
     outline-offset:3px;
 }
-/*==================================================
-REDUCED MOTION
-==================================================*/
+
 @media (prefers-reduced-motion:reduce){
 *{
 animation:none !important;
 transition:none !important;
 scroll-behavior:auto !important;
 }
-}/*==================================================
-NETHRA BRAND LOGO
-==================================================*/
+}
 .logo-box{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:8px;
     text-decoration:none;
     flex-shrink:0;
 }
@@ -632,13 +549,7 @@ serif;
         font-size:.55rem;
         letter-spacing:2px;
     }
-}/*==================================================
-NETHRA NAVBAR
-RTL VISIBLE RESPONSIVE FIX
-==================================================*/
-/*==============================
-TABLET
-==============================*/
+}
 @media (max-width:1024px){
     .nav-links{
         display:none;
@@ -647,10 +558,7 @@ TABLET
         display:flex;
     }
 }
-/*==============================
-MOBILE
-RTL BUTTON VISIBLE
-==============================*/
+
 @media (max-width:768px){
     #nav{
         min-height:72px;
@@ -688,9 +596,7 @@ RTL BUTTON VISIBLE
         height:42px;
     }
 }
-/*==============================
-SMALL MOBILE
-==============================*/
+
 @media(max-width:480px){
     .brand-name{
         font-size:1rem;
@@ -713,9 +619,7 @@ SMALL MOBILE
         height:40px;
     }
 }
-/*==============================
-DARK MODE RTL BUTTON
-==============================*/
+
 [data-theme="dark"] .rtl-btn{
     background:var(--surface);
     color:var(--text);
@@ -725,15 +629,11 @@ DARK MODE RTL BUTTON
     background:var(--primary);
     color:#fff;
 }
-/*==============================
-RTL DIRECTION SUPPORT
-==============================*/
+
 html[dir="rtl"] .nav-r{
     direction:rtl;
 }
-html[dir="rtl"] .logo-box{
-    flex-direction:row-reverse;
-}
+
 html[dir="rtl"] .mob-nav{
     left:auto;
     right:-100%;
@@ -741,9 +641,7 @@ html[dir="rtl"] .mob-nav{
 html[dir="rtl"] .mob-nav.active{
     right:0;
 }
-/*==================================================
-NETHRA MOBILE NAVIGATION SIDEBAR
-==================================================*/
+
 .mob-nav{
     position:fixed;
     top:0;
@@ -761,9 +659,7 @@ NETHRA MOBILE NAVIGATION SIDEBAR
 .mob-nav.active{
     right:0;
 }
-/*==================================================
-RTL MOBILE MENU
-==================================================*/
+
 html[dir="rtl"] .mob-nav{
     right:auto;
     left:-100%;
@@ -772,9 +668,7 @@ html[dir="rtl"] .mob-nav{
 html[dir="rtl"] .mob-nav.active{
     left:0;
 }
-/*==================================================
-MOBILE HEADER
-==================================================*/
+
 .mob-header{
     position:sticky;
     top:0;
@@ -791,9 +685,7 @@ MOBILE HEADER
     font-weight:700;
     color:var(--text);
 }
-/*==================================================
-MOBILE LINKS
-==================================================*/
+
 .mob-nav>a,
 .mob-dd-toggle{
     width:100%;
@@ -821,9 +713,7 @@ html[dir="rtl"] .mob-dd-toggle:hover{
     padding-left:24px;
     padding-right:32px;
 }
-/*==================================================
-MOBILE DROPDOWN
-==================================================*/
+
 .mob-dropdown{
     display:none;
     padding:10px 24px 10px 45px;
@@ -852,25 +742,16 @@ html[dir="rtl"] .mob-dropdown a:hover{
     padding-left:0;
     padding-right:8px;
 }
-/*==================================================
-MOBILE BUTTONS
-==================================================*/
 .mob-nav .btn{
     width:calc(100% - 48px);
     margin:14px 24px 0;
     justify-content:center;
 }
-/*==================================================
-DIVIDER
-==================================================*/
 .mob-divider{
     border:none;
     border-top:1px solid var(--border);
     margin:20px 24px;
 }
-/*==================================================
-SCROLLBAR
-==================================================*/
 .mob-nav::-webkit-scrollbar{
     width:6px;
 }
@@ -881,9 +762,6 @@ SCROLLBAR
 .mob-nav::-webkit-scrollbar-track{
     background:transparent;
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .mob-nav{
     background:var(--surface);
 }
@@ -893,9 +771,7 @@ DARK MODE
 [data-theme="dark"] .mob-dropdown{
     background:var(--surface2);
 }
-/*==================================================
-MOBILE RESPONSIVE
-==================================================*/
+
 @media(max-width:768px){
 .mob-nav{
     width:100%;
@@ -918,9 +794,7 @@ MOBILE RESPONSIVE
     width:38px;
     height:38px;
 }
-}/*==================================================
-MOBILE DROPDOWN
-==================================================*/
+}
 .mob-dd-toggle{
     position:relative;
 }
@@ -965,9 +839,7 @@ MOBILE DROPDOWN
         transform:translateY(0);
     }
 }
-/*==================================================
-MOBILE CLOSE BUTTON
-==================================================*/
+
 .mob-close{
     width:42px;
     height:42px;
@@ -1002,9 +874,7 @@ MOBILE CLOSE BUTTON
 .mob-close:hover span{
     background:#fff;
 }
-/*==================================================
-RTL SUPPORT
-==================================================*/
+
 html[dir="rtl"] .mob-dropdown{
     padding-left:24px;
     padding-right:45px;
@@ -1013,9 +883,6 @@ html[dir="rtl"] .mob-dropdown a:hover{
     padding-left:0;
     padding-right:10px;
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .mob-close{
     background:var(--surface);
     border-color:var(--border);
@@ -1026,35 +893,23 @@ DARK MODE
 [data-theme="dark"] .mob-close:hover span{
     background:#fff;
 }
-/*==================================================
-NETHRA SENIOR CARE
-FOOTER CSS
-Premium Footer Design
-==================================================*/
-/*==================================================
-FOOTER MAIN
-==================================================*/
+
+
 .nethra-footer{
     background:var(--surface);
     border-top:1px solid var(--border);
     color:var(--text);
-    margin-top:80px;
+   
 }
-/*==================================================
-FOOTER CONTAINER
-==================================================*/
+
 .footer-container{
     width:min(1320px,92%);
-    margin:auto;
-    padding:70px 0 50px;
+  
     display:grid;
     grid-template-columns:
     1.5fr 1fr 1.2fr 1fr;
     gap:45px;
 }
-/*==================================================
-BRAND SECTION
-==================================================*/
 .footer-logo{
     display:flex;
     align-items:center;
@@ -1090,9 +945,6 @@ BRAND SECTION
     margin-bottom:22px;
     font-size:.95rem;
 }
-/*==================================================
-CONTACT INFO
-==================================================*/
 .contact-info p{
     margin:8px 0;
     color:var(--text);
@@ -1105,9 +957,6 @@ CONTACT INFO
 .contact-info a:hover{
     color:var(--primary);
 }
-/*==================================================
-SOCIAL ICONS
-==================================================*/
 .social-icons{
     display:flex;
     gap:12px;
@@ -1130,9 +979,6 @@ SOCIAL ICONS
     color:#fff;
     transform:translateY(-4px);
 }
-/*==================================================
-FOOTER COLUMNS
-==================================================*/
 .footer-column h3{
     font-size:1.1rem;
     font-weight:700;
@@ -1167,9 +1013,6 @@ FOOTER COLUMNS
     color:var(--primary);
     padding-left:8px;
 }
-/*==================================================
-BOTTOM BAR
-==================================================*/
 .footer-bottom-bar{
     border-top:1px solid var(--border);
     padding:22px 0;
@@ -1190,18 +1033,12 @@ BOTTOM BAR
 .bottom-content p:last-child{
     color:var(--text);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .nethra-footer{
     background:var(--surface);
 }
 [data-theme="dark"] .social-icons a{
     background:var(--surface2);
 }
-/*==================================================
-RTL SUPPORT
-==================================================*/
 html[dir="rtl"] .footer-container{
     direction:rtl;
 }
@@ -1212,9 +1049,6 @@ html[dir="rtl"] .footer-column ul li a:hover{
     padding-left:0;
     padding-right:8px;
 }
-/*==================================================
-TABLET
-==================================================*/
 @media(max-width:1024px){
 .footer-container{
     grid-template-columns:
@@ -1222,9 +1056,6 @@ TABLET
     gap:40px;
 }
 }
-/*==================================================
-MOBILE
-==================================================*/
 @media(max-width:640px){
 .footer-container{
     grid-template-columns:1fr;
@@ -1242,9 +1073,6 @@ MOBILE
     margin-top:15px;
 }
 }
-/*==================================================
-SMALL MOBILE
-==================================================*/
 @media(max-width:480px){
 .social-icons a{
     width:38px;
@@ -1253,9 +1081,7 @@ SMALL MOBILE
 .footer-column ul li a{
     font-size:.9rem;
 }
-}/*========================================
-   HEADER CONTACT INFO WITH ICONS
-========================================*/
+}
 .tagline{
     display:flex;
     align-items:flex-start;
@@ -1271,9 +1097,7 @@ SMALL MOBILE
     font-size:20px;
     margin-top:4px;
 }
-/*========================================
-   CONTACT INFO
-========================================*/
+
 .contact-info{
     display:flex;
     flex-direction:column;
@@ -1304,9 +1128,6 @@ SMALL MOBILE
 .contact-info a:hover{
     color:var(--primary);
 }
-/*========================================
-   DARK MODE
-========================================*/
 [data-theme="dark"] .tagline,
 [data-theme="dark"] .contact-info p,
 [data-theme="dark"] .contact-info a{
@@ -1316,9 +1137,6 @@ SMALL MOBILE
 [data-theme="dark"] .contact-info i{
     color:var(--primary);
 }
-/*========================================
-   MOBILE RESPONSIVE
-========================================*/
 @media(max-width:640px){
     .tagline{
         font-size:14px;
@@ -1413,9 +1231,7 @@ SMALL MOBILE
     .social-icons{
         justify-content:center;
     }
-}/*==================================================
-   360px MOBILE FOOTER CENTER ALIGNMENT
-==================================================*/
+}
 @media(max-width:360px){
     .nethra-footer{
         text-align:center;
@@ -1500,14 +1316,8 @@ SMALL MOBILE
     .bottom-content p{
         text-align:center;
     }
-}/*==================================================
-NETHRA NAVBAR
-360px MOBILE COMPLETE FIX
-==================================================*/
+}
 @media(max-width:360px){
-/*================================
-HEADER CONTAINER
-================================*/
 .site-header .container{
     width:94%;
 }
@@ -1515,9 +1325,6 @@ HEADER CONTAINER
     min-height:68px;
     gap:6px;
 }
-/*================================
-LOGO AREA
-================================*/
 .logo-box{
     gap:6px;
     flex-shrink:1;
@@ -1550,9 +1357,6 @@ LOGO AREA
     white-space:nowrap;
     color:var(--text-light);
 }
-/*================================
-RIGHT ACTION AREA
-================================*/
 .nav-r{
     gap:5px;
     flex-shrink:0;
@@ -1579,9 +1383,6 @@ RIGHT ACTION AREA
 .nav-r .btn-sm{
     display:none;
 }
-/*================================
-HAMBURGER
-================================*/
 .ham{
     display:flex;
     width:36px;
@@ -1593,9 +1394,6 @@ HAMBURGER
 .ham span{
     height:2px;
 }
-/*================================
-MOBILE MENU
-================================*/
 .mob-nav{
     width:100%;
 }
@@ -1609,9 +1407,6 @@ MOBILE MENU
     width:36px;
     height:36px;
 }
-/*================================
-MOBILE LINKS
-================================*/
 .mob-nav>a,
 .mob-dd-toggle{
     padding:14px 20px;
@@ -1623,9 +1418,6 @@ MOBILE LINKS
 .mob-dropdown a{
     font-size:.9rem;
 }
-/*================================
-RTL SUPPORT
-================================*/
 html[dir="rtl"] .logo-box{
     flex-direction:row-reverse;
 }
@@ -1633,14 +1425,10 @@ html[dir="rtl"] .nav-r{
     direction:rtl;
 }
 }
-/*==================================================
-NETHRA SENIOR CARE
-PREMIUM FOOTER CSS
-==================================================*/
 .nethra-footer{
     background:var(--surface);
     border-top:1px solid var(--border);
-    padding:70px 0 0;
+  
     overflow:hidden;
 }
 .footer-container{
@@ -1650,9 +1438,6 @@ PREMIUM FOOTER CSS
     grid-template-columns:1.5fr 1fr 1fr 1fr;
     gap:45px;
 }
-/*==================================================
-FOOTER COLUMNS
-==================================================*/
 .footer-column h3{
     font-size:1.15rem;
     color:var(--heading);
@@ -1669,7 +1454,7 @@ FOOTER COLUMNS
 }
 .footer-column ul{
     display:grid;
-    gap:12px;
+  
 }
 .footer-column ul li a{
     color:var(--text-light);
@@ -1680,9 +1465,6 @@ FOOTER COLUMNS
     color:var(--primary);
     padding-left:6px;
 }
-/*==================================================
-LOGO AREA
-==================================================*/
 .footer-logo{
     display:flex;
     align-items:center;
@@ -1694,7 +1476,7 @@ LOGO AREA
     height:70px;
     object-fit:contain;
     border-radius:50%;
-    border:2px solid var(--primary-light);
+   
 }
 .logo-text{
     display:flex;
@@ -1714,9 +1496,6 @@ LOGO AREA
     color:var(--text-light);
     font-weight:600;
 }
-/*==================================================
-TAGLINE
-==================================================*/
 .tagline{
     display:flex;
     gap:12px;
@@ -1730,9 +1509,6 @@ TAGLINE
     font-size:1rem;
     margin-top:5px;
 }
-/*==================================================
-CONTACT INFO
-==================================================*/
 .contact-info{
     display:grid;
     gap:12px;
@@ -1761,9 +1537,6 @@ CONTACT INFO
 .contact-info a:hover{
     color:var(--primary);
 }
-/*==================================================
-SOCIAL ICONS
-==================================================*/
 .social-icons{
     display:flex;
     gap:12px;
@@ -1785,9 +1558,6 @@ SOCIAL ICONS
     color:#fff;
     transform:translateY(-4px);
 }
-/*==================================================
-FOOTER BOTTOM
-==================================================*/
 .footer-bottom-bar{
     margin-top:60px;
     border-top:1px solid var(--border);
@@ -1805,9 +1575,6 @@ FOOTER BOTTOM
     font-size:.85rem;
     color:var(--text-light);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .nethra-footer{
     background:var(--surface);
 }
@@ -1815,18 +1582,12 @@ DARK MODE
 [data-theme="dark"] .social-icons a{
     background:rgba(45,212,191,.12);
 }
-/*==================================================
-TABLET
-==================================================*/
 @media(max-width:1024px){
 .footer-container{
     grid-template-columns:repeat(2,1fr);
     gap:35px;
 }
 }
-/*==================================================
-MOBILE
-==================================================*/
 @media(max-width:640px){
 .nethra-footer{
     padding-top:50px;
@@ -1850,9 +1611,7 @@ MOBILE
 .footer-column h3{
     margin-bottom:16px;
 }
-}/*==================================================
-NETHRA FOOTER COMPACT SPACING FIX
-==================================================*/
+}
 .nethra-footer{
     padding:40px 0 0;
 }
@@ -1895,7 +1654,7 @@ NETHRA FOOTER COMPACT SPACING FIX
     margin-bottom:15px;
 }
 .footer-column ul{
-    gap:8px;
+    gap:2px;
 }
 .footer-column ul li a{
     font-size:.88rem;
@@ -1955,4 +1714,30 @@ NETHRA FOOTER COMPACT SPACING FIX
 .nav-links a.act,
 .mob-nav a.act{
     color:var(--primary);
+}
+.mob-nav{
+    display:flex;
+    flex-direction:column;
+}
+
+.mob-nav .btn{
+    width:calc(100% - 40px);
+    margin:20px;
+    margin-top:auto;
+    justify-content:center;
+}
+
+@media (max-width:768px){
+    .mob-nav{
+        padding-bottom:20px;
+    }
+
+    .mob-nav .btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:48px;
+        font-size:.95rem;
+        font-weight:600;
+    }
 }

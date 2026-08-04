@@ -24,9 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothHoverEffects();
   initCounterOptional();
 });
-/* =========================
-   SCROLL REVEAL
-========================= */
+
 function initRevealAnimation() {
   const revealItems = document.querySelectorAll(`
     .trust-item,
@@ -51,9 +49,7 @@ function initRevealAnimation() {
   }, { threshold: 0.15 });
   revealItems.forEach(item => observer.observe(item));
 }
-/* =========================
-   CARD HOVER PARALLAX
-========================= */
+
 function initSmoothHoverEffects() {
   const cards = document.querySelectorAll(
     ".service-card, .why-card, .life-card, .testimonial-card, .trust-item"
@@ -75,9 +71,7 @@ function initSmoothHoverEffects() {
     });
   });
 }
-/* =========================
-   OPTIONAL COUNTER
-========================= */
+
 function initCounterOptional() {
   const counters = document.querySelectorAll("[data-count]");
   counters.forEach(counter => {

@@ -1,11 +1,5 @@
-/*==================================================
-NETHRA SENIOR CARE
-SERVICE.JS
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
-FAQ ACCORDION
-==================================================*/
 const faqItems=document.querySelectorAll(".faq-item");
 faqItems.forEach(item=>{
 const question=item.querySelector("h3");
@@ -37,9 +31,6 @@ icon.classList.add("fa-plus");
 }
 });
 });
-/*==================================================
-SMOOTH SCROLL
-==================================================*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 anchor.addEventListener("click",function(e){
 const target=document.querySelector(this.getAttribute("href"));
@@ -52,9 +43,6 @@ block:"start"
 }
 });
 });
-/*==================================================
-SCROLL REVEAL
-==================================================*/
 const revealItems=document.querySelectorAll(
 ".service-card,.pricing-card,.faq-item,.cta-box,.hero-content,.hero-image"
 );
@@ -71,9 +59,6 @@ revealItems.forEach(item=>{
 item.classList.add("hidden");
 observer.observe(item);
 });
-/*==================================================
-FLOATING CARD
-==================================================*/
 const floating=document.querySelector(".floating-card");
 if(floating){
 let direction=1;
@@ -83,9 +68,6 @@ floating.style.transform=
 direction*=-1;
 },2000);
 }
-/*==================================================
-SERVICE CARD EFFECT
-==================================================*/
 document.querySelectorAll(".service-card").forEach(card=>{
 card.addEventListener("mouseenter",()=>{
 card.style.transform="translateY(-10px)";
@@ -94,9 +76,6 @@ card.addEventListener("mouseleave",()=>{
 card.style.transform="translateY(0)";
 });
 });
-/*==================================================
-PRICING CARD EFFECT
-==================================================*/
 document.querySelectorAll(".pricing-card").forEach(card=>{
 card.addEventListener("mouseenter",()=>{
 card.style.transform="translateY(-8px) scale(1.02)";
@@ -105,9 +84,6 @@ card.addEventListener("mouseleave",()=>{
 card.style.transform="translateY(0) scale(1)";
 });
 });
-/*==================================================
-BUTTON RIPPLE
-==================================================*/
 document.querySelectorAll(".btn").forEach(btn=>{
 btn.addEventListener("click",function(e){
 const ripple=document.createElement("span");
@@ -124,9 +100,6 @@ ripple.remove();
 },600);
 });
 });
-/*==================================================
-BACK TO TOP
-==================================================*/
 const topBtn=document.createElement("button");
 topBtn.innerHTML='<i class="fa-solid fa-arrow-up"></i>';
 topBtn.className="back-to-top";
@@ -144,9 +117,6 @@ top:0,
 behavior:"smooth"
 });
 });
-/*==================================================
-ACTIVE NAV LINK
-==================================================*/
 const sections=document.querySelectorAll("section");
 const navLinks=document.querySelectorAll("nav a");
 window.addEventListener("scroll",()=>{
@@ -164,9 +134,6 @@ link.classList.add("active");
 }
 });
 });
-/*==================================================
-COUNTER (Optional)
-==================================================*/
 document.querySelectorAll("[data-count]").forEach(counter=>{
 const update=()=>{
 const target=+counter.dataset.count;

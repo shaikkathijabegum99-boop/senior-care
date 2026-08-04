@@ -1,19 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-GLOBAL.CSS
-PART 1
-Reset
-Variables
-Dark Mode
-Typography
-Container
-Section System
-Grid System
-Utilities
-==================================================*/
-/*==================================================
-RESET
-==================================================*/
+
 *,
 *::before,
 *::after{
@@ -73,50 +58,30 @@ table{
     background:var(--primary);
     color:#fff;
 }
-/*==================================================
-LIGHT THEME
-==================================================*/
+
 :root{
-/*==================================================
-BRAND COLORS
-==================================================*/
+
 --primary:#0F766E;
 --primary-hover:#115E59;
 --primary-light:#CCFBF1;
 --secondary:#14B8A6;
 --secondary-hover:#0D9488;
 --secondary-light:#99F6E4;
-/*==================================================
-STATUS COLORS
-==================================================*/
+
 --success:#16A34A;
 --warning:#D97706;
 --danger:#DC2626;
-/*==================================================
-LIGHT BACKGROUND
-==================================================*/
+
 --bg:#F8FAFC;
 --bg-soft:#F1F5F9;
 --bg-muted:#E2E8F0;
-/*==================================================
-SURFACE
-==================================================*/
 --surface:#FFFFFF;
 --surface-soft:#F8FAFC;
-/*==================================================
-BORDER
-==================================================*/
 --border:#E2E8F0;
-/*==================================================
-TEXT
-==================================================*/
 --heading:#0F172A;
 --text:#475569;
 --text-light:#64748B;
 --placeholder:#94A3B8;
-/*==================================================
-SHADOWS
-==================================================*/
 --shadow-xs:
 0 2px 8px rgba(15,23,42,.04);
 --shadow-sm:
@@ -125,16 +90,10 @@ SHADOWS
 0 14px 36px rgba(15,23,42,.09);
 --shadow-lg:
 0 24px 60px rgba(15,23,42,.13);
-/*==================================================
-RADIUS
-==================================================*/
 --radius-sm:10px;
 --radius-md:16px;
 --radius-lg:22px;
 --radius-xl:32px;
-/*==================================================
-TYPOGRAPHY
-==================================================*/
 --h1:clamp(2.6rem,4vw,3.8rem);
 --h2:clamp(2rem,3vw,2.8rem);
 --h3:1.4rem;
@@ -145,22 +104,13 @@ TYPOGRAPHY
 --text-md:.95rem;
 --text-sm:.88rem;
 --text-xs:.78rem;
-/*==================================================
-LAYOUT
-==================================================*/
 --container:1240px;
 --section-space:80px;
 --section-space-lg:110px;
 --section-space-sm:60px;
-/*==================================================
-TRANSITION
-==================================================*/
 --transition:
 all .35s cubic-bezier(.4,0,.2,1);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"]{
 --bg:#020617;
 --bg-soft:#0B1220;
@@ -185,9 +135,6 @@ DARK MODE
 --shadow-md:none;
 --shadow-lg:none;
 }
-/*==================================================
-TYPOGRAPHY
-==================================================*/
 h1,
 h2,
 h3,
@@ -234,9 +181,6 @@ strong{
 font-weight:700;
 color:var(--heading);
 }
-/*==================================================
-CONTAINER
-==================================================*/
 .container{
 width:min(var(--container),92%);
 margin-inline:auto;
@@ -245,9 +189,6 @@ margin-inline:auto;
 width:100%;
 padding-inline:5%;
 }
-/*==================================================
-SECTION SPACING
-==================================================*/
 section{
 position:relative;
 padding:var(--section-space) 0;
@@ -258,9 +199,6 @@ padding:var(--section-space-sm) 0;
 .section-lg{
 padding:var(--section-space-lg) 0;
 }
-/*==================================================
-SECTION HEADER
-==================================================*/
 .section-header,
 .section-heading{
 max-width:720px;
@@ -276,9 +214,6 @@ margin-bottom:14px;
 max-width:620px;
 margin:auto;
 }
-/*==================================================
-GRID SYSTEM
-==================================================*/
 .grid{
 display:grid;
 gap:26px;
@@ -292,9 +227,6 @@ grid-template-columns:repeat(3,1fr);
 .grid-4{
 grid-template-columns:repeat(4,1fr);
 }
-/*==================================================
-FLEX UTILITIES
-==================================================*/
 .flex{
 display:flex;
 }
@@ -314,9 +246,6 @@ align-items:center;
 .justify-center{
 justify-content:center;
 }
-/*==================================================
-TEXT UTILITIES
-==================================================*/
 .text-center{
 text-align:center;
 }
@@ -332,24 +261,15 @@ color:var(--primary);
 .text-secondary{
 color:var(--secondary);
 }
-/*==================================================
-WIDTH
-==================================================*/
 .w-100{
 width:100%;
 }
-/*==================================================
-SPACING
-==================================================*/
 .mt-20{margin-top:20px;}
 .mt-40{margin-top:40px;}
 .mt-60{margin-top:60px;}
 .mb-20{margin-bottom:20px;}
 .mb-40{margin-bottom:40px;}
 .mb-60{margin-bottom:60px;}
-/*==================================================
-BACKGROUND
-==================================================*/
 .bg-primary{
 background:var(--primary);
 color:#fff;
@@ -361,9 +281,6 @@ color:#fff;
 .bg-surface{
 background:var(--surface);
 }
-/*==================================================
-SHADOWS
-==================================================*/
 .shadow-sm{
 box-shadow:var(--shadow-sm);
 }
@@ -372,20 +289,7 @@ box-shadow:var(--shadow-md);
 }
 .shadow-lg{
 box-shadow:var(--shadow-lg);
-}/*==================================================
-NETHRA SENIOR CARE
-GLOBAL.CSS
-PART 2
-Buttons
-Cards
-Forms
-Tables
-Components
-Professional Compact UI
-==================================================*/
-/*==================================================
-BUTTON SYSTEM
-==================================================*/
+}
 .btn{
     display:inline-flex;
     align-items:center;
@@ -448,9 +352,6 @@ BUTTON SYSTEM
     padding:14px 28px;
     font-size:.95rem;
 }
-/*==================================================
-CARD SYSTEM
-==================================================*/
 .card{
     background:var(--surface);
     border:1px solid var(--border);
@@ -472,9 +373,6 @@ CARD SYSTEM
 .card-text{
     color:var(--text-light);
 }
-/*==================================================
-SERVICE CARD
-==================================================*/
 .service-card{
     background:var(--surface);
     border:1px solid var(--border);
@@ -518,9 +416,6 @@ SERVICE CARD
 .service-content p{
     margin-bottom:18px;
 }
-/*==================================================
-ICON BOX
-==================================================*/
 .icon-box{
     width:58px;
     height:58px;
@@ -543,9 +438,6 @@ ICON BOX
 .icon-box-sm i{
     font-size:1rem;
 }
-/*==================================================
-BADGES
-==================================================*/
 .badge{
     display:inline-flex;
     align-items:center;
@@ -569,9 +461,6 @@ BADGES
     background:rgba(220,38,38,.1);
     color:var(--danger);
 }
-/*==================================================
-FORMS
-==================================================*/
 .form-group{
     margin-bottom:20px;
 }
@@ -608,9 +497,6 @@ select:focus{
     border-color:var(--primary);
     box-shadow:0 0 0 4px rgba(15,118,110,.10);
 }
-/*==================================================
-INPUT GROUP
-==================================================*/
 .input-group{
     display:flex;
     align-items:center;
@@ -628,9 +514,6 @@ INPUT GROUP
     border:none;
     box-shadow:none;
 }
-/*==================================================
-CHECKBOX
-==================================================*/
 .checkbox{
     display:flex;
     align-items:center;
@@ -640,9 +523,6 @@ CHECKBOX
     width:18px;
     height:18px;
 }
-/*==================================================
-TABLES
-==================================================*/
 .table-wrapper{
     overflow-x:auto;
 }
@@ -670,9 +550,6 @@ TABLES
 .table tr:hover{
     background:var(--bg-soft);
 }
-/*==================================================
-LISTS
-==================================================*/
 .check-list{
     display:grid;
     gap:12px;
@@ -686,9 +563,6 @@ LISTS
     color:var(--success);
     font-size:.9rem;
 }
-/*==================================================
-AVATARS
-==================================================*/
 .avatar{
     width:60px;
     height:60px;
@@ -703,17 +577,11 @@ AVATARS
     width:84px;
     height:84px;
 }
-/*==================================================
-DIVIDER
-==================================================*/
 .divider{
     height:1px;
     background:var(--border);
     margin:32px 0;
 }
-/*==================================================
-IMAGE UTILITIES
-==================================================*/
 .img-cover{
     width:100%;
     height:100%;
@@ -726,21 +594,7 @@ IMAGE UTILITIES
 }
 .rounded-img{
     border-radius:20px;
-}/*==================================================
-NETHRA SENIOR CARE
-GLOBAL.CSS
-PART 3
-Hero
-Page Header
-CTA
-Newsletter
-Images
-Animations
-Compact Premium Layout
-==================================================*/
-/*==================================================
-HERO SECTION
-==================================================*/
+}
 .hero-section{
     position:relative;
     overflow:hidden;
@@ -748,14 +602,12 @@ HERO SECTION
     background:var(--bg);
 }
 .hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
+
+  
     align-items:center;
     gap:55px;
 }
-.hero-content{
-    max-width:560px;
-}
+
 .hero-tag{
     display:inline-flex;
     align-items:center;
@@ -781,7 +633,7 @@ HERO SECTION
 .hero-content p{
     font-size:1rem;
     max-width:520px;
-    color:var(--text-light);
+  
     margin-bottom:30px;
 }
 .hero-buttons{
@@ -805,9 +657,6 @@ HERO SECTION
 .hero-features i{
     color:var(--primary);
 }
-/*==================================================
-HERO IMAGE
-==================================================*/
 .hero-image{
     position:relative;
 }
@@ -818,9 +667,6 @@ HERO IMAGE
     border-radius:24px;
     box-shadow:var(--shadow-md);
 }
-/*==================================================
-FLOATING CARD
-==================================================*/
 .floating-card{
     position:absolute;
     left:-20px;
@@ -851,9 +697,6 @@ FLOATING CARD
     font-size:.82rem;
     color:var(--text-light);
 }
-/*==================================================
-PAGE HEADER
-==================================================*/
 .page-header{
     padding:90px 0;
     background:var(--bg);
@@ -879,9 +722,6 @@ PAGE HEADER
     object-fit:cover;
     border-radius:24px;
 }
-/*==================================================
-BREADCRUMB
-==================================================*/
 .breadcrumb{
     display:flex;
     gap:8px;
@@ -895,9 +735,6 @@ BREADCRUMB
     color:var(--primary);
     font-weight:600;
 }
-/*==================================================
-CTA
-==================================================*/
 .cta-section{
     padding:90px 0;
 }
@@ -929,9 +766,6 @@ CTA
 .cta-image img{
     border-radius:20px;
 }
-/*==================================================
-NEWSLETTER
-==================================================*/
 .newsletter-section{
     padding:80px 0;
 }
@@ -965,9 +799,6 @@ NEWSLETTER
 .newsletter-form .btn{
     min-width:160px;
 }
-/*==================================================
-IMAGE EFFECTS
-==================================================*/
 .image-hover{
     overflow:hidden;
     border-radius:20px;
@@ -978,9 +809,6 @@ IMAGE EFFECTS
 .image-hover:hover img{
     transform:scale(1.05);
 }
-/*==================================================
-ANIMATIONS
-==================================================*/
 .fade-up{
     animation:fadeUp .8s both;
 }
@@ -1032,21 +860,7 @@ to{
 opacity:1;
 transform:scale(1);
 }
-}/*==================================================
-NETHRA SENIOR CARE
-GLOBAL.CSS
-PART 4
-Responsive Layout
-Utilities
-Helper Classes
-Accessibility
-Print
-Premium Responsive System
-==================================================*/
-/*==================================================
-LARGE DESKTOP
-1281px+
-==================================================*/
+}
 @media (min-width:1281px){
 .container{
     width:min(1240px,90%);
@@ -1071,10 +885,6 @@ LARGE DESKTOP
     margin-bottom:60px;
 }
 }
-/*==================================================
-DESKTOP
-1024px–1280px
-==================================================*/
 @media (max-width:1280px){
 .container{
     width:92%;
@@ -1097,10 +907,6 @@ DESKTOP
     grid-template-columns:repeat(2,1fr);
 }
 }
-/*==================================================
-TABLET
-640px–1023px
-==================================================*/
 @media (max-width:1023px){
 section{
     padding:70px 0;
@@ -1133,9 +939,7 @@ section{
     left:20px;
     bottom:20px;
 }
-.hero-buttons{
-    justify-content:flex-start;
-}
+
 .newsletter-form{
     flex-direction:column;
 }
@@ -1149,10 +953,6 @@ section{
     margin-bottom:45px;
 }
 }
-/*==================================================
-MOBILE
-Below 640px
-==================================================*/
 @media (max-width:639px){
 body{
     font-size:.9rem;
@@ -1239,9 +1039,6 @@ section{
     font-size:.82rem;
 }
 }
-/*==================================================
-COMMON HELPERS
-==================================================*/
 .rounded{
     border-radius:var(--radius-md);
 }
@@ -1302,9 +1099,6 @@ COMMON HELPERS
 .bg-white{
     background:#fff;
 }
-/*==================================================
-ACCESSIBILITY
-==================================================*/
 :focus-visible{
     outline:2px solid var(--primary);
     outline-offset:3px;
@@ -1312,9 +1106,6 @@ ACCESSIBILITY
 html{
     scroll-padding-top:90px;
 }
-/*==================================================
-SMOOTH HOVER
-==================================================*/
 img,
 .card,
 .service-card,
@@ -1322,9 +1113,6 @@ img,
 a{
     transition:var(--transition);
 }
-/*==================================================
-PRINT
-==================================================*/
 @media print{
 body{
     background:#fff;
@@ -1344,17 +1132,6 @@ img{
     page-break-inside:avoid;
 }
 }
-/*==================================================
-END OF GLOBAL.CSS
-Premium Nethra Senior Care Design System
-==================================================*//*==================================================
-NETHRA SENIOR CARE
-GLOBAL TYPOGRAPHY FIX
-COMPACT PREMIUM SCALE
-==================================================*/
-/*==================================================
-TYPOGRAPHY VARIABLES
-==================================================*/
 :root{
 --h1:clamp(2.1rem,3.2vw,3.1rem);
 --h2:clamp(1.65rem,2.4vw,2.35rem);
@@ -1370,9 +1147,6 @@ TYPOGRAPHY VARIABLES
 --section-space-lg:90px;
 --section-space-sm:50px;
 }
-/*==================================================
-GLOBAL TYPOGRAPHY
-==================================================*/
 h1,
 h2,
 h3,
@@ -1406,9 +1180,6 @@ p{
 font-size:var(--text-md);
 line-height:1.7;
 }
-/*==================================================
-SECTION LABEL / TAG
-==================================================*/
 .section-label,
 .hero-tag,
 .badge{
@@ -1431,9 +1202,7 @@ margin-bottom:10px;
 max-width:560px;
 margin:auto;
 }
-/*==================================================
-HERO TYPOGRAPHY
-==================================================*/
+
 .hero-section{
 padding:70px 0;
 }
@@ -1446,10 +1215,7 @@ margin-bottom:16px;
 font-size:.95rem;
 max-width:500px;
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+
 @media (min-width:1024px) and (max-width:1280px){
 .hero-content h1{
 font-size:2.6rem;
@@ -1467,10 +1233,7 @@ section{
 padding:65px 0;
 }
 }
-/*==================================================
-LARGE DESKTOP
-1281px+
-==================================================*/
+
 @media (min-width:1281px){
 .hero-content h1{
 font-size:3rem;
@@ -1482,10 +1245,6 @@ height:500px;
 margin-bottom:45px;
 }
 }
-/*==================================================
-TABLET
-640px - 1023px
-==================================================*/
 @media (max-width:1023px){
 h1{
 font-size:2.2rem;
@@ -1503,10 +1262,6 @@ section{
 padding:60px 0;
 }
 }
-/*==================================================
-MOBILE
-Below 640px
-==================================================*/
 @media (max-width:639px){
 body{
 font-size:.88rem;
@@ -1545,10 +1300,7 @@ margin-bottom:30px;
 .newsletter-box{
 padding:18px;
 }
-}/*==================================================
-SECTION LABEL
-Premium Badge Style
-==================================================*/
+}
 .section-label{
     display:inline-flex;
     align-items:center;
@@ -1571,9 +1323,6 @@ Premium Badge Style
     font-size:.85rem;
     color:var(--primary);
 }
-/*==================================================
-SECTION HEADING SPACING
-==================================================*/
 .section-heading h2,
 .about-content h2,
 .portal-content h2,
@@ -1588,18 +1337,12 @@ SECTION HEADING SPACING
     margin-inline:auto;
     color:var(--text-light);
 }
-/*==================================================
-TABLET
-==================================================*/
 @media(max-width:1024px){
 .section-label{
     font-size:.75rem;
     padding:7px 14px;
 }
 }
-/*==================================================
-MOBILE
-==================================================*/
 @media(max-width:639px){
 .section-label{
     font-size:.7rem;
@@ -1618,9 +1361,6 @@ body{
     color:var(--text);
     transition:var(--transition);
 }
-/*==================================================
-PAGE BACKGROUND SECTIONS
-==================================================*/
 section{
     background:var(--bg);
 }
@@ -1630,9 +1370,6 @@ section{
 .surface-section{
     background:var(--surface);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] body{
     background:var(--bg);
     color:var(--text);
@@ -1657,9 +1394,6 @@ DARK MODE
 .partners{
     background:var(--surface);
 }
-/*====================================================
-   GLOBAL H2 TYPOGRAPHY SYSTEM
-====================================================*/
 h2{
     font-size:2rem;          
     line-height:1.3;
@@ -1690,3 +1424,4 @@ h2,
     max-width:fit-content !important;
     flex:none !important;
 }
+

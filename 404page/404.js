@@ -1,11 +1,5 @@
-/*==================================================
- NETHRA SENIOR CARE
- 404 PAGE JAVASCRIPT
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
- DARK MODE
-==================================================*/
 const themeToggle = document.getElementById("themeToggle");
 const darkToggle = document.getElementById("darkToggle");
 const html = document.documentElement;
@@ -101,9 +95,6 @@ darkToggle.classList.remove(
 }
 });
 }
-/*==================================================
- AUTO BACK BUTTON
-==================================================*/
 const backButton =
 document.querySelector(
 ".error-actions .btn-primary"
@@ -124,9 +115,6 @@ backButton.style.transform =
 }
 );
 }
-/*==================================================
- PAGE LOAD ANIMATION
-==================================================*/
 const container =
 document.querySelector(
 ".error-container"

@@ -23,9 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothHoverState();
   initActiveNavLinks();
 });
-/* =========================
-   THEME TOGGLE + SAVE
-========================= */
+
 function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   const savedTheme = localStorage.getItem("theme");
@@ -48,9 +46,7 @@ function updateThemeIcon(btn) {
     ? '<i class="fas fa-sun"></i>'
     : '<i class="fas fa-moon"></i>';
 }
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
+
 function initRevealAnimations() {
   const revealElements = document.querySelectorAll(`
     .section-heading,
@@ -78,9 +74,7 @@ function initRevealAnimations() {
   );
   revealElements.forEach((el) => observer.observe(el));
 }
-/* =========================
-   ACTIVE NAV LINK
-========================= */
+
 function initActiveNavLinks() {
   const navLinks = document.querySelectorAll(".nav-link");
   const currentPath = window.location.pathname.split("/").pop();
@@ -91,9 +85,6 @@ function initActiveNavLinks() {
     }
   });
 }
-/* =========================
-   SMOOTH INTERACTION
-========================= */
 function initSmoothHoverState() {
   const cards = document.querySelectorAll(`
     .why-card,

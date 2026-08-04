@@ -1,16 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-CONTACT CSS - PART 1
-Sections:
-01. Global Setup
-02. Contact Hero
-03. Contact Information
-04. Contact Form
-Premium Clean Version
-==================================================*/
-/*==================================================
-01. GLOBAL CONTACT SETUP
-==================================================*/
+
 .contact-hero,
 .contact-info-section,
 .contact-form-section,
@@ -27,9 +15,7 @@ img{
     max-width:100%;
     display:block;
 }
-/*==================================================
-02. CONTACT HERO
-==================================================*/
+
 .contact-hero{
     padding:110px 0 70px;
     background:
@@ -166,9 +152,7 @@ img{
     background:var(--primary);
     color:#fff;
 }
-/*==================================================
-03. CONTACT INFORMATION
-==================================================*/
+
 .contact-info-section{
     background:var(--surface);
 }
@@ -234,9 +218,7 @@ img{
     font-weight:700;
     font-size:.9rem;
 }
-/*==================================================
-05. EMERGENCY SUPPORT
-==================================================*/
+
 .emergency-section{
     background:var(--surface);
 }
@@ -283,15 +265,13 @@ img{
     color:var(--primary);
     border-color:#fff;
 }
-/*==================================================
-06. LOCATION SECTION
-==================================================*/
+
 .contact-location{
     background:var(--bg);
 }
 .contact-location-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+  
     align-items:center;
     gap:50px;
 }
@@ -344,9 +324,7 @@ img{
     width:100%;
     height:100%;
     border:0;
-}/*==================================================
-07. FAQ SECTION
-==================================================*/
+}
 .contact-faq{
     background:var(--surface);
 }
@@ -402,14 +380,12 @@ img{
     line-height:1.8;
     font-size:.94rem;
 }
-/*==================================================
-08. NEWSLETTER SECTION
-==================================================*/
+
 .contact-newsletter{
     background:var(--bg);
 }
 .newsletter-box{
-    display:flex;
+  
     align-items:center;
     justify-content:space-between;
     gap:40px;
@@ -472,9 +448,7 @@ img{
     height:55px;
     white-space:nowrap;
 }
-/*==================================================
-09. DARK MODE POLISH
-==================================================*/
+
 [data-theme="dark"] 
 .contact-info-card,
 [data-theme="dark"] 
@@ -518,9 +492,7 @@ img{
 .newsletter-input input{
     background:var(--surface);
 }
-/*==================================================
-10. RESPONSIVE SYSTEM
-==================================================*/
+
 @media(min-width:1281px){
 .contact-hero{
     padding-top:120px;
@@ -682,9 +654,7 @@ section{
 .faq-answer{
     padding:0 18px 18px;
 }
-}/*==================================================
-CONTACT MESSAGE PREMIUM SECTION
-==================================================*/
+}
 .contact-message-section{
 background:var(--bg);
 }
@@ -818,9 +788,7 @@ border-radius:20px;
 .contact-message-card h2{
 font-size:1.9rem;
 }
-}/*==================================================
-CONTACT MESSAGE COMPACT ALIGNMENT FIX
-==================================================*/
+}
 .contact-message-grid{
     align-items:stretch;
 }

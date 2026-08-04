@@ -1,18 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-SERVICE DETAIL CSS
-
-PART 1
-
-01. Global Setup
-02. Detail Hero
-03. Introduction
-04. Overview
-
-Premium Version
-==================================================*//*==================================================
-01. GLOBAL SETUP
-==================================================*/.detail-hero,
+.detail-hero,
 .detail-intro,
 .detail-overview,
 .highlights-section,
@@ -88,9 +74,7 @@ Premium Version
 
     line-height:1.8;
 
-}/*==================================================
-02. DETAIL HERO
-==================================================*/.detail-hero{
+}.detail-hero{
 
     background:
 
@@ -170,9 +154,7 @@ Premium Version
 
     0 25px 70px rgba(0,0,0,.18);
 
-}/*==================================================
-03. INTRODUCTION SECTION
-==================================================*/.detail-intro{
+}.detail-intro{
 
     background:var(--surface);
 
@@ -196,9 +178,7 @@ Premium Version
 
     color:var(--heading);
 
-}/*==================================================
-04. SERVICE OVERVIEW
-==================================================*/.detail-overview{
+}.detail-overview{
 
     background:var(--bg);
 
@@ -284,9 +264,7 @@ Premium Version
 
     font-weight:800;
 
-}/*==================================================
-05. HIGHLIGHTS SECTION
-==================================================*/.highlights-section{
+}.highlights-section{
 
     background:var(--surface);
 
@@ -370,9 +348,7 @@ Premium Version
 
     color:var(--text-light);
 
-}/*==================================================
-06. INCLUDED SERVICES
-==================================================*/.included-services{
+}.included-services{
 
     background:var(--bg);
 
@@ -424,9 +400,7 @@ Premium Version
 
     font-size:.92rem;
 
-}/*==================================================
-07. CARE PROCESS
-==================================================*/.care-process{
+}.care-process{
 
     background:var(--surface);
 
@@ -500,9 +474,7 @@ Premium Version
 
     font-size:.9rem;
 
-}/*==================================================
-08. BENEFITS SECTION
-==================================================*/.benefits-section{
+}.benefits-section{
 
     background:var(--bg);
 
@@ -540,9 +512,7 @@ Premium Version
 
     0 12px 35px rgba(var(--primary-rgb),.18);
 
-}/*==================================================
-09. FAMILY SUPPORT
-==================================================*/.family-section{
+}.family-section{
 
     background:var(--surface);
 
@@ -594,9 +564,7 @@ Premium Version
 
     0 20px 50px rgba(0,0,0,.15);
 
-}/*==================================================
-10. CARE TEAM
-==================================================*/.team-section{
+}.team-section{
 
     background:var(--bg);
 
@@ -646,9 +614,7 @@ Premium Version
 
     color:var(--text-light);
 
-}/*==================================================
-11. DETAIL PRICING
-==================================================*/.detail-pricing{
+}.detail-pricing{
 
     background:var(--surface);
 
@@ -730,9 +696,7 @@ Premium Version
 
     color:var(--text-light);
 
-}/*==================================================
-12. FAQ
-==================================================*/.detail-faq{
+}.detail-faq{
 
     background:var(--bg);
 
@@ -782,9 +746,7 @@ Premium Version
 
     line-height:1.7;
 
-}/*==================================================
-13. CTA
-==================================================*/.detail-cta{
+}.detail-cta{
 
     background:var(--surface);
 
@@ -840,9 +802,7 @@ Premium Version
 
     flex-wrap:wrap;
 
-}/*==================================================
-14. DARK MODE
-==================================================*/[data-theme="dark"] .highlight-card,
+}[data-theme="dark"] .highlight-card,
 [data-theme="dark"] .included-card,
 [data-theme="dark"] .team-card,
 [data-theme="dark"] .pricing-card,
@@ -865,9 +825,7 @@ Premium Version
 
     filter:none;
 
-} /* ==========================================
-   PREMIUM CARD GLOW SHADOW
-========================================== */
+} 
 
 .highlight-card,
 .included-card,
@@ -892,9 +850,7 @@ Premium Version
         box-shadow 0.35s ease,
         border-color 0.35s ease;
 
-}/* ==========================================
-   CARD HOVER GLOW EFFECT
-========================================== */
+}
 
 .highlight-card:hover,
 .included-card:hover,
@@ -908,9 +864,7 @@ Premium Version
 
         0 0 35px rgba(27,94,32,0.25);
 
-}/* ==========================================
-   DARK MODE CARD GLOW
-========================================== */
+}
 
 [data-theme="dark"] 
 .highlight-card,
@@ -950,9 +904,7 @@ Premium Version
 
         0 0 40px rgba(46,125,50,0.35);
 
-}/* ==========================================
-   PREMIUM CARD HOVER EFFECT
-========================================== */
+}
 
 .highlight-card,
 .included-card,
@@ -1028,9 +980,7 @@ Premium Version
 
     transform:translateX(5px);
 
-}/* ==========================================
-   PREMIUM CARD GLOW SHADOW
-========================================== */
+}
 
 .highlight-card,
 .included-card,
@@ -1053,9 +1003,7 @@ Premium Version
         transform 0.35s ease,
         border-color 0.35s ease;
 
-}/* ==========================================
-   GLOW SHADOW ON HOVER
-========================================== */
+}
 
 .highlight-card:hover,
 .included-card:hover,
@@ -1075,9 +1023,7 @@ Premium Version
 
 }.section-label i {    font-size:.85rem;
 
-}/* ==========================================
-   SECTION HEADING SPACING
-========================================== */
+}
 
 .section-heading .section-label {    margin-bottom:20px;
 
@@ -1085,9 +1031,7 @@ Premium Version
 
     margin-bottom:15px;
 
-}/* ==========================================
-   DARK MODE
-========================================== */
+}
 
 [data-theme="dark"] .section-label {    background:rgba(255,255,255,.08);
 
@@ -1099,12 +1043,7 @@ Premium Version
 
 }
 
-/*==================================================
-15. RESPONSIVE MEDIA QUERIES
-==================================================*//*==================================================
-LARGE DESKTOP
-1280px+
-==================================================*/
+
 
 @media (min-width:1280px){
 
@@ -1129,10 +1068,8 @@ LARGE DESKTOP
 
         gap:70px;
 
-    }}/*==================================================
-DESKTOP
-1024px - 1279px
-==================================================*/@media (min-width:1024px) and (max-width:1279px){.detail-hero,
+    }}
+    @media (min-width:1024px) and (max-width:1279px){.detail-hero,
 .detail-intro,
 .detail-overview,
 .highlights-section,
@@ -1190,10 +1127,7 @@ DESKTOP
 
     height:380px;
 
-}}/*==================================================
-TABLET
-640px - 1023px
-==================================================*/@media (min-width:640px) and (max-width:1023px){.detail-hero,
+}}@media (min-width:640px) and (max-width:1023px){.detail-hero,
 .detail-intro,
 .detail-overview,
 .highlights-section,
@@ -1272,10 +1206,7 @@ TABLET
 
     transform:none;
 
-}}/*==================================================
-MOBILE
-0 - 639px
-==================================================*/@media (max-width:639px){.detail-hero,
+}}@media (max-width:639px){.detail-hero,
 .detail-intro,
 .detail-overview,
 .highlights-section,
@@ -1425,10 +1356,7 @@ MOBILE
 
     width:100%;
 
-}}/*==================================================
-SMALL MOBILE
-Below 420px
-==================================================*/@media (max-width:420px){.detail-hero-content h1{
+}}@media (max-width:420px){.detail-hero-content h1{
 
     font-size:1.75rem;
 
@@ -1464,10 +1392,7 @@ Below 420px
 
     padding:35px 15px;
 
-}}/*==================================================
-PREMIUM ICON SYSTEM
-SERVICE DETAIL PAGE
-==================================================*/.card-icon,
+}}.card-icon,
 .pricing-icon{
 
     width:60px;
@@ -1563,9 +1488,8 @@ SERVICE DETAIL PAGE
 
     justify-content:center;    border-radius:50%;    background:
 
-    rgba(255,255,255,.18);    font-size:1.1rem;}/*==================================================
-DARK MODE ICONS
-==================================================*/[data-theme="dark"] .card-icon,
+    rgba(255,255,255,.18);    font-size:1.1rem;}
+    [data-theme="dark"] .card-icon,
 [data-theme="dark"] .pricing-icon,
 [data-theme="dark"] .benefit-item i,
 [data-theme="dark"] .faq-card h3 i{    background:
@@ -1577,17 +1501,13 @@ DARK MODE ICONS
 [data-theme="dark"] .team-card:hover .card-icon,
 [data-theme="dark"] .pricing-card:hover .pricing-icon{    background:var(--primary);
 
-    color:#fff;}/*==================================================
-MOBILE ICON SIZE
-==================================================*/@media(max-width:639px){.card-icon{    width:52px;
+    color:#fff;}@media(max-width:639px){.card-icon{    width:52px;
 
     height:52px;    font-size:1.25rem;}.pricing-icon{    width:60px;
 
     height:60px;    font-size:1.45rem;}.cta-trust i{    width:35px;
 
-    height:35px;}}/*==================================================
-CENTER ALIGN ALL SERVICE DETAIL CARDS
-==================================================*/.highlight-card,
+    height:35px;}}.highlight-card,
 .included-card,
 .process-card,
 .team-card,
@@ -1626,18 +1546,14 @@ CENTER ALIGN ALL SERVICE DETAIL CARDS
 
     justify-content:center;}.process-card span{    margin-left:auto;
 
-    margin-right:auto;}/*==================================================
-MOBILE CARD ALIGNMENT
-==================================================*/@media(max-width:639px){.highlight-card,
+    margin-right:auto;}
+    @media(max-width:639px){.highlight-card,
 .included-card,
 .process-card,
 .team-card,
 .pricing-card,
 
-.benefit-item{    text-align:center;}}/*==================================================
-  DESKTOP RESPONSIVE
-  1024px - 1280px
-==================================================*/
+.benefit-item{    text-align:center;}}
 
 @media (min-width:1024px) and (max-width:1280px){.detail-hero-grid,
 .overview-grid,
@@ -1824,10 +1740,7 @@ MOBILE CARD ALIGNMENT
 
     justify-content:center;
 
-}}/*==================================================
- LARGE DESKTOP
- ABOVE 1280px
-==================================================*/@media (min-width:1281px){.detail-hero-grid{
+}}@media (min-width:1281px){.detail-hero-grid{
 
     grid-template-columns:1fr 1fr;
 
@@ -1865,9 +1778,7 @@ MOBILE CARD ALIGNMENT
 
     grid-template-columns:repeat(3,1fr);
 
-}}/*==================================================
- FAQ ICON
-==================================================*/.faq-card h3{
+}}.faq-card h3{
 
 display:flex;
 
@@ -1923,9 +1834,7 @@ max-height:200px;
 
 opacity:1;
 
-}/*==================================================
-DESKTOP HERO NAVBAR FIX
-==================================================*/
+}
 
 @media (min-width:1024px){
 
@@ -1947,9 +1856,7 @@ margin-top:20px;
 
 }
 
-}/*==================================================
-TABLET HERO NAVBAR FIX
-==================================================*/
+}
 
 @media (min-width:640px) and (max-width:1023px){
 
@@ -1985,9 +1892,7 @@ margin:auto;
 
 }
 
-}/*==================================================
-MOBILE HERO NAVBAR FIX
-==================================================*/
+}
 
 @media (max-width:639px){
 
@@ -2055,14 +1960,12 @@ object-fit:cover;
 
 }
 
-}/*==================================================
-PREMIUM HERO SECTION FIX
-==================================================*/
+}
 
 .detail-hero{
     position:relative;
     overflow:hidden;
-    padding:140px 0 90px;
+   
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -2110,10 +2013,7 @@ PREMIUM HERO SECTION FIX
 
 .trust-item{
     flex:1 1 170px;
-}/*==================================================
-PREMIUM HERO - DESKTOP FIX
-LIKE INDEX PAGE
-==================================================*/@media (min-width:1281px){
+}@media (min-width:1281px){
 
 .detail-hero{
     padding:90px 0 70px;
@@ -2186,10 +2086,7 @@ LIKE INDEX PAGE
 
 }
 
-/*==================================================
-DESKTOP
-1024px-1280px
-==================================================*/
+
 
 @media (min-width:1024px) and (max-width:1280px){
 
@@ -2255,10 +2152,7 @@ DESKTOP
     font-size:12px;
 }
 
-}/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+}
 @media (min-width:1024px) and (max-width:1280px){
 
 .detail-hero .container{
@@ -2275,12 +2169,10 @@ DESKTOP
     gap:40px;
 }
 
-}/*==================================================
-CTA SECTION
-==================================================*/
+}
 
 .detail-cta{
-    padding:80px 0;
+  
     background:var(--bg);
 }
 
@@ -2401,9 +2293,7 @@ CTA SECTION
     border-color:#fff;
 }
 
-/*==================================================
-TABLET
-==================================================*/
+
 
 @media (max-width:1023px){
 
@@ -2417,9 +2307,6 @@ TABLET
 
 }
 
-/*==================================================
-MOBILE
-==================================================*/
 
 @media (max-width:639px){
 

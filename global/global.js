@@ -1,17 +1,6 @@
-/*==================================================
- NETHRA SENIOR CARE
- GLOBAL.JS
- Component Loader
- Navbar Functionality
- Mobile Menu
- Dark Mode
- RTL Mode
- Sticky Header
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
- COMPONENT LOADER
-==================================================*/
+
 async function loadComponent(selector,file){
 const element =
 document.querySelector(selector);
@@ -33,32 +22,24 @@ catch(error){
 console.error(error);
 }
 }
-/*==================================================
-LOAD NAVBAR
-==================================================*/
+
 loadComponent(
 "#navbar",
 "../components/navbar.html"
 );
-/*==================================================
-LOAD FOOTER
-==================================================*/
+
 loadComponent(
 "#footer",
 "../components/footer.html"
 );
 });
-/*==================================================
-NAVBAR INITIALIZATION
-==================================================*/
+
 function initNavbar(){
 if(document.body.dataset.navLoaded){
 return;
 }
 document.body.dataset.navLoaded="true";
-/*==================================================
-ELEMENTS
-==================================================*/
+
 const ham =
 document.getElementById("ham");
 const mobNav =
@@ -73,9 +54,7 @@ const rtlBtn =
 document.getElementById("rtl-btn");
 const header =
 document.querySelector(".site-header");
-/*==================================================
-LOAD SAVED SETTINGS
-==================================================*/
+
 const savedTheme =
 localStorage.getItem("theme");
 if(savedTheme){
@@ -94,9 +73,6 @@ document.documentElement
 savedDirection
 );
 }
-/*==================================================
-OPEN MOBILE MENU
-==================================================*/
 function openMenu(){
 if(!mobNav) return;
 mobNav.classList.add(
@@ -116,9 +92,6 @@ document.body.classList.add(
 "menu-open"
 );
 }
-/*==================================================
-CLOSE MOBILE MENU
-==================================================*/
 function closeMenu(){
 if(mobNav){
 mobNav.classList.remove(
@@ -139,9 +112,6 @@ document.body.classList.remove(
 "menu-open"
 );
 }
-/*==================================================
-HAMBURGER BUTTON
-==================================================*/
 if(ham){
 ham.onclick = ()=>{
 if(
@@ -156,23 +126,14 @@ openMenu();
 }
 };
 }
-/*==================================================
-CLOSE BUTTON
-==================================================*/
 if(closeBtn){
 closeBtn.onclick =
 closeMenu;
 }
-/*==================================================
-OVERLAY CLOSE
-==================================================*/
 if(overlay){
 overlay.onclick =
 closeMenu;
 }
-/*==================================================
-MOBILE LINKS CLOSE
-==================================================*/
 document
 .querySelectorAll(
 ".mob-nav a"
@@ -181,9 +142,6 @@ document
 link.onclick =
 closeMenu;
 });
-/*==================================================
-MOBILE DROPDOWN
-==================================================*/
 const mobDrop =
 document.querySelector(
 ".mob-dd-toggle"
@@ -209,9 +167,6 @@ mobDrop
 );
 };
 }
-/*==================================================
-DARK LIGHT MODE
-==================================================*/
 if(themeBtn){
 themeBtn.onclick = ()=>{
 let current =
@@ -246,9 +201,6 @@ icon.classList.toggle(
 }
 };
 }
-/*==================================================
-RTL TOGGLE
-==================================================*/
 if(rtlBtn){
 rtlBtn.onclick = ()=>{
 let current =
@@ -273,9 +225,6 @@ direction
 );
 };
 }
-/*==================================================
-STICKY HEADER
-==================================================*/
 window.addEventListener(
 "scroll",
 ()=>{
@@ -293,9 +242,6 @@ header.classList.remove(
 }
 });
 }
-/*==================================================
-ACTIVE NAVIGATION
-==================================================*/
 function setActiveNav() {
 
     const currentPage =
@@ -328,7 +274,6 @@ function setActiveNav() {
 
     });
 
-    // Home dropdown
     if (
         currentPage === "index.html" ||
         currentPage === "home2.html"

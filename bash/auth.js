@@ -1,11 +1,5 @@
-/*==================================================
-NETHRA AUTH JS
-Senior Care Authentication
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
-THEME TOGGLE
-==================================================*/
 const themeBtn =
 document.getElementById("themeToggle");
 const themeIcon =
@@ -54,9 +48,6 @@ themeIcon.className=
 "fa-solid fa-moon";
 }
 }
-/*==================================================
-RTL TOGGLE
-==================================================*/
 const rtlBtn =
 document.getElementById("rtlToggle");
 rtlBtn?.addEventListener(
@@ -97,9 +88,6 @@ document.documentElement.setAttribute(
 savedDirection
 );
 }
-/*==================================================
-PASSWORD SHOW / HIDE
-==================================================*/
 const passwordInput =
 document.getElementById(
 "password"
@@ -130,9 +118,6 @@ passwordToggle.classList.add(
 );
 }
 });
-/*==================================================
-LOGIN FORM
-==================================================*/
 const authForm =
 document.querySelector(
 ".auth-form"
@@ -182,9 +167,6 @@ showMessage(
 );
 },1500);
 });
-/*==================================================
-SOCIAL BUTTONS
-==================================================*/
 const socialButtons =
 document.querySelectorAll(
 ".social-btn"
@@ -203,9 +185,6 @@ showMessage(
 );
 });
 });
-/*==================================================
-MESSAGE ALERT
-==================================================*/
 function showMessage(
 message,
 type

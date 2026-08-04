@@ -1,17 +1,4 @@
-/*==========================================================
-   NETHRA SENIOR CARE
-   HOME 2 CSS
-   PREMIUM VERSION
-   PART 1
-   Sections:
-   - Hero
-   - Trust Statistics
-   - Welcome
-   - Why Choose Us
-==========================================================*/
-/*==========================================================
-   HOME 2 PAGE BASE
-==========================================================*/
+
 .home2-hero,
 .trust-section,
 .welcome-section,
@@ -25,9 +12,6 @@
     display:block;
     object-fit:cover;
 }
-/*==========================================================
-   PREMIUM HERO SECTION
-==========================================================*/
 .home2-hero{
     min-height:660px;
     display:flex;
@@ -195,9 +179,6 @@
     color:var(--text2);
     font-size:.9rem;
 }
-/*==========================================================
-   TRUST STATISTICS
-==========================================================*/
 .trust-section{
     padding:40px 0;
     background:var(--surface);
@@ -230,9 +211,6 @@
     color:var(--text2);
     margin:0;
 }
-/*==========================================================
-   WELCOME SECTION
-==========================================================*/
 .welcome-grid{
     display:grid;
     grid-template-columns:
@@ -281,9 +259,6 @@
 .welcome-list i{
     color:var(--primary);
 }
-/*==========================================================
-   WHY CHOOSE SECTION
-==========================================================*/
 .section-heading{
     max-width:750px;
     margin-bottom:55px;
@@ -344,20 +319,7 @@
     color:var(--text2);
     line-height:1.7;
     margin:0;
-}/*==========================================================
-   NETHRA SENIOR CARE
-   HOME 2 CSS
-   PREMIUM VERSION
-   PART 2
-   Sections:
-   - Lifestyle Experience
-   - Premium Services
-   - Wellness & Healthcare
-   - Family Portal
-==========================================================*/
-/*==========================================================
-   LIFESTYLE EXPERIENCE
-==========================================================*/
+}
 .lifestyle-section{
     background:var(--bg2);
 }
@@ -429,9 +391,6 @@
     margin:0;
     line-height:1.6;
 }
-/*==========================================================
-   PREMIUM SERVICES
-==========================================================*/
 .services-section{
     background:var(--surface);
 }
@@ -499,9 +458,6 @@
 .text-link:hover{
     gap:15px;
 }
-/*==========================================================
-   WELLNESS & HEALTHCARE
-==========================================================*/
 .wellness-section{
     background:var(--bg2);
 }
@@ -567,9 +523,6 @@
 .wellness-image img{
     height:440px;
 }
-/*==========================================================
-   FAMILY PORTAL
-==========================================================*/
 .family-section{
     background:var(--surface);
 }
@@ -618,23 +571,7 @@
 }
 .family-list i{
     color:var(--primary);
-}/*==========================================================
-   NETHRA SENIOR CARE
-   HOME 2 CSS
-   PREMIUM VERSION
-   PART 3
-   Sections:
-   - Community Amenities
-   - Daily Life Gallery
-   - Testimonials
-   - Awards
-   - CTA
-   - Newsletter
-   - Responsive Design
-==========================================================*/
-/*==========================================================
-   COMMUNITY AMENITIES
-==========================================================*/
+}
 .amenities-section{
     background:var(--bg2);
 }
@@ -682,9 +619,6 @@
     line-height:1.7;
     margin:0;
 }
-/*==========================================================
-   DAILY LIFE GALLERY
-==========================================================*/
 .daily-life-section{
     background:var(--surface);
 }
@@ -712,9 +646,6 @@
 .gallery-item:hover img{
     transform:scale(1.08);
 }
-/*==========================================================
-   TESTIMONIALS
-==========================================================*/
 .testimonial-section{
     background:var(--bg2);
 }
@@ -777,9 +708,6 @@
     color:var(--text2);
     font-size:.9rem;
 }
-/*==========================================================
-   AWARDS & RECOGNITION
-==========================================================*/
 .awards-section{
     background:var(--surface);
 }
@@ -817,9 +745,6 @@
     line-height:1.6;
     margin:0;
 }
-/*==========================================================
-   PREMIUM CTA
-==========================================================*/
 .home2-cta{
     background:var(--bg2);
 }
@@ -873,9 +798,6 @@
     background:#fff;
     color:var(--primary);
 }
-/*==========================================================
-   NEWSLETTER
-==========================================================*/
 .newsletter-section{
     padding:70px 0;
     background:var(--surface);
@@ -916,9 +838,6 @@
     background:var(--surface);
     color:var(--text);
 }
-/*==========================================================
-   RESPONSIVE DESIGN
-==========================================================*/
 @media(max-width:1280px){
 .hero-grid{
     gap:40px;
@@ -1032,17 +951,8 @@
 .cta-box{
     padding:45px 20px;
 }
-}/*==================================================
-RESPONSIVE BREAKPOINTS
-Mobile     : max-width: 640px
-Tablet     : 641px - 1024px
-Desktop    : 1025px - 1280px
-Large      : 1281px+
-==================================================*/
-.home2-hero .hero-grid{
-    grid-template-columns: 1.05fr .95fr;
-    gap:70px;
 }
+
 .hero-content h1{
     font-size:64px;
 }
@@ -1083,10 +993,7 @@ Large      : 1281px+
 }
 .awards-grid{
     grid-template-columns:repeat(2,1fr);
-}/*==========================================================
-   HOME 2 TYPOGRAPHY SCALE REDUCTION
-   Match Index CSS Premium Style
-==========================================================*/
+}
 .hero-content h1{
     font-size:clamp(
         2.4rem,
@@ -1154,9 +1061,6 @@ Large      : 1281px+
 .newsletter-content p{
     font-size:.95rem;
 }
-/*==========================================================
-   DESKTOP LARGE 1280+
-==========================================================*/
 @media(min-width:1281px){
 .hero-content h1{
     font-size:3.8rem;
@@ -1168,9 +1072,6 @@ Large      : 1281px+
     font-size:2.8rem;
 }
 }
-/*==========================================================
-   DESKTOP 1025 - 1280
-==========================================================*/
 @media(max-width:1280px){
 .hero-content h1{
     font-size:3.2rem;
@@ -1199,9 +1100,6 @@ Large      : 1281px+
     font-size:1.8rem;
 }
 }
-/*==========================================================
-   MOBILE
-==========================================================*/
 @media(max-width:640px){
 .hero-content h1{
     font-size:2.1rem;
@@ -1228,9 +1126,7 @@ Large      : 1281px+
 .amenity-content h3{
     font-size:1rem;
 }
-}/*==================================================
-HOME2 FONT SIZE (Same as index.css)
-==================================================*/
+}
 .hero-content h1{
     font-size:3.2rem;
 }
@@ -1282,9 +1178,7 @@ HOME2 FONT SIZE (Same as index.css)
 }
 .newsletter-box{
     padding:40px;
-}/*=========================================
-WHY CHOOSE US
-=========================================*/
+}
 .why-card{
     display:flex;
     flex-direction:column;
@@ -1332,9 +1226,6 @@ WHY CHOOSE US
     margin:0;
     text-align:center;
 }
-/*==================================================
-HOME 2 - PREMIUM CARD HOVER EFFECTS
-==================================================*/
 .trust-card,
 .why-card,
 .lifestyle-card,
@@ -1399,9 +1290,6 @@ HOME 2 - PREMIUM CARD HOVER EFFECTS
 .award-card:hover::before{
     transform:scaleX(1);
 }
-/*==================================================
-IMAGE ZOOM
-==================================================*/
 .lifestyle-card img,
 .lifestyle-large img,
 .service-image img,
@@ -1419,9 +1307,6 @@ IMAGE ZOOM
     transform:scale(1.08);
     filter:brightness(1.05);
 }
-/*==================================================
-ICON ANIMATION
-==================================================*/
 .why-icon,
 .quote-icon,
 .profile-icon,
@@ -1440,9 +1325,6 @@ ICON ANIMATION
 .wellness-item:hover i{
     transform:scale(1.08);
 }
-/*==================================================
-LARGE LIFESTYLE CARD
-==================================================*/
 .lifestyle-large{
     position:relative;
     overflow:hidden;
@@ -1460,9 +1342,6 @@ LARGE LIFESTYLE CARD
     0 22px 50px rgba(27,94,32,.18),
     0 0 35px rgba(27,94,32,.22);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .trust-card,
 [data-theme="dark"] .why-card,
 [data-theme="dark"] .lifestyle-card,
@@ -1487,9 +1366,7 @@ DARK MODE
     box-shadow:
     0 25px 60px rgba(0,0,0,.60),
     0 0 45px rgba(27,94,32,.35);
-}/*=========================================
-ALTERNATING SECTION BACKGROUNDS
-=========================================*/
+}
 .home2-hero{
     background:var(--bg);
 }
@@ -1531,9 +1408,7 @@ ALTERNATING SECTION BACKGROUNDS
 }
 .newsletter-section{
     background:var(--surface);
-}/*=========================================
-TESTIMONIAL CARD
-=========================================*/
+}
 .testimonial-card{
     padding:32px;
     display:flex;
@@ -1544,9 +1419,6 @@ TESTIMONIAL CARD
     flex:1;
     margin:20px 0 24px;
 }
-/*=========================================
-PROFILE
-=========================================*/
 .testimonial-profile{
     display:flex;
     align-items:center;
@@ -1572,16 +1444,9 @@ PROFILE
 .testimonial-profile span{
     margin:0;
     line-height:1.4;
-}/* ==========================================
-   DESKTOP
-   1024px – 1279px
-========================================== */
+}
 @media (min-width:1024px) and (max-width:1279px){
-    .container{
-        max-width:1140px;
-        margin:auto;
-        padding:0 32px;
-    }
+   
     .hero-grid,
     .about-grid,
     .welcome-grid,
@@ -1614,16 +1479,8 @@ PROFILE
         grid-template-columns:repeat(2,1fr);
         gap:30px;
     }
-/* ==========================================
-   LARGE DESKTOP
-   1280px+
-========================================== */
 @media (min-width:1280px){
-    .container{
-        max-width:1320px;
-        margin:auto;
-        padding:0 40px;
-    }
+    
     .hero-content h1{
         font-size:4rem;
         line-height:1.15;
@@ -1653,4 +1510,303 @@ PROFILE
         grid-template-columns:repeat(3,1fr);
         gap:30px;
     }
+}
+
+
+.home2-hero{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    overflow:hidden;
+
+    padding:100px 0 60px;
+
+    background:url("../images/indexhero1.jpg") center/cover no-repeat;
+}
+
+.home2-hero .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.48)
+    );
+}
+
+.home2-hero .container{
+    position:relative;
+    z-index:2;
+    width:100%;
+}
+
+.hero-grid{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.hero-content{
+    width:100%;
+    max-width:720px;
+    margin:auto;
+
+    padding:45px;
+
+    text-align:center;
+    color:#fff;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.22);
+
+    border-radius:26px;
+
+    backdrop-filter:blur(15px);
+}
+
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin-bottom:24px;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.16);
+
+    color:#fff;
+
+    font-size:.88rem;
+
+    font-weight:600;
+}
+
+.hero-tag i{
+    font-size:17px;
+}
+
+.hero-content h1{
+    margin:0 0 22px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(2.4rem,5vw,4.5rem);
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:#fff;
+}
+
+.hero-content h1 em{
+    font-style:normal;
+    color:var(--primary);
+}
+
+.hero-content p{
+    max-width:620px;
+    margin:0 auto 35px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.92);
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons .btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+
+
+@media(min-width:1281px){
+
+.home2-hero{
+    min-height:100vh;
+    padding-top:120px;
+}
+
+.hero-content{
+    max-width:760px;
+    padding:55px;
+}
+
+.hero-content h1{
+    font-size:4.4rem;
+}
+
+}
+
+
+
+@media(min-width:1024px) and (max-width:1280px){
+
+.home2-hero{
+    min-height:92vh;
+    padding:110px 0 60px;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:42px;
+}
+
+.hero-content h1{
+    font-size:3.3rem;
+}
+
+.hero-content p{
+    font-size:.95rem;
+}
+
+}
+
+
+@media(min-width:640px) and (max-width:1023px){
+
+.home2-hero{
+    min-height:90vh;
+    padding:110px 25px 60px;
+}
+
+.hero-content{
+    max-width:650px;
+    padding:35px;
+}
+
+.hero-content h1{
+    font-size:2.7rem;
+}
+
+.hero-content p{
+    font-size:.94rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+}
+
+
+
+@media(max-width:639px){
+
+.home2-hero{
+    min-height:auto;
+    padding:95px 18px 55px;
+}
+
+.hero-content{
+    padding:24px 18px;
+    border-radius:18px;
+}
+
+.hero-tag{
+    padding:8px 16px;
+    font-size:.75rem;
+}
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.hero-content p{
+    font-size:.88rem;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.hero-buttons .btn{
+    width:100%;
+    max-width:280px;
+}
+
+}
+
+
+
+@media(max-width:400px){
+
+.home2-hero{
+    padding:90px 15px 50px;
+}
+
+.hero-content{
+    padding:20px 15px;
+}
+
+.hero-tag{
+    font-size:.7rem;
+}
+
+.hero-content h1{
+    font-size:1.65rem;
+}
+
+.hero-content p{
+    font-size:.82rem;
+}
+
+.hero-buttons .btn{
+    max-width:100%;
+}
+
+}
+
+
+[data-theme="dark"] .home2-hero{
+    background:url("../images/indexhero1.jpg") center/cover no-repeat;
+}
+
+[data-theme="dark"] .home2-hero .hero-overlay{
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.60)
+    );
+}
+
+[data-theme="dark"] .hero-content{
+    background:rgba(20,20,20,.45);
+    border-color:rgba(255,255,255,.18);
+}
+
+[data-theme="dark"] .hero-content h1{
+    color:#fff;
+}
+
+[data-theme="dark"] .hero-content h1 em{
+    color:var(--primary);
+}
+
+[data-theme="dark"] .hero-content p{
+    color:rgba(255,255,255,.90);
 }

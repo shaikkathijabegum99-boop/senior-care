@@ -1,18 +1,4 @@
-/*==================================================
-NETHRA SENIOR CARE
-INDEX CSS - PART 1
-Sections:
-01. Global Section Setup
-02. Section Header
-03. Home Hero
-04. Trust Bar
-05. About Section
-06. Values Section
-Clean Premium Version
-==================================================*/
-/*==================================================
-01. GLOBAL SECTION SETUP
-==================================================*/
+
 section{
     position:relative;
     padding:80px 0;
@@ -21,9 +7,6 @@ img{
     max-width:100%;
     display:block;
 }
-/*==================================================
-02. SECTION HEADER
-==================================================*/
 .section-header{
     max-width:720px;
     margin:0 auto 45px;
@@ -69,9 +52,6 @@ img{
     font-size:.98rem;
     line-height:1.8;
 }
-/*==================================================
-03. HOME HERO
-==================================================*/
 .home-hero{
     position:relative;
     overflow:hidden;
@@ -222,9 +202,6 @@ img{
     margin:0;
     font-size:.88rem;
 }
-/*==================================================
-04. TRUST BAR
-==================================================*/
 .trust-bar{
     background:var(--surface);
     border-top:1px solid var(--border);
@@ -260,9 +237,6 @@ img{
     font-size:.92rem;
     font-weight:600;
 }
-/*==================================================
-05. ABOUT SECTION
-==================================================*/
 .about-home{
     background:var(--bg);
 }
@@ -327,9 +301,6 @@ img{
     background:rgba(var(--primary-rgb),.08);
     color:var(--primary);
 }
-/*==================================================
-06. VALUES SECTION
-==================================================*/
 .values{
     background:var(--surface);
 }
@@ -371,19 +342,7 @@ img{
     font-size:.92rem;
     line-height:1.7;
     color:var(--text-light);
-}/*==================================================
-NETHRA SENIOR CARE
-INDEX CSS - PART 2
-Sections:
-07. Services
-08. Care Journey
-09. Family Portal
-10. Amenities
-Premium Clean Version
-==================================================*/
-/*==================================================
-07. SERVICES
-==================================================*/
+}
 .services{
     background:var(--bg);
 }
@@ -461,9 +420,6 @@ Premium Clean Version
 .text-link:hover{
     gap:12px;
 }
-/*==================================================
-08. CARE JOURNEY
-==================================================*/
 .care-journey{
     background:var(--surface);
 }
@@ -507,9 +463,6 @@ Premium Clean Version
     line-height:1.7;
     color:var(--text-light);
 }
-/*==================================================
-09. FAMILY PORTAL
-==================================================*/
 .family-portal{
     background:var(--bg);
 }
@@ -568,9 +521,6 @@ Premium Clean Version
 .portal-list i{
     color:var(--primary);
 }
-/*==================================================
-10. AMENITIES
-==================================================*/
 .amenities{
     background:var(--surface);
 }
@@ -611,19 +561,7 @@ Premium Clean Version
     font-size:.92rem;
     line-height:1.7;
     color:var(--text-light);
-}/*==================================================
-NETHRA SENIOR CARE
-INDEX CSS - PART 3
-Sections:
-11. Safety & Wellness
-12. Nutrition
-13. Daily Life
-14. Why Choose Us
-Premium Clean Version
-==================================================*/
-/*==================================================
-11. SAFETY & WELLNESS
-==================================================*/
+}
 .wellness-section{
     background:var(--bg);
 }
@@ -704,9 +642,6 @@ Premium Clean Version
     border-radius:24px;
     box-shadow:var(--shadow-md);
 }
-/*==================================================
-12. NUTRITION
-==================================================*/
 .nutrition{
     background:var(--surface);
 }
@@ -766,9 +701,6 @@ Premium Clean Version
 .nutrition-list i{
     color:var(--primary);
 }
-/*==================================================
-13. DAILY LIFE
-==================================================*/
 .daily-life{
     background:var(--bg);
 }
@@ -811,9 +743,6 @@ Premium Clean Version
     line-height:1.7;
     color:var(--text-light);
 }
-/*==================================================
-14. WHY CHOOSE US
-==================================================*/
 .why-us{
     background:var(--surface);
 }
@@ -860,20 +789,7 @@ Premium Clean Version
     font-size:.92rem;
     line-height:1.7;
     color:var(--text-light);
-}/*==================================================
-NETHRA SENIOR CARE
-INDEX CSS - PART 4
-Sections:
-15. Awards & Certifications
-16. Partners
-17. Photo Gallery
-18. CTA Section
-19. Newsletter
-Premium Clean Version
-==================================================*/
-/*==================================================
-15. AWARDS & CERTIFICATIONS
-==================================================*/
+}
 .awards{
     background:var(--bg);
 }
@@ -911,9 +827,6 @@ Premium Clean Version
     line-height:1.7;
     color:var(--text-light);
 }
-/*==================================================
-16. PARTNERS
-==================================================*/
 .partners{
     background:var(--surface);
 }
@@ -936,9 +849,6 @@ Premium Clean Version
     filter:none;
     transform:scale(1.08);
 }
-/*==================================================
-17. PHOTO GALLERY
-==================================================*/
 .gallery-preview{
     background:var(--bg);
 }
@@ -961,9 +871,6 @@ Premium Clean Version
     transform:scale(1.04);
     box-shadow:var(--shadow-md);
 }
-/*==================================================
-18. CTA SECTION
-==================================================*/
 .cta-box{
     padding:65px 45px;
     border-radius:30px;
@@ -1015,9 +922,6 @@ Premium Clean Version
     border-color:#fff;
     color:var(--primary);
 }
-/*==================================================
-19. NEWSLETTER
-==================================================*/
 .newsletter-section{
     background:var(--bg);
 }
@@ -1071,9 +975,6 @@ Premium Clean Version
 .newsletter-form button{
     white-space:nowrap;
 }
-/*==================================================
-RESPONSIVE
-==================================================*/
 @media (max-width:1280px){
 .awards-grid{
     grid-template-columns:repeat(2,1fr);
@@ -1137,20 +1038,7 @@ RESPONSIVE
 .newsletter-form button{
     width:100%;
 }
-}/*==================================================
-NETHRA SENIOR CARE
-INDEX CSS - PART 5
-Sections:
-20. Global Section System
-21. Hero Screen Fix
-22. Premium Card Effects
-23. Dark Mode Polish
-24. Final Responsive Cleanup
-Premium Final Version
-==================================================*/
-/*==================================================
-20. GLOBAL SECTION SYSTEM
-==================================================*/
+}
 section{
     position:relative;
     padding:80px 0;
@@ -1205,9 +1093,6 @@ section{
 img{
     max-width:100%;
 }
-/*==================================================
-21. HERO SCREEN FIX
-==================================================*/
 @media (min-width:1025px){
 .home-hero{
     min-height:calc(100vh - 90px);
@@ -1273,9 +1158,6 @@ img{
     font-size:2.15rem;
 }
 }
-/*==================================================
-22. PREMIUM CARD EFFECTS
-==================================================*/
 .value-card,
 .service-card,
 .journey-card,
@@ -1350,9 +1232,6 @@ img{
 .gallery-grid img:hover{
     transform:scale(1.06);
 }
-/*==================================================
-23. DARK MODE POLISH
-==================================================*/
 [data-theme="dark"] 
 .value-card,
 [data-theme="dark"] 
@@ -1406,9 +1285,6 @@ img{
     box-shadow:
     0 25px 60px rgba(0,0,0,.45);
 }
-/*==================================================
-24. FINAL RESPONSIVE CLEANUP
-==================================================*/
 @media (max-width:1280px){
 section{
     padding:70px 0;
@@ -1452,9 +1328,6 @@ section{
     border-radius:18px;
 }
 }
-/*==================================================
-ACCESSIBILITY
-==================================================*/
 button,
 a{
     -webkit-tap-highlight-color:transparent;
@@ -1462,18 +1335,7 @@ a{
 :focus-visible{
     outline:3px solid var(--primary);
     outline-offset:3px;
-}/*==================================================
-NETHRA SENIOR CARE
-FINAL RESPONSIVE SYSTEM
-Mobile     : < 640px
-Tablet     : 640px - 1024px
-Desktop    : 1024px - 1280px
-Large      : > 1280px
-==================================================*/
-/*==================================================
-LARGE DESKTOP
-1280px+
-==================================================*/
+}
 @media (min-width:1281px){
 .container{
     max-width:1200px;
@@ -1511,10 +1373,6 @@ section{
     grid-template-columns:repeat(3,1fr);
 }
 }
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
 @media (min-width:1024px) and (max-width:1280px){
 .home-hero{
     padding-top:120px;
@@ -1565,10 +1423,6 @@ DESKTOP
     grid-template-columns:repeat(4,1fr);
 }
 }
-/*==================================================
-TABLET
-640px - 1024px
-==================================================*/
 @media (min-width:640px) and (max-width:1024px){
 .container{
     padding:0 18px;
@@ -1635,10 +1489,6 @@ section{
     width:100%;
 }
 }
-/*==================================================
-MOBILE
-Below 640px
-==================================================*/
 @media (max-width:639px){
 .container{
     padding:0 15px;
@@ -1736,22 +1586,7 @@ section{
 .newsletter-form button{
     width:100%;
 }
-}/*==================================================
-NETHRA SENIOR CARE
-FINAL DESKTOP COMPACT MODE
-Reduce:
-- H1 Size
-- H2 Size
-- Section Padding
-- Hero Padding
-- Card Padding
-Desktop : 1024px - 1280px
-Large   : 1281px+
-==================================================*/
-/*==================================================
-DESKTOP
-1024px - 1280px
-==================================================*/
+}
 @media (min-width:1024px) and (max-width:1280px){
 section{
     padding:55px 0;
@@ -1833,10 +1668,6 @@ section{
     gap:18px;
 }
 }
-/*==================================================
-LARGE DESKTOP
-1281px+
-==================================================*/
 @media (min-width:1281px){
 section{
     padding:65px 0;
@@ -1898,9 +1729,7 @@ section{
 .awards-grid{
     gap:20px;
 }
-}/*==================================================
-SECTION HEADING EMPHASIS COLOR
-==================================================*/
+}
 .section-heading h2 em,
 .about-content h2 em,
 .portal-content h2 em,
@@ -1911,9 +1740,6 @@ SECTION HEADING EMPHASIS COLOR
     font-style:normal;
     font-weight:700;
 }
-/*==================================================
-SECTION LABEL STYLE
-==================================================*/
 .section-label{
     display:inline-flex;
     align-items:center;
@@ -1929,9 +1755,6 @@ SECTION LABEL STYLE
     font-size:.85rem;
     color:var(--primary);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"] .section-heading h2 em,
 [data-theme="dark"] .about-content h2 em,
 [data-theme="dark"] .portal-content h2 em,
@@ -1941,9 +1764,7 @@ DARK MODE
 [data-theme="dark"] .newsletter-box h2 em,
 [data-theme="dark"] .home-cta h2 em{
     color:var(--primary-light);
-}/*==================================================
-HOME HERO BACKGROUND
-==================================================*/
+}
 .home-hero{
     position:relative;
     background:
@@ -1981,9 +1802,6 @@ HOME HERO BACKGROUND
     position:relative;
     z-index:2;
 }
-/*==================================================
-FULL PAGE LIGHT BACKGROUND
-==================================================*/
 body{
     background:var(--bg);
     color:var(--text);
@@ -2005,9 +1823,6 @@ body{
 .daily-life{
     background:var(--surface);
 }
-/*==================================================
-DARK MODE
-==================================================*/
 [data-theme="dark"]{
     --primary-light:#134E4A;
     --primary-soft:#062F2D;
@@ -2048,10 +1863,7 @@ DARK MODE
 [data-theme="dark"] .nutrition,
 [data-theme="dark"] .daily-life{
     background:var(--surface);
-}/*==================================================
-HERO TABLET FIX
-1024px
-==================================================*/
+}
 @media (max-width:1024px){
 .home-hero .hero-grid{
     display:grid;
@@ -2076,10 +1888,6 @@ HERO TABLET FIX
     bottom:20px;
 }
 }
-/*==================================================
-SMALL TABLET / MOBILE
-768px
-==================================================*/
 @media(max-width:768px){
 .home-hero .hero-grid{
     grid-template-columns:1fr;

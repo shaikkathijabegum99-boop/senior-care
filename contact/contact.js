@@ -1,18 +1,6 @@
-/*==================================================
-NETHRA SENIOR CARE
-CONTACT PAGE JS
-Features:
-01. Contact Form Validation
-02. Submit Loading
-03. Success Message
-04. FAQ Accordion
-05. Newsletter Validation
-06. Smooth Scroll
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
-01. CONTACT FORM
-==================================================*/
+
 const contactForm = document.querySelector(".contact-form");
 if(contactForm){
 contactForm.addEventListener("submit",(e)=>{
@@ -86,9 +74,6 @@ button.innerHTML=oldText;
 },1500);
 });
 }
-/*==================================================
-FORM MESSAGE
-==================================================*/
 function showFormMessage(text,type){
 let messageBox =
 document.querySelector(".form-message");
@@ -106,9 +91,7 @@ setTimeout(()=>{
 messageBox.remove();
 },4000);
 }
-/*==================================================
-02. INPUT FOCUS EFFECT
-==================================================*/
+
 const fields =
 document.querySelectorAll(
 ".contact-form input, .contact-form select, .contact-form textarea"
@@ -129,9 +112,7 @@ field.parentElement.classList.remove(
 );
 });
 });
-/*==================================================
-03. FAQ ACCORDION
-==================================================*/
+
 const faqItems =
 document.querySelectorAll(".faq-item");
 faqItems.forEach(item=>{
@@ -152,9 +133,7 @@ item.classList.toggle(
 );
 });
 });
-/*==================================================
-04. NEWSLETTER FORM
-==================================================*/
+
 const newsletter =
 document.querySelector(
 ".newsletter-form"
@@ -183,9 +162,7 @@ alert(
 newsletter.reset();
 });
 }
-/*==================================================
-05. SMOOTH SCROLL
-==================================================*/
+
 document.querySelectorAll(
 'a[href^="#"]'
 )
