@@ -24,9 +24,7 @@ img{
     font-size:.82rem;
     font-weight:700;
 }
-.section-label i{
-    color:var(--primary);
-}
+
 .section-header .section-label{
     margin-bottom:15px;
 }
@@ -67,9 +65,9 @@ img{
     gap:55px;
 }
 .hero-content{
-    display:flex;
+   
     flex-direction:column;
-    gap:20px;
+    gap:30px;
 }
 .hero-tag{
     display:inline-flex;
@@ -256,7 +254,7 @@ img{
 .about-content{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:10px;
 }
 .about-content h2{
     margin:0;
@@ -482,7 +480,7 @@ img{
 .portal-content{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:10px;
 }
 .portal-content h2{
     margin:0;
@@ -1394,9 +1392,11 @@ section{
     gap:40px;
 }
 .about-images img,
-.portal-image img,
+.portal-image img{
+    height:460px;
+}
 .nutrition-image img{
-    height:450px;
+    height:380px;
 }
 .values-grid,
 .why-grid,
@@ -1753,18 +1753,9 @@ section{
 }
 .section-label i{
     font-size:.85rem;
-    color:var(--primary);
+  
 }
-[data-theme="dark"] .section-heading h2 em,
-[data-theme="dark"] .about-content h2 em,
-[data-theme="dark"] .portal-content h2 em,
-[data-theme="dark"] .wellness-content h2 em,
-[data-theme="dark"] .nutrition-content h2 em,
-[data-theme="dark"] .cta-box h2 em,
-[data-theme="dark"] .newsletter-box h2 em,
-[data-theme="dark"] .home-cta h2 em{
-    color:var(--primary-light);
-}
+
 .home-hero{
     position:relative;
     background:
@@ -1905,4 +1896,18 @@ body{
 .hero-buttons{
     justify-content:center;
 }
+}/*=====================================
+Desktop Hero Top Spacing
+=====================================*/
+@media (min-width:1024px){
+
+    .home-hero{
+        padding-top:110px;   /* Increase distance from navbar */
+        padding-bottom:60px;
+    }
+
+    .hero-grid{
+        align-items:center;
+    }
+
 }

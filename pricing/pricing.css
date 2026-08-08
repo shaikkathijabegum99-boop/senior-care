@@ -182,13 +182,25 @@
 
     color:var(--text-light);
 
-}.pricing-actions{    justify-content:center;
-
+}.pricing-actions{
+    display:flex;
+    align-items:center;
+   
     flex-wrap:wrap;
-
     gap:15px;
+    margin-top:10px;
+}
 
-}.pricing-actions .btn{
+.pricing-actions .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:13px 26px;
+    margin:0;
+}
+
+.pricing-actions .btn{
 
     padding:13px 26px;
 
@@ -1235,14 +1247,6 @@ input:focus-visible{    outline:
 
     line-height:1.8;
 
-}.pricing-actions{
-
-  
-
-    flex-wrap:wrap;
-
-    gap:14px;
-
 }.pricing-hero-image{
 
     position:relative;
@@ -1451,7 +1455,6 @@ input:focus-visible{    outline:
 
 .pricing-cta-section{
 
-    padding-bottom:0 !important;
 
     margin-bottom:0 !important;
 
@@ -1513,4 +1516,48 @@ input:focus-visible{    outline:
 
 }
 
+}/* ==========================================================
+   NETHRA SENIOR CARE — PRICING PAGE <em> STYLING
+========================================================== */
+
+/* All pricing emphasis */
+.pricing-hero-content h1 em,
+.section-header h2 em,
+.pricing-cta-box h2 em{
+    font-style: normal;
+    color: var(--primary);
+}
+
+
+/* Hero heading emphasis */
+.pricing-hero-content h1 em{
+    display: inline;
+    color: var(--primary);
+}
+
+
+/* Section heading emphasis */
+.section-header h2 em{
+    display: inline;
+    font-style: normal;
+    color: var(--primary);
+}
+
+
+/* CTA heading emphasis */
+.pricing-cta-box h2 em{
+    display: inline;
+    font-style: normal;
+    color: var(--primary);
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+[data-theme="dark"] .pricing-hero-content h1 em,
+[data-theme="dark"] .section-header h2 em,
+[data-theme="dark"] .pricing-cta-box h2 em{
+    color: var(--primary);
 }

@@ -99,6 +99,18 @@
 .nav-link.active{
     background:var(--primary);
     color:white;
+      
+}.sidebar-nav{
+    padding-right:8px;
+}
+
+.nav-link{
+    padding:12px 14px;
+}
+
+.nav-link.active{
+    padding:9px 12px;
+    margin-right:4px;
 }
 .nav-link.active i{
     color:white;

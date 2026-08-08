@@ -842,7 +842,7 @@
 [data-theme="dark"] .filter-btn{
 
     background:var(--surface);
-
+color:white;
     border-color:rgba(255,255,255,.08);
 
 }
