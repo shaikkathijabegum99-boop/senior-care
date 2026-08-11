@@ -782,7 +782,7 @@
 
 }.pricing-cta-section{
 
-    background:var(--surface);
+    background:var(--bg);
 
 }.pricing-cta-box{
 
@@ -1205,7 +1205,7 @@ input:focus-visible{    outline:
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+
 
     align-items:center;
 
