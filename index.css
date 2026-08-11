@@ -1910,4 +1910,19 @@ Desktop Hero Top Spacing
         align-items:center;
     }
 
+}/*==================================================
+  DESKTOP HERO TOP SPACING
+==================================================*/
+
+@media (min-width:1024px){
+
+    .home-hero{
+        padding-top:110px;
+        padding-bottom:60px;
+    }
+
+    .hero-grid{
+        align-items:center;
+    }
+
 }
