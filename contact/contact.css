@@ -1940,10 +1940,7 @@ DESKTOP — 1024px to 1280px
         gap:35px;
     }
 
-    .map-box,
-    .map-box iframe{
-        min-height:430px;
-    }
+   
 
     .newsletter-box{
         padding:35px;
