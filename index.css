@@ -1896,13 +1896,11 @@ body{
 .hero-buttons{
     justify-content:center;
 }
-}/*=====================================
-Desktop Hero Top Spacing
-=====================================*/
+}
 @media (min-width:1024px){
 
     .home-hero{
-        padding-top:110px;   /* Increase distance from navbar */
+        padding-top:110px;  
         padding-bottom:60px;
     }
 
@@ -1910,9 +1908,7 @@ Desktop Hero Top Spacing
         align-items:center;
     }
 
-}/*==================================================
-  DESKTOP HERO TOP SPACING
-==================================================*/
+}
 
 @media (min-width:1024px){
 

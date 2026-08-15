@@ -558,9 +558,7 @@ font-size:12px;
 font-size:10px;
 margin-top:8px;
 }
-}/* ==================================================
-   PASSWORD EYE ICON
-================================================== */
+}
 
 .password-box {
     position: relative;
@@ -594,9 +592,6 @@ margin-top:8px;
 }
 
 
-/* ==================================================
-   DARK MODE
-================================================== */
 
 [data-theme="dark"] .toggle-password {
     color: #ffffff;
@@ -606,10 +601,6 @@ margin-top:8px;
     color: #8fd3b0;
 }
 
-
-/* ==================================================
-   RTL
-================================================== */
 
 [dir="rtl"] .password-box input {
     padding-right: 14px;
