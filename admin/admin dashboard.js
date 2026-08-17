@@ -1,17 +1,5 @@
-/*==================================================
-NETHRA SENIOR CARE
-FAMILY DASHBOARD JS
-Features:
-- Dark Mode
-- Sidebar Mobile Menu
-- Overlay
-- Settings Toggle
-- Active Nav
-==================================================*/
+
 document.addEventListener("DOMContentLoaded",()=>{
-/*==================================================
-DARK MODE
-==================================================*/
 const html=document.documentElement;
 const themeToggle=document.getElementById(
 "themeToggle"
@@ -80,9 +68,6 @@ darkToggle?.addEventListener(
 "click",
 toggleTheme
 );
-/*==================================================
-MOBILE SIDEBAR
-==================================================*/
 const sidebar=
 document.getElementById(
 "sidebar"
@@ -150,9 +135,6 @@ closeSidebar();
 }
 });
 });
-/*==================================================
-ACTIVE NAVIGATION
-==================================================*/
 const navLinks=
 document.querySelectorAll(
 ".nav-link"
@@ -171,9 +153,6 @@ link.classList.add(
 );
 });
 });
-/*==================================================
-SETTINGS TOGGLE SWITCH
-==================================================*/
 document.querySelectorAll(
 ".toggle-switch"
 )
@@ -186,9 +165,6 @@ toggle.classList.toggle(
 );
 });
 });
-/*==================================================
-SMOOTH SCROLL
-==================================================*/
 document.querySelectorAll(
 'a[href^="#"]'
 )
@@ -209,9 +185,6 @@ block:"start"
 }
 });
 });
-/*==================================================
-SEARCH BOX
-==================================================*/
 const searchInput=
 document.querySelector(
 ".search-box input"
@@ -235,9 +208,7 @@ card.style.display="none";
 }
 });
 });
-});/*=========================================
-RTL TOGGLE
-=========================================*/
+});
 
 const rtlToggle = document.getElementById("rtlToggle");
 

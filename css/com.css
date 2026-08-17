@@ -1740,10 +1740,7 @@ html[dir="rtl"] .nav-r{
         font-size:.95rem;
         font-weight:600;
     }
-}/*==================================================
-  IPAD MINI - CONTACT INFO ALIGNMENT
-  768px - 834px
-==================================================*/
+}
 
 @media (min-width: 768px) and (max-width: 834px) {
 
@@ -1787,6 +1784,240 @@ html[dir="rtl"] .nav-r{
     /* Location text starts at exactly the same position */
     .brand-section .contact-info p:last-child {
         align-items: start;
+    }
+
+}
+
+.nethra-footer{
+    padding:28px 0 0 !important;
+}
+
+.footer-container{
+    width:min(1200px,92%) !important;
+    grid-template-columns:1.4fr 1fr 1fr 1fr !important;
+    gap:24px !important;
+}
+
+/* Logo */
+.footer-logo{
+    gap:10px !important;
+    margin-bottom:10px !important;
+}
+
+.footer-logo-img,
+.footer-logo .nav-logo-img{
+    width:48px !important;
+    height:48px !important;
+}
+
+.footer-logo .brand-name,
+.brand-name{
+    font-size:1.1rem !important;
+    letter-spacing:1px !important;
+}
+
+.footer-logo .brand-sub,
+.brand-sub{
+    font-size:.58rem !important;
+    letter-spacing:2px !important;
+    margin-top:4px !important;
+}
+
+/* Description */
+.tagline{
+    gap:8px !important;
+    margin:8px 0 12px !important;
+    font-size:.82rem !important;
+    line-height:1.45 !important;
+}
+
+.tagline i{
+    font-size:.9rem !important;
+    margin-top:3px !important;
+}
+
+/* Contact */
+.contact-info{
+    gap:6px !important;
+}
+
+.contact-info p{
+    gap:8px !important;
+    font-size:.82rem !important;
+    line-height:1.4 !important;
+}
+
+.contact-info i{
+    width:26px !important;
+    height:26px !important;
+    font-size:.72rem !important;
+}
+
+/* Social icons */
+.social-icons{
+    gap:8px !important;
+    margin-top:12px !important;
+}
+
+.social-icons a{
+    width:34px !important;
+    height:34px !important;
+    font-size:.8rem !important;
+}
+
+/* Footer headings */
+.footer-column h3{
+    font-size:.95rem !important;
+    margin-bottom:12px !important;
+}
+
+.footer-column h3::after{
+    width:28px !important;
+    height:2px !important;
+    margin-top:6px !important;
+}
+
+/* Footer links */
+.footer-column ul{
+    gap:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.footer-column ul li{
+    margin-bottom:7px !important;
+}
+
+.footer-column ul li a{
+    font-size:.82rem !important;
+}
+
+/* Bottom bar */
+.footer-bottom-bar{
+    margin-top:25px !important;
+    padding:12px 0 !important;
+}
+
+.bottom-content{
+    width:min(1200px,92%) !important;
+}
+
+.bottom-content p{
+    font-size:.75rem !important;
+}
+
+
+
+@media (max-width:1024px){
+
+    .nethra-footer{
+        padding-top:25px !important;
+    }
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:22px !important;
+    }
+
+}
+
+
+
+@media (max-width:640px){
+
+    .nethra-footer{
+        padding-top:25px !important;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr !important;
+        gap:20px !important;
+    }
+
+    .footer-logo-img,
+    .footer-logo .nav-logo-img{
+        width:45px !important;
+        height:45px !important;
+    }
+
+    .footer-logo .brand-name,
+    .brand-name{
+        font-size:1.05rem !important;
+    }
+
+    .tagline{
+        font-size:.8rem !important;
+        margin:8px 0 10px !important;
+    }
+
+    .contact-info{
+        gap:5px !important;
+    }
+
+    .social-icons{
+        margin-top:10px !important;
+    }
+
+    .footer-column h3{
+        font-size:.9rem !important;
+        margin-bottom:10px !important;
+    }
+
+    .footer-column ul li{
+        margin-bottom:5px !important;
+    }
+
+    .footer-column ul li a{
+        font-size:.8rem !important;
+    }
+
+    .footer-bottom-bar{
+        margin-top:20px !important;
+        padding:11px 0 !important;
+    }
+
+    .bottom-content{
+        gap:6px !important;
+    }
+
+    .bottom-content p{
+        font-size:.72rem !important;
+    }
+
+}
+
+
+@media (max-width:360px){
+
+    .nethra-footer{
+        padding-top:20px !important;
+    }
+
+    .footer-container{
+        gap:16px !important;
+    }
+
+    .footer-logo-img,
+    .footer-logo .nav-logo-img{
+        width:42px !important;
+        height:42px !important;
+    }
+
+    .tagline{
+        font-size:.76rem !important;
+    }
+
+    .footer-column h3{
+        font-size:.85rem !important;
+    }
+
+    .footer-column ul li a{
+        font-size:.76rem !important;
+    }
+
+    .social-icons a{
+        width:32px !important;
+        height:32px !important;
     }
 
 }

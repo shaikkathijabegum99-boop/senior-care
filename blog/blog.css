@@ -3487,4 +3487,118 @@ input:focus-visible{
 
     color:var(--primary);
 
+}/*==================================================
+REDUCE GAP BETWEEN BLOG CONTROLS & FEATURED BLOG
+==================================================*/
+
+/* Desktop > 1280px */
+@media (min-width:1281px){
+
+    .blog-controls{
+        padding-bottom:30px !important;
+    }
+
+    .featured-blog{
+        padding-top:30px !important;
+    }
+
+}
+
+
+/* Desktop 1024px - 1280px */
+@media (min-width:1024px) and (max-width:1280px){
+
+    .blog-controls{
+        padding-bottom:25px !important;
+    }
+
+    .featured-blog{
+        padding-top:25px !important;
+    }
+
+}
+
+
+/* Tablet 640px - 1023px */
+@media (min-width:640px) and (max-width:1023px){
+
+    .blog-controls{
+        padding-bottom:25px !important;
+    }
+
+    .featured-blog{
+        padding-top:25px !important;
+    }
+
+}
+
+
+/* Mobile < 640px */
+@media (max-width:639px){
+
+    .blog-controls{
+        padding-bottom:20px !important;
+    }
+
+    .featured-blog{
+        padding-top:20px !important;
+    }
+
+}
+
+
+/* Small Mobile < 420px */
+@media (max-width:420px){
+
+    .blog-controls{
+        padding-bottom:15px !important;
+    }
+
+    .featured-blog{
+        padding-top:15px !important;
+    }
+
+}/*==================================================
+BLOG NAV - REMOVE ALL CLICK ICON / MARKERS
+==================================================*/
+
+header .nav-link[href="blog.html"]::before,
+header .nav-link[href="blog.html"]::after,
+header nav a[href="blog.html"]::before,
+header nav a[href="blog.html"]::after,
+.navbar a[href="blog.html"]::before,
+.navbar a[href="blog.html"]::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Remove icon elements inside Blog link */
+header .nav-link[href="blog.html"] i,
+header .nav-link[href="blog.html"] svg,
+header nav a[href="blog.html"] i,
+header nav a[href="blog.html"] svg {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Remove active/click decoration */
+header .nav-link[href="blog.html"],
+header .nav-link[href="blog.html"].active,
+header .nav-link[href="blog.html"]:active,
+header .nav-link[href="blog.html"]:focus,
+header .nav-link[href="blog.html"]:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+/* Remove any generated active marker */
+header .nav-link.active::before,
+header .nav-link.active::after,
+header nav a.active::before,
+header nav a.active::after {
+    content: none !important;
+    display: none !important;
 }

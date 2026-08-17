@@ -204,3 +204,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/*==================================================
+NAVBAR LOAD — PREVENT LOGO FLASH
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const navbar = document.getElementById("navbar");
+
+    if (!navbar) return;
+
+    const showNavbar = () => {
+        if (navbar.innerHTML.trim() !== "") {
+            navbar.classList.add("navbar-loaded");
+        }
+    };
+
+    /* Check immediately */
+    showNavbar();
+
+    /* Watch dynamically loaded navbar */
+    const observer = new MutationObserver(() => {
+        showNavbar();
+
+        if (navbar.innerHTML.trim() !== "") {
+            observer.disconnect();
+        }
+    });
+
+    observer.observe(navbar, {
+        childList: true,
+        subtree: true
+    });
+
+});

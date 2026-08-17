@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==================================================
-       THEME TOGGLE
-    ================================================== */
 
     const themeBtn = document.getElementById("themeToggle");
     const themeIcon = themeBtn?.querySelector("i");
@@ -60,9 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* ==================================================
-       RTL TOGGLE
-    ================================================== */
 
     const rtlBtn = document.getElementById("rtlToggle");
 
@@ -105,10 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* ==================================================
-       PASSWORD EYE TOGGLE
-       PASSWORD + CONFIRM PASSWORD
-    ================================================== */
 
     const passwordBoxes =
         document.querySelectorAll(".password-box");
@@ -173,9 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* ==================================================
-       SIGNUP FORM
-    ================================================== */
 
     const authForm =
         document.querySelector(".signup-form");
@@ -309,9 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* ==================================================
-       SOCIAL LOGIN BUTTONS
-    ================================================== */
 
     const socialButtons =
         document.querySelectorAll(".social-btn");
@@ -340,9 +324,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* ==================================================
-       MESSAGE
-    ================================================== */
 
     function showMessage(message, type) {
 
