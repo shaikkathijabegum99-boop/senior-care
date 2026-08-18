@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothHoverState();
   initActiveNavLinks();
 });
-
 function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   const savedTheme = localStorage.getItem("theme");
@@ -46,7 +45,6 @@ function updateThemeIcon(btn) {
     ? '<i class="fas fa-sun"></i>'
     : '<i class="fas fa-moon"></i>';
 }
-
 function initRevealAnimations() {
   const revealElements = document.querySelectorAll(`
     .section-heading,
@@ -74,7 +72,6 @@ function initRevealAnimations() {
   );
   revealElements.forEach((el) => observer.observe(el));
 }
-
 function initActiveNavLinks() {
   const navLinks = document.querySelectorAll(".nav-link");
   const currentPath = window.location.pathname.split("/").pop();

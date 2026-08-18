@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded",()=>{
 const themeToggle = document.getElementById("themeToggle");
 const darkToggle = document.getElementById("darkToggle");

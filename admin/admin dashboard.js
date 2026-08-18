@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded",()=>{
 const html=document.documentElement;
 const themeToggle=document.getElementById(
@@ -209,37 +208,34 @@ card.style.display="none";
 });
 });
 });
-
 const rtlToggle = document.getElementById("rtlToggle");
-
 // Load saved direction
 const savedDirection = localStorage.getItem("direction");
-
 if (savedDirection) {
     document.documentElement.setAttribute("dir", savedDirection);
 }
-
 if (rtlToggle) {
-
     // Update icon/button state
     if (document.documentElement.getAttribute("dir") === "rtl") {
         rtlToggle.classList.add("active");
     }
-
     rtlToggle.addEventListener("click", () => {
-
         const currentDir =
             document.documentElement.getAttribute("dir") || "ltr";
-
         const newDir =
             currentDir === "rtl" ? "ltr" : "rtl";
-
         document.documentElement.setAttribute("dir", newDir);
-
         localStorage.setItem("direction", newDir);
-
         rtlToggle.classList.toggle("active");
-
     });
-
 }
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn?.addEventListener("click", function(e){
+    e.preventDefault();
+    // Clear temporary session data
+    sessionStorage.clear();
+    // Remove saved login data if available
+    localStorage.removeItem("nethra-user");
+    // Redirect to Sign In page
+    window.location.href = "../bash/signin.html";
+});

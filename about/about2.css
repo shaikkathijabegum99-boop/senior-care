@@ -1,4 +1,3 @@
-
 .about-hero,
 .about-story,
 .values,
@@ -22,7 +21,6 @@
     width:min(1200px,92%);
     margin:auto;
 }
-
 .section-header{
     max-width:720px;
     margin:0 auto 60px;
@@ -57,7 +55,6 @@
     line-height:1.8;
     font-size:16px;
 }
-
 .about-hero{
     padding-top:110px;
     padding-bottom:100px;
@@ -110,7 +107,6 @@
     color:var(--text-light);
     margin-bottom:35px;
 }
-
 .hero-buttons{
     display:flex;
     gap:18px;
@@ -121,7 +117,6 @@
     align-items:center;
     gap:10px;
 }
-
 .hero-features{
     display:flex;
     gap:30px;
@@ -138,7 +133,6 @@
     color:var(--primary);
     font-size:22px;
 }
-
 .hero-image{
     position:relative;
 }
@@ -182,7 +176,6 @@
     line-height:1.5;
     color:var(--text-light);
 }
-
 .about-story{
     background:var(--surface);
 }
@@ -228,7 +221,6 @@
 .about-list i{
     color:var(--primary);
 }
-
 .values{
     background:var(--bg-soft);
 }
@@ -314,7 +306,6 @@
     line-height:1.8;
     font-size:16px;
 }
-
 .care-philosophy{
     background:var(--bg-soft);
 }
@@ -365,7 +356,6 @@
     border-radius:30px;
     box-shadow:var(--shadow-lg);
 }
-
 .about-stats{
     background:var(--surface);
 }
@@ -408,7 +398,6 @@
     color:var(--text-light);
     font-size:15px;
 }
-
 .why-about{
     background:var(--bg-soft);
 }
@@ -450,14 +439,12 @@
     color:var(--text-light);
     line-height:1.7;
 }
-
 .value-card,
 .mission-card,
 .stat-card,
 .why-card{
     will-change:transform;
 }
-
 [data-theme="dark"] .mission-card,
 [data-theme="dark"] .stat-card,
 [data-theme="dark"] .why-card,
@@ -471,7 +458,6 @@
 [data-theme="dark"] .hero-tag{
     background:var(--surface);
 }
-
 .team-section{
     background:var(--surface);
 }
@@ -543,7 +529,6 @@
     background:var(--primary);
     color:#fff;
 }
-
 .timeline-section{
     background:var(--bg-soft);
 }
@@ -613,7 +598,6 @@
     color:var(--text-light);
     line-height:1.7;
 }
-
 .facility-section{
     background:var(--surface);
 }
@@ -656,7 +640,6 @@
     color:var(--text-light);
     line-height:1.7;
 }
-
 .gallery-section{
     background:var(--bg-soft);
 }
@@ -677,7 +660,6 @@
     transform:scale(1.04);
     box-shadow:var(--shadow-lg);
 }
-
 [data-theme="dark"] .team-card,
 [data-theme="dark"] .timeline-content,
 [data-theme="dark"] .facility-card{
@@ -686,7 +668,6 @@
 [data-theme="dark"] .team-social a{
     background:var(--bg-soft);
 }
-
 .testimonials-section{
     background:var(--surface);
 }
@@ -746,7 +727,6 @@
     color:var(--primary);
     font-size:14px;
 }
-
 .about-cta{
     background:
     linear-gradient(
@@ -797,7 +777,6 @@
     background:#fff;
     color:var(--primary);
 }
-
 @media(max-width:1280px){
 .hero-content h1{
     font-size:52px;
@@ -887,7 +866,6 @@
     width:100%;
 }
 }
-
 @media(max-width:640px){
 .about-hero,
 .about-story,
@@ -1129,7 +1107,6 @@
 .timeline-content:hover::before{
     transform:scaleX(1);
 }
-
 .value-icon,
 .mission-icon,
 .stat-icon,
@@ -1146,8 +1123,6 @@
     box-shadow:
     0 0 25px rgba(27,94,32,.45);
 }
-
-
 .team-image{
     overflow:hidden;
 }
@@ -1157,14 +1132,12 @@
 .team-card:hover .team-image img{
     transform:scale(1.08);
 }
-
 .testimonial-card:hover .quote-icon{
     background:var(--primary);
     color:#fff;
     box-shadow:
     0 0 25px rgba(27,94,32,.45);
 }
-
 [data-theme="dark"]
 .value-card,
 [data-theme="dark"]
@@ -1204,7 +1177,6 @@
     0 25px 60px rgba(0,0,0,.65),
     0 0 45px rgba(27,94,32,.35);
 }
-
 @media(max-width:640px){
 .value-card,
 .mission-card,
@@ -1334,7 +1306,6 @@
         font-size:44px;
     }
 }
-
 @media (min-width:1281px){
     .content-container{
         width:1200px;
@@ -1536,7 +1507,6 @@
 .cta-box p{
     font-size:.95rem;
 }
-
 @media(max-width:1280px){
 .hero-content h1{
     font-size:2.8rem;
@@ -1571,7 +1541,6 @@
     font-size:1.1rem;
 }
 }
-
 @media(max-width:640px){
 .hero-content h1{
     font-size:2rem;
@@ -1611,7 +1580,6 @@
 }
 }
 @media (max-width:768px){
-
 .about-hero{
     padding-top:120px;
     padding-bottom:70px;
@@ -1626,7 +1594,6 @@
 .hero-image img{
     height:450px;
 }
-
 .value-card,
 .mission-card,
 .stat-card,
@@ -1636,7 +1603,6 @@
     padding:25px 20px;
     border-radius:20px;
 }
-
 .value-icon,
 .mission-icon,
 .stat-icon,
@@ -1647,7 +1613,6 @@
     font-size:20px;
     margin-bottom:18px;
 }
-
 .value-card h3,
 .mission-card h3,
 .why-card h3,
@@ -1657,7 +1622,6 @@
 .stat-card h3{
     font-size:32px;
 }
-
 .value-card p,
 .mission-card p,
 .why-card p,
@@ -1666,7 +1630,6 @@
     font-size:14px;
     line-height:1.6;
 }
-
 .mission-card{
     text-align:center;
     display:flex;
@@ -1677,11 +1640,9 @@
     margin-left:auto;
     margin-right:auto;
 }
-
 .team-image img{
     height:260px;
 }
-
 .timeline-content{
     padding:25px;
 }
@@ -1743,34 +1704,29 @@
     font-size:.95rem;
     color:var(--text-light);
 }
-
 .about-cta{
     position:relative;
-    padding:60px 0 30px;   /* reduced from 100px */
+    padding:60px 0 30px;   
     background:linear-gradient(
         135deg,
         var(--primary),
         var(--primary-soft)
     );
 }
-
 .cta-box{
     text-align:center;
-    padding:50px 35px;      /* reduced from 75px 60px */
+    padding:50px 35px;      
     border-radius:30px;
     background:rgba(255,255,255,.12);
     backdrop-filter:blur(10px);
 }
-
 .cta-box h2{
     margin-bottom:15px;
 }
-
 .cta-box p{
     max-width:750px;
-    margin:0 auto 25px;     /* reduced from 35px */
+    margin:0 auto 25px;     
 }
-
 .cta-actions{
     display:flex;
     justify-content:center;
@@ -1778,28 +1734,19 @@
     flex-wrap:wrap;
     margin-bottom:0;
 }
-
-/* Mobile */
-
 @media(max-width:640px){
-
     .about-cta{
         padding:40px 0 20px;
     }
-
     .cta-box{
         padding:35px 20px;
     }
-
 }
-
 @media (min-width:1281px){
-
     .content-container{
         width:min(1200px,92%);
         margin:auto;
     }
-
     .about-hero,
     .about-story,
     .values,
@@ -1814,178 +1761,102 @@
     .testimonials-section{
         padding:100px 0;
     }
-
     .about-cta{
         padding:60px 0 30px;
     }
-
-
-    /* HERO */
-
     .hero-grid{
         grid-template-columns:1fr 1fr;
         gap:70px;
     }
-
     .hero-content{
         max-width:600px;
     }
-
     .hero-content h1{
         font-size:58px;
     }
-
     .hero-content p{
         font-size:18px;
     }
-
     .hero-image img{
         height:620px;
     }
-
     .floating-card{
         left:-40px;
         bottom:35px;
     }
-
-
-    /* STORY */
-
     .about-grid{
         grid-template-columns:1fr 1fr;
         gap:70px;
     }
-
     .about-images img{
         height:560px;
     }
-
     .about-content h2{
         font-size:44px;
     }
-
-
-    /* VALUES */
-
     .values-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
-
-    /* MISSION */
-
     .mission-grid{
         grid-template-columns:repeat(2,1fr);
         gap:35px;
     }
-
-
-    /* PHILOSOPHY */
-
     .philosophy-grid{
         grid-template-columns:1fr 1fr;
         gap:70px;
     }
-
     .philosophy-content h2{
         font-size:45px;
     }
-
     .philosophy-image img{
         height:560px;
     }
-
-
-    /* STATS */
-
     .stats-grid{
         grid-template-columns:repeat(4,1fr);
         gap:25px;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:repeat(4,1fr);
         gap:25px;
     }
-
-
-    /* TEAM */
-
     .team-grid{
         grid-template-columns:repeat(3,1fr);
         gap:30px;
     }
-
     .team-image img{
         height:350px;
     }
-
-
-    /* FACILITIES */
-
     .facility-grid{
         grid-template-columns:repeat(4,1fr);
         gap:25px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:repeat(3,1fr);
         gap:25px;
     }
-
     .gallery-grid img{
         height:320px;
     }
-
-
-    /* TESTIMONIALS */
-
     .testimonials-grid,
     .testimonial-grid{
         grid-template-columns:repeat(3,1fr);
         gap:30px;
     }
-
-
-    /* TIMELINE */
-
     .timeline{
         max-width:900px;
     }
-
-
-    /* CTA */
-
     .cta-box{
         padding:50px 35px;
     }
-
     .cta-box h2{
         font-size:48px;
     }
-
 }
-
-
-
-
 @media (min-width:1024px) and (max-width:1280px){
-
     .content-container{
         width:min(1100px,92%);
     }
-
-
-    /* GLOBAL SECTION SPACING */
-
-  
     .about-story,
     .values,
     .mission-vision,
@@ -2005,224 +1876,135 @@
     .about-cta{
         padding:55px 0 25px;
     }
-
-
-    /* SECTION HEADER */
-
     .section-header{
         max-width:680px;
         margin-bottom:45px;
     }
-
     .section-header h2{
         font-size:34px;
     }
-
     .section-header p{
         font-size:15px;
     }
-
-
-    /* HERO */
-
     .hero-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
     .hero-content h1{
         font-size:48px;
     }
-
     .hero-content p{
         font-size:16px;
     }
-
     .hero-image img{
         height:540px;
         border-radius:25px;
     }
-
     .floating-card{
         width:300px;
         left:-20px;
         bottom:25px;
         padding:20px;
     }
-
-
-    /* STORY */
-
     .about-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
     .about-images img{
         height:560px;
         border-radius:25px;
     }
-
     .about-content h2{
         font-size:38px;
     }
-
     .about-content p{
         font-size:15px;
     }
-
-
-    /* VALUES */
-
     .values-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .value-card{
         padding:28px 22px;
     }
-
-
-    /* MISSION */
-
     .mission-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
     .mission-card{
         padding:30px 25px;
     }
-
-
-    /* PHILOSOPHY */
-
     .philosophy-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
-    
-
     .philosophy-image img{
         height:480px;
         border-radius:25px;
     }
-
     .philosophy-list{
         gap:15px;
     }
-
-
-    /* STATS */
-
     .stats-grid{
         grid-template-columns:repeat(4,1fr);
         gap:18px;
     }
-
     .stat-card{
         padding:28px 18px;
     }
-
     .stat-card h3{
         font-size:32px;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* TEAM */
-
     .team-grid{
         grid-template-columns:repeat(3,1fr);
         gap:20px;
     }
-
     .team-image img{
         height:300px;
     }
-
     .team-content{
         padding:22px;
     }
-
-
-    /* TIMELINE */
-
     .timeline{
         max-width:850px;
     }
-
     .timeline-content{
         padding:25px;
     }
-
-
-    /* FACILITY */
-
     .facility-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:repeat(3,1fr);
         gap:20px;
     }
-
     .gallery-grid img{
         height:280px;
     }
-
-
-    /* TESTIMONIALS */
-
     .testimonials-grid,
     .testimonial-grid{
         grid-template-columns:repeat(3,1fr);
         gap:20px;
     }
-
     .testimonial-card{
         padding:28px;
     }
-
-
-    /* CTA */
-
     .cta-box{
         padding:50px 35px;
     }
-
     .cta-box h2{
         font-size:42px;
     }
-
 }
-
-
-
-
 @media (min-width:640px) and (max-width:1023px){
-
     .content-container{
         width:min(94%,720px);
     }
-
-
-    /* GLOBAL */
-
     .about-hero,
     .about-story,
     .values,
@@ -2237,246 +2019,156 @@
     .testimonials-section{
         padding:70px 0;
     }
-
     .about-cta{
         padding:50px 0 25px;
     }
-
-
-    /* SECTION HEADER */
-
     .section-header{
         max-width:650px;
         margin-bottom:40px;
     }
-
     .section-header h2{
         font-size:34px;
     }
-
     .section-header p{
         font-size:15px;
     }
-
-
-    /* HERO */
-
     .hero-grid{
         grid-template-columns:1fr;
         gap:40px;
     }
-
     .hero-content{
         max-width:700px;
         margin:auto;
         text-align:center;
     }
-
     .hero-content h1{
         font-size:44px;
     }
-
     .hero-content p{
         font-size:16px;
     }
-
     .hero-buttons{
         justify-content:center;
     }
-
     .hero-features{
         justify-content:center;
     }
-
     .hero-image img{
         height:470px;
         border-radius:25px;
     }
-
     .floating-card{
         left:20px;
         bottom:25px;
         width:310px;
         padding:20px;
     }
-
-
-    /* STORY */
-
     .about-grid{
         grid-template-columns:1fr;
         gap:40px;
     }
-
     .about-images img{
         height:450px;
         border-radius:25px;
     }
-
     .about-content h2{
         font-size:36px;
     }
-
-
-    /* VALUES */
-
     .values-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .value-card{
         padding:28px 20px;
     }
-
-
-    /* MISSION */
-
     .mission-grid{
         grid-template-columns:1fr;
         gap:22px;
     }
-
     .mission-card{
         padding:32px 25px;
     }
-
-
-    /* PHILOSOPHY */
-
     .philosophy-grid{
         grid-template-columns:1fr;
         gap:40px;
     }
-
     .philosophy-content{
         text-align:center;
     }
-
     .philosophy-content h2{
         font-size:36px;
     }
-
     .philosophy-list{
         text-align:left;
     }
-
     .philosophy-image img{
         height:450px;
         border-radius:25px;
     }
-
-
-    /* STATS */
-
     .stats-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* TEAM */
-
     .team-grid{
         grid-template-columns:repeat(2,1fr);
         gap:22px;
     }
-
     .team-image img{
         height:300px;
     }
-
-
-    /* TIMELINE */
-
     .timeline{
         max-width:100%;
     }
-
     .timeline::before{
         left:28px;
     }
-
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even){
         justify-content:flex-start;
         padding-left:75px;
     }
-
     .timeline-icon{
         left:28px;
         width:56px;
         height:56px;
     }
-
     .timeline-content{
         width:100%;
         padding:25px;
     }
-
-
-    /* FACILITY */
-
     .facility-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .gallery-grid img{
         height:280px;
     }
-
-
-    /* TESTIMONIALS */
-
     .testimonials-grid,
     .testimonial-grid{
         grid-template-columns:repeat(2,1fr);
         gap:22px;
     }
-
-
-    /* CTA */
-
     .cta-box{
         padding:45px 30px;
     }
-
     .cta-box h2{
         font-size:38px;
     }
-
 }
-
-
-
 @media (max-width:639px){
-
     .content-container{
         width:92%;
         margin:auto;
     }
-
-
-    /* GLOBAL SECTION SPACING */
-
     .about-hero,
     .about-story,
     .values,
@@ -2491,94 +2183,72 @@
     .testimonials-section{
         padding:55px 0;
     }
-
     .about-cta{
         padding:40px 0 20px;
     }
-
-
-    /* SECTION HEADER */
-
     .section-header{
         width:100%;
         margin-bottom:35px;
     }
-
     .section-label{
         font-size:12px;
         padding:7px 12px;
         gap:7px;
         margin-bottom:12px;
     }
-
     .section-label i{
         font-size:15px;
     }
-
     .section-header h2{
         font-size:28px;
         line-height:1.25;
         margin-bottom:14px;
     }
-
     .section-header p{
         font-size:14px;
         line-height:1.7;
     }
-
-
-    /* HERO */
-
     .about-hero{
         padding-top:100px;
         padding-bottom:55px;
     }
-
     .hero-grid{
         grid-template-columns:1fr;
         gap:30px;
     }
-
     .hero-content{
         width:100%;
         text-align:center;
     }
-
     .hero-tag{
         font-size:12px;
         padding:8px 13px;
         gap:7px;
         margin-bottom:18px;
     }
-
     .hero-tag i{
         font-size:15px;
     }
-
     .hero-content h1{
         font-size:34px;
         line-height:1.15;
         margin-bottom:18px;
     }
-
     .hero-content p{
         font-size:14px;
         line-height:1.75;
         margin-bottom:25px;
     }
-
     .hero-buttons{
         flex-direction:column;
         width:100%;
         gap:12px;
         margin-bottom:30px;
     }
-
     .hero-buttons .btn{
         width:100%;
         justify-content:center;
     }
-
     .hero-features{
         flex-direction:column;
         align-items:flex-start;
@@ -2587,25 +2257,20 @@
         max-width:100%;
         margin:auto;
     }
-
     .hero-features div{
         font-size:13px;
     }
-
     .hero-features i{
         font-size:18px;
     }
-
     .hero-image{
         width:100%;
     }
-
     .hero-image img{
         width:100%;
         height:380px;
         border-radius:20px;
     }
-
     .floating-card{
         position:relative;
         left:0;
@@ -2616,281 +2281,207 @@
         gap:12px;
         border-radius:18px;
     }
-
     .card-icon{
         width:48px;
         height:48px;
         min-width:48px;
         font-size:19px;
     }
-
     .floating-card h4{
         font-size:16px;
     }
-
     .floating-card p{
         font-size:12px;
     }
-
-
-    /* STORY */
-
     .about-grid{
         grid-template-columns:1fr;
         gap:30px;
     }
-
     .about-images img{
         height:330px;
         border-radius:20px;
     }
-
     .about-content h2{
         font-size:30px;
         line-height:1.25;
         margin-bottom:18px;
     }
-
     .about-content p{
         font-size:14px;
         line-height:1.75;
         margin-bottom:15px;
     }
-
     .about-list{
         margin:22px 0;
     }
-
     .about-list li{
         font-size:13px;
         gap:9px;
         margin-bottom:12px;
     }
-
-
-    /* VALUES */
-
     .values-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .value-card{
         padding:25px 18px;
         border-radius:18px;
     }
-
     .value-icon{
         width:58px;
         height:58px;
         font-size:22px;
         margin-bottom:18px;
     }
-
     .value-icon i{
         font-size:22px;
     }
-
     .value-card h3{
         font-size:19px;
         margin-bottom:10px;
     }
-
     .value-card p{
         font-size:13px;
         line-height:1.65;
     }
-
-
-    /* MISSION / VISION */
-
     .mission-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .mission-card{
         padding:28px 20px;
         border-radius:18px;
     }
-
     .mission-icon{
         width:58px;
         height:58px;
         font-size:22px;
         margin-bottom:18px;
     }
-
     .mission-card h3{
         font-size:20px;
         margin-bottom:12px;
     }
-
     .mission-card p{
         font-size:13px;
         line-height:1.7;
     }
-
-
-    /* PHILOSOPHY */
-
     .philosophy-grid{
         grid-template-columns:1fr;
         gap:30px;
     }
-
     .philosophy-content{
         text-align:left;
     }
-
     .philosophy-content h2{
         font-size:30px;
         line-height:1.25;
         margin:15px 0 18px;
     }
-
     .philosophy-content p{
         font-size:14px;
         line-height:1.75;
     }
-
     .philosophy-list{
         grid-template-columns:1fr;
         gap:12px;
         margin-top:25px;
     }
-
     .philosophy-list div{
         font-size:13px;
         gap:9px;
     }
-
     .philosophy-list i{
         font-size:16px;
     }
-
     .philosophy-image img{
         height:330px;
         border-radius:20px;
     }
-
-
-    /* STATS */
-
     .stats-grid{
         grid-template-columns:repeat(2,1fr);
         gap:12px;
     }
-
     .stat-card{
         padding:22px 12px;
         border-radius:18px;
     }
-
     .stat-icon{
         width:50px;
         height:50px;
         font-size:19px;
         margin-bottom:13px;
     }
-
     .stat-card h3{
         font-size:26px;
         margin-bottom:7px;
     }
-
     .stat-card p{
         font-size:11px;
         line-height:1.5;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .why-card{
         padding:25px 18px;
         border-radius:18px;
         text-align:center;
     }
-
     .why-card > i{
         width:55px;
         height:55px;
         font-size:20px;
         margin:0 auto 18px;
     }
-
     .why-card h3{
         font-size:19px;
         margin-bottom:10px;
     }
-
     .why-card p{
         font-size:13px;
         line-height:1.65;
     }
-
-
-    /* TEAM */
-
     .team-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
     .team-card{
         border-radius:18px;
     }
-
     .team-image img{
         height:280px;
     }
-
     .team-content{
         padding:22px 18px;
     }
-
     .team-content h3{
         font-size:20px;
         margin-bottom:6px;
     }
-
     .team-content span{
         font-size:12px;
         margin-bottom:10px;
     }
-
     .team-content p{
         font-size:13px;
         line-height:1.65;
         margin-bottom:18px;
     }
-
     .team-social{
         gap:8px;
     }
-
     .team-social a{
         width:36px;
         height:36px;
     }
-
-
-    /* TIMELINE */
-
     .timeline{
         max-width:100%;
     }
-
     .timeline::before{
         left:23px;
     }
-
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even){
@@ -2898,160 +2489,115 @@
         padding-left:58px;
         margin-bottom:30px;
     }
-
     .timeline-icon{
         left:23px;
         width:46px;
         height:46px;
         font-size:17px;
     }
-
     .timeline-content{
         width:100%;
         padding:20px 17px;
         border-radius:18px;
     }
-
     .timeline-content .year{
         font-size:12px;
     }
-
     .timeline-content h3{
         font-size:18px;
         margin-bottom:9px;
     }
-
     .timeline-content p{
         font-size:13px;
         line-height:1.65;
     }
-
-
-    /* FACILITIES */
-
     .facility-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .facility-card{
         padding:25px 18px;
         border-radius:18px;
     }
-
     .facility-card > i{
         width:55px;
         height:55px;
         font-size:20px;
         margin-bottom:18px;
     }
-
     .facility-card h3{
         font-size:19px;
         margin-bottom:10px;
     }
-
     .facility-card p{
         font-size:13px;
         line-height:1.65;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .gallery-grid img{
         height:250px;
         border-radius:18px;
     }
-
-
-    /* TESTIMONIALS */
-
     .testimonials-grid,
     .testimonial-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
     .testimonial-card{
         padding:25px 20px;
         border-radius:18px;
     }
-
     .testimonial-card .stars{
         margin-bottom:14px;
     }
-
     .testimonial-card p{
         font-size:13px;
         line-height:1.7;
         margin-bottom:20px;
     }
-
     .testimonial-footer{
         gap:12px;
     }
-
     .testimonial-footer img{
         width:55px;
         height:55px;
     }
-
     .testimonial-info h4{
         font-size:16px;
     }
-
     .testimonial-info span{
         font-size:12px;
     }
-
-
-    /* CTA */
-
     .cta-box{
         padding:35px 18px;
         border-radius:22px;
     }
-
     .cta-box h2{
         font-size:30px;
         line-height:1.25;
         margin-bottom:14px;
     }
-
     .cta-box p{
         font-size:13px;
         line-height:1.7;
         margin-bottom:22px;
     }
-
     .cta-actions{
         flex-direction:column;
         gap:10px;
     }
-
     .cta-actions .btn{
         width:100%;
         justify-content:center;
     }
-
 }
-
-
-
-
 @media (max-width:399px){
-
     .content-container{
         width:94%;
     }
-
-
     .about-hero,
     .about-story,
     .values,
@@ -3066,147 +2612,101 @@
     .testimonials-section{
         padding:45px 0;
     }
-
-
     .about-hero{
         padding-top:90px;
     }
-
-
     .section-header h2{
         font-size:25px;
     }
-
-
     .hero-content h1{
         font-size:30px;
     }
-
     .hero-content p{
         font-size:13px;
     }
-
-
     .hero-image img{
         height:320px;
     }
-
-
     .floating-card{
         padding:15px;
     }
-
-
     .about-images img,
     .philosophy-image img{
         height:290px;
     }
-
-
     .about-content h2,
     .philosophy-content h2{
         font-size:27px;
     }
-
-
     .stats-grid{
         grid-template-columns:1fr 1fr;
         gap:10px;
     }
-
-
     .stat-card{
         padding:18px 8px;
     }
-
     .stat-icon{
         width:45px;
         height:45px;
         font-size:17px;
     }
-
     .stat-card h3{
         font-size:23px;
     }
-
-
     .team-image img{
         height:240px;
     }
-
-
     .gallery-grid img{
         height:220px;
     }
-
-
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even){
         padding-left:55px;
     }
-
-
     .timeline::before{
         left:20px;
     }
-
-
     .timeline-icon{
         left:20px;
         width:42px;
         height:42px;
     }
-
-
     .cta-box{
         padding:30px 15px;
     }
-
     .cta-box h2{
         font-size:26px;
     }
-
 }
 html[dir="rtl"] .timeline::before{
     left:auto;
     right:50%;
     transform:translateX(50%);
 }
-
 html[dir="rtl"] .timeline-item{
     direction:rtl;
 }
-
-/* Odd items → right side in RTL */
 html[dir="rtl"] .timeline-item:nth-child(odd){
     justify-content:flex-end;
 }
-
-/* Even items → left side in RTL */
 html[dir="rtl"] .timeline-item:nth-child(even){
     justify-content:flex-start;
 }
-
 html[dir="rtl"] .timeline-icon{
     left:auto;
     right:50%;
     transform:translateX(50%);
 }
-
 html[dir="rtl"] .timeline-content{
     text-align:right;
 }
-
-
 @media (max-width:1024px){
-
     html[dir="rtl"] .timeline::before{
         left:auto;
         right:30px;
         transform:none;
     }
-
     html[dir="rtl"] .timeline-item,
     html[dir="rtl"] .timeline-item:nth-child(odd),
     html[dir="rtl"] .timeline-item:nth-child(even){
@@ -3214,28 +2714,22 @@ html[dir="rtl"] .timeline-content{
         padding-left:0;
         padding-right:80px;
     }
-
     html[dir="rtl"] .timeline-icon{
         left:auto;
         right:30px;
         transform:translateX(50%);
     }
-
     html[dir="rtl"] .timeline-content{
         width:100%;
         text-align:right;
     }
 }
-
-
 @media (max-width:640px){
-
     html[dir="rtl"] .timeline::before{
         left:auto;
         right:25px;
         transform:none;
     }
-
     html[dir="rtl"] .timeline-item,
     html[dir="rtl"] .timeline-item:nth-child(odd),
     html[dir="rtl"] .timeline-item:nth-child(even){
@@ -3243,7 +2737,6 @@ html[dir="rtl"] .timeline-content{
         padding-left:0;
         padding-right:65px;
     }
-
     html[dir="rtl"] .timeline-icon{
         left:auto;
         right:25px;
@@ -3252,46 +2745,36 @@ html[dir="rtl"] .timeline-content{
         height:50px;
         font-size:18px;
     }
-
     html[dir="rtl"] .timeline-content{
         width:100%;
         padding:25px;
         text-align:right;
     }
-
     html[dir="rtl"] .timeline-content .year{
         text-align:right;
     }
-
     html[dir="rtl"] .timeline-content h3{
         text-align:right;
     }
-
     html[dir="rtl"] .timeline-content p{
         text-align:right;
     }
 }
-
-
 @media (max-width:480px){
-
     html[dir="rtl"] .timeline::before{
         right:22px;
     }
-
     html[dir="rtl"] .timeline-item,
     html[dir="rtl"] .timeline-item:nth-child(odd),
     html[dir="rtl"] .timeline-item:nth-child(even){
         padding-right:55px;
     }
-
     html[dir="rtl"] .timeline-icon{
         right:22px;
         width:44px;
         height:44px;
         font-size:16px;
     }
-
     html[dir="rtl"] .timeline-content{
         padding:20px 18px;
         border-radius:18px;
@@ -3301,7 +2784,6 @@ html[dir="rtl"] .timeline-content{
     align-items:center;
     gap:8px;
 }
-
 .team-social a{
     width:36px;
     height:36px;
@@ -3319,7 +2801,6 @@ html[dir="rtl"] .timeline-content{
         color .25s ease,
         box-shadow .25s ease;
 }
-
 .team-social a:hover{
     transform:translateY(-3px);
     border-color:var(--primary);
@@ -3327,19 +2808,16 @@ html[dir="rtl"] .timeline-content{
     color:#fff;
     box-shadow:0 8px 20px rgba(27,94,32,.20);
 }
-
 .team-social a svg{
     width:16px;
     height:16px;
     flex-shrink:0;
 }
-
 html.dark-mode .team-social a{
     background:var(--bg-soft);
     border-color:var(--border);
     color:var(--primary);
 }
-
 html.dark-mode .team-social a:hover{
     background:var(--primary);
     border-color:var(--primary);

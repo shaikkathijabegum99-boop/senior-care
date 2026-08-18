@@ -1,8 +1,6 @@
-
 document.addEventListener(
 "DOMContentLoaded",
 ()=>{
-
 const faqItems =
 document.querySelectorAll(".faq-item");
 faqItems.forEach(item=>{
@@ -40,7 +38,6 @@ answer.style.display="none";
 }
 });
 });
-
 const newsletterForm =
 document.querySelector(".newsletter-form");
 if(newsletterForm){
@@ -105,7 +102,6 @@ alertBox.className =
 "pricing-alert";
 },3000);
 }
-
 const pricingCards =
 document.querySelectorAll(
 ".pricing-card"
@@ -124,7 +120,6 @@ card.style.transform=
 },
 index*120);
 });
-
 const buttons =
 document.querySelectorAll(
 ".pricing-card .btn"

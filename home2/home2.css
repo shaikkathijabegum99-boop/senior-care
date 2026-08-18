@@ -1,4 +1,3 @@
-
 .home2-hero,
 .trust-section,
 .welcome-section,
@@ -859,7 +858,6 @@
 .home2-hero{
     padding:100px 0;
 }
-
 .hero-image{
     margin-top:30px;
 }
@@ -947,19 +945,15 @@
     padding:45px 20px;
 }
 }
-
 .hero-content h1{
     font-size:64px;
 }
 .hero-image img{
     height:650px;
 }
-
-
 .why-grid{
     grid-template-columns:repeat(1,1fr);
 }
-
 .services-grid{
     grid-template-columns:repeat(2,1fr);
 }
@@ -967,12 +961,9 @@
     grid-template-columns:1fr 1fr;
     gap:80px;
 }
-
-
 .gallery-grid{
     grid-template-columns:repeat(1,1fr);
 }
-
 .awards-grid{
     grid-template-columns:repeat(2,1fr);
 }
@@ -1065,9 +1056,6 @@
     font-size:2.4rem;
 }
 }
-/*==========================================================
-   TABLET
-==========================================================*/
 @media(max-width:1024px){
 .hero-content h1{
     font-size:2.8rem;
@@ -1428,7 +1416,6 @@
     line-height:1.4;
 }
 @media (min-width:1024px) and (max-width:1279px){
-   
     .hero-grid,
     .about-grid,
     .welcome-grid,
@@ -1457,9 +1444,7 @@
         grid-template-columns:repeat(3,1fr);
     }
 }
-
 @media (min-width:1280px){
-    
     .hero-content h1{
         font-size:4rem;
         line-height:1.15;
@@ -1490,8 +1475,6 @@
         gap:30px;
     }
 }
-
-
 .home2-hero{
     position:relative;
     display:flex;
@@ -1499,12 +1482,9 @@
     justify-content:center;
     min-height:100vh;
     overflow:hidden;
-
     padding:100px 0 60px;
-
     background:url("../images/indexhero1.jpg") center/cover no-repeat;
 }
-
 .home2-hero .hero-overlay{
     position:absolute;
     inset:0;
@@ -1514,96 +1494,65 @@
         rgba(0,0,0,.48)
     );
 }
-
 .home2-hero .container{
     position:relative;
     z-index:2;
     width:100%;
 }
-
 .hero-grid{
     display:flex;
     justify-content:center;
     align-items:center;
     width:100%;
 }
-
 .hero-content{
     width:100%;
     max-width:720px;
     margin:auto;
-
     padding:45px;
-
     text-align:center;
     color:#fff;
-
     background:rgba(255,255,255,.12);
-
     border:1px solid rgba(255,255,255,.22);
-
     border-radius:26px;
-
     backdrop-filter:blur(15px);
 }
-
 .hero-tag{
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:10px;
-
     margin-bottom:24px;
-
     padding:10px 22px;
-
     border-radius:50px;
-
     background:rgba(255,255,255,.16);
-
     color:#fff;
-
     font-size:.88rem;
-
     font-weight:600;
 }
-
 .hero-tag i{
     font-size:17px;
 }
-
 .hero-content h1{
     margin:0 0 22px;
-
     font-family:"Cormorant Garamond",serif;
-
     font-size:clamp(2.4rem,5vw,4.5rem);
-
     line-height:1.15;
-
     font-weight:700;
-
     color:#fff;
 }
-
 .hero-content h1 em{
     font-style:normal;
     color:var(--primary);
 }
-
 .hero-content p{
     max-width:620px;
     margin:0 auto 35px;
-
     font-family:"Manrope",sans-serif;
-
     font-size:1rem;
-
     line-height:1.8;
-
     color:rgba(255,255,255,.92);
 }
-
 .hero-buttons{
     display:flex;
     justify-content:center;
@@ -1611,160 +1560,112 @@
     gap:16px;
     flex-wrap:wrap;
 }
-
 .hero-buttons .btn{
     display:inline-flex;
     justify-content:center;
     align-items:center;
     gap:10px;
 }
-
-
-
 @media(min-width:1281px){
-
 .home2-hero{
     min-height:100vh;
     padding-top:120px;
 }
-
 .hero-content{
     max-width:760px;
     padding:55px;
 }
-
 .hero-content h1{
     font-size:4.4rem;
 }
-
 }
-
-
-
 @media(min-width:1024px) and (max-width:1280px){
-
 .home2-hero{
     min-height:92vh;
     padding:110px 0 60px;
 }
-
 .hero-content{
     max-width:700px;
     padding:42px;
 }
-
 .hero-content h1{
     font-size:3.3rem;
 }
-
 .hero-content p{
     font-size:.95rem;
 }
-
 }
-
-
 @media(min-width:640px) and (max-width:1023px){
-
 .home2-hero{
     min-height:90vh;
     padding:110px 25px 60px;
 }
-
 .hero-content{
     max-width:650px;
     padding:35px;
 }
-
 .hero-content h1{
     font-size:2.7rem;
 }
-
 .hero-content p{
     font-size:.94rem;
 }
-
 .hero-buttons{
     justify-content:center;
 }
-
 }
-
-
-
 @media(max-width:639px){
-
 .home2-hero{
     min-height:auto;
     padding:95px 18px 55px;
 }
-
 .hero-content{
     padding:24px 18px;
     border-radius:18px;
 }
-
 .hero-tag{
     padding:8px 16px;
     font-size:.75rem;
 }
-
 .hero-content h1{
     font-size:2rem;
 }
-
 .hero-content p{
     font-size:.88rem;
     line-height:1.7;
 }
-
 .hero-buttons{
     flex-direction:column;
     width:100%;
 }
-
 .hero-buttons .btn{
     width:100%;
     max-width:280px;
 }
-
 }
-
-
-
 @media(max-width:400px){
-
 .home2-hero{
     padding:90px 15px 50px;
 }
-
 .hero-content{
     padding:20px 15px;
 }
-
 .hero-tag{
     font-size:.7rem;
 }
-
 .hero-content h1{
     font-size:1.65rem;
 }
-
 .hero-content p{
     font-size:.82rem;
 }
-
 .hero-buttons .btn{
     max-width:100%;
 }
-
 }
-
-
 [data-theme="dark"] .home2-hero{
     background:url("../images/indexhero1.jpg") center/cover no-repeat;
 }
-
 [data-theme="dark"] .home2-hero .hero-overlay{
     background:linear-gradient(
         90deg,
@@ -1772,366 +1673,227 @@
         rgba(0,0,0,.60)
     );
 }
-
 [data-theme="dark"] .hero-content{
     background:rgba(20,20,20,.45);
     border-color:rgba(255,255,255,.18);
 }
-
 [data-theme="dark"] .hero-content h1{
     color:#fff;
 }
-
 [data-theme="dark"] .hero-content h1 em{
     color:var(--primary);
 }
-
 [data-theme="dark"] .hero-content p{
     color:rgba(255,255,255,.90);
-}/*==================================================
-LIFESTYLE GRID
-1 LARGE + 2 SMALL CARDS
-==================================================*/
-
+}
 .lifestyle-grid{
     display:grid;
-
     grid-template-columns:
         1.5fr
         1fr;
-
     grid-template-rows:
         repeat(2, 280px);
-
     gap:25px;
 }
-
-
-/*==================================================
-LARGE CARD
-==================================================*/
-
 .lifestyle-large{
     grid-column:1;
     grid-row:1 / span 2;
-
     position:relative;
     overflow:hidden;
-
     min-height:585px;
-
     border-radius:25px;
-
     box-shadow:
         0 10px 30px rgba(27,94,32,.10),
         0 0 18px rgba(27,94,32,.06);
-
     transition:
         transform .35s ease,
         box-shadow .35s ease;
 }
-
-
-/*==================================================
-SMALL CARDS
-==================================================*/
-
 .lifestyle-card{
     grid-column:2;
-
     position:relative;
     overflow:hidden;
-
     min-height:280px;
-
     border-radius:25px;
-
     background:var(--surface);
-
     border:1px solid var(--border);
-
     box-shadow:
         0 10px 30px rgba(27,94,32,.10),
         0 0 18px rgba(27,94,32,.06);
-
     transition:
         transform .35s ease,
         box-shadow .35s ease,
         border-color .35s ease;
 }
-
-
-/* First small card */
-
 .lifestyle-card:nth-child(2){
     grid-row:1;
 }
-
-
-/* Second small card */
-
 .lifestyle-card:nth-child(3){
     grid-row:2;
 }
-
-
-/*==================================================
-IMAGES
-==================================================*/
-
 .lifestyle-large img,
 .lifestyle-card img{
     width:100%;
     height:100%;
-
     min-height:100%;
-
     object-fit:cover;
-
     display:block;
-
     transition:
         transform .5s ease,
         filter .5s ease;
 }
-
-
-/*==================================================
-HOVER
-==================================================*/
-
 .lifestyle-large:hover,
 .lifestyle-card:hover{
     transform:translateY(-8px);
-
     border-color:var(--primary);
-
     box-shadow:
         0 22px 50px rgba(27,94,32,.18),
         0 0 35px rgba(27,94,32,.22);
 }
-
-
 .lifestyle-large:hover img,
 .lifestyle-card:hover img{
     transform:scale(1.08);
-
     filter:brightness(1.05);
 }
-
-
-/*==================================================
-OVERLAY
-==================================================*/
-
 .lifestyle-overlay,
 .lifestyle-content{
     position:absolute;
-
     left:0;
     right:0;
     bottom:0;
-
     padding:30px;
-
     color:#fff;
-
     background:
         linear-gradient(
             transparent,
             rgba(0,0,0,.82)
         );
 }
-
-
 .lifestyle-overlay h3,
 .lifestyle-content h3{
     color:#fff;
-
     font-size:1.5rem;
-
     margin-bottom:10px;
 }
-
-
 .lifestyle-overlay p,
 .lifestyle-content p{
     color:rgba(255,255,255,.92);
-
     line-height:1.6;
-
     margin:0;
 }
-
-
-/*==================================================
-TABLET
-640px - 1023px
-==================================================*/
-
 @media (min-width:640px) and (max-width:1023px){
-
     .lifestyle-grid{
         grid-template-columns:
             1.3fr
             1fr;
-
         grid-template-rows:
             repeat(2,240px);
-
         gap:20px;
     }
-
     .lifestyle-large{
         min-height:500px;
     }
-
     .lifestyle-card{
         min-height:240px;
     }
-
     .lifestyle-overlay,
     .lifestyle-content{
         padding:22px;
     }
-
     .lifestyle-overlay h3,
     .lifestyle-content h3{
         font-size:1.2rem;
     }
-
     .lifestyle-overlay p,
     .lifestyle-content p{
         font-size:.9rem;
     }
 }
-
-
-/*==================================================
-MOBILE
-< 640px
-==================================================*/
-
 @media (max-width:639px){
-
     .lifestyle-grid{
         display:grid;
-
         grid-template-columns:1fr;
-
         grid-template-rows:auto;
-
         gap:18px;
     }
-
     .lifestyle-large,
     .lifestyle-card{
         grid-column:1;
-
         grid-row:auto;
-
         min-height:260px;
-
         height:260px;
     }
-
     .lifestyle-overlay,
     .lifestyle-content{
         padding:22px 20px;
     }
-
     .lifestyle-overlay h3,
     .lifestyle-content h3{
         font-size:1.15rem;
     }
-
     .lifestyle-overlay p,
     .lifestyle-content p{
         font-size:.88rem;
     }
 }
-
-
-/*==================================================
-VERY SMALL MOBILE
-< 400px
-==================================================*/
-
 @media (max-width:399px){
-
     .lifestyle-large,
     .lifestyle-card{
         min-height:230px;
         height:230px;
     }
-
     .lifestyle-overlay,
     .lifestyle-content{
         padding:18px;
     }
-
     .lifestyle-overlay h3,
     .lifestyle-content h3{
         font-size:1rem;
     }
-
     .lifestyle-overlay p,
     .lifestyle-content p{
         font-size:.82rem;
     }
-}/*==================================================
-SAMSUNG GALAXY S8+
-360px - 380px
-==================================================*/
-
+}
 @media (min-width:360px) and (max-width:380px){
-
     .family-section{
         padding:55px 0;
     }
-
     .family-grid{
         display:grid;
         grid-template-columns:1fr;
         gap:35px;
         align-items:center;
     }
-
     .family-image{
         width:100%;
         height:330px;
         border-radius:20px;
         overflow:hidden;
     }
-
     .family-image img{
         width:100%;
         height:330px;
         object-fit:cover;
         display:block;
     }
-
     .family-content{
         width:100%;
         text-align:left;
     }
-
     .family-content h2{
         font-size:1.85rem;
         line-height:1.25;
         margin-bottom:18px;
     }
-
     .family-content p{
         font-size:.88rem;
         line-height:1.7;
         margin-bottom:22px;
     }
-
     .family-list{
         margin-bottom:25px;
     }
-
     .family-list li{
         display:flex;
         align-items:flex-start;
@@ -2140,729 +1902,474 @@ SAMSUNG GALAXY S8+
         line-height:1.5;
         margin-bottom:12px;
     }
-
     .family-list i{
         flex-shrink:0;
         margin-top:3px;
         font-size:.9rem;
     }
-
     .family-content .btn{
         width:100%;
         max-width:100%;
         justify-content:center;
     }
-
-}/* =========================================================
-   FINAL RESPONSIVE SYSTEM
-   Mobile     : < 640px
-   Tablet     : 640px - 1023px
-   Desktop    : 1024px - 1279px
-   Large      : 1280px+
-   Extra Large: 1440px+
-========================================================= */
-
-
-/* =========================================================
-   BASE / DESKTOP DEFAULT
-========================================================= */
-
-
+}
 .hero-content h1{
     font-size:3.8rem;
 }
-
 .hero-content p{
     font-size:1.05rem;
 }
-
 .hero-highlights{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
-
 .hero-image img{
     height:500px;
 }
-
 .hero-floating-card{
     left:-40px;
 }
-
 .trust-grid{
     grid-template-columns:repeat(4,1fr);
 }
-
 .welcome-grid{
     grid-template-columns:.9fr 1.1fr;
     gap:70px;
 }
-
 .welcome-image img{
     height:600px;
 }
-
 .why-grid{
     grid-template-columns:repeat(4,1fr);
 }
-
 .lifestyle-grid{
     grid-template-columns:1.5fr 1fr;
     grid-template-rows:repeat(2,280px);
     gap:25px;
 }
-
 .lifestyle-large{
     grid-column:1;
     grid-row:1 / span 2;
     min-height:585px;
 }
-
 .lifestyle-card{
     grid-column:2;
     min-height:280px;
 }
-
 .lifestyle-card:nth-child(2){
     grid-row:1;
 }
-
 .lifestyle-card:nth-child(3){
     grid-row:2;
 }
-
 .services-grid{
     grid-template-columns:repeat(3,1fr);
 }
-
 .wellness-grid{
     grid-template-columns:1fr 1fr;
     gap:70px;
 }
-
 .wellness-image img{
     height:440px;
 }
-
 .family-grid{
     grid-template-columns:1fr 1fr;
     gap:70px;
 }
-
 .family-image img{
     height:550px;
 }
-
 .amenities-grid{
     grid-template-columns:repeat(4,1fr);
 }
-
 .gallery-grid{
     grid-template-columns:repeat(4,1fr);
     grid-auto-rows:220px;
     gap:20px;
 }
-
 .testimonial-grid{
     grid-template-columns:repeat(3,1fr);
 }
-
 .awards-grid{
     grid-template-columns:repeat(4,1fr);
 }
-
 .newsletter-box{
     display:flex;
     flex-direction:row;
     align-items:center;
 }
-
 .newsletter-form{
     flex-direction:row;
 }
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1280px - 1439px
-========================================================= */
-
 @media (min-width:1280px) and (max-width:1439px){
-
     .hero-grid{
         gap:50px;
     }
-
     .hero-content h1{
         font-size:3.5rem;
     }
-
     .hero-image img{
         height:580px;
     }
-
     .welcome-grid,
     .wellness-grid,
     .family-grid{
         gap:55px;
     }
-
     .welcome-image img{
         height:540px;
     }
-
     .family-image img{
         height:520px;
     }
-
     .why-grid,
     .amenities-grid,
     .awards-grid{
         gap:22px;
     }
-
 }
-
-
-/* =========================================================
-   DESKTOP
-   1024px - 1279px
-========================================================= */
-
 @media (min-width:1024px) and (max-width:1279px){
-
     .home2-hero{
         min-height:90vh;
         padding:110px 0 70px;
     }
-
     .hero-grid{
         grid-template-columns:1fr 1fr;
         gap:40px;
     }
-
     .hero-content h1{
         font-size:3.1rem;
     }
-
     .hero-content p{
         font-size:.95rem;
     }
-
     .hero-highlights{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .hero-image img{
         height:500px;
     }
-
     .hero-floating-card{
         left:20px;
         bottom:25px;
     }
-
-
-    /* TRUST */
-
     .trust-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* WELCOME */
-
     .welcome-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
     .welcome-image img{
         height:480px;
     }
-
     .welcome-content h2{
         font-size:2.4rem;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
-
-    /* LIFESTYLE */
-
     .lifestyle-grid{
         grid-template-columns:1.3fr 1fr;
         grid-template-rows:repeat(2,240px);
         gap:20px;
     }
-
     .lifestyle-large{
         min-height:500px;
     }
-
     .lifestyle-card{
         min-height:240px;
     }
-
-
-    /* SERVICES */
-
     .services-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
-
-    /* WELLNESS */
-
     .wellness-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
     .wellness-image img{
         height:520px;
     }
-
-
-    /* FAMILY */
-
     .family-grid{
         grid-template-columns:1fr 1fr;
         gap:45px;
     }
-
     .family-image img{
         height:480px;
     }
-
     .family-content h2{
         font-size:2.4rem;
     }
-
-
-    /* AMENITIES */
-
     .amenities-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:repeat(3,1fr);
     }
-
-
-    /* TESTIMONIAL */
-
     .testimonial-grid{
         grid-template-columns:repeat(3,1fr);
         gap:20px;
     }
-
     .testimonial-card{
         padding:25px;
     }
-
-
-    /* AWARDS */
-
     .awards-grid{
         grid-template-columns:repeat(2,1fr);
         gap:25px;
     }
-
-
-    /* NEWSLETTER */
-
     .newsletter-box{
         gap:30px;
     }
-
 }
-
-
-/* =========================================================
-   IPAD MINI / TABLET
-   640px - 1023px
-========================================================= */
-
 @media (min-width:640px) and (max-width:1023px){
-
     .home2-hero{
         min-height:90vh;
         padding:105px 25px 60px;
     }
-
     .hero-grid{
         grid-template-columns:1fr;
         gap:35px;
     }
-
     .hero-content{
         max-width:700px;
         margin:auto;
         padding:35px;
         text-align:center;
     }
-
     .hero-content h1{
         font-size:2.8rem;
     }
-
     .hero-content p{
         font-size:.94rem;
         margin-left:auto;
         margin-right:auto;
     }
-
     .hero-buttons{
         justify-content:center;
     }
-
     .hero-highlights{
         grid-template-columns:repeat(3,1fr);
         gap:15px;
     }
-
     .hero-image{
         max-width:650px;
         margin:0 auto;
     }
-
     .hero-image img{
         height:420px;
     }
-
     .hero-floating-card{
         left:20px;
     }
-
-
-    /* TRUST */
-
     .trust-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .trust-card{
         padding:28px 18px;
     }
-
-
-    /* WELCOME */
-
     .welcome-grid{
         grid-template-columns:1fr 1fr;
         gap:35px;
     }
-
     .welcome-image img{
         height:420px;
     }
-
     .welcome-content h2{
         font-size:2.1rem;
     }
-
     .welcome-content p{
         font-size:.9rem;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* LIFESTYLE */
-
     .lifestyle-grid{
         grid-template-columns:1.3fr 1fr;
         grid-template-rows:repeat(2,240px);
         gap:20px;
     }
-
     .lifestyle-large{
         min-height:500px;
     }
-
     .lifestyle-card{
         min-height:240px;
     }
-
     .lifestyle-overlay,
     .lifestyle-content{
         padding:22px;
     }
-
     .lifestyle-overlay h3,
     .lifestyle-content h3{
         font-size:1.2rem;
     }
-
     .lifestyle-overlay p,
     .lifestyle-content p{
         font-size:.88rem;
     }
-
-
-    /* SERVICES */
-
     .services-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .service-image{
         height:220px;
     }
-
     .service-content{
         padding:24px;
     }
-
-
-    /* WELLNESS */
-
     .wellness-grid{
         grid-template-columns:1fr 1fr;
         gap:35px;
     }
-
     .wellness-image img{
         height:380px;
     }
-
-
-    /* FAMILY */
-
     .family-grid{
         grid-template-columns:1fr 1fr;
         gap:35px;
     }
-
     .family-image img{
         height:420px;
     }
-
     .family-content h2{
         font-size:2.1rem;
     }
-
     .family-content p{
         font-size:.9rem;
     }
-
     .family-list li{
         font-size:.86rem;
     }
-
-
-    /* AMENITIES */
-
     .amenities-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
     .amenity-image{
         height:220px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:repeat(3,1fr);
         grid-auto-rows:190px;
         gap:15px;
     }
-
-
-    /* TESTIMONIAL */
-
     .testimonial-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* AWARDS */
-
     .awards-grid{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
     }
-
-
-    /* NEWSLETTER */
-
     .newsletter-box{
         flex-direction:column;
         padding:40px 30px;
         text-align:center;
     }
-
     .newsletter-content{
         max-width:650px;
     }
-
     .newsletter-form{
         max-width:600px;
     }
-
 }
-
-
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360px - 380px
-========================================================= */
-
 @media (min-width:360px) and (max-width:380px){
-
     .home2-hero{
         min-height:auto;
         padding:90px 15px 50px;
     }
-
     .hero-grid{
         grid-template-columns:1fr;
         gap:25px;
     }
-
     .hero-content{
         width:100%;
         padding:24px 18px;
         border-radius:18px;
         text-align:center;
     }
-
     .hero-content h1{
         font-size:2rem;
         line-height:1.2;
     }
-
     .hero-content p{
         font-size:.86rem;
         line-height:1.7;
     }
-
     .hero-tag{
         font-size:.75rem;
         padding:8px 15px;
     }
-
     .hero-buttons{
         flex-direction:column;
         width:100%;
         gap:10px;
     }
-
     .hero-buttons .btn{
         width:100%;
         max-width:280px;
     }
-
     .hero-highlights{
         grid-template-columns:1fr;
         gap:12px;
     }
-
     .hero-image{
         width:100%;
     }
-
     .hero-image img{
         height:300px;
     }
-
     .hero-floating-card{
         left:10px;
         right:10px;
         bottom:15px;
         padding:14px 16px;
     }
-
     .floating-icon{
         width:45px;
         height:45px;
     }
-
-
-    /* TRUST */
-
     .trust-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .trust-card{
         padding:24px 18px;
     }
-
     .trust-card h3{
         font-size:1.7rem;
     }
-
-
-    /* WELCOME */
-
     .welcome-grid{
         grid-template-columns:1fr;
         gap:28px;
     }
-
     .welcome-image img{
         height:300px;
     }
-
     .welcome-content h2{
         font-size:1.75rem;
     }
-
     .welcome-content p{
         font-size:.86rem;
     }
-
-
-    /* WHY */
-
     .why-grid{
         grid-template-columns:1fr;
         gap:15px;
     }
-
     .why-card{
         padding:25px 18px;
     }
-
-
-    /* LIFESTYLE */
-
     .lifestyle-grid{
         grid-template-columns:1fr;
         grid-template-rows:auto;
         gap:18px;
     }
-
     .lifestyle-large,
     .lifestyle-card{
         grid-column:1;
@@ -2870,276 +2377,182 @@ SAMSUNG GALAXY S8+
         min-height:260px;
         height:260px;
     }
-
     .lifestyle-overlay,
     .lifestyle-content{
         padding:20px;
     }
-
-
-    /* SERVICES */
-
     .services-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
     .service-image{
         height:210px;
     }
-
     .service-content{
         padding:22px 18px;
     }
-
-
-    /* WELLNESS */
-
     .wellness-grid{
         grid-template-columns:1fr;
         gap:28px;
     }
-
     .wellness-image img{
         height:300px;
     }
-
     .wellness-content h2{
         font-size:1.75rem;
     }
-
-
-    /* FAMILY */
-
     .family-grid{
         grid-template-columns:1fr;
         gap:28px;
     }
-
     .family-image{
         border-radius:18px;
     }
-
     .family-image img{
         height:300px;
     }
-
     .family-content h2{
         font-size:1.75rem;
     }
-
     .family-content p{
         font-size:.86rem;
     }
-
     .family-list li{
         font-size:.84rem;
         gap:9px;
     }
-
     .family-content .btn{
         width:100%;
     }
-
-
-    /* AMENITIES */
-
     .amenities-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
     .amenity-image{
         height:210px;
     }
-
-
-    /* GALLERY */
-
     .gallery-grid{
         grid-template-columns:1fr;
         grid-auto-rows:220px;
         gap:15px;
     }
-
     .gallery-item.large{
         grid-column:auto;
         grid-row:auto;
     }
-
-
-    /* TESTIMONIAL */
-
     .testimonial-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
     .testimonial-card{
         padding:25px 20px;
     }
-
-
-    /* AWARDS */
-
     .awards-grid{
         grid-template-columns:1fr;
         gap:18px;
     }
-
-
-    /* CTA */
-
     .cta-box{
         padding:45px 20px;
         border-radius:25px;
     }
-
     .cta-buttons{
         flex-direction:column;
         width:100%;
     }
-
     .cta-buttons .btn{
         width:100%;
     }
-
-
-    /* NEWSLETTER */
-
     .newsletter-box{
         flex-direction:column;
         padding:30px 18px;
         text-align:center;
     }
-
     .newsletter-content h2{
         font-size:1.8rem;
     }
-
     .newsletter-form{
         flex-direction:column;
         width:100%;
     }
-
     .newsletter-form input,
     .newsletter-form .btn{
         width:100%;
     }
-
 }
-
-
-/* =========================================================
-   SMALL MOBILE
-   BELOW 360px
-========================================================= */
-
 @media (max-width:359px){
-
     .home2-hero{
         padding:85px 12px 45px;
     }
-
     .hero-content{
         padding:20px 15px;
     }
-
     .hero-content h1{
         font-size:1.7rem;
     }
-
     .hero-content p{
         font-size:.81rem;
     }
-
     .hero-image img{
         height:270px;
     }
-
-
     .welcome-image img,
     .wellness-image img,
     .family-image img{
         height:270px;
     }
-
     .welcome-content h2,
     .wellness-content h2,
     .family-content h2{
         font-size:1.55rem;
     }
-
     .why-card{
         padding:22px 16px;
     }
-
     .why-icon{
         width:60px;
         height:60px;
     }
-
     .service-image,
     .amenity-image{
         height:190px;
     }
-
     .lifestyle-large,
     .lifestyle-card{
         height:230px;
         min-height:230px;
     }
-
     .testimonial-card{
         padding:22px 17px;
     }
-
     .cta-box{
         padding:40px 16px;
     }
-
     .newsletter-box{
         padding:25px 15px;
     }
-
 }
-
-
-/* =========================================================
-   EXTRA LARGE
-   1440px+
-========================================================= */
-
 @media (min-width:1440px){
-
     .hero-content h1{
         font-size:4.4rem;
     }
-
     .hero-image img{
         height:650px;
     }
-
     .welcome-grid,
     .wellness-grid,
     .family-grid{
         gap:90px;
     }
-
     .welcome-image img{
         height:600px;
     }
-
     .family-image img{
         height:600px;
     }
-
     .services-grid{
         gap:35px;
     }
-
     .gallery-grid{
         gap:25px;
     }
-
 }

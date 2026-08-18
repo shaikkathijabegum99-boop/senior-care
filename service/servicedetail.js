@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const faqCards=document.querySelectorAll(".faq-card");faqCards.forEach(card=>{const title=card.querySelector("h3");if(title){title.addEventListener("click",()=>{faqCards.forEach(item=>{
-
 if(item!==card){
-
 item.classList.remove("active");
-
 }
-
 });card.classList.toggle("active");});}});
 const revealElements=document.querySelectorAll(
 ".detail-hero-content,\
@@ -25,27 +21,20 @@ const revealElements=document.querySelectorAll(
 .faq-card,\
 .cta-box"
 );revealElements.forEach(element=>{
-
 element.classList.add("reveal");
-
 });const observer=new IntersectionObserver(
 (entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");observer.unobserve(entry.target);}});},
 {
 threshold:0.15
 }
 );revealElements.forEach(element=>{
-
 observer.observe(element);
-
 });
 document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener("click",(e)=>{const target=document.querySelector(
 link.getAttribute("href")
 );if(target){e.preventDefault();target.scrollIntoView({
-
 behavior:"smooth",
-
 block:"start"
-
 });}});});
 const images=document.querySelectorAll("img");images.forEach(img=>{img.addEventListener("load",()=>{img.classList.add("loaded");});});
 const buttons=document.querySelectorAll(".btn");buttons.forEach(button=>{button.addEventListener("click",(e)=>{const ripple=document.createElement("span");ripple.classList.add("ripple");const rect=button.getBoundingClientRect();ripple.style.left=

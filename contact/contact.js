@@ -1,6 +1,4 @@
-
 document.addEventListener("DOMContentLoaded",()=>{
-
 const contactForm = document.querySelector(".contact-form");
 if(contactForm){
 contactForm.addEventListener("submit",(e)=>{
@@ -91,7 +89,6 @@ setTimeout(()=>{
 messageBox.remove();
 },4000);
 }
-
 const fields =
 document.querySelectorAll(
 ".contact-form input, .contact-form select, .contact-form textarea"
@@ -112,7 +109,6 @@ field.parentElement.classList.remove(
 );
 });
 });
-
 const faqItems =
 document.querySelectorAll(".faq-item");
 faqItems.forEach(item=>{
@@ -133,7 +129,6 @@ item.classList.toggle(
 );
 });
 });
-
 const newsletter =
 document.querySelector(
 ".newsletter-form"
@@ -162,7 +157,6 @@ alert(
 newsletter.reset();
 });
 }
-
 document.querySelectorAll(
 'a[href^="#"]'
 )
