@@ -1407,91 +1407,258 @@ h2,
     max-width:fit-content !important;
     flex:none !important;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+.section-header h2,
+.section-heading h2,
+.hero-content h1,
+.page-header-text h1,
+.card h3,
+.service-card h3,
+.pricing-card h3,
+.team-content h3,
+.testimonial-card h3,
+.about-content h2,
+.portal-content h2,
+.wellness-content h2,
+.nutrition-content h2,
+.home-cta h2,
+.newsletter-box h2{
+
     font-weight:600 !important;
+
     line-height:1.2;
+
     color:var(--heading);
+
 }
-h1{
-    font-weight:600 !important;
-}
-h2{
-    font-weight:600 !important;
-}
-h3{
-    font-weight:600 !important;
-}
-h4,
-h5,
-h6{
-    font-weight:600 !important;
-}
-p{
-    font-weight:400 !important;
-    color:var(--text);
-}
+
+
+p,
 .section-header p,
 .section-heading p,
 .hero-content p,
 .page-header-text p,
 .card-text,
+.card p,
 .service-content p,
+.service-card p,
+.pricing-card p,
+.team-content p,
+.testimonial-card p,
 .about-content p,
 .philosophy-content p,
+.portal-content p,
+.wellness-content p,
+.nutrition-content p,
 .newsletter-box p,
 .cta-content p{
+
     font-weight:400 !important;
+
+    color:var(--text);
+
 }
+
+
+
 p strong,
-p b{
+p b,
+.card p strong,
+.service-card p strong,
+.pricing-card p strong{
+
     font-weight:550 !important;
+
 }
+
+
+
+small{
+
+    font-weight:400 !important;
+
+    color:var(--text-light);
+
+}
+
+
+
 .section-label,
 .hero-tag,
 .badge,
 .service-tag,
 label{
+
     font-weight:500 !important;
+
 }
-.btn{
+
+
+
+.btn,
+button{
+
     font-weight:600 !important;
+
 }
-a{
-    font-weight:400;
-}
+
+
+
 nav a,
 .nav-link{
+
     font-weight:500 !important;
+
 }
-.card h3,
-.service-card h3,
-.pricing-card h3,
-.team-content h3,
-.testimonial-card h3{
-    font-weight:600 !important;
-}
-.card p,
-.service-card p,
-.pricing-card p,
-.team-content p,
-.testimonial-card p{
+
+
+
+input,
+textarea,
+select{
+
     font-weight:400 !important;
+
 }
-@media (max-width:639px){
+
+
+.table th{
+
+    font-weight:600 !important;
+
+}
+
+.table td{
+
+    font-weight:400 !important;
+
+}
+
+
+
+.check-list li{
+
+    font-weight:400 !important;
+
+}
+
+
+
+.pricing-features li{
+
+    font-weight:500 !important;
+
+}
+
+
+
+.faq-question{
+
+    font-weight:600 !important;
+
+}
+
+.faq-answer p{
+
+    font-weight:400 !important;
+
+}
+
+
+
+.breadcrumb{
+
+    font-weight:400 !important;
+
+}
+
+.breadcrumb span{
+
+    font-weight:500 !important;
+
+}
+
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6{
+
+    font-weight:600 !important;
+
+    color:var(--heading);
+
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .card p,
+[data-theme="dark"] .service-card p,
+[data-theme="dark"] .pricing-card p,
+[data-theme="dark"] .testimonial-card p,
+[data-theme="dark"] .newsletter-box p{
+
+    font-weight:400 !important;
+
+    color:var(--text);
+
+}
+
+
+
+@media (max-width:1023px){
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6{
+
         font-weight:600 !important;
+
     }
+
     p{
+
         font-weight:400 !important;
+
     }
+
+}
+
+
+@media (max-width:639px){
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+
+        font-weight:600 !important;
+
+    }
+
+    p{
+
+        font-weight:400 !important;
+
+    }
+
+    p strong,
+    p b{
+
+        font-weight:550 !important;
+
+    }
+
 }

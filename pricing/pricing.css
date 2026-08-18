@@ -1227,4 +1227,163 @@ input:focus-visible{
 }
 #footer{
     margin-top:0 !important;
+}/*==================================================
+MOST POPULAR BADGE - FINAL FIX
+==================================================*/
+
+.pricing-card.featured{
+    position:relative;
+    overflow:visible !important;
+}
+
+
+.pricing-card.featured .popular-badge{
+    position:absolute;
+    top:0;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:max-content;
+    min-width:130px;
+    height:30px;
+
+    padding:0 16px;
+
+    background:var(--primary);
+    color:#fff;
+
+    border-radius:999px;
+
+    font-size:.72rem;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:.05em;
+
+    white-space:nowrap;
+    text-align:center;
+
+    z-index:100;
+
+    box-shadow:
+        0 6px 18px rgba(27,94,32,.22);
+
+    box-sizing:border-box;
+}
+
+
+/*==================================================
+MOBILE
+< 640px
+==================================================*/
+
+@media(max-width:639px){
+
+    .pricing-card.featured{
+        padding-top:52px !important;
+    }
+
+    .pricing-card.featured .popular-badge{
+        top:0;
+        left:50%;
+
+        transform:translate(-50%, -50%);
+
+        min-width:120px;
+        height:28px;
+
+        padding:0 14px;
+
+        font-size:.68rem;
+        line-height:1;
+    }
+
+}
+
+
+/*==================================================
+TABLET
+640px - 1023px
+==================================================*/
+
+@media(min-width:640px) and (max-width:1023px){
+
+    .pricing-card.featured{
+        padding-top:52px !important;
+    }
+
+    .pricing-card.featured .popular-badge{
+        top:0;
+        left:50%;
+
+        transform:translate(-50%, -50%);
+
+        min-width:125px;
+        height:30px;
+
+        padding:0 15px;
+
+        font-size:.7rem;
+    }
+
+}
+
+
+/*==================================================
+DESKTOP
+1024px - 1280px
+==================================================*/
+
+@media(min-width:1024px) and (max-width:1280px){
+
+    .pricing-card.featured{
+        padding-top:52px !important;
+    }
+
+    .pricing-card.featured .popular-badge{
+        top:0;
+        left:50%;
+
+        transform:translate(-50%, -50%);
+
+        min-width:120px;
+        height:30px;
+
+        padding:0 14px;
+
+        font-size:.68rem;
+    }
+
+}
+
+
+/*==================================================
+LARGE DESKTOP
+> 1280px
+==================================================*/
+
+@media(min-width:1281px){
+
+    .pricing-card.featured{
+        padding-top:56px !important;
+    }
+
+    .pricing-card.featured .popular-badge{
+        top:0;
+        left:50%;
+
+        transform:translate(-50%, -50%);
+
+        min-width:135px;
+        height:32px;
+
+        padding:0 17px;
+
+        font-size:.72rem;
+    }
+
 }
