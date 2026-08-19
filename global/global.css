@@ -1661,4 +1661,79 @@ select{
 
     }
 
+}/* =========================================================
+   NETHRA SENIOR CARE — GLOBAL CTA HEADING SIZE
+========================================================= */
+
+.cta-box h2,
+.cta-content h2,
+.about-cta h2,
+.home-cta h2,
+.contact-cta h2,
+.pricing-cta-box h2,
+.pricing-cta-section h2,
+.visit-cta h2,
+.care-cta h2,
+.family-cta h2{
+    font-size:clamp(1.8rem,3vw,2.5rem) !important;
+    font-weight:600 !important;
+    line-height:1.15;
+}
+
+
+/* Tablet */
+@media (min-width:640px) and (max-width:1023px){
+
+    .cta-box h2,
+    .cta-content h2,
+    .about-cta h2,
+    .home-cta h2,
+    .contact-cta h2,
+    .pricing-cta-box h2,
+    .pricing-cta-section h2,
+    .visit-cta h2,
+    .care-cta h2,
+    .family-cta h2{
+        font-size:2.15rem !important;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:639px){
+
+    .cta-box h2,
+    .cta-content h2,
+    .about-cta h2,
+    .home-cta h2,
+    .contact-cta h2,
+    .pricing-cta-box h2,
+    .pricing-cta-section h2,
+    .visit-cta h2,
+    .care-cta h2,
+    .family-cta h2{
+        font-size:1.75rem !important;
+        line-height:1.18;
+    }
+
+}
+
+
+/* Extra small */
+@media (max-width:399px){
+
+    .cta-box h2,
+    .cta-content h2,
+    .about-cta h2,
+    .home-cta h2,
+    .contact-cta h2,
+    .pricing-cta-box h2,
+    .pricing-cta-section h2,
+    .visit-cta h2,
+    .care-cta h2,
+    .family-cta h2{
+        font-size:1.6rem !important;
+    }
+
 }
