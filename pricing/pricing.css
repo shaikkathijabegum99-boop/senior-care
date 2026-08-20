@@ -1441,4 +1441,63 @@ input:focus-visible{
 .pricing-card.featured:hover::before{
     display:none !important;
     transform:none !important;
+}/* ==========================================
+   PREMIUM GLOW SHADOW - ALL CARDS
+========================================== */
+
+.pricing-card,
+.service-card,
+.faq-item,
+.newsletter-box{
+    box-shadow:
+        0 12px 35px rgba(27,94,32,.10),
+        0 0 22px rgba(27,94,32,.08);
+}
+
+/* Hover Glow */
+.pricing-card:hover,
+.service-card:hover,
+.faq-item:hover,
+.newsletter-box:hover{
+    box-shadow:
+        0 20px 50px rgba(27,94,32,.18),
+        0 0 35px rgba(27,94,32,.16);
+}
+
+/* Featured Pricing Card */
+.pricing-card.featured{
+    box-shadow:
+        0 20px 50px rgba(27,94,32,.20),
+        0 0 35px rgba(27,94,32,.18);
+}
+
+.pricing-card.featured:hover{
+    box-shadow:
+        0 25px 60px rgba(27,94,32,.25),
+        0 0 45px rgba(27,94,32,.22);
+}
+
+/* Dark Mode Glow */
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .newsletter-box{
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.45),
+        0 0 25px rgba(27,94,32,.14);
+}
+
+[data-theme="dark"] .pricing-card:hover,
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .faq-item:hover,
+[data-theme="dark"] .newsletter-box:hover{
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.60),
+        0 0 40px rgba(27,94,32,.25);
+}
+
+[data-theme="dark"] .pricing-card.featured{
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.55),
+        0 0 40px rgba(27,94,32,.25);
 }
