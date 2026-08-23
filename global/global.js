@@ -16,17 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             element.innerHTML = await response.text();
             loadedComponents.add(selector);
-            /*
-             * Initialize navbar only after navbar HTML
-             * has actually been inserted.
-             */
+           
             if (selector === "#navbar") {
                 initNavbar();
                 setActiveNav();
             }
-            /*
-             * Re-render Lucide icons after component load.
-             */
+           
             createIcons();
         } catch (error) {
             console.error(
@@ -77,10 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("rtl-btn");
         const header =
             document.querySelector(".site-header");
-        /*
-         * If navbar has not loaded yet,
-         * do not mark it initialized.
-         */
+        
         if (!ham || !mobNav) {
             return;
         }
@@ -155,16 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 openMenu();
             }
         }
-        /*
-         * Hamburger button
-         */
+        
         ham.addEventListener(
             "click",
             toggleMenu
         );
-        /*
-         * Close button
-         */
+      
         if (closeBtn) {
             closeBtn.addEventListener(
                 "click",
@@ -175,9 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
         }
-        /*
-         * Overlay
-         */
+       
         if (overlay) {
             overlay.addEventListener(
                 "click",
@@ -186,9 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
         }
-        /*
-         * Mobile navigation links
-         */
+       
         document.addEventListener(
             "click",
             function(event) {
@@ -296,10 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         "direction",
                         newDirection
                     );
-                    /*
-                     * Keep menu closed after
-                     * direction change.
-                     */
+                   
                     closeMenu();
                     setActiveNav();
                 }
@@ -337,18 +318,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         function() {
                             const width =
                                 window.innerWidth;
-                            /*
-                             * Desktop/tablet boundary.
-                             * Close mobile menu when
-                             * leaving mobile navigation.
-                             */
+                           
                             if (width > 1024) {
                                 closeMenu();
                             }
-                            /*
-                             * Recreate icons if
-                             * components changed.
-                             */
+                            
                             createIcons();
                         },
                         150
@@ -366,9 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         );
-        /*
-         * Initial accessibility state
-         */
+     
         ham.setAttribute(
             "aria-expanded",
             "false"
@@ -407,9 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .pop()
                 .toLowerCase() ||
             "index.html";
-        /*
-         * Remove previous active states
-         */
+      
         document.querySelectorAll(
             ".nav-links a, .nav-dropdown a, .mob-nav a"
         ).forEach(
@@ -417,9 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.remove("act");
             }
         );
-        /*
-         * Desktop + Mobile
-         */
+      
         document.querySelectorAll(
             ".nav-links a, .mob-nav a"
         ).forEach(
@@ -445,9 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         );
-        /*
-         * Home dropdown handling
-         */
+      
         if (
             currentPage === "index.html" ||
             currentPage === "home2.html"
@@ -470,10 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "act"
                 );
             }
-            /*
-             * Highlight matching home
-             * dropdown item
-             */
+          
             document.querySelectorAll(
                 ".nav-dropdown a, .mob-dropdown a"
             ).forEach(

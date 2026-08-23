@@ -1661,9 +1661,7 @@ select{
 
     }
 
-}/* =========================================================
-   NETHRA SENIOR CARE — GLOBAL CTA HEADING SIZE
-========================================================= */
+}
 
 .cta-box h2,
 .cta-content h2,
@@ -1681,7 +1679,7 @@ select{
 }
 
 
-/* Tablet */
+
 @media (min-width:640px) and (max-width:1023px){
 
     .cta-box h2,
@@ -1700,7 +1698,7 @@ select{
 }
 
 
-/* Mobile */
+
 @media (max-width:639px){
 
     .cta-box h2,
@@ -1720,7 +1718,7 @@ select{
 }
 
 
-/* Extra small */
+
 @media (max-width:399px){
 
     .cta-box h2,
@@ -1736,11 +1734,6 @@ select{
         font-size:1.6rem !important;
     }
 
-}
-/* =========================================================
-   NETHRA SENIOR CARE — NAVBAR RESPONSIVE FIX
-   Mobile • Tablet • Desktop • RTL
-========================================================= */
 
 .site-header,
 .site-header * {
@@ -1759,17 +1752,14 @@ select{
     max-width: 100%;
     margin-inline: auto;
 }
+}
 
-/* Prevent horizontal overflow */
 html,
 body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* =========================================================
-   DESKTOP
-========================================================= */
 
 @media (min-width: 1025px) {
 
@@ -1815,10 +1805,6 @@ body {
 }
 
 
-/* =========================================================
-   TABLET
-   640px — 1024px
-========================================================= */
 
 @media (min-width: 640px) and (max-width: 1024px) {
 
@@ -1866,7 +1852,7 @@ body {
         justify-content: center;
     }
 
-    /* Mobile menu */
+    
 
     .mob-overlay {
         position: fixed;
@@ -1927,10 +1913,6 @@ body {
 }
 
 
-/* =========================================================
-   MOBILE
-   Below 640px
-========================================================= */
 
 @media (max-width: 639px) {
 
@@ -1984,9 +1966,6 @@ body {
         padding: 0;
     }
 
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
 
     .mob-overlay {
         position: fixed;
@@ -2064,7 +2043,7 @@ body {
         padding: 0;
     }
 
-    /* Close button */
+    
 
     #mob-close {
         position: absolute;
@@ -2085,7 +2064,7 @@ body {
         z-index: 2;
     }
 
-    /* Mobile dropdown */
+    
 
     .mob-dropdown {
         width: 100%;
@@ -2117,10 +2096,6 @@ body {
 }
 
 
-/* =========================================================
-   VERY SMALL MOBILE
-   Below 400px
-========================================================= */
 
 @media (max-width: 399px) {
 
@@ -2147,9 +2122,6 @@ body {
 }
 
 
-/* =========================================================
-   RTL MOBILE MENU
-========================================================= */
 
 [dir="rtl"] .mob-nav {
     right: auto;
@@ -2185,9 +2157,6 @@ body {
 }
 
 
-/* =========================================================
-   HEADER STICKY
-========================================================= */
 
 .site-header.sticky {
     position: fixed;
@@ -2200,9 +2169,6 @@ body {
 }
 
 
-/* =========================================================
-   SAFETY — NO NAVBAR HORIZONTAL OVERFLOW
-========================================================= */
 
 .site-header,
 .site-header .container,
